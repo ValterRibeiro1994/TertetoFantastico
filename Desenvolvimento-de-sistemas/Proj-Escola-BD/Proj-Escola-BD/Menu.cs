@@ -37,7 +37,8 @@ namespace Proj_Escola_BD
 
         private void listagensToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listagem Lista = new listagem();
+            //listagem Lista = new listagem();
+            ListarAlunos Lista = new ListarAlunos();
             Lista.ShowDialog();
         }
     }

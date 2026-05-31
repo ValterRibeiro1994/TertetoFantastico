@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace Proj_Escola_BD
         StringBuilder cmdSql = new StringBuilder();
         DataSet conjuntoDeDados;
         DataTable DT;
-        //MySqlDataReader Sqlreader;
+        MySqlDataReader Sqlreader;
 
         public listagem()
         {
@@ -40,13 +41,14 @@ namespace Proj_Escola_BD
 
             DT = conjuntoDeDados.Tables[0];
             gridLista.DataSource = DT;
+            exibirDataReader();
         }
 
         private void btnPagamentos_Click(object sender, EventArgs e)
         {
             int Mes = dtpInput.Value.Month;
             cmdSql.Remove(0, cmdSql.Length);
-            cmdSql.Append("SELECT alunos.Matricula_Alu, Nome_Alu, Nasc_Alu, Email_Alu, CPF_Alu, DtPag_Mens, VlPag_Mens, Juros_Mens, Desconto_Mens,");
+            cmdSql.Append("SELECT alunos.Matricula_Alu, Nome_Alu, Nasc_Alu, Email_Alu, CPF_Alu, Foto_alun, DtPag_Mens, VlPag_Mens, Juros_Mens, Desconto_Mens,");
             cmdSql.Append("IF(Juros_Mens > 0 && Desconto_Mens = 0,VlPag_Mens+(VlPag_Mens*(Juros_Mens/100)),IF(Desconto_Mens > 0 && Juros_Mens = 0,VlPag_Mens-(VlPag_Mens*(Desconto_Mens/100)),VlPag_Mens)) as Valor_total ");
             cmdSql.Append("from mensalidade INNER JOIN Alunos ON mensalidade.Matricula_Alu = alunos.Matricula_Alu ");
             cmdSql.Append("where Month(DtPag_Mens) = @DtPag_Mens;");
@@ -60,7 +62,6 @@ namespace Proj_Escola_BD
 
             DT = conjuntoDeDados.Tables[0];
             gridLista.DataSource = DT;
-
         }
 
         private void btnAniver_Click(object sender, EventArgs e)
@@ -98,6 +99,28 @@ namespace Proj_Escola_BD
 
             DT = conjuntoDeDados.Tables[0];
             gridLista.DataSource = DT;
+
+        }
+
+        private void gridLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void exibirDataReader()
+        {
+            Sqlreader = Conexao.retornarDataReader();
+            if (Sqlreader.Read())
+            {
+                byte[] blob_aluno = (byte[])Sqlreader["Foto_Alu"];
+
+                using (MemoryStream ms = new MemoryStream(blob_aluno))
+                {
+                    Image img_aluno = Image.FromStream(ms);
+
+                    outputImageAluno.Image = img_aluno;
+                }
+            }
         }
     }
 }

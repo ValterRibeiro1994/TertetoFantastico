@@ -69,6 +69,12 @@
     <Compile Include="listagem.Designer.cs">
       <DependentUpon>listagem.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarAlunos.Designer.cs">
+      <DependentUpon>ListarAlunos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="listagem.resx">
       <DependentUpon>listagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarAlunos.resx">
+      <DependentUpon>ListarAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

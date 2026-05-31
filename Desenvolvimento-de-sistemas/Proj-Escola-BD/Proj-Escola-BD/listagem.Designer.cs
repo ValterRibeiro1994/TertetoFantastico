@@ -34,14 +34,16 @@
             this.btnDesconto = new System.Windows.Forms.Button();
             this.gridLista = new System.Windows.Forms.DataGridView();
             this.dtpInput = new System.Windows.Forms.DateTimePicker();
+            this.outputImageAluno = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.outputImageAluno)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAlunos
             // 
-            this.btnAlunos.Location = new System.Drawing.Point(642, 59);
+            this.btnAlunos.Location = new System.Drawing.Point(600, 239);
             this.btnAlunos.Name = "btnAlunos";
-            this.btnAlunos.Size = new System.Drawing.Size(87, 23);
+            this.btnAlunos.Size = new System.Drawing.Size(121, 23);
             this.btnAlunos.TabIndex = 0;
             this.btnAlunos.Text = "Alunos";
             this.btnAlunos.UseVisualStyleBackColor = true;
@@ -49,9 +51,9 @@
             // 
             // btnAniver
             // 
-            this.btnAniver.Location = new System.Drawing.Point(642, 198);
+            this.btnAniver.Location = new System.Drawing.Point(600, 312);
             this.btnAniver.Name = "btnAniver";
-            this.btnAniver.Size = new System.Drawing.Size(87, 23);
+            this.btnAniver.Size = new System.Drawing.Size(121, 23);
             this.btnAniver.TabIndex = 1;
             this.btnAniver.Text = "Aniversariantes";
             this.btnAniver.UseVisualStyleBackColor = true;
@@ -59,9 +61,9 @@
             // 
             // btnPagamentos
             // 
-            this.btnPagamentos.Location = new System.Drawing.Point(642, 152);
+            this.btnPagamentos.Location = new System.Drawing.Point(600, 390);
             this.btnPagamentos.Name = "btnPagamentos";
-            this.btnPagamentos.Size = new System.Drawing.Size(87, 23);
+            this.btnPagamentos.Size = new System.Drawing.Size(121, 23);
             this.btnPagamentos.TabIndex = 2;
             this.btnPagamentos.Text = "Pagamentos";
             this.btnPagamentos.UseVisualStyleBackColor = true;
@@ -69,9 +71,9 @@
             // 
             // btnDesconto
             // 
-            this.btnDesconto.Location = new System.Drawing.Point(642, 239);
+            this.btnDesconto.Location = new System.Drawing.Point(600, 352);
             this.btnDesconto.Name = "btnDesconto";
-            this.btnDesconto.Size = new System.Drawing.Size(87, 23);
+            this.btnDesconto.Size = new System.Drawing.Size(121, 23);
             this.btnDesconto.TabIndex = 3;
             this.btnDesconto.Text = "Descontos";
             this.btnDesconto.UseVisualStyleBackColor = true;
@@ -85,16 +87,25 @@
             this.gridLista.Name = "gridLista";
             this.gridLista.Size = new System.Drawing.Size(529, 379);
             this.gridLista.TabIndex = 4;
+            this.gridLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridLista_CellContentClick);
             // 
             // dtpInput
             // 
             this.dtpInput.CustomFormat = "";
             this.dtpInput.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpInput.Location = new System.Drawing.Point(642, 106);
+            this.dtpInput.Location = new System.Drawing.Point(600, 277);
             this.dtpInput.Name = "dtpInput";
-            this.dtpInput.Size = new System.Drawing.Size(87, 20);
+            this.dtpInput.Size = new System.Drawing.Size(121, 20);
             this.dtpInput.TabIndex = 5;
             this.dtpInput.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // outputImageAluno
+            // 
+            this.outputImageAluno.Location = new System.Drawing.Point(600, 70);
+            this.outputImageAluno.Name = "outputImageAluno";
+            this.outputImageAluno.Size = new System.Drawing.Size(121, 148);
+            this.outputImageAluno.TabIndex = 6;
+            this.outputImageAluno.TabStop = false;
             // 
             // listagem
             // 
@@ -102,6 +113,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(855, 450);
+            this.Controls.Add(this.outputImageAluno);
             this.Controls.Add(this.dtpInput);
             this.Controls.Add(this.gridLista);
             this.Controls.Add(this.btnDesconto);
@@ -111,6 +123,7 @@
             this.Name = "listagem";
             this.Text = "listagem";
             ((System.ComponentModel.ISupportInitialize)(this.gridLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.outputImageAluno)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -123,5 +136,6 @@
         private System.Windows.Forms.Button btnDesconto;
         private System.Windows.Forms.DataGridView gridLista;
         private System.Windows.Forms.DateTimePicker dtpInput;
+        private System.Windows.Forms.PictureBox outputImageAluno;
     }
 }
