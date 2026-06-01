@@ -130,8 +130,8 @@ namespace Proj_Escola_BD
             comando_sql.Append("Foto_Alu as 'Foto Aluno', ");
             comando_sql.Append("DtPag_Mens as 'Data de Pagamento', ");
             comando_sql.Append("VlPag_Mens as 'Valor do pagamento', ");
-            comando_sql.Append("Juros_Mens as 'Juros por atraso', ");
-            comando_sql.Append("Desconto_Mens as 'Desconto por adiantamento', ");
+            comando_sql.Append("Juros_Mens as 'Juros por atraso em %', ");
+            comando_sql.Append("Desconto_Mens as 'Desconto por adiantamento em %', ");
 
             // condição para Juros pago
             comando_sql.Append("IF (Juros_Mens > 0 && Desconto_Mens = 0, ");
@@ -212,10 +212,12 @@ namespace Proj_Escola_BD
             comando_sql.Append("DtPag_Mens as 'Data de Pagamento', ");
             comando_sql.Append("VlPag_Mens as 'Valor do pagamento', ");
             comando_sql.Append("Desconto_Mens as 'Desconto por adiantamento' ");
+
             // associa as tabelas para consulta de pagamento
             comando_sql.Append("FROM mensalidade "); // Primeira tabela para associação 
             comando_sql.Append("INNER JOIN alunos "); // Segunda tabela para associação
             comando_sql.Append("ON mensalidade.Matricula_Alu = alunos.Matricula_Alu "); // condição para associção
+            
             // verifica se o botão de radio foi selecionado
             if (checkFiltro.Checked)
             {
