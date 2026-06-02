@@ -11,9 +11,20 @@ namespace AppPetShop
     internal class Conexao
     {
         MySqlConnection conexaoDb;
-        public MySqlCommand comandoSql;
+        public MySqlCommand comandoSql = new MySqlCommand();
         private string strComandoSql;
         private string strConexao = "datasource=localhost;username=root;password=;database=petshop_db";
+
+        public string getStrComandoSql()
+        {
+            return this.strComandoSql;
+        }
+
+        public void setStrComandoSql(string comando)
+        {
+            this.strComandoSql = comando;
+        }
+
 
         private MySqlConnection abrirBanco()
         {
@@ -37,7 +48,7 @@ namespace AppPetShop
             try
             {
                 conexaoDb = abrirBanco();
-                comandoSql.CommandText = strComandoSql;
+                comandoSql.CommandText = getStrComandoSql();
                 comandoSql.CommandType = CommandType.Text;
                 comandoSql.Connection = conexaoDb;
                 adaptadorSql.SelectCommand = comandoSql;
@@ -59,7 +70,7 @@ namespace AppPetShop
             try
             {
                 conexaoDb = abrirBanco();
-                comandoSql.CommandText = strComandoSql;
+                comandoSql.CommandText = getStrComandoSql();
                 comandoSql.CommandType = CommandType.Text;
                 comandoSql.Connection = conexaoDb;
                 return comandoSql.ExecuteReader(CommandBehavior.CloseConnection);
@@ -79,7 +90,7 @@ namespace AppPetShop
             try
             {
                 conexaoDb = abrirBanco();
-                comandoSql.CommandText = strComandoSql;
+                comandoSql.CommandText = getStrComandoSql();
                 comandoSql.CommandType = CommandType.Text;
                 comandoSql.Connection = conexaoDb;
                 return comandoSql.ExecuteNonQuery();

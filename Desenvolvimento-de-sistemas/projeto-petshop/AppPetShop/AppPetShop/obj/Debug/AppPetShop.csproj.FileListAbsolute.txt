@@ -24,3 +24,7 @@ C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de
 C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\projeto-petshop\AppPetShop\AppPetShop\obj\Debug\AppPetShop.csproj.CoreCompileInputs.cache
 C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\projeto-petshop\AppPetShop\AppPetShop\obj\Debug\AppPetShop.exe
 C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\projeto-petshop\AppPetShop\AppPetShop\obj\Debug\AppPetShop.pdb
+C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\projeto-petshop\AppPetShop\AppPetShop\bin\Debug\MySql.Data.dll
+C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\projeto-petshop\AppPetShop\AppPetShop\bin\Debug\System.Memory.dll
+C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\projeto-petshop\AppPetShop\AppPetShop\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\projeto-petshop\AppPetShop\AppPetShop\obj\Debug\AppPetShop.csproj.Up2Date

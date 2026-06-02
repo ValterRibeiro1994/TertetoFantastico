@@ -10,18 +10,20 @@ namespace AppPetShop
         private String nome, cpf, celular, email;
         private Utilidades utils;
         private StringBuilder comandoSql;
+        private Conexao conexao;
 
         // método construtor
         public FormTutor()
         {
-            utils = new Utilidades();
-            comandoSql = new StringBuilder();
-
+            
             InitializeComponent();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            utils = new Utilidades(); //classe utilitaria para reutilização de´processos 
+            comandoSql = new StringBuilder(); // classe para comandos sql
+            conexao = new Conexao(); // classe de conexão com banco de dados
             try
             {
                 // captura e valida as entradas antes delas serem definidas
@@ -39,8 +41,23 @@ namespace AppPetShop
                 comandoSql.Append("VALUES (@nome, @cpf, @celular, @email);"); // valores da tabela
 
                 // adiciona os parametros da consulta
-                // precisa da classe conexão
-                
+                conexao.comandoSql.Parameters.Clear(); // limpa os paramtros anteriores
+                conexao.comandoSql.Parameters.AddWithValue("@nome", getNome());
+                conexao.comandoSql.Parameters.AddWithValue("@cpf", getCpf());
+                conexao.comandoSql.Parameters.AddWithValue("@celular", getcelular());
+                conexao.comandoSql.Parameters.AddWithValue("@email", getEmail());
+
+                // modifica a string de colsulta da classe conexão
+                conexao.setStrComandoSql(comandoSql.ToString());
+
+                // executa o comando
+                if (conexao.executarComando() > 0)
+                {
+                    utils.notificarUsuario("Tutor cadastrado com sucesso !!!");
+                } else
+                {
+                    utils.notificarUsuario("Tutor não cadastrado no banco de dados");
+                }
                 // apos o fim de tudo envia para FormPet
                 FormPet tela = new FormPet();
                 tela.Show();
