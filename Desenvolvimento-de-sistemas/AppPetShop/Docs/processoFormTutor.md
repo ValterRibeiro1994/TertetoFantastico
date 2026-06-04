@@ -1,8 +1,10 @@
 # Menu Strip Tools
-1 - Adicionado Link de Formulario para cadastrar Tutor
-2 - Adicionado Link de Formulario para cadastrar Pet
+1 - Adicionado Link de Formulario para cadastrar Pet
 
 # Getters e Setter
+1 - Adicionado atributos privados para nome, cpf, email, celular para inserção dos dados do tutor no banco de dados
+2 - Adicionado setters para cada atributo com validação adequada, qualquer regra violada o setter levanta um erro
+  - informando qual regra foi violada, as regras são definidas dentro do setter com o auxilio da classe Utilidades
 
 # Inserção no banco de dados 
 1 - Adicionada a classe de conexão, e StringBuilder

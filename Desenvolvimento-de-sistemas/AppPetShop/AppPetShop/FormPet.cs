@@ -8,7 +8,12 @@ namespace AppPetShop
         /*
          Usar o modelo de getters e setter do mesmo modo que em formTutor, 
          */
-        string nome, cpf, genero, raca, especie, data_nascimento;
+        string nome, cpf, genero, raca, especie, data_nascimento, foto;
+
+        private void FormPet_Load(object sender, EventArgs e)
+        {
+
+        }
 
         public FormPet()
         {
@@ -24,5 +29,9 @@ namespace AppPetShop
         {
 
         }
+
+        /*
+            Getters e setter abaixo - adicionar metodos de eventos e botoes acima desses comentarios
+         */
     }
 }

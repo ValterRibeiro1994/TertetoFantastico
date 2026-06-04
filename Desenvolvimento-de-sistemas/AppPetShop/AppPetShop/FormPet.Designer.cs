@@ -28,18 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.btnFoto = new System.Windows.Forms.Button();
+            this.inputFoto = new System.Windows.Forms.PictureBox();
+            this.btnCadastrarPet = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.inputRaca = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.inputNome = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -55,124 +52,106 @@
             this.consultasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.inputNascimento = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.inputCpf = new System.Windows.Forms.TextBox();
+            this.rdMacho = new System.Windows.Forms.RadioButton();
+            this.rdFemea = new System.Windows.Forms.RadioButton();
+            this.inputEspecie = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.inputFoto)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button4
+            // btnFoto
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(711, 411);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(283, 51);
-            this.button4.TabIndex = 42;
-            this.button4.Text = "Adicionar Foto do Pet";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFoto.Location = new System.Drawing.Point(711, 411);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(283, 51);
+            this.btnFoto.TabIndex = 42;
+            this.btnFoto.Text = "Adicionar Foto do Pet";
+            this.btnFoto.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // inputFoto
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(711, 141);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(283, 246);
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
+            this.inputFoto.Location = new System.Drawing.Point(711, 141);
+            this.inputFoto.Name = "inputFoto";
+            this.inputFoto.Size = new System.Drawing.Size(283, 246);
+            this.inputFoto.TabIndex = 41;
+            this.inputFoto.TabStop = false;
             // 
-            // button2
+            // btnCadastrarPet
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(33, 444);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(600, 51);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Cadastrar Pet";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(287, 371);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(346, 38);
-            this.textBox9.TabIndex = 38;
+            this.btnCadastrarPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarPet.Location = new System.Drawing.Point(37, 503);
+            this.btnCadastrarPet.Name = "btnCadastrarPet";
+            this.btnCadastrarPet.Size = new System.Drawing.Size(600, 51);
+            this.btnCadastrarPet.TabIndex = 39;
+            this.btnCadastrarPet.Text = "Cadastrar Pet";
+            this.btnCadastrarPet.UseVisualStyleBackColor = true;
+            this.btnCadastrarPet.Click += new System.EventHandler(this.button2_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(27, 371);
+            this.label11.Location = new System.Drawing.Point(31, 430);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(193, 31);
             this.label11.TabIndex = 37;
             this.label11.Text = "Especie do pet";
             // 
-            // textBox8
+            // inputRaca
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(287, 317);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(346, 38);
-            this.textBox8.TabIndex = 36;
+            this.inputRaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputRaca.Location = new System.Drawing.Point(291, 376);
+            this.inputRaca.Name = "inputRaca";
+            this.inputRaca.Size = new System.Drawing.Size(346, 38);
+            this.inputRaca.TabIndex = 36;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(27, 317);
+            this.label10.Location = new System.Drawing.Point(31, 376);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(163, 31);
             this.label10.TabIndex = 35;
             this.label10.Text = "Raça do Pet";
             // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(287, 251);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(346, 38);
-            this.textBox7.TabIndex = 34;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(27, 258);
+            this.label9.Location = new System.Drawing.Point(31, 317);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(186, 31);
             this.label9.TabIndex = 33;
             this.label9.Text = "Genero do pet";
             // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(287, 197);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(346, 38);
-            this.textBox6.TabIndex = 32;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(27, 200);
+            this.label8.Location = new System.Drawing.Point(31, 259);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(243, 31);
             this.label8.TabIndex = 31;
             this.label8.Text = "Nascimento do Pet";
             // 
-            // textBox5
+            // inputNome
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(287, 138);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(346, 38);
-            this.textBox5.TabIndex = 30;
+            this.inputNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputNome.Location = new System.Drawing.Point(291, 197);
+            this.inputNome.Name = "inputNome";
+            this.inputNome.Size = new System.Drawing.Size(346, 38);
+            this.inputNome.TabIndex = 30;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(27, 138);
+            this.label7.Location = new System.Drawing.Point(31, 197);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(171, 31);
             this.label7.TabIndex = 29;
@@ -284,30 +263,93 @@
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
+            // inputNascimento
+            // 
+            this.inputNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.inputNascimento.Location = new System.Drawing.Point(291, 253);
+            this.inputNascimento.Name = "inputNascimento";
+            this.inputNascimento.Size = new System.Drawing.Size(346, 38);
+            this.inputNascimento.TabIndex = 44;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(31, 141);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 31);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "Cpf Tutor";
+            // 
+            // inputCpf
+            // 
+            this.inputCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputCpf.Location = new System.Drawing.Point(291, 141);
+            this.inputCpf.Name = "inputCpf";
+            this.inputCpf.Size = new System.Drawing.Size(346, 38);
+            this.inputCpf.TabIndex = 46;
+            // 
+            // rdMacho
+            // 
+            this.rdMacho.AutoSize = true;
+            this.rdMacho.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdMacho.Location = new System.Drawing.Point(291, 317);
+            this.rdMacho.Name = "rdMacho";
+            this.rdMacho.Size = new System.Drawing.Size(113, 35);
+            this.rdMacho.TabIndex = 47;
+            this.rdMacho.TabStop = true;
+            this.rdMacho.Text = "Macho";
+            this.rdMacho.UseVisualStyleBackColor = true;
+            // 
+            // rdFemea
+            // 
+            this.rdFemea.AutoSize = true;
+            this.rdFemea.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdFemea.Location = new System.Drawing.Point(438, 317);
+            this.rdFemea.Name = "rdFemea";
+            this.rdFemea.Size = new System.Drawing.Size(116, 35);
+            this.rdFemea.TabIndex = 48;
+            this.rdFemea.TabStop = true;
+            this.rdFemea.Text = "Femea";
+            this.rdFemea.UseVisualStyleBackColor = true;
+            // 
+            // inputEspecie
+            // 
+            this.inputEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputEspecie.Location = new System.Drawing.Point(291, 440);
+            this.inputEspecie.Name = "inputEspecie";
+            this.inputEspecie.Size = new System.Drawing.Size(346, 38);
+            this.inputEspecie.TabIndex = 49;
+            // 
             // FormPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 749);
+            this.Controls.Add(this.inputEspecie);
+            this.Controls.Add(this.rdFemea);
+            this.Controls.Add(this.rdMacho);
+            this.Controls.Add(this.inputCpf);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.inputNascimento);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.btnFoto);
+            this.Controls.Add(this.inputFoto);
+            this.Controls.Add(this.btnCadastrarPet);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.inputRaca);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.inputNome);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Name = "FormPet";
             this.Text = "FormPet";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fecharApp);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.FormPet_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.inputFoto)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -317,18 +359,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.PictureBox inputFoto;
+        private System.Windows.Forms.Button btnCadastrarPet;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox inputRaca;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox inputNome;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -344,5 +383,11 @@
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
+        private System.Windows.Forms.DateTimePicker inputNascimento;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox inputCpf;
+        private System.Windows.Forms.RadioButton rdMacho;
+        private System.Windows.Forms.RadioButton rdFemea;
+        private System.Windows.Forms.TextBox inputEspecie;
     }
 }
