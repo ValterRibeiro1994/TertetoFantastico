@@ -3,6 +3,12 @@
 2 - Adicionado Link de Formulario para cadastrar Pet
 
 # Getters e Setter
+1 - adicionado getters para cpf, nome, nascimento, raça e especie do pet
+
+# botao adicionar foto
+1 - Adicionado caixa de dialogo para captura de foto
+2 - adicionado exibição da foto do pet para confirmação
+
 
 # Inserção no banco de dados 
 1 - Adicionada a classe de conexão, e StringBuilder
@@ -16,5 +22,3 @@
 1 - Adicionado Variavel de controle abrir_form para fechar o formulario corretamente 
 
 ## Recomendações para possiveis melhorias 
-1 - Filtrar os erros lançados pelo banco em caso de duplicações de email, cpf e etc.
-2 - Melhorar o design do formulario
