@@ -1,2 +1,3 @@
-# Essa é minha primeira contribuição em um projeto github 
-clonei o repositorio e agora vou modificar ele
+# Ass: Esperando assinatura do Valter Tertuliano
+# Ass: Esperando assinatura do Lucas Bras
+# Ass: Esperando assinatura do Felipe Rodrigo
