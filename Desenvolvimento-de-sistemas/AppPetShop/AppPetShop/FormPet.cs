@@ -9,6 +9,7 @@ namespace AppPetShop
          Usar o modelo de getters e setter do mesmo modo que em formTutor, 
          */
         string nome, cpf, genero, raca, especie, data_nascimento, foto;
+        bool abrir_form = false;
 
         private void petToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -19,7 +20,6 @@ namespace AppPetShop
             tela.Show();
         }
 
-        bool abrir_form = false;
 
         private void tutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -96,6 +96,9 @@ namespace AppPetShop
             return especie;
         }
 
-
+        private string getGenero()
+        {
+            return genero;
+        }
     }
 }
