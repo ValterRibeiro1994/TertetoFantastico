@@ -81,6 +81,23 @@ namespace AppPetShop
             FormPet tela = new FormPet();
             tela.Show();
         }
+        private void tutorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrir_form = true;
+            this.Close();
+
+            FormTutor tela = new FormTutor();
+            tela.Show();
+        }
+
+        private void petToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrir_form = true;
+            this.Close();
+
+            FormPet tela = new FormPet();
+            tela.Show();
+        }
         private void fechandoForm(object sender, FormClosingEventArgs e)
         {
             // esse metodo garante que o this.close fecha o formulario sem deixar ele escondido em segundo plano
@@ -125,15 +142,6 @@ namespace AppPetShop
             {
                 this.nome = nomeTutor;
             }
-        }
-
-        private void tutorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            abrir_form = true;
-            this.Close();
-
-            FormTutor tela = new FormTutor();
-            tela.Show();
         }
 
         private void setCpf(String cpfTutor)

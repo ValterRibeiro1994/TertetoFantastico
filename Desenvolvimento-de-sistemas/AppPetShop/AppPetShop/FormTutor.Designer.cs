@@ -88,19 +88,20 @@
             // petToolStripMenuItem
             // 
             this.petToolStripMenuItem.Name = "petToolStripMenuItem";
-            this.petToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.petToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.petToolStripMenuItem.Text = "Pet";
+            this.petToolStripMenuItem.Click += new System.EventHandler(this.petToolStripMenuItem_Click);
             // 
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // serviçosToolStripMenuItem1
             // 
             this.serviçosToolStripMenuItem1.Name = "serviçosToolStripMenuItem1";
-            this.serviçosToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.serviçosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.serviçosToolStripMenuItem1.Text = "Serviços";
             // 
             // pesquisarToolStripMenuItem
