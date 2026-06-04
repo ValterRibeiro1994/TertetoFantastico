@@ -11,21 +11,24 @@ namespace AppPetShop
         private Utilidades utils;
         private StringBuilder comandoSql;
         private Conexao conexao;
+        private bool abrir_form = false; // variavel de controle para fechamento do form atual
 
         // método construtor
         public FormTutor()
         {
             
             InitializeComponent();
+            utils = new Utilidades(); //classe utilitaria para reutilização de´processos 
+            comandoSql = new StringBuilder(); // classe para comandos sql
+            conexao = new Conexao(); // classe de conexão com banco de dados
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            utils = new Utilidades(); //classe utilitaria para reutilização de´processos 
-            comandoSql = new StringBuilder(); // classe para comandos sql
-            conexao = new Conexao(); // classe de conexão com banco de dados
             try
             {
+                
+                
                 // captura e valida as entradas antes delas serem definidas
                 // lança erro caso alguma não passe pelas regras definidas
                 setNome(inputNome.Text);
@@ -58,19 +61,35 @@ namespace AppPetShop
                 {
                     utils.notificarUsuario("Tutor não cadastrado no banco de dados");
                 }
-                // apos o fim de tudo envia para FormPet
-                FormPet tela = new FormPet();
-                tela.Show();
-                this.Hide();
+
+                // botao para cadastrar pet se torna visivel
+                btnCadastrarPet.Visible = true;
             }
             catch (Exception ex)
             {
+                // acrescentar validações de erros para codigos de erro no banco
+                // valores duplicados 
                 utils.notificarUsuario(ex.Message);
             }
-
-
         }
 
+        private void btnCadastrarPet_Click(object sender, EventArgs e)
+        {
+            // envia para FormPet
+            abrir_form = true;
+            this.Close(); // fecha form atual
+            FormPet tela = new FormPet();
+            tela.Show();
+        }
+        private void fechandoForm(object sender, FormClosingEventArgs e)
+        {
+            // esse metodo garante que o this.close fecha o formulario sem deixar ele escondido em segundo plano
+            // e que o proximo formulario seja aberto sem a aplicação encerrar totalmente
+            if (!abrir_form)
+            {
+                Application.Exit();
+            }
+        }
         private String getNome()
         {
             return nome;
@@ -108,6 +127,15 @@ namespace AppPetShop
             }
         }
 
+        private void tutorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrir_form = true;
+            this.Close();
+
+            FormTutor tela = new FormTutor();
+            tela.Show();
+        }
+
         private void setCpf(String cpfTutor)
         {
             if (utils.campoVazio(cpfTutor))
@@ -123,6 +151,7 @@ namespace AppPetShop
                 this.cpf = cpfTutor;
             }
         }
+
 
         private void setCelular(String celularTutor)
         {
@@ -154,10 +183,6 @@ namespace AppPetShop
             {
                 this.email = emailTutor;
             }
-        }
-        private void fecharApp_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
 
     }

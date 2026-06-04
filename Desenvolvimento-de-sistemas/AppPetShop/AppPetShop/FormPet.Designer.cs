@@ -86,6 +86,7 @@
             this.button2.TabIndex = 39;
             this.button2.Text = "Cadastrar Pet";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox9
             // 
@@ -186,7 +187,6 @@
             this.label6.Size = new System.Drawing.Size(182, 31);
             this.label6.TabIndex = 28;
             this.label6.Text = "Cadastrar Pet";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // menuStrip1
             // 
@@ -214,25 +214,25 @@
             // tutorToolStripMenuItem
             // 
             this.tutorToolStripMenuItem.Name = "tutorToolStripMenuItem";
-            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.tutorToolStripMenuItem.Text = "Tutor";
             // 
             // petToolStripMenuItem
             // 
             this.petToolStripMenuItem.Name = "petToolStripMenuItem";
-            this.petToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.petToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.petToolStripMenuItem.Text = "Pet";
             // 
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // serviçosToolStripMenuItem1
             // 
             this.serviçosToolStripMenuItem1.Name = "serviçosToolStripMenuItem1";
-            this.serviçosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.serviçosToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.serviçosToolStripMenuItem1.Text = "Serviços";
             // 
             // pesquisarToolStripMenuItem
@@ -288,7 +288,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 805);
+            this.ClientSize = new System.Drawing.Size(1102, 749);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
@@ -306,6 +306,7 @@
             this.Controls.Add(this.label6);
             this.Name = "FormPet";
             this.Text = "FormPet";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fecharApp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

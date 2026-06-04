@@ -51,6 +51,7 @@
             this.inputEmail = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnCadastrarPet = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,8 +81,9 @@
             // tutorToolStripMenuItem
             // 
             this.tutorToolStripMenuItem.Name = "tutorToolStripMenuItem";
-            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tutorToolStripMenuItem.Text = "Tutor";
+            this.tutorToolStripMenuItem.Click += new System.EventHandler(this.tutorToolStripMenuItem_Click);
             // 
             // petToolStripMenuItem
             // 
@@ -243,11 +245,24 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Cadastrar Tutor";
             // 
+            // btnCadastrarPet
+            // 
+            this.btnCadastrarPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarPet.Location = new System.Drawing.Point(74, 417);
+            this.btnCadastrarPet.Name = "btnCadastrarPet";
+            this.btnCadastrarPet.Size = new System.Drawing.Size(600, 48);
+            this.btnCadastrarPet.TabIndex = 13;
+            this.btnCadastrarPet.Text = "Clique para Cadastrar Pet";
+            this.btnCadastrarPet.UseVisualStyleBackColor = true;
+            this.btnCadastrarPet.Visible = false;
+            this.btnCadastrarPet.Click += new System.EventHandler(this.btnCadastrarPet_Click);
+            // 
             // FormTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 541);
+            this.Controls.Add(this.btnCadastrarPet);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.inputEmail);
@@ -260,7 +275,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FormTutor";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fecharApp_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fechandoForm);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -293,5 +308,6 @@
         private System.Windows.Forms.TextBox inputEmail;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnCadastrarPet;
     }
 }
