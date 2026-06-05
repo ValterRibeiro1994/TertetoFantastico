@@ -24,7 +24,7 @@ create table if not exists tb_pet(
     especie_pet varchar(30) not null,
     PRIMARY key (cod_pet),
     FOREIGN key (cpf_tutor) REFERENCES tb_tutor(cpf_tutor)
-)engine="InnoDB";
+) engine="InnoDB";
 
 insert into tb_pet(cpf_tutor, nascimento_pet, genero_pet, raca_pet, nome_pet, especie_pet) values 
 ("07845179913", '2025-10-13', "M", "vira-lata", "caramelo", "cachorro"),
@@ -39,7 +39,7 @@ create table if not exists tb_servicos(
     -- valor mais caro poposto 5000,00
     valor_servico numeric(6,2) not null,
     FOREIGN key(cod_pet) REFERENCES tb_pet(cod_pet)
-)engine="InnoDB";
+) engine="InnoDB";
 
 insert into tb_servicos(cod_pet, tipo_servico, data_servico, valor_servico) values 
 (01, "banho", "2026-06-01", 20.50),
@@ -51,7 +51,7 @@ create table if not exists tb_consulta(
     data_consulta date not null,
     prescricao_consulta text not null,
     FOREIGN key(cod_pet) REFERENCES tb_pet(cod_pet)
-)engine="InnoDB";
+) engine="InnoDB";
 
 insert into tb_consulta(cod_pet, data_consulta, prescricao_consulta) VALUES
 (01, "2026-06-01", "Cachorro com excesso de gostosura igual o tutor"),

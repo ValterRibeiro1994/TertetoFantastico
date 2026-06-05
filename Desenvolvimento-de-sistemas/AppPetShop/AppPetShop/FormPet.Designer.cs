@@ -90,7 +90,7 @@
             this.btnCadastrarPet.TabIndex = 39;
             this.btnCadastrarPet.Text = "Cadastrar Pet";
             this.btnCadastrarPet.UseVisualStyleBackColor = true;
-            this.btnCadastrarPet.Click += new System.EventHandler(this.button2_Click);
+            this.btnCadastrarPet.Click += new System.EventHandler(this.btnCadastrarPet_Click);
             // 
             // label11
             // 
@@ -194,14 +194,14 @@
             // tutorToolStripMenuItem
             // 
             this.tutorToolStripMenuItem.Name = "tutorToolStripMenuItem";
-            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.tutorToolStripMenuItem.Text = "Tutor";
             this.tutorToolStripMenuItem.Click += new System.EventHandler(this.tutorToolStripMenuItem_Click);
             // 
             // petToolStripMenuItem
             // 
             this.petToolStripMenuItem.Name = "petToolStripMenuItem";
-            this.petToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.petToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.petToolStripMenuItem.Text = "Pet";
             this.petToolStripMenuItem.Click += new System.EventHandler(this.petToolStripMenuItem_Click);
             // 

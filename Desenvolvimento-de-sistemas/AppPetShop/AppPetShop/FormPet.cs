@@ -10,7 +10,20 @@ namespace AppPetShop
          */
         string nome, cpf, genero, raca, especie, data_nascimento, foto;
         bool abrir_form = false;
+        Utilidades utils;
 
+        /*
+         Construtor
+         */
+        public FormPet()
+        {
+            InitializeComponent();
+            utils = new Utilidades();
+        }
+
+        /*
+         Menu Strip - funções
+         */
         private void petToolStripMenuItem_Click(object sender, EventArgs e)
         {
             abrir_form = true;
@@ -32,15 +45,12 @@ namespace AppPetShop
         }
 
         
-
+        /*
+         Eventos de formulario
+         */
         private void FormPet_Load(object sender, EventArgs e)
         {
 
-        }
-
-        public FormPet()
-        {
-            InitializeComponent();
         }
 
         private void fecharApp(object sender, FormClosingEventArgs e)
@@ -51,6 +61,9 @@ namespace AppPetShop
             }
         }
 
+        /*
+         Botões de formulario
+         */
         private void btnFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog cxFoto = new OpenFileDialog();
@@ -67,9 +80,45 @@ namespace AppPetShop
 
         }
 
+        private void btnCadastrarPet_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
         /*
             Getters e setter abaixo - adicionar metodos de eventos e botoes acima desses comentarios
          */
+
+        private void setNascimento(string data)
+        {
+
+        }
+
+        private void setCpf(string cpf)
+        {
+            if (utils.campoVazio(cpf))
+            {
+                throw new Exception("Cpf deve ser preenchido !!!");
+            } else if (utils.totalCaracteres(11, cpf))
+            {
+                throw new Exception("Cpf deve ter 11 caracteres");
+            } else
+            {
+                this.cpf = cpf;
+            }
+        }
+
+        private void setNomePet(string nomePet)
+        {
+            if (utils.campoVazio(nomePet)){
+                throw new Exception("Nome do pet deve ser informado");
+            } else if (utils.limiteTexto(30, nomePet)){
+                throw new Exception("Limite de caracteres excedido para nome do Pet");
+            } else
+            {
+                this.nome = nomePet;
+            }
+        }
 
         private string getCpf()
         {
