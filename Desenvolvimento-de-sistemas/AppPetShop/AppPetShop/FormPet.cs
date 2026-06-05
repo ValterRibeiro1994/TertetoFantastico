@@ -1,6 +1,8 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 using System.Windows.Forms;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 namespace AppPetShop
 {
     public partial class FormPet : Form
@@ -11,7 +13,8 @@ namespace AppPetShop
         string nome, cpf, genero, raca, especie, data_nascimento, foto;
         bool abrir_form = false;
         Utilidades utils;
-
+        StringBuilder comandoSql;
+        Conexao conexao;
         /*
          Construtor
          */
@@ -19,6 +22,8 @@ namespace AppPetShop
         {
             InitializeComponent();
             utils = new Utilidades();
+            comandoSql = new StringBuilder();
+            conexao = new Conexao();
         }
 
         /*
@@ -75,23 +80,121 @@ namespace AppPetShop
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCadastrarPet_Click(object sender, EventArgs e)
         {
-            //
+            try
+            {
+                setCpf(inputCpf.Text);
+                setNomePet(inputNome.Text);
+                setNascimento(inputNascimento.Value.ToString());
+                setGenero(rdMacho, rdFemea);
+                setRaca(inputRaca.Text);
+                setEspecie(inputEspecie.Text);
+                setCaminhoFoto(inputFoto.ImageLocation);
+
+                // converter foto para bytes
+                byte[] fotoPet = File.ReadAllBytes(inputFoto.ImageLocation);
+
+                // comando de inserção na tabela de pets
+                comandoSql.Remove(0, comandoSql.Length);
+                comandoSql.Append("INSERT INTO tb_pet(cpf_tutor, nascimento_pet, genero_pet, raca_pet, foto_pet, nome_pet, especie_pet) ");
+                comandoSql.Append("VALUES (@cpf, @data, @genero, @raca, @foto, @nome, @especie) ");
+
+                // classe de conexão
+                conexao.comandoSql.Parameters.Clear();
+                conexao.comandoSql.Parameters.AddWithValue("@cpf", getCpf());
+                conexao.comandoSql.Parameters.AddWithValue("@data", getNascimento());
+                conexao.comandoSql.Parameters.AddWithValue("@genero", getGenero());
+                conexao.comandoSql.Parameters.AddWithValue("@raca", getRaca());
+                conexao.comandoSql.Parameters.AddWithValue("@foto", fotoPet);
+                conexao.comandoSql.Parameters.AddWithValue("@nome", getNome());
+                conexao.comandoSql.Parameters.AddWithValue("@especie", getEspecie());
+                
+                // modifica a string de colsulta da classe conexão
+                conexao.setStrComandoSql(comandoSql.ToString());
+                if (conexao.executarComando() != 0)
+                {
+                    MessageBox.Show("Pet adicionado com sucesso");
+                } else
+                {
+                    MessageBox.Show("Falha ao adicionar Pet"); 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
         }
 
         /*
             Getters e setter abaixo - adicionar metodos de eventos e botoes acima desses comentarios
          */
 
+        private void setCaminhoFoto(string caminho)
+        {
+            if (utils.campoVazio(caminho))
+            {
+                throw new Exception("Foto do pet é obrigatorio ");
+            } else
+            {
+                this.foto = caminho;
+            } 
+        }
+
+        private void setEspecie(string especie)
+        {
+            if (utils.campoVazio(especie))
+            {
+                throw new Exception("Informe a especie do Pet");
+            }
+            else if (utils.limiteTexto(30, especie))
+            {
+                throw new Exception("Limite de caracteres para especie excedido");
+            }
+            else
+            {
+                this.especie = especie;
+            }
+        }
+
+        private void setRaca(string raca)
+        {
+            if (utils.campoVazio(raca))
+            {
+                throw new Exception("Informe a raça do pet");
+            } else if (utils.limiteTexto(30, raca))
+            {
+                throw new Exception("Limite de caracteres excedido para raça do pet");
+            } else
+            {
+                this.raca = raca;
+            }
+
+        }
+        private void setGenero(RadioButton macho, RadioButton femea)
+        {
+            if (macho.Checked)
+            {
+                this.genero = "M";
+            } else if (femea.Checked)
+            {
+
+                this.genero = "F";
+            } else
+            {
+                throw new Exception("Informe o genero do Pet macho ou femea !!!");
+            }
+        }
+
         private void setNascimento(string data)
         {
-
+           if (utils.campoVazio(data))
+           {
+                throw new Exception("Data de nascimento deve ser preenchida !!!");
+           } else
+            {
+                this.data_nascimento = data;
+            }
         }
 
         private void setCpf(string cpf)
