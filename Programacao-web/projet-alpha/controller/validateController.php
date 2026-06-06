@@ -9,7 +9,6 @@ class ValidateController {
     }
 
     public function validarLogin(array $post) {
-        // verifica se o botão submit está indentificado como login
         if (!isset($post['login'])) {
             return $this->resposta->respostaFuncao(false, "Erro dev: Botão não indentificado para login !!!", []);
         }
@@ -19,13 +18,11 @@ class ValidateController {
 
         for ($x = 0; $x < $n; $x++) {
             $campo = $campos[$x];
-
             if (!isset($post[$campo])) {
                 return $this->resposta->respostaFuncao(false, "Preencha todos os campos !!! -> " . $campo, []);
             }
         }
 
-        // para o login são verificados 3 entradas (email, senha e lembrar)
         $resposta = $this->validarEmail($post['emailUsuario']);
         if (!$resposta['status']){
             return $resposta;
@@ -40,12 +37,6 @@ class ValidateController {
     }
 
     public function validarBanco(array $post) {
-        /**
-         * O metodo deve validar se o numero da conta e o capital
-         * são valores numericos e se o banco é conhecido pelo sistema
-         */
-
-        // verifica se o botão submit está indentificado como banco
         if (!isset($post['banco'])) {
             return $this->resposta->respostaFuncao(false, "Erro dev: Botão não indentificado para banco !!!", []);
         }
@@ -55,7 +46,6 @@ class ValidateController {
 
         for ($x = 0; $x < $n; $x++) {
             $campo = $campos[$x];
-
             if (!isset($post[$campo])) {
                 return $this->resposta->respostaFuncao(false, "Preencha todos os campos !!! -> " . $campo, []);
             }
@@ -74,10 +64,9 @@ class ValidateController {
         }
 
         if (!$encontrado) {
-            return $this->resposta->respostaFuncao(false, "Banco informado não conhecido pelo sistema", []);
+            return $this->resposta->respostaFuncao(false, "Banco informado não conhecido pelo systema", []);
         }
 
-        // valida o numero da conta
         if (empty($post['contaUsuario'])) {
             return $this->resposta->respostaFuncao(false, "Número da conta não enviado", []);
         }
@@ -90,7 +79,6 @@ class ValidateController {
     }
 
     public function validarPedido(array $post) {
-        // verifica se o botão submit está indentificado como banco
         if (!isset($post['pedido'])) {
             return $this->resposta->respostaFuncao(false, "Erro dev: Botão não indentificado para pedido !!!", []);
         }
@@ -100,7 +88,6 @@ class ValidateController {
 
         for ($x = 0; $x < $n; $x++) {
             $campo = $campos[$x];
-
             if (!isset($post[$campo]) or empty($post[$campo])) {
                 return $this->resposta->respostaFuncao(false, "Preencha todos os campos !!! -> " . $campo, []);
             }
@@ -129,7 +116,6 @@ class ValidateController {
 
         for ($x = 0; $x < $n; $x++) {
             $campo = $campos[$x];
-
             if (!isset($post[$campo])) {
                 return $this->resposta->respostaFuncao(false, "Preencha todos os campos !!! -> " . $campo, []);
             }
@@ -168,7 +154,6 @@ class ValidateController {
             return $this->resposta->respostaFuncao(false, "Senha de confirmação não enviado", []);
         }
 
-        // verifica a senha de confirmação e a senha enviada
         if ($post['senhaUsuario'] !== $post['senhaConfirmacaoUsuario']) {
             return $this->resposta->respostaFuncao(false, "Senhas não conferem", []);
         }
@@ -178,11 +163,10 @@ class ValidateController {
 
     public function validarRecuperarSenha(array $post) {
         $campos = ["emailUsuario", "cpfUsuario", "celularUsuario", "nascimentoUsuario"];
-
         $n = count($campos);
+        
         for ($x = 0; $x < $n; $x++) {
             $campo = $campos[$x];
-
             if (!isset($post[$campo])) {
                 return $this->resposta->respostaFuncao(false, "Preencha todos os campos !!!", []);
             }
@@ -217,7 +201,6 @@ class ValidateController {
         }
 
         $comprimento = $this->validarComprimento($nome);
-
         if (!$comprimento['status']) {
             return $comprimento;
         }
@@ -245,14 +228,11 @@ class ValidateController {
         }
 
         $comprimento = $this->validarComprimento($email);
-
         if (!$comprimento['status']) {
             return $comprimento;
         }
 
-        // valida o Email
         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             return $this->resposta->respostaFuncao(false, "E-mail Invalido", []);
         }
@@ -299,6 +279,4 @@ class ValidateController {
 
         return $this->resposta->respostaFuncao(true, "", []);
     }
-
-
 }

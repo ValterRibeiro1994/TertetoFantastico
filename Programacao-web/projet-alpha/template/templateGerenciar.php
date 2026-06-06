@@ -17,7 +17,6 @@ class TemplateGerenciar {
 
         $html = $this->componentes->criarDocumentoHtml("Gerenciador Projeto Alpha");
 
-        // cria mini formulario para editar nome
         $inputNome = $this->componentes->criarInputFormText("Editar Nome", "editarNome", "text", $this->placeholder_nome);
         $inputs = [];
         if ($erro){
@@ -28,7 +27,7 @@ class TemplateGerenciar {
         $botao = $this->componentes->criarBotaoSubmit("Editar", "editarNomeBtn");
         $form_nome = $this->componentes->criarForm($inputs, "../controller/gerenciarController.php", "Editar Nome", $botao);
         
-        // cria mini formulario para editar email
+
         $inputEmail = $this->componentes->criarInputFormText("Editar Email", "editarEmail", "text", $this->placeholder_email);
         $inputs = [];
         if ($erro){
@@ -39,14 +38,11 @@ class TemplateGerenciar {
         $botao = $this->componentes->criarBotaoSubmit("Editar", "editarEmailBtn");
         $form_email = $this->componentes->criarForm($inputs, "../controller/gerenciarController.php", "Editar E-mail", $botao);
         
-        // form apenas para criar novo calculo de rendimento
-        // botão para novo calculo de rendimento
+
         $label = $this->componentes->criarRotuloResultadp("Realizar novo calculo de rendimento", "Clique no Botão");
         $botao = $this->componentes->criarBotaoSubmit("Novo calculo de rendimento", "btnCalcularRendimento");
         $form_renda = $this->componentes->criarForm([$label], "../controller/gerenciarController.php", "", $botao);
 
-
-        // cria um header proprio
         $header = '
             <header class="container-fluid"
                 <div class="row">' . $form_nome . '</div> 

@@ -2,7 +2,6 @@
 
 require_once('../template/componentes.php');
 
-
 class TemplateBanco {
     private ComponentesTemplates $componentes;
 
@@ -14,11 +13,11 @@ class TemplateBanco {
     public function criarTemplate(bool $erro, string $msg){
         $html = $this->componentes->criarDocumentoHtml('Projeto Alpha - Banco');
         
-        // componentes para coleta de dados
+
         $inputBanco = $this->criarOpcaoBanco();
         $inputConta = $this->componentes->criarInputFormText('Numero da conta', 'contaUsuario', 'text', 'Digite o numero da conta...');
         
-        // botão
+
         $botao = $this->componentes->criarBotaoSubmit('Cadastrar Banco', "banco");
         
         $inputs = [];
@@ -29,10 +28,8 @@ class TemplateBanco {
             $inputs = [$inputBanco, $inputConta];
         }
 
-        // cria o formulario
         $formulario = $this->componentes->criarForm($inputs, '../controller/bancoController.php', 'Conecte-se', $botao);
 
-        // cria o corpo da pagina 
         $body = $this->componentes->criarBody($formulario);
 
         $documento = $html . ' ' . $body . ' ' . $this->componentes->fecharDocumentoHtml();
@@ -51,6 +48,3 @@ class TemplateBanco {
     }
 }
 
-// // teste da class
-// $templateBanco = new TemplateBanco();
-// echo($templateBanco->criarTemplate(false, ''));

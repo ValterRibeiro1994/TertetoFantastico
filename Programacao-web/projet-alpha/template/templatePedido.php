@@ -2,7 +2,6 @@
 
 require_once('../template/componentes.php');
 
-
 class TemplatePedido {
     private ComponentesTemplates $componentes;
     private string $resultado_rendimento = "";
@@ -16,7 +15,7 @@ class TemplatePedido {
         $html = $this->componentes->criarDocumentoHtml('Projeto Alpha - Login');
         $taxas = $this->criarOpcaoTaxa();
         $tempo = $this->componentes->criarInputFormText("Tempo de rendimento", "tempoUsuario", "number", "Informe o tempo em mêses ...");
-        $capital = $this->componentes->criarInputFormText("Valor a ser investido", "capitalUsuario", "text", "Informe o valor a ser investido mensalmente ...");
+        $capital = $this->componentes->criarInputFormText("Valor a ser investido", "capitalUsuario", "text", "Informe o valor a ser investido ...");
 
         $inputs = [];
         if ($erro){
@@ -36,7 +35,7 @@ class TemplatePedido {
         $botao2 = $this->componentes->criarBotaoSubmit("Exibir historico", "historico");
 
         $formulario = $this->componentes->criarForm($inputs, '../controller/pedidoController.php', 'Calcular rendimento', $botao . $botao2);
-        // cria o corpo da pagina 
+
         $body = $this->componentes->criarBody($formulario);
 
         $documento = $html . ' ' . $body . ' ' . $this->componentes->fecharDocumentoHtml();

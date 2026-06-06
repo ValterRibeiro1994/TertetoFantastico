@@ -1,21 +1,8 @@
 <?php
 
-/**
- * Classe responsável por criar componentes HTML reutilizáveis.
- * A ideia dessa classe é centralizar toda a construção visual do sistema.
- */
 class ComponentesTemplates {
     
-    /**
-     * Cria a estrutura inicial do documento HTML.
-     * Define:
-     * - tipo do documento
-     * - idioma
-     * - charset
-     * - viewport
-     * - bootstrap
-     * - título da página
-     */
+    
     public function criarDocumentoHtml(string $titulo){
         return '
         <!DOCTYPE html>
@@ -33,17 +20,12 @@ class ComponentesTemplates {
         ';
     }
 
-    /**
-     * Fecha as tags principais do documento HTML.
-     */
+    
     public function fecharDocumentoHtml(){
         return "</html>";
     }
 
-    /**
-     * Cria a tag body da página.
-     * O conteúdo recebido é inserido dentro dela.
-     */
+    
     public function criarBody(string $conteudo){
         return '
             <body class="container-fluid p-5">
@@ -52,15 +34,7 @@ class ComponentesTemplates {
         '; 
     }
 
-    /**
-     * Cria um input padrão do formulário.
-     * Pode ser utilizado para:
-     * - texto
-     * - email
-     * - senha
-     * - número
-     * etc...
-     */
+    
     public function criarInputFormText(string $rotulo, string $name, string $type, string $placeholder){
         return '
             <!-- Campo de entrada -->
@@ -75,13 +49,7 @@ class ComponentesTemplates {
         '; 
     }
     
-    /**
-     * Cria um input checkbox.
-     * Utilizado para opções booleanas.
-     * Exemplo:
-     * - lembrar usuário
-     * - aceitar termos
-     */
+    
     public function criarInputFormCheck(string $rotulo, string $name){
         return '
             <!-- Campo checkbox -->
@@ -95,20 +63,11 @@ class ComponentesTemplates {
         '; 
     }
 
-    /**
-     * Cria um formulário HTML completo.
-     * Recebe:
-     * - array de inputs
-     * - action do formulário
-     * - título
-     * - botão submit
-     */
+    
     public function criarForm(array $inputs, string $action, string $titulo, string $botao){
 
-        // quantidade de inputs recebidos
         $n = count($inputs);
 
-        // estrutura inicial do formulário
         $form = '
             <form 
                 action="' . $action . '" 
@@ -124,20 +83,16 @@ class ComponentesTemplates {
                 <br>
         ';
 
-        // adiciona todos os inputs recebidos
         for ($input = 0; $input < $n; $input++){
             $form .= $inputs[$input] . '<br>';
         }
 
-        // adiciona botão e fecha o formulário
         $form .= $botao . '</form>';
 
         return $form;
     }
 
-    /**
-     * Cria um botão submit padrão.
-     */
+    
     public function criarBotaoSubmit(string $titulo, string $name){
         return '
             <button 
@@ -150,9 +105,7 @@ class ComponentesTemplates {
         ';
     }
 
-    /**
-     * Cria um rótulo visual para mensagens de erro.
-     */
+    
     public function criarLabelErro(string $msg){
         return '
             <br>
@@ -163,13 +116,7 @@ class ComponentesTemplates {
         ';
     }
 
-    /**
-     * Cria um bloco visual para exibir resultados.
-     * Exemplo:
-     * - resultado de cálculo
-     * - retorno financeiro
-     * - mensagens informativas
-     */
+    
     public function criarRotuloResultadp(string $informe, string $resultado) {
         return '
             <hr>
@@ -182,28 +129,14 @@ class ComponentesTemplates {
         ';
     }
 
-    /**
-     * Cria uma tabela HTML dinâmica.
-     * 
-     * $linhasCabecalho:
-     * array contendo os nomes das colunas.
-     * 
-     * $dadosTabela:
-     * array associativo vindo do banco de dados.
-     */
+    
     public function criarTabelaDados(array $linhasCabecalho, array $dadosTabela) {
 
-        // inicia a tabela
         $tabela = '<table class="table table-dark table-striped table-hover">';
 
-        /**
-         * =========================
-         * CABEÇALHO DA TABELA
-         * =========================
-         */
+        
         $cabecalho = '<thead><tr>';
 
-        // percorre todas as colunas do cabeçalho
         for ($i = 0; $i < count($linhasCabecalho); $i++) {
 
             $cabecalho .= '
@@ -215,26 +148,16 @@ class ComponentesTemplates {
 
         $cabecalho .= '</tr></thead>';
 
-        /**
-         * =========================
-         * CORPO DA TABELA
-         * =========================
-         */
+        
         $corpo = '<tbody>';
 
-        // percorre todos os registros
         for ($i = 0; $i < count($dadosTabela); $i++) {
 
             $corpo .= '<tr>';
 
-            /**
-             * array_values:
-             * remove as chaves associativas
-             * e mantém apenas os valores.
-             */
+            
             $valores = array_values($dadosTabela[$i]);
 
-            // percorre os valores do registro atual
             for ($j = 0; $j < count($valores); $j++) {
 
                 $corpo .= '
@@ -249,7 +172,6 @@ class ComponentesTemplates {
 
         $corpo .= '</tbody>';
 
-        // retorna tabela completa
         return $tabela . $cabecalho . $corpo . '</table>';
     }
 }

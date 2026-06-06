@@ -41,9 +41,6 @@ CREATE TABLE IF NOT EXISTS `tb_conta_usuario` (
 -- Despejando dados para a tabela `tb_conta_usuario`
 --
 
-INSERT INTO `tb_conta_usuario` (`id_usuario`, `nome_banco_conta`, `numero_conta`) VALUES
-(4, 'Nubank', '1238');
-
 -- --------------------------------------------------------
 
 --
@@ -64,12 +61,6 @@ CREATE TABLE IF NOT EXISTS `tb_registros` (
 --
 -- Despejando dados para a tabela `tb_registros`
 --
-
-INSERT INTO `tb_registros` (`id_registro`, `id_usuario`, `taxa_registro`, `tempo_registro`, `capital_registro`, `rendimento_registro`) VALUES
-(32, 4, 0.01, 3, 2000.00, 2060.60),
-(31, 4, 0.01, 12, 100.00, 112.68),
-(30, 4, 0.03, 12, 100.00, 142.58),
-(29, 4, 0.01, 3, 100.00, 103.03);
 
 -- --------------------------------------------------------
 
@@ -95,10 +86,6 @@ CREATE TABLE IF NOT EXISTS `tb_usuario` (
 --
 -- Despejando dados para a tabela `tb_usuario`
 --
-
-INSERT INTO `tb_usuario` (`id_usuario`, `nome_usuario`, `cpf_usuario`, `email_usuario`, `celular_usuario`, `data_nascimento_usuario`, `senha_usuario`) VALUES
-(4, 'valter sergio', '07845179914', 'valtertert@gmail.com', '16994030287', '1994-10-13', '321');
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
