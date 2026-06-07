@@ -52,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="FormPesquisarPet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPesquisarPet.Designer.cs">
+      <DependentUpon>FormPesquisarPet.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
       <DependentUpon>TelaSplash.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
+    <EmbeddedResource Include="FormPesquisarPet.resx">
+      <DependentUpon>FormPesquisarPet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPet.resx">
       <DependentUpon>FormPet.cs</DependentUpon>
     </EmbeddedResource>
