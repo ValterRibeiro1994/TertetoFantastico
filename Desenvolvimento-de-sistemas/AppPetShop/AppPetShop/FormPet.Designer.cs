@@ -78,6 +78,7 @@
             this.inputFoto.Location = new System.Drawing.Point(711, 141);
             this.inputFoto.Name = "inputFoto";
             this.inputFoto.Size = new System.Drawing.Size(283, 246);
+            this.inputFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.inputFoto.TabIndex = 41;
             this.inputFoto.TabStop = false;
             // 

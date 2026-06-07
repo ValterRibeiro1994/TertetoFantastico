@@ -35,7 +35,17 @@ namespace AppPetShop
                 setCpf(inputCpf.Text);
                 setCelular(inputCelular.Text);
                 setEmail(inputEmail.Text);
+            }
+            catch (Exception ex)
+            {
+                // acrescentar validações de erros para codigos de erro no banco
+                // valores duplicados 
+                utils.notificarUsuario(ex.Message);
+                return;
+            }
 
+            try
+            {
                 // aqui criamos a consulta
                 comandoSql.Remove(0, comandoSql.Length); // limpa a string de consulta atual
                 comandoSql.Append("USE petshop_db; "); // seleciona o banco a ser usado
@@ -50,27 +60,27 @@ namespace AppPetShop
                 conexao.comandoSql.Parameters.AddWithValue("@celular", getcelular());
                 conexao.comandoSql.Parameters.AddWithValue("@email", getEmail());
 
-                // modifica a string de colsulta da classe conexão
+                // modifica a string de consulta da classe conexão
                 conexao.setStrComandoSql(comandoSql.ToString());
 
                 // executa o comando
                 if (conexao.executarComando() > 0)
                 {
                     utils.notificarUsuario("Tutor cadastrado com sucesso !!!");
-                } else
+                    // botao para cadastrar pet se torna visivel
+                    btnCadastrarPet.Visible = true;
+                }
+                else
                 {
                     utils.notificarUsuario("Tutor não cadastrado no banco de dados");
                 }
 
-                // botao para cadastrar pet se torna visivel
-                btnCadastrarPet.Visible = true;
             }
             catch (Exception ex)
             {
-                // acrescentar validações de erros para codigos de erro no banco
-                // valores duplicados 
                 utils.notificarUsuario(ex.Message);
             }
+            
         }
 
         private void btnCadastrarPet_Click(object sender, EventArgs e)

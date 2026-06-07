@@ -95,9 +95,38 @@ namespace AppPetShop
                 comandoSql.Connection = conexaoDb;
                 return comandoSql.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
-                throw new Exception("Erro ao executar consulta: " + ex.Message);
+                // captura o código de erro
+                int codigo_erro = ex.Number;
+                if (codigo_erro == 1452) // chave estrangeira não existe na tabela pai
+                {
+                    // caso tente cadastrar pet sem antes cadastrar um tutor
+                    if (ex.Message.Contains("cpf_tutor"))
+                    {
+                        throw new Exception("Erro: Tutor não registrado no sistema");
+                    }
+                    // para erros dentro do código ainda não descoberto
+                    throw new Exception("Erro 1452 ao executar consulta: " + ex.Message + "-> " + ex.Number);
+                } else if (codigo_erro == 1062) // Registro duplicado
+                {
+                    if (ex.Message.Contains("tb_tutor.PRIMARY"))
+                    {
+                        throw new Exception("Cpf já cadastrado no banco de dados");
+                    } else if (ex.Message.Contains("tb_tutor.celular_tutor"))
+                    {
+                        throw new Exception("Celular já registrado no banco de dados");
+                    } else if (ex.Message.Contains("tb_tutor.email_tutor"))
+                    {
+                        throw new Exception("Email já cadastrado no banco de dados");
+                    } else
+                    {
+                        throw new Exception("Campo duplicado: " + ex.Message);
+                    }
+                }
+
+                // captura erros desconhecidos
+                throw new Exception("Erro ao executar consulta: " + ex.Message + "-> " + ex.Number);
             }
             finally
             {

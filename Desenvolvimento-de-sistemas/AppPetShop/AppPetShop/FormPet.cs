@@ -91,15 +91,23 @@ namespace AppPetShop
                 setRaca(inputRaca.Text);
                 setEspecie(inputEspecie.Text);
                 setCaminhoFoto(inputFoto.ImageLocation);
+            }
+            catch (Exception ex)
+            {
+                utils.notificarUsuario(ex.Message);
+                return; // encerra o processo antes de enviar dados para o banco
+            }
 
-                // converter foto para bytes
-                byte[] fotoPet = File.ReadAllBytes(inputFoto.ImageLocation);
+            // converter foto para bytes
+            byte[] fotoPet = File.ReadAllBytes(inputFoto.ImageLocation);
 
-                // comando de inserção na tabela de pets
-                comandoSql.Remove(0, comandoSql.Length);
-                comandoSql.Append("INSERT INTO tb_pet(cpf_tutor, nascimento_pet, genero_pet, raca_pet, foto_pet, nome_pet, especie_pet) ");
-                comandoSql.Append("VALUES (@cpf, @data, @genero, @raca, @foto, @nome, @especie) ");
-
+            // comando de inserção na tabela de pets
+            comandoSql.Remove(0, comandoSql.Length);
+            comandoSql.Append("INSERT INTO tb_pet(cpf_tutor, nascimento_pet, genero_pet, raca_pet, foto_pet, nome_pet, especie_pet) ");
+            comandoSql.Append("VALUES (@cpf, @data, @genero, @raca, @foto, @nome, @especie) ");
+            
+            try
+            {
                 // classe de conexão
                 conexao.comandoSql.Parameters.Clear();
                 conexao.comandoSql.Parameters.AddWithValue("@cpf", getCpf());
@@ -109,21 +117,22 @@ namespace AppPetShop
                 conexao.comandoSql.Parameters.AddWithValue("@foto", fotoPet);
                 conexao.comandoSql.Parameters.AddWithValue("@nome", getNome());
                 conexao.comandoSql.Parameters.AddWithValue("@especie", getEspecie());
-                
+
                 // modifica a string de colsulta da classe conexão
                 conexao.setStrComandoSql(comandoSql.ToString());
                 if (conexao.executarComando() != 0)
                 {
-                    MessageBox.Show("Pet adicionado com sucesso");
-                } else
-                {
-                    MessageBox.Show("Falha ao adicionar Pet"); 
+                    utils.notificarUsuario("Pet adicionado com sucesso");
                 }
-            }
-            catch (Exception ex)
+                else
+                {
+                    utils.notificarUsuario("Falha ao adicionar Pet");
+                }
+            } catch (Exception erro)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                utils.notificarUsuario(erro.Message);
             }
+            
         }
 
         /*
