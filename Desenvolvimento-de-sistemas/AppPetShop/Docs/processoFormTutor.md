@@ -1,5 +1,5 @@
 # Menu Strip Tools
-1 - Adicionado Link de Formulario para cadastrar Pet
+1 - Adicionado Link de Formulario para cadastrar Pet.
 
 # Getters e Setter
 1 - Adicionado atributos privados para nome, cpf, email, celular para inserção dos dados do tutor no banco de dados
