@@ -53,7 +53,7 @@ namespace AppPetShop
                 comandoSql.Connection = conexaoDb;
                 adaptadorSql.SelectCommand = comandoSql;
                 adaptadorSql.Fill(conjuntoDados);
-                return conjuntoDados;
+                return (conjuntoDados);
             }
             catch (Exception ex)
             {

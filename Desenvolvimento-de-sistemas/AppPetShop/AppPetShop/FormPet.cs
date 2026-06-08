@@ -11,7 +11,6 @@ namespace AppPetShop
          Usar o modelo de getters e setter do mesmo modo que em formTutor, 
          */
         string nome, cpf, genero, raca, especie, data_nascimento, foto;
-        bool abrir_form = false;
         Utilidades utils;
         StringBuilder comandoSql;
         Conexao conexao;
@@ -24,46 +23,6 @@ namespace AppPetShop
             utils = new Utilidades();
             comandoSql = new StringBuilder();
             conexao = new Conexao();
-        }
-
-        /*
-         Menu Strip - funções
-         */
-        private void petToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            abrir_form = true;
-            this.Close();
-
-            FormPet tela = new FormPet();
-            tela.Show();
-        }
-
-
-        private void tutorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            abrir_form = true;
-            this.Close();
-
-            FormTutor tela = new FormTutor();
-            tela.Show();
-            
-        }
-
-        
-        /*
-         Eventos de formulario
-         */
-        private void FormPet_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fecharApp(object sender, FormClosingEventArgs e)
-        {
-            if (!abrir_form)
-            {
-                Application.Exit();
-            }
         }
 
         /*
@@ -86,7 +45,6 @@ namespace AppPetShop
             {
                 setCpf(inputCpf.Text);
                 setNomePet(inputNome.Text);
-                setNascimento(inputNascimento.Value.ToString());
                 setGenero(rdMacho, rdFemea);
                 setRaca(inputRaca.Text);
                 setEspecie(inputEspecie.Text);
@@ -111,7 +69,7 @@ namespace AppPetShop
                 // classe de conexão
                 conexao.comandoSql.Parameters.Clear();
                 conexao.comandoSql.Parameters.AddWithValue("@cpf", getCpf());
-                conexao.comandoSql.Parameters.AddWithValue("@data", getNascimento());
+                conexao.comandoSql.Parameters.AddWithValue("@data", inputNascimento.Value);
                 conexao.comandoSql.Parameters.AddWithValue("@genero", getGenero());
                 conexao.comandoSql.Parameters.AddWithValue("@raca", getRaca());
                 conexao.comandoSql.Parameters.AddWithValue("@foto", fotoPet);
@@ -195,17 +153,6 @@ namespace AppPetShop
             }
         }
 
-        private void setNascimento(string data)
-        {
-           if (utils.campoVazio(data))
-           {
-                throw new Exception("Data de nascimento deve ser preenchida !!!");
-           } else
-            {
-                this.data_nascimento = data;
-            }
-        }
-
         private void setCpf(string cpf)
         {
             if (utils.campoVazio(cpf))
@@ -240,11 +187,6 @@ namespace AppPetShop
         private string getNome()
         {
             return nome;
-        }
-
-        private string getNascimento()
-        {
-            return data_nascimento;
         }
 
         private string getRaca()

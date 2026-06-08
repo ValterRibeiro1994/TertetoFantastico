@@ -77,7 +77,7 @@
             // petToolStripMenuItem
             // 
             this.petToolStripMenuItem.Name = "petToolStripMenuItem";
-            this.petToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.petToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.petToolStripMenuItem.Text = "Pet";
             this.petToolStripMenuItem.Click += new System.EventHandler(this.petToolStripMenuItem_Click);
             // 
@@ -107,25 +107,26 @@
             // tutorToolStripMenuItem1
             // 
             this.tutorToolStripMenuItem1.Name = "tutorToolStripMenuItem1";
-            this.tutorToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.tutorToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.tutorToolStripMenuItem1.Text = "Tutor";
             // 
             // petToolStripMenuItem1
             // 
             this.petToolStripMenuItem1.Name = "petToolStripMenuItem1";
-            this.petToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.petToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.petToolStripMenuItem1.Text = "Pet";
+            this.petToolStripMenuItem1.Click += new System.EventHandler(this.petToolStripMenuItem1_Click);
             // 
             // serviçosToolStripMenuItem
             // 
             this.serviçosToolStripMenuItem.Name = "serviçosToolStripMenuItem";
-            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.serviçosToolStripMenuItem.Text = "Serviços";
             // 
             // consultasToolStripMenuItem1
             // 
             this.consultasToolStripMenuItem1.Name = "consultasToolStripMenuItem1";
-            this.consultasToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.consultasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.consultasToolStripMenuItem1.Text = "Consultas";
             // 
             // ajudaToolStripMenuItem

@@ -14,19 +14,23 @@ namespace AppPetShop
         {
             FormTutor tela = new FormTutor();
             tela.Show();
-            this.Hide();
         }
 
         private void petToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormPet tela = new FormPet();
             tela.Show();
-            this.Hide();
         }
 
         private void fecharApp_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void petToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormPesquisarPet tela = new FormPesquisarPet();
+            tela.Show();
         }
     }
 }

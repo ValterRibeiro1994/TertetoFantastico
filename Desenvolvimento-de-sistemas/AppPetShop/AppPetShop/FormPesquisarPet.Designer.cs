@@ -42,28 +42,28 @@
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.gridPet = new System.Windows.Forms.DataGridView();
+            this.inputCpf = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.campoImagem = new System.Windows.Forms.PictureBox();
+            this.campoCodigo = new System.Windows.Forms.TextBox();
+            this.campoNome = new System.Windows.Forms.TextBox();
+            this.campoEspecie = new System.Windows.Forms.TextBox();
+            this.campoRaca = new System.Windows.Forms.TextBox();
+            this.campoGenero = new System.Windows.Forms.TextBox();
+            this.campoData = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnFoto = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.campoImagem)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -92,25 +92,25 @@
             // tutorToolStripMenuItem
             // 
             this.tutorToolStripMenuItem.Name = "tutorToolStripMenuItem";
-            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tutorToolStripMenuItem.Text = "Tutor";
             // 
             // petToolStripMenuItem
             // 
             this.petToolStripMenuItem.Name = "petToolStripMenuItem";
-            this.petToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.petToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.petToolStripMenuItem.Text = "Pet";
             // 
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // serviçosToolStripMenuItem1
             // 
             this.serviçosToolStripMenuItem1.Name = "serviçosToolStripMenuItem1";
-            this.serviçosToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.serviçosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.serviçosToolStripMenuItem1.Text = "Serviços";
             // 
             // pesquisarToolStripMenuItem
@@ -171,20 +171,20 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Cpf Tutor";
             // 
-            // dataGridView1
+            // gridPet
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 42);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(595, 541);
-            this.dataGridView1.TabIndex = 4;
+            this.gridPet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridPet.Location = new System.Drawing.Point(12, 42);
+            this.gridPet.Name = "gridPet";
+            this.gridPet.Size = new System.Drawing.Size(595, 541);
+            this.gridPet.TabIndex = 4;
             // 
-            // textBox1
+            // inputCpf
             // 
-            this.textBox1.Location = new System.Drawing.Point(709, 249);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 20);
-            this.textBox1.TabIndex = 5;
+            this.inputCpf.Location = new System.Drawing.Point(709, 249);
+            this.inputCpf.Name = "inputCpf";
+            this.inputCpf.Size = new System.Drawing.Size(145, 20);
+            this.inputCpf.TabIndex = 5;
             // 
             // label2
             // 
@@ -231,56 +231,56 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Genero";
             // 
-            // pictureBox1
+            // campoImagem
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(627, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(227, 159);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.campoImagem.Location = new System.Drawing.Point(627, 42);
+            this.campoImagem.Name = "campoImagem";
+            this.campoImagem.Size = new System.Drawing.Size(227, 159);
+            this.campoImagem.TabIndex = 11;
+            this.campoImagem.TabStop = false;
             // 
-            // textBox2
+            // campoCodigo
             // 
-            this.textBox2.Location = new System.Drawing.Point(709, 320);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 20);
-            this.textBox2.TabIndex = 12;
+            this.campoCodigo.Location = new System.Drawing.Point(709, 320);
+            this.campoCodigo.Name = "campoCodigo";
+            this.campoCodigo.Size = new System.Drawing.Size(145, 20);
+            this.campoCodigo.TabIndex = 12;
             // 
-            // textBox3
+            // campoNome
             // 
-            this.textBox3.Location = new System.Drawing.Point(709, 352);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(145, 20);
-            this.textBox3.TabIndex = 13;
+            this.campoNome.Location = new System.Drawing.Point(709, 352);
+            this.campoNome.Name = "campoNome";
+            this.campoNome.Size = new System.Drawing.Size(145, 20);
+            this.campoNome.TabIndex = 13;
             // 
-            // textBox4
+            // campoEspecie
             // 
-            this.textBox4.Location = new System.Drawing.Point(709, 384);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(145, 20);
-            this.textBox4.TabIndex = 14;
+            this.campoEspecie.Location = new System.Drawing.Point(709, 384);
+            this.campoEspecie.Name = "campoEspecie";
+            this.campoEspecie.Size = new System.Drawing.Size(145, 20);
+            this.campoEspecie.TabIndex = 14;
             // 
-            // textBox5
+            // campoRaca
             // 
-            this.textBox5.Location = new System.Drawing.Point(709, 418);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(145, 20);
-            this.textBox5.TabIndex = 15;
+            this.campoRaca.Location = new System.Drawing.Point(709, 418);
+            this.campoRaca.Name = "campoRaca";
+            this.campoRaca.Size = new System.Drawing.Size(145, 20);
+            this.campoRaca.TabIndex = 15;
             // 
-            // textBox6
+            // campoGenero
             // 
-            this.textBox6.Location = new System.Drawing.Point(709, 452);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(145, 20);
-            this.textBox6.TabIndex = 16;
+            this.campoGenero.Location = new System.Drawing.Point(709, 452);
+            this.campoGenero.Name = "campoGenero";
+            this.campoGenero.Size = new System.Drawing.Size(145, 20);
+            this.campoGenero.TabIndex = 16;
             // 
-            // dateTimePicker1
+            // campoData
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(709, 486);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(145, 20);
-            this.dateTimePicker1.TabIndex = 17;
+            this.campoData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.campoData.Location = new System.Drawing.Point(709, 486);
+            this.campoData.Name = "campoData";
+            this.campoData.Size = new System.Drawing.Size(145, 20);
+            this.campoData.TabIndex = 17;
             // 
             // label7
             // 
@@ -291,74 +291,75 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Nascimento";
             // 
-            // button1
+            // btnFoto
             // 
-            this.button1.Location = new System.Drawing.Point(627, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(227, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Trocar foto";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnFoto.Location = new System.Drawing.Point(627, 207);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.Size = new System.Drawing.Size(227, 23);
+            this.btnFoto.TabIndex = 19;
+            this.btnFoto.Text = "Trocar foto";
+            this.btnFoto.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnEditar
             // 
-            this.button2.Location = new System.Drawing.Point(627, 531);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(227, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Editar Dados";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEditar.Location = new System.Drawing.Point(627, 531);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(227, 23);
+            this.btnEditar.TabIndex = 20;
+            this.btnEditar.Text = "Editar Dados";
+            this.btnEditar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnRemover
             // 
-            this.button3.Location = new System.Drawing.Point(627, 560);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(227, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Remover Pet";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnRemover.Location = new System.Drawing.Point(627, 560);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(227, 23);
+            this.btnRemover.TabIndex = 21;
+            this.btnRemover.Text = "Remover Pet";
+            this.btnRemover.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnBuscar
             // 
-            this.button4.Location = new System.Drawing.Point(659, 275);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(145, 23);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Buscar Pets do Tutor";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(659, 275);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(145, 23);
+            this.btnBuscar.TabIndex = 22;
+            this.btnBuscar.Text = "Buscar Pets do Tutor";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FormPesquisarPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 607);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnRemover);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnFoto);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.campoData);
+            this.Controls.Add(this.campoGenero);
+            this.Controls.Add(this.campoRaca);
+            this.Controls.Add(this.campoEspecie);
+            this.Controls.Add(this.campoNome);
+            this.Controls.Add(this.campoCodigo);
+            this.Controls.Add(this.campoImagem);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.inputCpf);
+            this.Controls.Add(this.gridPet);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "FormPesquisarPet";
             this.Text = "FormPesquisarPet";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.campoImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,24 +381,24 @@
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView gridPet;
+        private System.Windows.Forms.TextBox inputCpf;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.PictureBox campoImagem;
+        private System.Windows.Forms.TextBox campoCodigo;
+        private System.Windows.Forms.TextBox campoNome;
+        private System.Windows.Forms.TextBox campoEspecie;
+        private System.Windows.Forms.TextBox campoRaca;
+        private System.Windows.Forms.TextBox campoGenero;
+        private System.Windows.Forms.DateTimePicker campoData;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnFoto;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
