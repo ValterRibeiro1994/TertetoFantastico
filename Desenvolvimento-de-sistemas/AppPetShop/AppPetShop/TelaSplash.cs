@@ -13,7 +13,7 @@ namespace AppPetShop
 
         private async void iniciarSplash_Shown(object sender, EventArgs e)
         {
-            await Task.Delay(3000);
+            await Task.Delay(500);
             TelaInicial tela = new TelaInicial();
             tela.Show();
             this.Hide();
