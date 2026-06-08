@@ -102,9 +102,6 @@ namespace AppPetShop
             if (utils.campoVazio(caminho))
             {
                 throw new Exception("Foto do pet é obrigatorio ");
-            } else
-            {
-                this.foto = caminho;
             } 
         }
 

@@ -61,6 +61,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnChamarGrid = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridPet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.campoImagem)).BeginInit();
@@ -92,25 +93,25 @@
             // tutorToolStripMenuItem
             // 
             this.tutorToolStripMenuItem.Name = "tutorToolStripMenuItem";
-            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.tutorToolStripMenuItem.Text = "Tutor";
             // 
             // petToolStripMenuItem
             // 
             this.petToolStripMenuItem.Name = "petToolStripMenuItem";
-            this.petToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.petToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.petToolStripMenuItem.Text = "Pet";
             // 
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // serviçosToolStripMenuItem1
             // 
             this.serviçosToolStripMenuItem1.Name = "serviçosToolStripMenuItem1";
-            this.serviçosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.serviçosToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
             this.serviçosToolStripMenuItem1.Text = "Serviços";
             // 
             // pesquisarToolStripMenuItem
@@ -178,12 +179,13 @@
             this.gridPet.Name = "gridPet";
             this.gridPet.Size = new System.Drawing.Size(595, 541);
             this.gridPet.TabIndex = 4;
+            this.gridPet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.selecionarPet);
             // 
             // inputCpf
             // 
             this.inputCpf.Location = new System.Drawing.Point(709, 249);
             this.inputCpf.Name = "inputCpf";
-            this.inputCpf.Size = new System.Drawing.Size(145, 20);
+            this.inputCpf.Size = new System.Drawing.Size(173, 20);
             this.inputCpf.TabIndex = 5;
             // 
             // label2
@@ -235,7 +237,8 @@
             // 
             this.campoImagem.Location = new System.Drawing.Point(627, 42);
             this.campoImagem.Name = "campoImagem";
-            this.campoImagem.Size = new System.Drawing.Size(227, 159);
+            this.campoImagem.Size = new System.Drawing.Size(255, 159);
+            this.campoImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.campoImagem.TabIndex = 11;
             this.campoImagem.TabStop = false;
             // 
@@ -243,35 +246,35 @@
             // 
             this.campoCodigo.Location = new System.Drawing.Point(709, 320);
             this.campoCodigo.Name = "campoCodigo";
-            this.campoCodigo.Size = new System.Drawing.Size(145, 20);
+            this.campoCodigo.Size = new System.Drawing.Size(173, 20);
             this.campoCodigo.TabIndex = 12;
             // 
             // campoNome
             // 
             this.campoNome.Location = new System.Drawing.Point(709, 352);
             this.campoNome.Name = "campoNome";
-            this.campoNome.Size = new System.Drawing.Size(145, 20);
+            this.campoNome.Size = new System.Drawing.Size(173, 20);
             this.campoNome.TabIndex = 13;
             // 
             // campoEspecie
             // 
             this.campoEspecie.Location = new System.Drawing.Point(709, 384);
             this.campoEspecie.Name = "campoEspecie";
-            this.campoEspecie.Size = new System.Drawing.Size(145, 20);
+            this.campoEspecie.Size = new System.Drawing.Size(173, 20);
             this.campoEspecie.TabIndex = 14;
             // 
             // campoRaca
             // 
             this.campoRaca.Location = new System.Drawing.Point(709, 418);
             this.campoRaca.Name = "campoRaca";
-            this.campoRaca.Size = new System.Drawing.Size(145, 20);
+            this.campoRaca.Size = new System.Drawing.Size(173, 20);
             this.campoRaca.TabIndex = 15;
             // 
             // campoGenero
             // 
             this.campoGenero.Location = new System.Drawing.Point(709, 452);
             this.campoGenero.Name = "campoGenero";
-            this.campoGenero.Size = new System.Drawing.Size(145, 20);
+            this.campoGenero.Size = new System.Drawing.Size(173, 20);
             this.campoGenero.TabIndex = 16;
             // 
             // campoData
@@ -279,7 +282,7 @@
             this.campoData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.campoData.Location = new System.Drawing.Point(709, 486);
             this.campoData.Name = "campoData";
-            this.campoData.Size = new System.Drawing.Size(145, 20);
+            this.campoData.Size = new System.Drawing.Size(173, 20);
             this.campoData.TabIndex = 17;
             // 
             // label7
@@ -295,44 +298,58 @@
             // 
             this.btnFoto.Location = new System.Drawing.Point(627, 207);
             this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Size = new System.Drawing.Size(227, 23);
+            this.btnFoto.Size = new System.Drawing.Size(255, 23);
             this.btnFoto.TabIndex = 19;
             this.btnFoto.Text = "Trocar foto";
             this.btnFoto.UseVisualStyleBackColor = true;
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(627, 531);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(227, 23);
+            this.btnEditar.Size = new System.Drawing.Size(255, 23);
             this.btnEditar.TabIndex = 20;
             this.btnEditar.Text = "Editar Dados";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnRemover
             // 
             this.btnRemover.Location = new System.Drawing.Point(627, 560);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(227, 23);
+            this.btnRemover.Size = new System.Drawing.Size(255, 23);
             this.btnRemover.TabIndex = 21;
             this.btnRemover.Text = "Remover Pet";
             this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(659, 275);
+            this.btnBuscar.Location = new System.Drawing.Point(627, 275);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(145, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(121, 23);
             this.btnBuscar.TabIndex = 22;
             this.btnBuscar.Text = "Buscar Pets do Tutor";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnChamarGrid
+            // 
+            this.btnChamarGrid.Location = new System.Drawing.Point(758, 274);
+            this.btnChamarGrid.Name = "btnChamarGrid";
+            this.btnChamarGrid.Size = new System.Drawing.Size(124, 23);
+            this.btnChamarGrid.TabIndex = 23;
+            this.btnChamarGrid.Text = "Buscar Pets";
+            this.btnChamarGrid.UseVisualStyleBackColor = true;
+            this.btnChamarGrid.Click += new System.EventHandler(this.btnChamarGrid_Click);
             // 
             // FormPesquisarPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 607);
+            this.Controls.Add(this.btnChamarGrid);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnEditar);
@@ -400,5 +417,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnChamarGrid;
     }
 }
