@@ -1,88 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|c:\\users\\valte\\desktop\\mundo da programacao\\tertetofantastico\\desenvolvimento-de-sistemas\\proj-escola-bd\\proj-escola-bd\\frmmensalidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|solutionrelative:proj-escola-bd\\frmmensalidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\proj-escola-bd\\frmmensalidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|solutionrelative:proj-escola-bd\\frmmensalidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|c:\\users\\valte\\desktop\\mundo da programacao\\tertetofantastico\\desenvolvimento-de-sistemas\\proj-escola-bd\\proj-escola-bd\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|solutionrelative:proj-escola-bd\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|c:\\users\\valte\\desktop\\mundo da programacao\\tertetofantastico\\desenvolvimento-de-sistemas\\proj-escola-bd\\proj-escola-bd\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|solutionrelative:proj-escola-bd\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmMensalidade.cs",
-              "DocumentMoniker": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmMensalidade.cs",
-              "RelativeDocumentMoniker": "Proj-Escola-BD\\frmMensalidade.cs",
-              "ToolTip": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmMensalidade.cs*",
-              "RelativeToolTip": "Proj-Escola-BD\\frmMensalidade.cs*",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAACAAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T14:56:15.865Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmMensalidade.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmMensalidade.cs",
-              "RelativeDocumentMoniker": "Proj-Escola-BD\\frmMensalidade.cs",
-              "ToolTip": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmMensalidade.cs [Design]*",
-              "RelativeToolTip": "Proj-Escola-BD\\frmMensalidade.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-31T19:47:06.807Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmAlunos.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmAlunos.cs",
-              "RelativeDocumentMoniker": "Proj-Escola-BD\\frmAlunos.cs",
-              "ToolTip": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmAlunos.cs [Design]",
-              "RelativeToolTip": "Proj-Escola-BD\\frmAlunos.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T23:07:17.086Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmAlunos.cs",
-              "DocumentMoniker": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmAlunos.cs",
-              "RelativeDocumentMoniker": "Proj-Escola-BD\\frmAlunos.cs",
-              "ToolTip": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmAlunos.cs",
-              "RelativeToolTip": "Proj-Escola-BD\\frmAlunos.cs",
-              "ViewState": "AgIAAKQAAAAAAAAAAAAAAOAAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T23:07:28.964Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

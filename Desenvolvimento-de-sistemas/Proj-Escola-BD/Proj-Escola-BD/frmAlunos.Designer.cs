@@ -205,8 +205,7 @@
             this.dtpAlunos.Name = "dtpAlunos";
             this.dtpAlunos.Size = new System.Drawing.Size(643, 150);
             this.dtpAlunos.TabIndex = 15;
-            this.dtpAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtpAlunos_CellContentClick);
-            this.dtpAlunos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtpAlunos_MouseClick);
+            this.dtpAlunos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SelecionarAluno);
             // 
             // alterarbtn
             // 
@@ -227,7 +226,6 @@
             this.outputFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.outputFoto.TabIndex = 17;
             this.outputFoto.TabStop = false;
-            this.outputFoto.Click += new System.EventHandler(this.outputFoto_Click);
             // 
             // btnFoto
             // 

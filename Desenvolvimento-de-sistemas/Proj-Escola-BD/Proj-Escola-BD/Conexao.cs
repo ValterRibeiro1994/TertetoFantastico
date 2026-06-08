@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
 namespace Proj_Escola_BD
@@ -95,9 +97,40 @@ namespace Proj_Escola_BD
                 Comandos.Connection = conexao;
                 return Comandos.ExecuteNonQuery();
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
-                throw new Exception("Erro: " + ex.Message);
+                if (ex.Number == 1452)
+                {
+                    // chave estrangeira não existe na tabela principal
+                    // ou seja na tabela mensalidade a matricula informada não existe na tabela alunos
+                    if (ex.Message.Contains("Matricula_Alu"))
+                    {
+                        throw new Exception("Aluno não registrado no banco de dados");
+                    }
+                } 
+                // captura erro de valores duplicados
+                else if (ex.Number == 1062)
+                {
+                    // email, cpf ou matricula já foram adicionados
+                    if (ex.Message.Contains("alunos.PRIMARY"))
+                    {
+                        // Matricula já existe
+                        throw new Exception("Matricula já existe no banco de dados");
+                    } 
+                    else if (ex.Message.Contains("alunos.CPF_Alu"))
+                    {
+                        // CPF já Existe
+                        throw new Exception("Cpf já existe no banco de dados");
+                    } 
+                    else if (ex.Message.Contains("alunos.Email_Alu"))
+                    {
+                        // Email já Existe
+                        throw new Exception("Email já existe no banco de dados");
+                    }
+                }
+
+                // erro desconhecido
+                throw new Exception("ERRO DESCONHECIDO: " + ex.Message);
             }
             finally
             {

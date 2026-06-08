@@ -54,15 +54,12 @@ namespace Proj_Escola_BD
 
             byte[] imagemBytes = File.ReadAllBytes(outputFoto.ImageLocation);
          
-            
             // Monta a string builder para construir o comando do sql
             cmdSql.Remove(0, cmdSql.Length);
             cmdSql.Append("insert into Alunos ");
             cmdSql.Append("(Matricula_Alu, Nome_Alu, Email_Alu, Nasc_Alu, CPF_Alu, NomeFoto_Alu, Foto_Alu) ");
             cmdSql.Append("Values ");
             cmdSql.Append("(@Matricula_Alu, @Nome_Alu, @Email_Alu, @Nasc_Alu, @CPF_Alu, @NomeFoto_Alu, @Foto_Alu); ");
-
-
 
             // adiciona os valores da string de comando
             Conexao.Comandos.Parameters.Clear();
@@ -100,30 +97,34 @@ namespace Proj_Escola_BD
         {
             // verifica se o campo matricula foi preenchido
             if (!utilidades.validarCampo(txtMatricula.Text, "número da Matricula do aluno")) { return; }
-            
+
             cmdSql.Remove(0, cmdSql.Length);
-            cmdSql.Append("select * ");
+            cmdSql.Append("select ");
+            cmdSql.Append("Matricula_Alu as 'Matricula', ");
+            cmdSql.Append("Nome_Alu as 'Nome', ");
+            cmdSql.Append("Email_Alu as 'Email', ");
+            cmdSql.Append("Nasc_Alu as 'Data de nascimento', ");
+            cmdSql.Append("CPF_Alu as 'CPF', ");
+            cmdSql.Append("Foto_Alu as 'Foto' ");
             cmdSql.Append("from Alunos");
             cmdSql.Append(" WHERE Matricula_Alu = @Matricula_Alu");
 
             Conexao.Comandos.Parameters.Clear();
             Conexao.Comandos.Parameters.AddWithValue("@Matricula_Alu", txtMatricula.Text);
-
             Conexao.StrSql = cmdSql.ToString();
-
-
-
+            conjuntoDeDados = Conexao.RetornarDataSet();
+            DT = conjuntoDeDados.Tables[0];
+            dtpAlunos.DataSource = DT;
             Sqlreader = Conexao.retornarDataReader();
 
             if (Sqlreader.Read())
             {
-                txtNome.Text = Sqlreader["Nome_Alu"].ToString();
-                txtEmail.Text = Sqlreader["Email_Alu"].ToString();
-                dtpNasc.Text = Sqlreader["Nasc_Alu"].ToString();
-                txtCPF.Text = Sqlreader["CPF_Alu"].ToString();
+                txtNome.Text = Sqlreader["Nome"].ToString();
+                txtEmail.Text = Sqlreader["Email"].ToString();
+                dtpNasc.Text = Sqlreader["Data de nascimento"].ToString();
+                txtCPF.Text = Sqlreader["CPF"].ToString();
 
-                string nome_foto = Sqlreader["NomeFoto_Alu"].ToString();
-                byte[] blob_aluno =  (byte[])Sqlreader["Foto_Alu"];
+                byte[] blob_aluno =  (byte[])Sqlreader["Foto"];
                 
                 using (MemoryStream ms = new MemoryStream(blob_aluno))
                 {
@@ -168,7 +169,13 @@ namespace Proj_Escola_BD
              Esse método retorna todos os alunos registrados
              */
             cmdSql.Remove(0, cmdSql.Length);
-            cmdSql.Append("select * ");
+            cmdSql.Append("select ");
+            cmdSql.Append("Matricula_Alu as 'Matricula', ");
+            cmdSql.Append("Nome_Alu as 'Nome', ");
+            cmdSql.Append("Email_Alu as 'Email', ");
+            cmdSql.Append("Nasc_Alu as 'Data de nascimento', ");
+            cmdSql.Append("CPF_Alu as 'CPF', ");
+            cmdSql.Append("Foto_Alu as 'Foto' ");
             cmdSql.Append("from Alunos");
 
             Conexao.StrSql = cmdSql.ToString();
@@ -194,7 +201,6 @@ namespace Proj_Escola_BD
             cmdSql.Append("update alunos set ");
             cmdSql.Append("Nome_Alu = @Nome_Alu , Email_Alu = @Email_Alu , Nasc_Alu = @Nasc_Alu , CPF_Alu = @CPF_Alu, NomeFoto_Alu = @NomeFoto_Alu, Foto_Alu = @Foto_Alu");
             cmdSql.Append(" where Matricula_Alu= @Matricula_Alu");
-            //update filme set nome_filme='Teste',data_lanc_filme = curdate() where id_filme = 5;
             byte[] imagemBytes = File.ReadAllBytes(outputFoto.ImageLocation);
 
             Conexao.Comandos.Parameters.Clear();
@@ -217,38 +223,6 @@ namespace Proj_Escola_BD
             }
         }
 
-        private void dtpAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dtpAlunos_MouseClick(object sender, MouseEventArgs e)
-        {
-            txtMatricula.Text = dtpAlunos.CurrentRow.Cells[0].Value.ToString();
-            txtNome.Text = dtpAlunos.CurrentRow.Cells[1].Value.ToString();
-            txtEmail.Text = dtpAlunos.CurrentRow.Cells[2].Value.ToString();
-            dtpNasc.Text = dtpAlunos.CurrentRow.Cells[3].Value.ToString();
-            txtCPF.Text = dtpAlunos.CurrentRow.Cells[4].Value.ToString();
-
-
-            try
-            {
-                byte[] blob_aluno = (byte[])dtpAlunos.CurrentRow.Cells[6].Value;
-
-                using (MemoryStream ms = new MemoryStream(blob_aluno))
-                {
-                    Image img_aluno = Image.FromStream(ms);
-
-                    outputFoto.Image = img_aluno;
-                }
-            }
-            catch (Exception ex) {
-                outputFoto.Image = null;
-
-            }
-
-        }
-
         private void btnFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog cxDialogo = new OpenFileDialog();
@@ -263,9 +237,31 @@ namespace Proj_Escola_BD
             }
         }
 
-        private void outputFoto_Click(object sender, EventArgs e)
+        private void SelecionarAluno(object sender, DataGridViewCellEventArgs e)
         {
+            txtMatricula.Text = dtpAlunos.CurrentRow.Cells[0].Value.ToString();
+            txtNome.Text = dtpAlunos.CurrentRow.Cells[1].Value.ToString();
+            txtEmail.Text = dtpAlunos.CurrentRow.Cells[2].Value.ToString();
+            dtpNasc.Text = dtpAlunos.CurrentRow.Cells[3].Value.ToString();
+            txtCPF.Text = dtpAlunos.CurrentRow.Cells[4].Value.ToString();
 
+
+            try
+            {
+                byte[] blob_aluno = (byte[])dtpAlunos.CurrentRow.Cells[5].Value;
+
+                using (MemoryStream ms = new MemoryStream(blob_aluno))
+                {
+                    Image img_aluno = Image.FromStream(ms);
+
+                    outputFoto.Image = img_aluno;
+                }
+            }
+            catch (Exception ex)
+            {
+                outputFoto.Image = null;
+
+            }
         }
     }
 }

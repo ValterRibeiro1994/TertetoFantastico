@@ -49,6 +49,8 @@
             this.btnConsultar = new System.Windows.Forms.Button();
             this.outputTotalPagamento = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.lblMensa = new System.Windows.Forms.Label();
+            this.campoId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridMensalidade)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(77, 36);
+            this.label1.Location = new System.Drawing.Point(77, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 0;
@@ -68,7 +70,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(30, 72);
+            this.label2.Location = new System.Drawing.Point(30, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 16);
             this.label2.TabIndex = 1;
@@ -79,7 +81,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(51, 107);
+            this.label3.Location = new System.Drawing.Point(51, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 16);
             this.label3.TabIndex = 2;
@@ -90,7 +92,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(108, 152);
+            this.label4.Location = new System.Drawing.Point(102, 173);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 16);
             this.label4.TabIndex = 3;
@@ -101,7 +103,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(80, 189);
+            this.label5.Location = new System.Drawing.Point(77, 201);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 16);
             this.label5.TabIndex = 4;
@@ -109,7 +111,7 @@
             // 
             // campoMatricula
             // 
-            this.campoMatricula.Location = new System.Drawing.Point(164, 31);
+            this.campoMatricula.Location = new System.Drawing.Point(164, 66);
             this.campoMatricula.Name = "campoMatricula";
             this.campoMatricula.Size = new System.Drawing.Size(155, 20);
             this.campoMatricula.TabIndex = 5;
@@ -118,7 +120,7 @@
             // 
             this.lblDtaPag.AutoSize = true;
             this.lblDtaPag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDtaPag.Location = new System.Drawing.Point(164, 72);
+            this.lblDtaPag.Location = new System.Drawing.Point(164, 107);
             this.lblDtaPag.Name = "lblDtaPag";
             this.lblDtaPag.Size = new System.Drawing.Size(0, 15);
             this.lblDtaPag.TabIndex = 6;
@@ -127,7 +129,7 @@
             // 
             this.lblValorPagar.AutoSize = true;
             this.lblValorPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorPagar.Location = new System.Drawing.Point(164, 109);
+            this.lblValorPagar.Location = new System.Drawing.Point(164, 144);
             this.lblValorPagar.Name = "lblValorPagar";
             this.lblValorPagar.Size = new System.Drawing.Size(0, 15);
             this.lblValorPagar.TabIndex = 7;
@@ -135,14 +137,14 @@
             // campoData
             // 
             this.campoData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.campoData.Location = new System.Drawing.Point(164, 72);
+            this.campoData.Location = new System.Drawing.Point(164, 107);
             this.campoData.Name = "campoData";
             this.campoData.Size = new System.Drawing.Size(155, 20);
             this.campoData.TabIndex = 10;
             // 
             // campoPagamento
             // 
-            this.campoPagamento.Location = new System.Drawing.Point(164, 109);
+            this.campoPagamento.Location = new System.Drawing.Point(164, 144);
             this.campoPagamento.Name = "campoPagamento";
             this.campoPagamento.Size = new System.Drawing.Size(155, 20);
             this.campoPagamento.TabIndex = 11;
@@ -152,7 +154,7 @@
             this.outputJuros.AutoSize = true;
             this.outputJuros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputJuros.ForeColor = System.Drawing.Color.Khaki;
-            this.outputJuros.Location = new System.Drawing.Point(189, 152);
+            this.outputJuros.Location = new System.Drawing.Point(183, 173);
             this.outputJuros.Name = "outputJuros";
             this.outputJuros.Size = new System.Drawing.Size(0, 16);
             this.outputJuros.TabIndex = 12;
@@ -162,7 +164,7 @@
             this.outputDesconto.AutoSize = true;
             this.outputDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputDesconto.ForeColor = System.Drawing.Color.Khaki;
-            this.outputDesconto.Location = new System.Drawing.Point(189, 189);
+            this.outputDesconto.Location = new System.Drawing.Point(186, 201);
             this.outputDesconto.Name = "outputDesconto";
             this.outputDesconto.Size = new System.Drawing.Size(0, 16);
             this.outputDesconto.TabIndex = 13;
@@ -264,12 +266,32 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Total a pagar";
             // 
+            // lblMensa
+            // 
+            this.lblMensa.AutoSize = true;
+            this.lblMensa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblMensa.Location = new System.Drawing.Point(29, 32);
+            this.lblMensa.Name = "lblMensa";
+            this.lblMensa.Size = new System.Drawing.Size(123, 17);
+            this.lblMensa.TabIndex = 23;
+            this.lblMensa.Text = "Id da Mensalidade";
+            // 
+            // campoId
+            // 
+            this.campoId.Location = new System.Drawing.Point(164, 29);
+            this.campoId.Name = "campoId";
+            this.campoId.Size = new System.Drawing.Size(155, 20);
+            this.campoId.TabIndex = 25;
+            // 
             // frmMensalidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.campoId);
+            this.Controls.Add(this.lblMensa);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.outputTotalPagamento);
             this.Controls.Add(this.btnConsultar);
@@ -322,5 +344,7 @@
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Label outputTotalPagamento;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblMensa;
+        private System.Windows.Forms.TextBox campoId;
     }
 }

@@ -25,6 +25,7 @@ namespace Proj_Escola_BD
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
+            campoId.Text = "";
             campoMatricula.Text = "";
             campoPagamento.Text = "";
             campoData.Value = DateTime.Now;
@@ -36,17 +37,17 @@ namespace Proj_Escola_BD
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             // checa se o campo matricula está preenchido
-            if (!utilidades.validarCampo(campoMatricula.Text, "Matricula do aluno"))
+            if (!utilidades.validarCampo(campoId.Text, "Id da mensalidade"))
             {
                 return;
             }
 
             cmdSql.Remove(0, cmdSql.Length);
             cmdSql.Append("delete from mensalidade");
-            cmdSql.Append(" where Matricula_Alu = @Matricula_Alu");
+            cmdSql.Append(" where Id_Mens = @id");
 
             Conexao.Comandos.Parameters.Clear();
-            Conexao.Comandos.Parameters.AddWithValue("@Matricula_Alu", campoMatricula.Text);
+            Conexao.Comandos.Parameters.AddWithValue("@id", campoId.Text);
             Conexao.StrSql = cmdSql.ToString();
            
 
@@ -124,6 +125,7 @@ namespace Proj_Escola_BD
 
             cmdSql.Remove(0, cmdSql.Length);
             cmdSql.Append("SELECT ");
+            cmdSql.Append("Id_Mens as 'Id', ");
             cmdSql.Append("Matricula_Alu as 'Matricula', ");
             cmdSql.Append("DtPag_Mens as 'Data de Pagamento', ");
             cmdSql.Append("VlPag_Mens as 'Valor da Mensalidade', ");
@@ -167,10 +169,10 @@ namespace Proj_Escola_BD
                 cmdSql.Remove(0, cmdSql.Length);
                 cmdSql.Append("update mensalidade set ");
                 cmdSql.Append("DtPag_Mens =  @DtPag_Mens , VlPag_Mens = @VlPag_Mens , Juros_Mens = @Juros_Mens  , Desconto_Mens = @Desconto_Mens");
-                cmdSql.Append(" where Matricula_Alu= @Matricula_Alu");
+                cmdSql.Append(" where Id_Mens= @id");
 
                 Conexao.Comandos.Parameters.Clear();
-                Conexao.Comandos.Parameters.AddWithValue("@Matricula_Alu", campoMatricula.Text);
+                Conexao.Comandos.Parameters.AddWithValue("@id", campoId.Text);
                 Conexao.Comandos.Parameters.AddWithValue("@DtPag_Mens", campoData.Value);
                 Conexao.Comandos.Parameters.AddWithValue("@VlPag_Mens", Double.Parse(campoPagamento.Text));
                 Conexao.Comandos.Parameters.AddWithValue("@Juros_Mens", this.juros);
@@ -248,21 +250,21 @@ namespace Proj_Escola_BD
 
         private void selecionarMensalidade(object sender, DataGridViewCellEventArgs e)
         {
-            
-            campoMatricula.Text = gridMensalidade.CurrentRow.Cells[0].Value.ToString();
-            campoData.Text = gridMensalidade.CurrentRow.Cells[1].Value.ToString();
-            campoPagamento.Text = gridMensalidade.CurrentRow.Cells[2].Value.ToString();
-            outputJuros.Text = gridMensalidade.CurrentRow.Cells[3].Value.ToString();
-            outputDesconto.Text = gridMensalidade.CurrentRow.Cells[4].Value.ToString();
+            campoId.Text = gridMensalidade.CurrentRow.Cells[0].Value.ToString();
+            campoMatricula.Text = gridMensalidade.CurrentRow.Cells[1].Value.ToString();
+            campoData.Text = gridMensalidade.CurrentRow.Cells[2].Value.ToString();
+            campoPagamento.Text = gridMensalidade.CurrentRow.Cells[3].Value.ToString();
+            outputJuros.Text = gridMensalidade.CurrentRow.Cells[4].Value.ToString();
+            outputDesconto.Text = gridMensalidade.CurrentRow.Cells[5].Value.ToString();
             // checa se o valor real a ser pago é o do juros ou do desconto
             if (Double.Parse(outputJuros.Text) == 0)
             {
-                outputTotalPagamento.Text = "R$: " + gridMensalidade.CurrentRow.Cells[6].Value.ToString();
+                outputTotalPagamento.Text = "R$: " + gridMensalidade.CurrentRow.Cells[7].Value.ToString();
             }
 
             if (Double.Parse(outputDesconto.Text) == 0)
             {
-                outputTotalPagamento.Text = "R$: " + gridMensalidade.CurrentRow.Cells[5].Value.ToString();
+                outputTotalPagamento.Text = "R$: " + gridMensalidade.CurrentRow.Cells[6].Value.ToString();
             }
 
             outputDesconto.Text += "%";
@@ -273,6 +275,7 @@ namespace Proj_Escola_BD
         {
             cmdSql.Remove(0, cmdSql.Length);
             cmdSql.Append("SELECT ");
+            cmdSql.Append("Id_Mens as 'id', ");
             cmdSql.Append("Matricula_Alu as 'Matricula', ");
             cmdSql.Append("DtPag_Mens as 'Data de Pagamento', ");
             cmdSql.Append("VlPag_Mens as 'Valor da Mensalidade', ");
