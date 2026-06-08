@@ -206,15 +206,10 @@ namespace Proj_Escola_BD
             Conexao.Comandos.Parameters.AddWithValue("@NomeFoto_Alu", txtNome.Text + "_foto");
             Conexao.Comandos.Parameters.AddWithValue("@Foto_Alu", imagemBytes);
           
-
             Conexao.StrSql = cmdSql.ToString();
-
-
-
             if (Conexao.executarComando() > 0)
             {
                 MessageBox.Show("Alteração com sucesso");
-
             }
             else
             {

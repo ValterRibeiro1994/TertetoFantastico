@@ -33,23 +33,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtMat = new System.Windows.Forms.TextBox();
+            this.campoMatricula = new System.Windows.Forms.TextBox();
             this.lblDtaPag = new System.Windows.Forms.Label();
             this.lblValorPagar = new System.Windows.Forms.Label();
-            this.dtpPag = new System.Windows.Forms.DateTimePicker();
-            this.txtVPag = new System.Windows.Forms.TextBox();
-            this.lbljurus = new System.Windows.Forms.Label();
-            this.lblDesconto = new System.Windows.Forms.Label();
+            this.campoData = new System.Windows.Forms.DateTimePicker();
+            this.campoPagamento = new System.Windows.Forms.TextBox();
+            this.outputJuros = new System.Windows.Forms.Label();
+            this.outputDesconto = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnIncluir = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.gridMens = new System.Windows.Forms.DataGridView();
+            this.gridMensalidade = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
-            this.lblTotal = new System.Windows.Forms.Label();
+            this.outputTotalPagamento = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.gridMens)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMensalidade)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -107,12 +107,12 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Desconto";
             // 
-            // txtMat
+            // campoMatricula
             // 
-            this.txtMat.Location = new System.Drawing.Point(164, 31);
-            this.txtMat.Name = "txtMat";
-            this.txtMat.Size = new System.Drawing.Size(155, 20);
-            this.txtMat.TabIndex = 5;
+            this.campoMatricula.Location = new System.Drawing.Point(164, 31);
+            this.campoMatricula.Name = "campoMatricula";
+            this.campoMatricula.Size = new System.Drawing.Size(155, 20);
+            this.campoMatricula.TabIndex = 5;
             // 
             // lblDtaPag
             // 
@@ -132,43 +132,40 @@
             this.lblValorPagar.Size = new System.Drawing.Size(0, 15);
             this.lblValorPagar.TabIndex = 7;
             // 
-            // dtpPag
+            // campoData
             // 
-            this.dtpPag.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpPag.Location = new System.Drawing.Point(164, 72);
-            this.dtpPag.Name = "dtpPag";
-            this.dtpPag.Size = new System.Drawing.Size(155, 20);
-            this.dtpPag.TabIndex = 10;
+            this.campoData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.campoData.Location = new System.Drawing.Point(164, 72);
+            this.campoData.Name = "campoData";
+            this.campoData.Size = new System.Drawing.Size(155, 20);
+            this.campoData.TabIndex = 10;
             // 
-            // txtVPag
+            // campoPagamento
             // 
-            this.txtVPag.Location = new System.Drawing.Point(164, 109);
-            this.txtVPag.Name = "txtVPag";
-            this.txtVPag.Size = new System.Drawing.Size(155, 20);
-            this.txtVPag.TabIndex = 11;
+            this.campoPagamento.Location = new System.Drawing.Point(164, 109);
+            this.campoPagamento.Name = "campoPagamento";
+            this.campoPagamento.Size = new System.Drawing.Size(155, 20);
+            this.campoPagamento.TabIndex = 11;
             // 
-            // lbljurus
+            // outputJuros
             // 
-            this.lbljurus.AutoSize = true;
-            this.lbljurus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbljurus.ForeColor = System.Drawing.Color.Khaki;
-            this.lbljurus.Location = new System.Drawing.Point(167, 153);
-            this.lbljurus.Name = "lbljurus";
-            this.lbljurus.Size = new System.Drawing.Size(15, 16);
-            this.lbljurus.TabIndex = 12;
-            this.lbljurus.Text = "..";
-            this.lbljurus.Click += new System.EventHandler(this.lbljurus_Click);
+            this.outputJuros.AutoSize = true;
+            this.outputJuros.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputJuros.ForeColor = System.Drawing.Color.Khaki;
+            this.outputJuros.Location = new System.Drawing.Point(189, 152);
+            this.outputJuros.Name = "outputJuros";
+            this.outputJuros.Size = new System.Drawing.Size(0, 16);
+            this.outputJuros.TabIndex = 12;
             // 
-            // lblDesconto
+            // outputDesconto
             // 
-            this.lblDesconto.AutoSize = true;
-            this.lblDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesconto.ForeColor = System.Drawing.Color.Khaki;
-            this.lblDesconto.Location = new System.Drawing.Point(164, 190);
-            this.lblDesconto.Name = "lblDesconto";
-            this.lblDesconto.Size = new System.Drawing.Size(15, 16);
-            this.lblDesconto.TabIndex = 13;
-            this.lblDesconto.Text = "..";
+            this.outputDesconto.AutoSize = true;
+            this.outputDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputDesconto.ForeColor = System.Drawing.Color.Khaki;
+            this.outputDesconto.Location = new System.Drawing.Point(189, 189);
+            this.outputDesconto.Name = "outputDesconto";
+            this.outputDesconto.Size = new System.Drawing.Size(0, 16);
+            this.outputDesconto.TabIndex = 13;
             // 
             // btnPesquisar
             // 
@@ -225,14 +222,15 @@
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // gridMens
+            // gridMensalidade
             // 
-            this.gridMens.BackgroundColor = System.Drawing.Color.CadetBlue;
-            this.gridMens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridMens.Location = new System.Drawing.Point(33, 242);
-            this.gridMens.Name = "gridMens";
-            this.gridMens.Size = new System.Drawing.Size(699, 150);
-            this.gridMens.TabIndex = 19;
+            this.gridMensalidade.BackgroundColor = System.Drawing.Color.CadetBlue;
+            this.gridMensalidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridMensalidade.Location = new System.Drawing.Point(22, 269);
+            this.gridMensalidade.Name = "gridMensalidade";
+            this.gridMensalidade.Size = new System.Drawing.Size(699, 178);
+            this.gridMensalidade.TabIndex = 19;
+            this.gridMensalidade.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.selecionarMensalidade);
             // 
             // btnConsultar
             // 
@@ -245,23 +243,22 @@
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
-            // lblTotal
+            // outputTotalPagamento
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.Khaki;
-            this.lblTotal.Location = new System.Drawing.Point(335, 155);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(15, 16);
-            this.lblTotal.TabIndex = 21;
-            this.lblTotal.Text = "..";
+            this.outputTotalPagamento.AutoSize = true;
+            this.outputTotalPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputTotalPagamento.ForeColor = System.Drawing.Color.Khaki;
+            this.outputTotalPagamento.Location = new System.Drawing.Point(189, 233);
+            this.outputTotalPagamento.Name = "outputTotalPagamento";
+            this.outputTotalPagamento.Size = new System.Drawing.Size(0, 16);
+            this.outputTotalPagamento.TabIndex = 21;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(218, 152);
+            this.label7.Location = new System.Drawing.Point(52, 233);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 16);
             this.label7.TabIndex = 22;
@@ -274,21 +271,21 @@
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.outputTotalPagamento);
             this.Controls.Add(this.btnConsultar);
-            this.Controls.Add(this.gridMens);
+            this.Controls.Add(this.gridMensalidade);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnIncluir);
             this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.lblDesconto);
-            this.Controls.Add(this.lbljurus);
-            this.Controls.Add(this.txtVPag);
-            this.Controls.Add(this.dtpPag);
+            this.Controls.Add(this.outputDesconto);
+            this.Controls.Add(this.outputJuros);
+            this.Controls.Add(this.campoPagamento);
+            this.Controls.Add(this.campoData);
             this.Controls.Add(this.lblValorPagar);
             this.Controls.Add(this.lblDtaPag);
-            this.Controls.Add(this.txtMat);
+            this.Controls.Add(this.campoMatricula);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -296,7 +293,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmMensalidade";
             this.Text = "frmMensalidade";
-            ((System.ComponentModel.ISupportInitialize)(this.gridMens)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridMensalidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,21 +306,21 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtMat;
+        private System.Windows.Forms.TextBox campoMatricula;
         private System.Windows.Forms.Label lblDtaPag;
         private System.Windows.Forms.Label lblValorPagar;
-        private System.Windows.Forms.DateTimePicker dtpPag;
-        private System.Windows.Forms.TextBox txtVPag;
-        private System.Windows.Forms.Label lbljurus;
-        private System.Windows.Forms.Label lblDesconto;
+        private System.Windows.Forms.DateTimePicker campoData;
+        private System.Windows.Forms.TextBox campoPagamento;
+        private System.Windows.Forms.Label outputJuros;
+        private System.Windows.Forms.Label outputDesconto;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnIncluir;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.DataGridView gridMens;
+        private System.Windows.Forms.DataGridView gridMensalidade;
         private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label outputTotalPagamento;
         private System.Windows.Forms.Label label7;
     }
 }

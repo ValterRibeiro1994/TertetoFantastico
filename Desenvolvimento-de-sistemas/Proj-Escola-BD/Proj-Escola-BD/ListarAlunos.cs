@@ -89,8 +89,6 @@ namespace Proj_Escola_BD
             // envia os dados para tabela do grid
             tabela_dados = conjunto_dados.Tables[0];
             gridAlunos.DataSource = tabela_dados;
-
-
         }
 
 
