@@ -1,5 +1,5 @@
 # Menu Strip Tools
-1 - Adicionado Link de Formulario para cadastrar Tutor
+1 - Adicionado Link de Formulario para cadastrar Tutor.
 2 - Adicionado Link de Formulario para cadastrar Pet
 
 # Getters e Setter
