@@ -74,6 +74,11 @@ namespace AppPetShop
             {
                 conexao.comandoSql.Parameters.Clear();
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.ToString()); // captura os detalhes do erro
+                MessageBox.Show("Erro: " + ex.Message); // captura apenas mensagem
+            }  
 
         }
     }

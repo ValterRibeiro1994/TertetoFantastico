@@ -52,10 +52,10 @@ namespace AppPetShop
 
                 // adiciona os parametros da consulta
                 conexao.comandoSql.Parameters.Clear(); // limpa os paramtros anteriores
-                conexao.comandoSql.Parameters.AddWithValue("@nome", getNome());
-                conexao.comandoSql.Parameters.AddWithValue("@cpf", getCpf());
-                conexao.comandoSql.Parameters.AddWithValue("@celular", getcelular());
-                conexao.comandoSql.Parameters.AddWithValue("@email", getEmail());
+                conexao.comandoSql.Parameters.AddWithValue("@nome", this.nome);
+                conexao.comandoSql.Parameters.AddWithValue("@cpf", this.cpf);
+                conexao.comandoSql.Parameters.AddWithValue("@celular", this.celular);
+                conexao.comandoSql.Parameters.AddWithValue("@email", this.email);
 
                 // modifica a string de consulta da classe conexão
                 conexao.setStrComandoSql(comandoSql.ToString());
@@ -77,26 +77,7 @@ namespace AppPetShop
             }
             
         }
-        
-        private String getNome()
-        {
-            return nome;
-        }
-
-        private String getCpf()
-        {
-            return cpf;
-        }
-
-        private String getcelular()
-        {
-            return celular;
-        }
-
-        private String getEmail()
-        {
-            return email;
-        }
+       
 
         /*
          Setter validam as regras de entrada, antes de armazenar os valores

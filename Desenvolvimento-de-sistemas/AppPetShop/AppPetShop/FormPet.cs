@@ -10,7 +10,7 @@ namespace AppPetShop
         /*
          Usar o modelo de getters e setter do mesmo modo que em formTutor, 
          */
-        string nome, cpf, genero, raca, especie, data_nascimento, foto;
+        private string nome, cpf, genero, raca, especie;
         Utilidades utils;
         StringBuilder comandoSql;
         Conexao conexao;
@@ -68,13 +68,13 @@ namespace AppPetShop
             {
                 // classe de conexão
                 conexao.comandoSql.Parameters.Clear();
-                conexao.comandoSql.Parameters.AddWithValue("@cpf", getCpf());
+                conexao.comandoSql.Parameters.AddWithValue("@cpf", this.cpf);
                 conexao.comandoSql.Parameters.AddWithValue("@data", inputNascimento.Value);
-                conexao.comandoSql.Parameters.AddWithValue("@genero", getGenero());
-                conexao.comandoSql.Parameters.AddWithValue("@raca", getRaca());
+                conexao.comandoSql.Parameters.AddWithValue("@genero", this.genero);
+                conexao.comandoSql.Parameters.AddWithValue("@raca", this.raca);
                 conexao.comandoSql.Parameters.AddWithValue("@foto", fotoPet);
-                conexao.comandoSql.Parameters.AddWithValue("@nome", getNome());
-                conexao.comandoSql.Parameters.AddWithValue("@especie", getEspecie());
+                conexao.comandoSql.Parameters.AddWithValue("@nome", this.nome);
+                conexao.comandoSql.Parameters.AddWithValue("@especie", this.especie);
 
                 // modifica a string de colsulta da classe conexão
                 conexao.setStrComandoSql(comandoSql.ToString());
@@ -176,29 +176,5 @@ namespace AppPetShop
             }
         }
 
-        private string getCpf()
-        {
-            return cpf;
-        }
-
-        private string getNome()
-        {
-            return nome;
-        }
-
-        private string getRaca()
-        {
-            return raca;
-        }
-
-        private string getEspecie()
-        {
-            return especie;
-        }
-
-        private string getGenero()
-        {
-            return genero;
-        }
     }
 }
