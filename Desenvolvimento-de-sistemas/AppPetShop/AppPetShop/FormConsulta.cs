@@ -77,7 +77,7 @@ namespace AppPetShop
 
             try
             {
-                setCodigo(int.Parse(campoCod.Text));
+                setCodigo(campoCod.Text);
                 setDesc(descConsulta.Text);
                 
             } catch (Exception ex)
@@ -89,9 +89,9 @@ namespace AppPetShop
             try
             {
                 conexao.comandoSql.Parameters.Clear();
-                conexao.comandoSql.Parameters.AddWithValue("@codigo", codigo);
+                conexao.comandoSql.Parameters.AddWithValue("@codigo", this.codigo);
                 conexao.comandoSql.Parameters.AddWithValue("@data", dataConsulta.Value);
-                conexao.comandoSql.Parameters.AddWithValue("@prescricao", desc);
+                conexao.comandoSql.Parameters.AddWithValue("@prescricao", this.desc);
 
                 conexao.setStrComandoSql(cmdSql.ToString());
 
@@ -112,21 +112,14 @@ namespace AppPetShop
 
         }
 
-        private void setCodigo(int codigo)
+        private void setCodigo(string codigo)
         {
-            if (!utils.campoVazio(campoCod.Text)) 
-            {
-                this.codigo = int.Parse(campoCod.Text);
-            }
+            this.codigo = int.Parse(codigo);
         }
 
-        private void setDesc(String desc)
+        private void setDesc(String descri)
         {
-            if (!utils.campoVazio(descConsulta.Text))
-            {
-                this.desc = descConsulta.Text;
-            }
-
+            this.desc = descri;
         }   
     }
 }
