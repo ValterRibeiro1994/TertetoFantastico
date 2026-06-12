@@ -1,17 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\",
+  "WorkspaceRootPath": "C:\\Users\\alunoinfo.DESKTOP-FFTGG6Q\\Desktop\\clone\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|c:\\users\\valte\\desktop\\mundo da programacao\\tertetofantastico\\desenvolvimento-de-sistemas\\proj-escola-bd\\proj-escola-bd\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|c:\\users\\alunoinfo.desktop-fftgg6q\\desktop\\clone\\tertetofantastico\\desenvolvimento-de-sistemas\\proj-escola-bd\\proj-escola-bd\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|solutionrelative:proj-escola-bd\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|c:\\users\\alunoinfo.desktop-fftgg6q\\desktop\\clone\\tertetofantastico\\desenvolvimento-de-sistemas\\proj-escola-bd\\proj-escola-bd\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|solutionrelative:proj-escola-bd\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|c:\\users\\valte\\desktop\\mundo da programacao\\tertetofantastico\\desenvolvimento-de-sistemas\\proj-escola-bd\\proj-escola-bd\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|C:\\Users\\alunoinfo.DESKTOP-FFTGG6Q\\Desktop\\clone\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\proj-escola-bd\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|solutionrelative:proj-escola-bd\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\proj-escola-bd\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|C:\\Users\\alunoinfo.DESKTOP-FFTGG6Q\\Desktop\\clone\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\proj-escola-bd\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A6CCBD85-1C07-4A1A-8708-E675E4376725}|Proj-Escola-BD\\Proj-Escola-BD.csproj|solutionrelative:proj-escola-bd\\frmalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -22,42 +26,53 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Conexao.cs",
-              "DocumentMoniker": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\Conexao.cs",
-              "RelativeDocumentMoniker": "Proj-Escola-BD\\Conexao.cs",
-              "ToolTip": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\Conexao.cs",
-              "RelativeToolTip": "Proj-Escola-BD\\Conexao.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAABwAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Menu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\alunoinfo.DESKTOP-FFTGG6Q\\Desktop\\clone\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\Menu.cs",
+              "RelativeDocumentMoniker": "Proj-Escola-BD\\Menu.cs",
+              "ToolTip": "C:\\Users\\alunoinfo.DESKTOP-FFTGG6Q\\Desktop\\clone\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\Menu.cs [Design]",
+              "RelativeToolTip": "Proj-Escola-BD\\Menu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T13:21:57.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-12T20:02:24.088Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Conexao.cs",
+              "DocumentMoniker": "C:\\Users\\alunoinfo.DESKTOP-FFTGG6Q\\Desktop\\clone\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\Conexao.cs",
+              "RelativeDocumentMoniker": "Proj-Escola-BD\\Conexao.cs",
+              "ToolTip": "C:\\Users\\alunoinfo.DESKTOP-FFTGG6Q\\Desktop\\clone\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\Conexao.cs",
+              "RelativeToolTip": "Proj-Escola-BD\\Conexao.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAABwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T13:21:57.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "frmAlunos.cs",
-              "DocumentMoniker": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmAlunos.cs",
+              "DocumentMoniker": "C:\\Users\\alunoinfo.DESKTOP-FFTGG6Q\\Desktop\\clone\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmAlunos.cs",
               "RelativeDocumentMoniker": "Proj-Escola-BD\\frmAlunos.cs",
-              "ToolTip": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmAlunos.cs",
+              "ToolTip": "C:\\Users\\alunoinfo.DESKTOP-FFTGG6Q\\Desktop\\clone\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmAlunos.cs",
               "RelativeToolTip": "Proj-Escola-BD\\frmAlunos.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-08T12:35:01.189Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "frmAlunos.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmAlunos.cs",
+              "DocumentMoniker": "C:\\Users\\alunoinfo.DESKTOP-FFTGG6Q\\Desktop\\clone\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmAlunos.cs",
               "RelativeDocumentMoniker": "Proj-Escola-BD\\frmAlunos.cs",
               "ToolTip": "C:\\Users\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmAlunos.cs [Design]",
-              "RelativeToolTip": "Proj-Escola-BD\\frmAlunos.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\valte\\Desktop\\Mundo da programacao\\TertetoFantastico\\Desenvolvimento-de-sistemas\\Proj-Escola-BD\\Proj-Escola-BD\\frmAlunos.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-08T12:34:58.135Z"
             }

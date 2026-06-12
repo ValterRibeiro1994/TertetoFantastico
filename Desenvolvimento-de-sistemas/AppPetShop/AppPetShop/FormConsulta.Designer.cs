@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.campoCod = new System.Windows.Forms.TextBox();
-            this.descConsulta = new System.Windows.Forms.TextBox();
             this.dataConsulta = new System.Windows.Forms.DateTimePicker();
             this.btnConsulta = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.descConsulta = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // campoCod
@@ -45,14 +45,6 @@
             this.campoCod.Name = "campoCod";
             this.campoCod.Size = new System.Drawing.Size(282, 38);
             this.campoCod.TabIndex = 1;
-            // 
-            // descConsulta
-            // 
-            this.descConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descConsulta.Location = new System.Drawing.Point(357, 226);
-            this.descConsulta.Name = "descConsulta";
-            this.descConsulta.Size = new System.Drawing.Size(282, 116);
-            this.descConsulta.TabIndex = 3;
             // 
             // dataConsulta
             // 
@@ -115,18 +107,26 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Data da consulta";
             // 
+            // descConsulta
+            // 
+            this.descConsulta.Location = new System.Drawing.Point(355, 228);
+            this.descConsulta.Name = "descConsulta";
+            this.descConsulta.Size = new System.Drawing.Size(282, 124);
+            this.descConsulta.TabIndex = 10;
+            this.descConsulta.Text = "";
+            // 
             // FormConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 555);
+            this.Controls.Add(this.descConsulta);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConsulta);
             this.Controls.Add(this.dataConsulta);
-            this.Controls.Add(this.descConsulta);
             this.Controls.Add(this.campoCod);
             this.Name = "FormConsulta";
             this.Text = "FormConsulta";
@@ -138,12 +138,12 @@
         #endregion
 
         private System.Windows.Forms.TextBox campoCod;
-        private System.Windows.Forms.TextBox descConsulta;
         private System.Windows.Forms.DateTimePicker dataConsulta;
         private System.Windows.Forms.Button btnConsulta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.RichTextBox descConsulta;
     }
 }

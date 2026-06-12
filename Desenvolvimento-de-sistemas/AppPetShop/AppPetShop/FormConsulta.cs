@@ -12,9 +12,14 @@ namespace AppPetShop
 {
     public partial class FormConsulta : Form
     {
+        int codigo;
+        String desc;
+
+
         Conexao conexao = new Conexao();
         StringBuilder cmdSql = new StringBuilder();
         Utilidades utils = new Utilidades();
+
 
 
         public FormConsulta()
@@ -72,14 +77,56 @@ namespace AppPetShop
 
             try
             {
+                setCodigo(int.Parse(campoCod.Text));
+                setDesc(descConsulta.Text);
+                
+            } catch (Exception ex)
+            {
+                utils.notificarUsuario(ex.Message);
+                return;
+            }
+
+            try
+            {
                 conexao.comandoSql.Parameters.Clear();
+                conexao.comandoSql.Parameters.AddWithValue("@codigo", codigo);
+                conexao.comandoSql.Parameters.AddWithValue("@data", dataConsulta.Value);
+                conexao.comandoSql.Parameters.AddWithValue("@prescricao", desc);
+
+                conexao.setStrComandoSql(cmdSql.ToString());
+
+                if (conexao.executarComando() > 0)
+                {
+                    utils.notificarUsuario("Consulta cadastrada com sucesso !!!");
+                }
+                else
+                {
+                    utils.notificarUsuario("Consulta não cadastrada no banco de dados");
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.ToString()); // captura os detalhes do erro
                 MessageBox.Show("Erro: " + ex.Message); // captura apenas mensagem
-            }  
+            }
 
         }
+
+        private void setCodigo(int codigo)
+        {
+            if (!utils.campoVazio(campoCod.Text)) 
+            {
+                this.codigo = int.Parse(campoCod.Text);
+            }
+        }
+
+        private void setDesc(String desc)
+        {
+            if (!utils.campoVazio(descConsulta.Text))
+            {
+                this.desc = descConsulta.Text;
+            }
+
+        }   
     }
 }

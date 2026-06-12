@@ -96,3 +96,20 @@ C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de
 C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj-Escola-BD.exe
 C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj-Escola-BD.pdb
 C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj_Escola_BD.listarAlunos.resources
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\bin\Debug\Proj-Escola-BD.exe.config
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\bin\Debug\Proj-Escola-BD.exe
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\bin\Debug\Proj-Escola-BD.pdb
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\bin\Debug\System.Memory.dll
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj-Escola-BD.csproj.AssemblyReference.cache
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj_Escola_BD.frmAlunos.resources
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj_Escola_BD.frmMensalidade.resources
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj_Escola_BD.listagem.resources
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj_Escola_BD.ListarAlunos.resources
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj_Escola_BD.Menu.resources
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj_Escola_BD.Properties.Resources.resources
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj-Escola-BD.csproj.GenerateResource.cache
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj-Escola-BD.csproj.CoreCompileInputs.cache
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj-Esc.E5D0C09F.Up2Date
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj-Escola-BD.exe
+C:\Users\alunoinfo.DESKTOP-FFTGG6Q\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\Proj-Escola-BD\Proj-Escola-BD\obj\Debug\Proj-Escola-BD.pdb
