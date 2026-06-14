@@ -58,6 +58,12 @@
     <Compile Include="FormConsulta.Designer.cs">
       <DependentUpon>FormConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPesquisarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPesquisarConsulta.Designer.cs">
+      <DependentUpon>FormPesquisarConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPesquisarPet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="FormConsulta.resx">
       <DependentUpon>FormConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPesquisarConsulta.resx">
+      <DependentUpon>FormPesquisarConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPesquisarPet.resx">
       <DependentUpon>FormPesquisarPet.cs</DependentUpon>

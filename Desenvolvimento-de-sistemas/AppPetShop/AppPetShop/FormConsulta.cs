@@ -75,17 +75,9 @@ namespace AppPetShop
             cmdSql.Append(" (cod_pet, data_consulta, prescricao_consulta) ");
             cmdSql.Append("values (@codigo, @data, @prescricao);");
 
-            try
-            {
-                setCodigo(campoCod.Text);
-                setDesc(descConsulta.Text);
-                
-            } catch (Exception ex)
-            {
-                utils.notificarUsuario(ex.Message);
-                return;
-            }
-
+            setCodigo(campoCod.Text);
+            setDesc(descConsulta.Text);
+           
             try
             {
                 conexao.comandoSql.Parameters.Clear();
@@ -106,7 +98,6 @@ namespace AppPetShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.ToString()); // captura os detalhes do erro
                 MessageBox.Show("Erro: " + ex.Message); // captura apenas mensagem
             }
 

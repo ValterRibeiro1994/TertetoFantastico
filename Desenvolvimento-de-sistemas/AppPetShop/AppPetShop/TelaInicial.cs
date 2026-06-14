@@ -38,5 +38,11 @@ namespace AppPetShop
             FormConsulta tela = new FormConsulta();
             tela.Show();
         }
+
+        private void consultasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormPesquisarConsulta tela = new FormPesquisarConsulta();
+            tela.Show();
+        }
     }
 }
