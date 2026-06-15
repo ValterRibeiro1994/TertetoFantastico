@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace AppPetShop
 {
@@ -69,8 +70,6 @@ namespace AppPetShop
             }
 
             this.cpf_tutor = cpf;
-
-
         }
 
         public void setNomePet(string nomePet)
@@ -148,13 +147,31 @@ namespace AppPetShop
                 throw new Exception("Genero de Pet não indentificado !!!");
             }
         }
-       public void setDataPet(DateTimePicker dataPet)
+        
+        public void setDataPet(DateTimePicker dataPet)
         {
             DateTime dataHoje = DateTime.Now;
 
             if (dataPet.Value > dataHoje)
             {
                 throw new Exception("Data de nascimento inválida para pet");
+            }
+        }
+    
+        public void setFoto(PictureBox imagem)
+        {
+            if (String.IsNullOrEmpty(imagem.ImageLocation))
+            {
+                throw new Exception("Imagem do Pet é Obrigatorio");
+            }
+
+            try
+            {
+                this.foto = File.ReadAllBytes(imagem.ImageLocation);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro de Foto: " + e.Message);
             }
         }
     }
