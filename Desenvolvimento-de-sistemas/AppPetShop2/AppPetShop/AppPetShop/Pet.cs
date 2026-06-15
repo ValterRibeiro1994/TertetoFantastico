@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AppPetShop
 {
@@ -79,8 +80,8 @@ namespace AppPetShop
                 throw new Exception("Campo nome do pet não pode estar vazio!!!");
             }
 
-           int n = nomePet.Length;
-            if ( n > 30)
+            int n = nomePet.Length;
+            if (n > 30)
             {
                 throw new Exception("Limite de 30 caracteres!");
             }
@@ -147,6 +148,15 @@ namespace AppPetShop
                 throw new Exception("Genero de Pet não indentificado !!!");
             }
         }
-    }   public void setData
+       public void setDataPet(DateTimePicker dataPet)
+        {
+            DateTime dataHoje = DateTime.Now;
+
+            if (dataPet.Value > dataHoje)
+            {
+                throw new Exception("Data de nascimento inválida para pet");
+            }
+        }
+    }
 
 }
