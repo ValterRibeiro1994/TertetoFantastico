@@ -148,7 +148,7 @@ namespace AppPetShop
             }
         }
         
-        public void setDataPet(DateTimePicker dataPet)
+        public void setNascimento(DateTimePicker dataPet)
         {
             DateTime dataHoje = DateTime.Now;
 
@@ -173,6 +173,46 @@ namespace AppPetShop
             {
                 throw new Exception("Erro de Foto: " + e.Message);
             }
+        }
+
+        public int getCodigo()
+        {
+            return this.codigo;
+        }
+
+        public string getCpf()
+        {
+            return this.cpf_tutor;
+        }
+
+        public string getNome()
+        {
+            return this.nome_pet;
+        }
+
+        public string getEspecie()
+        {
+            return this.especie;
+        }
+
+        public string getRaca()
+        {
+            return this.raca;
+        }
+
+        public char getGenero()
+        {
+            return this.genero;
+        }
+
+        public DateTime getNascimento()
+        {
+            return this.nascimento; 
+        }
+
+        public byte[] getFoto()
+        {
+            return this.foto;
         }
     }
 
