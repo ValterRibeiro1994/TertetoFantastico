@@ -24,6 +24,8 @@ create table if not exists tb_pet(
     foto_pet blob,
     nome_pet varchar(30) not null,
     especie_pet varchar(30) not null,
+
+    
     PRIMARY key (cod_pet),
     -- Veja a sintaxe correta aqui (sem a vírgula antes do ON DELETE):
     FOREIGN key (cpf_tutor) REFERENCES tb_tutor(cpf_tutor) ON DELETE CASCADE
