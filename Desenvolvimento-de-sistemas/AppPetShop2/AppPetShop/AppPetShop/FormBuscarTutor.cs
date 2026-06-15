@@ -35,20 +35,13 @@ namespace AppPetShop
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnPesquisarTodos_Click(object sender, EventArgs e)
         {
-            try
-            {
-                repositorio.listarTutores(gridTutor);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            chamarGrid();
         }
 
         private void gridTutor_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -63,9 +56,67 @@ namespace AppPetShop
             campoEmail.Text= email;
             campoTelefone.Text = telefone;
 
-
         }
-    
+
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            // temos que garantir que o cpf não possa ser modificado via código
+            string cpf = gridTutor.CurrentRow.Cells[1].Value.ToString();
+            if (!campoCpf.Text.Equals(cpf))
+            {
+                MessageBox.Show("CPF não pode ser alterado !!!");
+                return;
+            }
+
+            string nome = campoNome.Text.ToString();
+            string email = campoEmail.Text.ToString();
+            string telefone = campoTelefone.Text.ToString();
+
+            try
+            {
+                Tutor tutor = new Tutor();
+                tutor.setTelefone(telefone);
+                tutor.setEmail(email);
+                tutor.setCpf(cpf);
+                tutor.setNome(nome);
+
+                if (repositorio.alterarTutor(tutor))
+                {
+                    chamarGrid();
+                    MessageBox.Show("Dados Alterados com sucesso !!!");
+                }
+                else
+                {
+                    MessageBox.Show("Dados não foram alterados !!!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         
+        private void chamarGrid()
+        {
+            try
+            {
+                repositorio.listarTutores(gridTutor);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            campoCpf.Text = "";
+            campoNome.Text = "";
+            campoEmail.Text = "";
+            campoTelefone.Text = "";
+        }
     }
+
 }

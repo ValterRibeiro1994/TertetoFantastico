@@ -30,8 +30,14 @@ namespace AppPetShop
                 tutor.setCpf(inputCpf.Text);
                 tutor.setEmail(inputEmail.Text);
                 tutor.setTelefone(inputTelefone.Text);
-                repositorio.salvarTutor(tutor);
-                MessageBox.Show("Tutor Registrado com Sucesso !!!");
+                if (repositorio.salvarTutor(tutor))
+                {
+                    MessageBox.Show("Tutor Registrado com Sucesso !!!");
+                }
+                else
+                {
+                    MessageBox.Show("Tutor Não registrado !!!");
+                }
                 tutor = null;
             }
             catch (Exception ex)

@@ -29,5 +29,10 @@ namespace AppPetShop
             FormBuscarTutor tela = new FormBuscarTutor();
             tela.ShowDialog();
         }
+
+        private void fecharApp(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

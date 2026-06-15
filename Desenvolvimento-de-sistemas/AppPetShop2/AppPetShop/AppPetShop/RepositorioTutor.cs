@@ -46,7 +46,7 @@ namespace AppPetShop
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro: " + ex.Message);
+                throw new Exception(ex.Message);
             }
         }
 
@@ -73,6 +73,7 @@ namespace AppPetShop
                 conexao.comandoSql.Parameters.Clear();
                 conexao.comandoSql.Parameters.AddWithValue("@cpf", cpf);
                 conexao.setStrComandoSql(string_comando.ToString());
+                
                 return conexao.executarComando() > 0;
             }
             catch (Exception ex)
@@ -162,5 +163,31 @@ namespace AppPetShop
             }
         }
             
+        public bool alterarTutor(Tutor tutor)
+        {
+            string_comando.Clear();
+
+            string_comando.Append("UPDATE tb_tutor set ");
+            string_comando.Append("nome_tutor = @nome, ");
+            string_comando.Append("celular_tutor = @contato, ");
+            string_comando.Append("email_tutor = @email ");
+            string_comando.Append("WHERE cpf_tutor = @cpf");
+
+            try
+            {
+                conexao.comandoSql.Parameters.Clear();
+                conexao.comandoSql.Parameters.AddWithValue("@nome", tutor.getNome());
+                conexao.comandoSql.Parameters.AddWithValue("@contato", tutor.getTelefone());
+                conexao.comandoSql.Parameters.AddWithValue("@email", tutor.getEmail());
+                conexao.comandoSql.Parameters.AddWithValue("@cpf", tutor.getCpf());
+
+                conexao.setStrComandoSql(string_comando.ToString());
+                return conexao.executarComando() > 0;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

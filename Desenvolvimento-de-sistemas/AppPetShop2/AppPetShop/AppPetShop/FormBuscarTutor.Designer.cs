@@ -40,6 +40,8 @@
             this.btnFiltrarCpf = new System.Windows.Forms.Button();
             this.btnPesquisarTodos = new System.Windows.Forms.Button();
             this.gridTutor = new System.Windows.Forms.DataGridView();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridTutor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,18 +141,41 @@
             // 
             // gridTutor
             // 
+            this.gridTutor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridTutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTutor.Location = new System.Drawing.Point(319, 93);
+            this.gridTutor.Location = new System.Drawing.Point(319, 96);
             this.gridTutor.Name = "gridTutor";
-            this.gridTutor.Size = new System.Drawing.Size(469, 215);
+            this.gridTutor.Size = new System.Drawing.Size(474, 241);
             this.gridTutor.TabIndex = 11;
             this.gridTutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTutor_CellClick);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Location = new System.Drawing.Point(51, 314);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(103, 23);
+            this.btnAlterar.TabIndex = 12;
+            this.btnAlterar.Text = "Alterar Tutor";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(184, 314);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(103, 23);
+            this.btnLimpar.TabIndex = 13;
+            this.btnLimpar.Text = "Limpar Campos";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // FormBuscarTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(805, 361);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.gridTutor);
             this.Controls.Add(this.btnPesquisarTodos);
             this.Controls.Add(this.btnFiltrarCpf);
@@ -185,5 +210,7 @@
         private System.Windows.Forms.Button btnFiltrarCpf;
         private System.Windows.Forms.Button btnPesquisarTodos;
         private System.Windows.Forms.DataGridView gridTutor;
+        private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

@@ -39,5 +39,32 @@ namespace AppPetShop
             }
         }
 
+        public void setCpfTutor (string cpf)
+        {
+            if (String.IsNullOrEmpty(cpf))
+            {
+                throw new Exception("Campo cpf não pode estar vazio !!!");
+            }
+
+            // checa se todos os caracteres são numeros
+            int n = cpf.Length;
+            for (int i = 0; i < n; i++)
+            {
+                // 0 7 8
+                
+                char letra = cpf[i]; // 0
+                
+                
+                if (char.IsDigit(letra))
+                {
+                    continue;
+                } else
+                {
+                    throw new Exception("Informe apenas números para o cpf !!!");
+                }
+
+            }
+        }
+
     }
 }
