@@ -55,7 +55,7 @@ namespace AppPetShop
                 conexao.comandoSql.Parameters.Clear();
 
                 // adiciona o cpf como parametro na conexão
-                conexao.comandoSql.Parameters.AddWithValue("@cpf", getCpf());
+                conexao.comandoSql.Parameters.AddWithValue("@codigo", codigo);
 
                 // adiciona a string de comando na conexão
                 conexao.setStrComandoSql(comandoSql.ToString());
@@ -67,7 +67,10 @@ namespace AppPetShop
                 DataTable tabelaDados = conjuntoDeDados.Tables[0];
 
                 // captura os dados
-
+                // verificar se teve retorno
+                // setters para armazenar os dados no Pet
+                // retornar Pet
+                return pet;
             }
             catch (Exception ex)
             {
