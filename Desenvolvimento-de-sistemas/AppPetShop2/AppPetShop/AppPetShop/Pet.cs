@@ -39,7 +39,7 @@ namespace AppPetShop
             }
         }
 
-        public void setCpfTutor (string cpf)
+        public void setCpfTutor(string cpf)
         {
             if (String.IsNullOrEmpty(cpf))
             {
@@ -50,21 +50,103 @@ namespace AppPetShop
             int n = cpf.Length;
             for (int i = 0; i < n; i++)
             {
-                // 0 7 8
-                
-                char letra = cpf[i]; // 0
-                
-                
+                char letra = cpf[i];
                 if (char.IsDigit(letra))
                 {
                     continue;
-                } else
+                }
+                else
                 {
                     throw new Exception("Informe apenas números para o cpf !!!");
                 }
 
             }
+
+            if (n != 11)
+            {
+                throw new Exception("Campo cpf deve conter 11 números");
+            }
+
+            this.cpf_tutor = cpf;
+
+
         }
 
-    }
+        public void setNomePet(string nomePet)
+        {
+            if (String.IsNullOrEmpty(nomePet))
+            {
+                throw new Exception("Campo nome do pet não pode estar vazio!!!");
+            }
+
+           int n = nomePet.Length;
+            if ( n > 30)
+            {
+                throw new Exception("Limite de 30 caracteres!");
+            }
+
+            this.nome_pet = nomePet;
+        }
+
+        public void setEspecie(string especiePet)
+        {
+            if (String.IsNullOrEmpty(especiePet))
+            {
+                throw new Exception("Especie do pet deve ser Informado !!!");
+            }
+
+            if (especiePet.Length > 30)
+            {
+                throw new Exception("Limite de caracteres invalido para Pet");
+            }
+
+            this.especie = especiePet;
+        }
+
+        public void setRaca(string racapet)
+        {
+            if (String.IsNullOrEmpty(racapet))
+            {
+                throw new Exception("Campo raça pet não pode estar vazio");
+            }
+
+            if (racapet.Length > 30)
+            {
+                throw new Exception("Limite de caracteres invalido");
+            }
+
+            this.raca = racapet;
+
+        }
+
+        public void setGenero(char genero)
+        {
+
+            // verifica se o espaço esta em branco
+            if (Char.IsWhiteSpace(genero))
+            {
+                throw new Exception("Genero deve ser informado !!!");
+            }
+
+            // ele deve ser uma letra
+            if (!Char.IsLetter(genero))
+            {
+                throw new Exception("Genero deve ser representado apenas com letras ( M|F) !!!");
+            }
+
+            // letra maiuscula
+            char letra = Char.ToUpper(genero);
+
+            // verifica se é F ou M
+            if (letra.Equals('M') || letra.Equals('F'))
+            {
+                this.genero = letra;
+            }
+            else
+            {
+                throw new Exception("Genero de Pet não indentificado !!!");
+            }
+        }
+    }   public void setData
+
 }
