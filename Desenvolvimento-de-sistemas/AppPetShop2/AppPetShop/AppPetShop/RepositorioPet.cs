@@ -36,6 +36,7 @@ namespace AppPetShop
 
             // Criar comando de busca
             comandoSql.Clear();
+
             // insere o comando de busca
             comandoSql.Append("SELECT ");
             comandoSql.Append("cod_pet as 'Código', ");
@@ -66,10 +67,33 @@ namespace AppPetShop
                 // monta a tabela de dados
                 DataTable tabelaDados = conjuntoDeDados.Tables[0];
 
-                // captura os dados
                 // verificar se teve retorno
-                // setters para armazenar os dados no Pet
-                // retornar Pet
+                if (tabelaDados.Rows.Count == 0)
+                {
+                    throw new Exception("Código não encontrado na base de dados");
+                }
+
+                // captura os dados
+                DataRow linha = tabelaDados.Rows[0];
+                string codigoPet = linha["Código"].ToString();
+                string cpfTutor = linha["CPF Tutor"].ToString();
+                DateTime dataNascimento = (DateTime)linha["nascimento_pet"];
+                string genero = linha["Genero"].ToString();
+                string raca = linha["Raça"].ToString();
+                string nome = linha["Nome"].ToString();
+                string especie = linha["Especie"].ToString();
+                byte[] foto = (byte[]) linha["Foto"];
+
+                pet.setCodigo(codigoPet);
+                pet.setCpfTutor(cpfTutor);
+                pet.setNascimento(dataNascimento);
+                pet.setGenero(genero[0]);
+                pet.setRaca(raca);
+                pet.setNomePet(nome);
+                pet.setEspecie(especie);
+                pet.setFoto(foto);
+
+                // retorna o objeto preenchido
                 return pet;
             }
             catch (Exception ex)

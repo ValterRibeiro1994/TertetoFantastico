@@ -148,31 +148,24 @@ namespace AppPetShop
             }
         }
         
-        public void setNascimento(DateTimePicker dataPet)
+        public void setNascimento(DateTime dataPet)
         {
             DateTime dataHoje = DateTime.Now;
 
-            if (dataPet.Value > dataHoje)
+            if (dataPet > dataHoje)
             {
                 throw new Exception("Data de nascimento inválida para pet");
             }
         }
-    
-        public void setFoto(PictureBox imagem)
+
+        public void setFoto(byte[] foto)
         {
-            if (String.IsNullOrEmpty(imagem.ImageLocation))
+            if (foto == null || foto.Length == 0)
             {
-                throw new Exception("Imagem do Pet é Obrigatorio");
+                throw new Exception("Imagem do Pet é obrigatória.");
             }
 
-            try
-            {
-                this.foto = File.ReadAllBytes(imagem.ImageLocation);
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Erro de Foto: " + e.Message);
-            }
+            this.foto = foto;
         }
 
         public int getCodigo()
