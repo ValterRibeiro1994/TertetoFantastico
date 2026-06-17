@@ -10,7 +10,7 @@ namespace AppPetShop
 {
     internal class Pet
     {
-        int codigo;
+        CodigoBanco codigo;
         Cpf cpf;
         Nome nome_pet;
         Nome especie;
@@ -19,26 +19,9 @@ namespace AppPetShop
         DateTime nascimento;
         byte[] foto;
 
-        public void setCodigo(string codigoStr)
+        public void setCodigo(CodigoBanco codigoStr)
         {
-            if (String.IsNullOrEmpty(codigoStr))
-            {
-                throw new Exception("Campo código não deve estar vazio !!!");
-            }
-
-            try
-            {
-                int codigoInt = int.Parse(codigoStr);
-                if (codigoInt <= 0)
-                {
-                    throw new Exception("Código de Pet Inválido !!!");
-                }
-                this.codigo = codigoInt;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            this.codigo = codigoStr;
         }
 
         public void setCpfTutor(Cpf cpf)
@@ -112,7 +95,7 @@ namespace AppPetShop
 
         public int getCodigo()
         {
-            return this.codigo;
+            return this.codigo.getCodigo();
         }
 
         public string getCpf()

@@ -22,7 +22,7 @@ namespace AppPetShop
         {
             try
             {
-                string codigo = inputCodigo.Text;
+                CodigoBanco codigo = new CodigoBanco(inputCodigo.Text);
                 Cpf cpf = new Cpf(inputCpf.Text);
                 char genero = obterGenero();
                 Nome raca = new Nome(inputRaca.Text, limite_max: 30);

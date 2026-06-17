@@ -20,20 +20,8 @@ namespace AppPetShop
             comandoSql = new StringBuilder();
         }
 
-        public Pet buscarPetCodigo(string codigo)
+        public Pet buscarPetCodigo(CodigoBanco codigo)
         {
-            pet = new Pet();
-
-            // Validar Código de Pet
-            try
-            {
-                pet.setCodigo(codigo);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-
             // Criar comando de busca
             comandoSql.Clear();
 
@@ -56,7 +44,7 @@ namespace AppPetShop
                 conexao.comandoSql.Parameters.Clear();
 
                 // adiciona o cpf como parametro na conexão
-                conexao.comandoSql.Parameters.AddWithValue("@codigo", codigo);
+                conexao.comandoSql.Parameters.AddWithValue("@codigo", codigo.getCodigo());
 
                 // adiciona a string de comando na conexão
                 conexao.setStrComandoSql(comandoSql.ToString());
@@ -75,15 +63,16 @@ namespace AppPetShop
 
                 // captura os dados
                 DataRow linha = tabelaDados.Rows[0];
-                string codigoPet = linha["Código"].ToString();
-                string cpfTutor = linha["CPF Tutor"].ToString();
+                CodigoBanco codigoPet = new CodigoBanco(linha["Código"].ToString());
+                Cpf cpfTutor = new Cpf(linha["CPF Tutor"].ToString());
                 DateTime dataNascimento = (DateTime)linha["nascimento_pet"];
                 string genero = linha["Genero"].ToString();
-                string raca = linha["Raça"].ToString();
-                string nome = linha["Nome"].ToString();
-                string especie = linha["Especie"].ToString();
+                Nome raca = new Nome(linha["Raça"].ToString());
+                Nome nome = new Nome(linha["Nome"].ToString());
+                Nome especie = new Nome(linha["Especie"].ToString());
                 byte[] foto = (byte[]) linha["Foto"];
 
+                Pet pet = new Pet();
                 pet.setCodigo(codigoPet);
                 pet.setCpfTutor(cpfTutor);
                 pet.setNascimento(dataNascimento);

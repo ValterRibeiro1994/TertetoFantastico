@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodigoBanco.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="Cpf.cs" />
     <Compile Include="Email.cs" />
