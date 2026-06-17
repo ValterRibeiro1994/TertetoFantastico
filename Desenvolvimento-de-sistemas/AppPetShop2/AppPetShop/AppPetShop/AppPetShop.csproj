@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="Cpf.cs" />
+    <Compile Include="Email.cs" />
     <Compile Include="FormBuscarTutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +70,7 @@
     <Compile Include="FormCadastrarTutor.Designer.cs">
       <DependentUpon>FormCadastrarTutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nome.cs" />
     <Compile Include="Pet.cs" />
     <Compile Include="RepositorioPet.cs" />
     <Compile Include="RepositorioTutor.cs" />
@@ -85,6 +88,7 @@
     <Compile Include="TelaInicial.Designer.cs">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telefone.cs" />
     <Compile Include="Tutor.cs" />
     <EmbeddedResource Include="FormBuscarTutor.resx">
       <DependentUpon>FormBuscarTutor.cs</DependentUpon>

@@ -25,11 +25,16 @@ namespace AppPetShop
         {
             try
             {
+                Cpf cpf = new Cpf(inputCpf.Text);
+                Nome nome = new Nome(inputNome.Text);
+                Email email = new Email(inputEmail.Text);
+                Telefone telefone = new Telefone(inputTelefone.Text)    ;
+
                 tutor = new Tutor();
-                tutor.setNome(inputNome.Text);
-                tutor.setCpf(inputCpf.Text);
-                tutor.setEmail(inputEmail.Text);
-                tutor.setTelefone(inputTelefone.Text);
+                tutor.setNome(nome);
+                tutor.setCpf(cpf);
+                tutor.setEmail(email);
+                tutor.setTelefone(telefone);
                 if (repositorio.salvarTutor(tutor))
                 {
                     MessageBox.Show("Tutor Registrado com Sucesso !!!");

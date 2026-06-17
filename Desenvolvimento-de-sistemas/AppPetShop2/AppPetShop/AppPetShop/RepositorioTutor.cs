@@ -50,19 +50,8 @@ namespace AppPetShop
             }
         }
 
-        public bool removerTutor(string cpf)
+        public bool removerTutor(Cpf cpf)
         {
-            // valide o CPF
-            try
-            {
-                Tutor tutor = new Tutor();
-                tutor.setCpf(cpf);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-
             // comando de remoção
             string_comando.Clear();
             string_comando.Append("DELETE FROM tb_tutor ");
@@ -71,7 +60,7 @@ namespace AppPetShop
             try
             {
                 conexao.comandoSql.Parameters.Clear();
-                conexao.comandoSql.Parameters.AddWithValue("@cpf", cpf);
+                conexao.comandoSql.Parameters.AddWithValue("@cpf", cpf.getCpf());
                 conexao.setStrComandoSql(string_comando.ToString());
                 
                 return conexao.executarComando() > 0;
@@ -108,20 +97,8 @@ namespace AppPetShop
             }
         }
 
-        public Tutor buscarTutor(String cpf, DataGridView grid)
+        public Tutor buscarTutor(Cpf cpf, DataGridView grid)
         {
-            Tutor tutor = new Tutor();
-            try
-            {
-                // validar e definir cpf
-                tutor.setCpf(cpf);
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.ToString());
-            }
-
             // comando de localização
             string_comando.Clear();
             string_comando.Append("SELECT ");
@@ -135,7 +112,7 @@ namespace AppPetShop
             try
             {
                 conexao.comandoSql.Parameters.Clear();
-                conexao.comandoSql.Parameters.AddWithValue("@cpf", cpf);
+                conexao.comandoSql.Parameters.AddWithValue("@cpf", cpf.getCpf());
                 conexao.setStrComandoSql(string_comando.ToString());
 
                 DataSet dados = conexao.getDataSet();
@@ -147,10 +124,12 @@ namespace AppPetShop
                 }
 
                 DataRow linha = tabela.Rows[0];
-                string nomeBanco = linha["Nome"].ToString();
-                string emailBanco = linha["Email"].ToString();
-                string contatoBanco = linha["Contato"].ToString();
+                Nome nomeBanco = new Nome(linha["Nome"].ToString());
+                Email emailBanco = new Email(linha["Email"].ToString());
+                Telefone contatoBanco = new Telefone(linha["Contato"].ToString());
 
+                Tutor tutor = new Tutor();
+                tutor.setCpf(cpf);
                 tutor.setNome(nomeBanco);
                 tutor.setEmail(emailBanco);
                 tutor.setTelefone(contatoBanco);

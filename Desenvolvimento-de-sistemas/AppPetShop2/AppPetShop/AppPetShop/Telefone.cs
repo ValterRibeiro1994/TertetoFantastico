@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AppPetShop
+{
+    internal class Telefone
+    {
+        private string telefone;
+
+        public Telefone(string telefone)
+        {
+
+        }
+
+        public string getTelefone()
+        {
+            return this.telefone; 
+        }
+        private bool validarTelefone(string telefone)
+        {
+            if (String.IsNullOrEmpty(telefone))
+            {
+                throw new Exception("Número de Telefone é obrigatorio !!!");
+            }
+
+            if (telefone.All(char.IsDigit) == false)
+            {
+                throw new Exception("Número de Telefone deve ter apenas valores númericos !!!");
+            }
+
+            if (telefone.Length != 11)
+            {
+                throw new Exception("Numero de caracteres invalido para Telefone !!!");
+            }
+
+            return true;
+        }
+    }
+}

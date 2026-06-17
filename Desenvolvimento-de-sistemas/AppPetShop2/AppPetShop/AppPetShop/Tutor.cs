@@ -17,104 +17,49 @@ namespace AppPetShop
          */
         
         // dados a serem armazenados no banco
-        private String nome, email, cpf, telefone;
-        
-        public void setNome(String nome, int limite_minimo = 3, int limite_maximo = 80)
+        private Cpf cpf;
+        private Nome nome;
+        private Email email;
+        private Telefone telefone;
+
+        public void setCpf(Cpf cpf)
         {
-            
-            if (String.IsNullOrEmpty(nome))
-            {
-                throw new Exception("Nome do tutor deve ser informado !!!");
-            }
-
-            int n = nome.Length;
-
-            if (n > limite_maximo)
-            {
-                throw new Exception("Limite de caracteres excedido para nome do Tutor");
-            }
-            if (n < limite_minimo)
-            {
-                throw new Exception("Caracteres insuficiente para nome Tutor");
-            }
-
-            this.nome = nome;
-
-        }
-
-        public void setEmail(String email, int limite_caracteres = 80)
-        {
-            if (String.IsNullOrEmpty(email))
-            {
-                throw new Exception("Email do tutor é obrigatorio para cadastro !!!");
-            }
-
-            if (email.Length > limite_caracteres)
-            {
-                throw new Exception("Limite de caracteres excedido para Email");
-            }
-            this.email = email;
-        }
-
-        public void setCpf(String cpf)
-        {
-            if (String.IsNullOrEmpty(cpf))
-            {
-                throw new Exception("Número de CPF é obrigatorio para Tutor !!!");
-            }
-
-            // checa se todos os caracteres são numeros
-            if (cpf.All(char.IsDigit) == false)
-            {
-                throw new Exception("CPF do tutor deve possuir apenas números !!!");
-            }
-
-            if (cpf.Length != 11)
-            {
-                throw new Exception("Limite de caracteres invalido para CPF !!!");
-            }
-
             this.cpf = cpf;
         }
 
-        public void setTelefone(String telefone)
+        public void setNome(Nome nome)
         {
-            if (String.IsNullOrEmpty(telefone))
-            {
-                throw new Exception("Número de Telefone do Tutor é obrigatorio !!!");
-            }
+            this.nome = nome;
+        }
 
-            if (telefone.All(char.IsDigit) == false)
-            {
-                throw new Exception("Número de Telefone deve ter apenas valores númericos !!!");
-            }
+        public void setEmail(Email email)
+        {
+            this.email = email;
+        }
 
-            if (telefone.Length != 11)
-            {
-                throw new Exception("Numero de caracteres invalido para Telefone !!!");
-            }
-
+        public void setTelefone(Telefone telefone)
+        {
             this.telefone = telefone;
         }
         
         public string getNome()
         {
-            return this.nome;
+            return this.nome.getNome();
         }
 
         public string getEmail()
         {
-            return this.email; 
+            return this.email.getEmail(); 
         }
 
         public string getCpf()
         {
-            return this.cpf;
+            return this.cpf.getCpf();
         }
 
         public string getTelefone()
         {
-            return this.telefone;
+            return this.telefone.getTelefone();
         }
 
     }

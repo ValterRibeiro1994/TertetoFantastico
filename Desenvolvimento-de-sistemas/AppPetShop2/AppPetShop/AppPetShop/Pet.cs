@@ -11,10 +11,10 @@ namespace AppPetShop
     internal class Pet
     {
         int codigo;
-        string cpf_tutor;
-        string nome_pet;
-        string especie;
-        string raca;
+        Cpf cpf;
+        Nome nome_pet;
+        Nome especie;
+        Nome raca;
         char genero;
         DateTime nascimento;
         byte[] foto;
@@ -41,82 +41,24 @@ namespace AppPetShop
             }
         }
 
-        public void setCpfTutor(string cpf)
+        public void setCpfTutor(Cpf cpf)
         {
-            if (String.IsNullOrEmpty(cpf))
-            {
-                throw new Exception("Campo cpf não pode estar vazio !!!");
-            }
-
-            // checa se todos os caracteres são numeros
-            int n = cpf.Length;
-            for (int i = 0; i < n; i++)
-            {
-                char letra = cpf[i];
-                if (char.IsDigit(letra))
-                {
-                    continue;
-                }
-                else
-                {
-                    throw new Exception("Informe apenas números para o cpf !!!");
-                }
-
-            }
-
-            if (n != 11)
-            {
-                throw new Exception("Campo cpf deve conter 11 números");
-            }
-
-            this.cpf_tutor = cpf;
+            this.cpf = cpf;
         }
 
-        public void setNomePet(string nomePet)
+        public void setNomePet(Nome nomePet)
         {
-            if (String.IsNullOrEmpty(nomePet))
-            {
-                throw new Exception("Campo nome do pet não pode estar vazio!!!");
-            }
-
-            int n = nomePet.Length;
-            if (n > 30)
-            {
-                throw new Exception("Limite de 30 caracteres!");
-            }
-
             this.nome_pet = nomePet;
         }
 
-        public void setEspecie(string especiePet)
+        public void setEspecie(Nome especiePet)
         {
-            if (String.IsNullOrEmpty(especiePet))
-            {
-                throw new Exception("Especie do pet deve ser Informado !!!");
-            }
-
-            if (especiePet.Length > 30)
-            {
-                throw new Exception("Limite de caracteres invalido para Pet");
-            }
-
             this.especie = especiePet;
         }
 
-        public void setRaca(string racapet)
+        public void setRaca(Nome racapet)
         {
-            if (String.IsNullOrEmpty(racapet))
-            {
-                throw new Exception("Campo raça pet não pode estar vazio");
-            }
-
-            if (racapet.Length > 30)
-            {
-                throw new Exception("Limite de caracteres invalido");
-            }
-
             this.raca = racapet;
-
         }
 
         public void setGenero(char genero)
@@ -175,22 +117,22 @@ namespace AppPetShop
 
         public string getCpf()
         {
-            return this.cpf_tutor;
+            return this.cpf.getCpf();
         }
 
         public string getNome()
         {
-            return this.nome_pet;
+            return this.nome_pet.getNome();
         }
 
         public string getEspecie()
         {
-            return this.especie;
+            return this.especie.getNome();
         }
 
         public string getRaca()
         {
-            return this.raca;
+            return this.raca.getNome() ;
         }
 
         public char getGenero()

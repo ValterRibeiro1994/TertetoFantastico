@@ -25,7 +25,8 @@ namespace AppPetShop
         {
             try
             {
-                Tutor tutor = repositorio.buscarTutor(campoCpf.Text.ToString(), gridTutor);
+                Cpf cpf = new Cpf(campoCpf.Text.ToString());
+                Tutor tutor = repositorio.buscarTutor(cpf, gridTutor);
 
                 // Completa os campos em branco
                 campoNome.Text = tutor.getNome();
@@ -69,17 +70,18 @@ namespace AppPetShop
                 return;
             }
 
-            string nome = campoNome.Text.ToString();
-            string email = campoEmail.Text.ToString();
-            string telefone = campoTelefone.Text.ToString();
-
             try
             {
+                Cpf cpfObj = new Cpf(cpf);
+                Nome nome = new Nome(campoNome.Text);
+                Email email = new Email(campoEmail.Text);
+                Telefone telefone = new Telefone(campoTelefone.Text);
+
                 Tutor tutor = new Tutor();
-                tutor.setTelefone(telefone);
-                tutor.setEmail(email);
-                tutor.setCpf(cpf);
+                tutor.setCpf(cpfObj);
                 tutor.setNome(nome);
+                tutor.setEmail(email);
+                tutor.setTelefone(telefone);
 
                 if (repositorio.alterarTutor(tutor))
                 {
