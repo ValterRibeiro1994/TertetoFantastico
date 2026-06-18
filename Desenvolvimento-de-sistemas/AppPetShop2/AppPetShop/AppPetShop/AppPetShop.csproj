@@ -53,6 +53,12 @@
     <Compile Include="Conexao.cs" />
     <Compile Include="Cpf.cs" />
     <Compile Include="Email.cs" />
+    <Compile Include="FormBuscarPet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarPet.Designer.cs">
+      <DependentUpon>FormBuscarPet.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBuscarTutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </Compile>
     <Compile Include="Telefone.cs" />
     <Compile Include="Tutor.cs" />
+    <EmbeddedResource Include="FormBuscarPet.resx">
+      <DependentUpon>FormBuscarPet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarTutor.resx">
       <DependentUpon>FormBuscarTutor.cs</DependentUpon>
     </EmbeddedResource>

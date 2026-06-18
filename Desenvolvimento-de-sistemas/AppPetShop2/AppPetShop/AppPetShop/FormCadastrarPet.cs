@@ -13,16 +13,18 @@ namespace AppPetShop
 {
     public partial class FormCadastrarPet : Form
     {
+        RepositorioPet repositorio;
+
         public FormCadastrarPet()
         {
             InitializeComponent();
+            repositorio = new RepositorioPet();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             try
             {
-                CodigoBanco codigo = new CodigoBanco(inputCodigo.Text);
                 Cpf cpf = new Cpf(inputCpf.Text);
                 char genero = obterGenero();
                 Nome raca = new Nome(inputRaca.Text, limite_max: 30);
@@ -31,7 +33,6 @@ namespace AppPetShop
                 Nome especie = new Nome(inputRaca.Text, limite_max: 30);
 
                 Pet pet = new Pet();
-                pet.setCodigo(codigo);
                 pet.setCpfTutor(cpf);
                 pet.setNascimento(inputNascimento.Value);
                 pet.setGenero(genero);
@@ -40,7 +41,9 @@ namespace AppPetShop
                 pet.setNomePet(nome_pet);
                 pet.setEspecie(especie);
 
-
+                if (repositorio.cadastrarPet(pet)){
+                    MessageBox.Show("Pet cadastrado");
+                }
             }
             catch (Exception ex)
             {

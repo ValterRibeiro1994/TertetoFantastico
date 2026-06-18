@@ -20,6 +20,33 @@ namespace AppPetShop
             comandoSql = new StringBuilder();
         }
 
+        public bool cadastrarPet(Pet pet)
+        {
+            comandoSql.Clear();
+            comandoSql.Append("INSERT INTO tb_pet(cpf_tutor, nascimento_pet, genero_pet, raca_pet, foto_pet, nome_pet, especie_pet) ");
+            comandoSql.Append("VALUES (@cpf, @data, @genero, @raca, @foto, @nome, @especie) ");
+
+            try
+            {
+                // classe de conexão
+                conexao.comandoSql.Parameters.Clear();
+                conexao.comandoSql.Parameters.AddWithValue("@cpf", pet.getCpf());
+                conexao.comandoSql.Parameters.AddWithValue("@data", pet.getNascimento());
+                conexao.comandoSql.Parameters.AddWithValue("@genero", pet.getGenero());
+                conexao.comandoSql.Parameters.AddWithValue("@raca", pet.getRaca());
+                conexao.comandoSql.Parameters.AddWithValue("@foto", pet.getFoto());
+                conexao.comandoSql.Parameters.AddWithValue("@nome", pet.getNome());
+                conexao.comandoSql.Parameters.AddWithValue("@especie", pet.getEspecie());
+
+                // modifica a string de colsulta da classe conexão
+                conexao.setStrComandoSql(comandoSql.ToString());
+                return conexao.executarComando() > 0;
+            } catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public Pet buscarPetCodigo(CodigoBanco codigo)
         {
             // Criar comando de busca
