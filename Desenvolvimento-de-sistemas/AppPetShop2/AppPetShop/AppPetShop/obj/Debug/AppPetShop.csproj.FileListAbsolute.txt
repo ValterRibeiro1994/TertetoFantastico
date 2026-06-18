@@ -68,3 +68,4 @@ C:\Users\brazl\OneDrive\Desktop\clone\TertetoFantastico\Desenvolvimento-de-siste
 C:\Users\brazl\OneDrive\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.csproj.Up2Date
 C:\Users\brazl\OneDrive\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.exe
 C:\Users\brazl\OneDrive\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.pdb
+C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormBuscarPet.resources

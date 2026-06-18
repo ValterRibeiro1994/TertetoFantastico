@@ -85,14 +85,14 @@ namespace AppPetShop
                 // verificar se teve retorno
                 if (tabelaDados.Rows.Count == 0)
                 {
-                    throw new Exception("Código não encontrado na base de dados");
+                    throw new Exception("Pet não encontrado na base de dados");
                 }
 
                 // captura os dados
                 DataRow linha = tabelaDados.Rows[0];
                 CodigoBanco codigoPet = new CodigoBanco(linha["Código"].ToString());
                 Cpf cpfTutor = new Cpf(linha["CPF Tutor"].ToString());
-                DateTime dataNascimento = (DateTime)linha["nascimento_pet"];
+                DateTime dataNascimento = (DateTime)linha["Data de nascimento"];
                 string genero = linha["Genero"].ToString();
                 Nome raca = new Nome(linha["Raça"].ToString());
                 Nome nome = new Nome(linha["Nome"].ToString());
