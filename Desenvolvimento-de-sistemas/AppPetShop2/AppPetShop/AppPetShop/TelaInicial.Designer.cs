@@ -40,12 +40,14 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Gold;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tutorToolStripMenuItem,
             this.petsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,20 +57,20 @@
             this.cadastrarTutorToolStripMenuItem,
             this.pesquisarTutorToolStripMenuItem});
             this.tutorToolStripMenuItem.Name = "tutorToolStripMenuItem";
-            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
             this.tutorToolStripMenuItem.Text = "Tutor";
             // 
             // cadastrarTutorToolStripMenuItem
             // 
             this.cadastrarTutorToolStripMenuItem.Name = "cadastrarTutorToolStripMenuItem";
-            this.cadastrarTutorToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.cadastrarTutorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.cadastrarTutorToolStripMenuItem.Text = "Cadastrar Tutor";
             this.cadastrarTutorToolStripMenuItem.Click += new System.EventHandler(this.cadastrarTutorToolStripMenuItem_Click);
             // 
             // pesquisarTutorToolStripMenuItem
             // 
             this.pesquisarTutorToolStripMenuItem.Name = "pesquisarTutorToolStripMenuItem";
-            this.pesquisarTutorToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.pesquisarTutorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.pesquisarTutorToolStripMenuItem.Text = "Pesquisar Tutor";
             this.pesquisarTutorToolStripMenuItem.Click += new System.EventHandler(this.pesquisarTutorToolStripMenuItem_Click);
             // 
@@ -78,29 +80,31 @@
             this.cadastrarPetToolStripMenuItem,
             this.pesquisarPetToolStripMenuItem});
             this.petsToolStripMenuItem.Name = "petsToolStripMenuItem";
-            this.petsToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.petsToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.petsToolStripMenuItem.Text = "Pets";
             // 
             // cadastrarPetToolStripMenuItem
             // 
             this.cadastrarPetToolStripMenuItem.Name = "cadastrarPetToolStripMenuItem";
-            this.cadastrarPetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarPetToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.cadastrarPetToolStripMenuItem.Text = "Cadastrar Pet";
             this.cadastrarPetToolStripMenuItem.Click += new System.EventHandler(this.cadastrarPetToolStripMenuItem_Click);
             // 
             // pesquisarPetToolStripMenuItem
             // 
             this.pesquisarPetToolStripMenuItem.Name = "pesquisarPetToolStripMenuItem";
-            this.pesquisarPetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pesquisarPetToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.pesquisarPetToolStripMenuItem.Text = "Pesquisar Pet";
             // 
             // TelaInicial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TelaInicial";
             this.Text = "TelaInicial";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fecharApp);
