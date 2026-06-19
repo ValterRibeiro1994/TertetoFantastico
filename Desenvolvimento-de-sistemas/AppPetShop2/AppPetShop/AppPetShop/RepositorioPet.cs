@@ -58,7 +58,8 @@ namespace AppPetShop
                 // modifica a string de colsulta da classe conexão
                 conexao.setStrComandoSql(comandoSql.ToString());
                 return conexao.executarComando() > 0;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -186,7 +187,7 @@ namespace AppPetShop
                 Nome raca = new Nome(linha["Raça"].ToString());
                 Nome nome = new Nome(linha["Nome"].ToString());
                 Nome especie = new Nome(linha["Especie"].ToString());
-                byte[] foto = (byte[]) linha["Foto"];
+                byte[] foto = (byte[])linha["Foto"];
 
                 Pet pet = new Pet();
                 pet.setCodigo(codigoPet);
@@ -200,6 +201,73 @@ namespace AppPetShop
 
                 // retorna o objeto preenchido
                 return pet;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+        public void buscarPets(DataGridView grid)
+        {
+            comandoSql.Clear();
+            comandoSql.Append("SELECT ");
+            comandoSql.Append("nome_pet as Nome, ");
+            comandoSql.Append("cpf_tutor as CPF, ");
+            comandoSql.Append("nascimento_pet as Nascimento, ");
+            comandoSql.Append("genero_pet as Genero, ");
+            comandoSql.Append("raca_pet as Raca, ");
+            comandoSql.Append("foto_pet as Foto, ");
+            comandoSql.Append("especie_pet as Especie ");
+            comandoSql.Append("FROM tb_pet; ");
+
+            try
+            {
+                conexao.comandoSql.Parameters.Clear();
+                conexao.setStrComandoSql(comandoSql.ToString());
+
+                DataSet dados = conexao.getDataSet();
+                DataTable tabela = dados.Tables[0];
+                grid.DataSource = tabela;
+
+                DataSet conjuntoDeDados = conexao.getDataSet();
+
+                // monta a tabela de dados
+                DataTable tabelaDados = conjuntoDeDados.Tables[0];
+
+                // verificar se teve retorno
+                if (tabelaDados.Rows.Count == 0)
+                {
+                    throw new Exception("Pet não encontrado na base de dados");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        private bool removerPet(CodigoBanco codigo)
+        {
+            comandoSql.Clear();
+            comandoSql.Append("DELET FROM tb_pet");
+            comandoSql.Append("WHERE cod_pet = @cod_pet;");
+
+            try
+            {
+                // limpa os parametros anteriores da conexão
+                conexao.comandoSql.Parameters.Clear();
+
+                // adiciona o cpf como parametro na conexão
+                conexao.comandoSql.Parameters.AddWithValue("@cod_pet", codigo);
+
+                // adiciona a string de comando na conexão
+                conexao.setStrComandoSql(comandoSql.ToString());
+
+                return conexao.executarComando() > 0;
+
             }
             catch (Exception ex)
             {
