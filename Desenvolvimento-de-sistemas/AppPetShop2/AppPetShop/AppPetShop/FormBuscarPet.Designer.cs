@@ -215,10 +215,8 @@
             this.btnRemoverPet.TabIndex = 19;
             this.btnRemoverPet.Text = "Remover Pet";
             this.btnRemoverPet.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
-=======
             this.btnRemoverPet.Click += new System.EventHandler(this.btnRemoverPet_Click);
->>>>>>> 721bc463d15ec9b829ed5778425b8dbd7a6beac2
+
             // 
             // btnListarPet
             // 

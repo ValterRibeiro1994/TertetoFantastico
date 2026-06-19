@@ -78,7 +78,6 @@ namespace AppPetShop
 
         private void btnListarPet_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             try
             {
                 repositorio.listarPet(gridPet);
@@ -116,14 +115,11 @@ namespace AppPetShop
                 campoImagem.Image = img_pet;
             }
 
-=======
             repositorio.buscarPets(gridPet);
         }
 
         private void btnRemoverPet_Click(object sender, EventArgs e)
         {
-            
->>>>>>> 721bc463d15ec9b829ed5778425b8dbd7a6beac2
         }
     }
 }

@@ -212,13 +212,14 @@ namespace AppPetShop
         {
             comandoSql.Clear();
             comandoSql.Append("SELECT ");
-            comandoSql.Append("nome_pet as Nome, ");
-            comandoSql.Append("cpf_tutor as CPF, ");
-            comandoSql.Append("nascimento_pet as Nascimento, ");
-            comandoSql.Append("genero_pet as Genero, ");
-            comandoSql.Append("raca_pet as Raca, ");
-            comandoSql.Append("foto_pet as Foto, ");
-            comandoSql.Append("especie_pet as Especie ");
+            comandoSql.Append("cod_pet as 'Código', ");
+            comandoSql.Append("cpf_tutor as 'CPF Tutor', ");
+            comandoSql.Append("nascimento_pet as 'Data de nascimento', ");
+            comandoSql.Append("genero_pet as 'Genero', ");
+            comandoSql.Append("raca_pet as 'Raça', ");
+            comandoSql.Append("nome_pet as 'Nome', ");
+            comandoSql.Append("especie_pet as 'Especie', ");
+            comandoSql.Append("foto_pet as 'Foto' ");
             comandoSql.Append("FROM tb_pet; ");
 
             try
@@ -249,30 +250,5 @@ namespace AppPetShop
             }
         }
 
-        private bool removerPet(CodigoBanco codigo)
-        {
-            comandoSql.Clear();
-            comandoSql.Append("DELET FROM tb_pet");
-            comandoSql.Append("WHERE cod_pet = @cod_pet;");
-
-            try
-            {
-                // limpa os parametros anteriores da conexão
-                conexao.comandoSql.Parameters.Clear();
-
-                // adiciona o cpf como parametro na conexão
-                conexao.comandoSql.Parameters.AddWithValue("@cod_pet", codigo);
-
-                // adiciona a string de comando na conexão
-                conexao.setStrComandoSql(comandoSql.ToString());
-
-                return conexao.executarComando() > 0;
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
     }
 }
