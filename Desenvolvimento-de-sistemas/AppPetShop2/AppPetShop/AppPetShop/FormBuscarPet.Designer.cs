@@ -36,21 +36,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.imgPet = new System.Windows.Forms.PictureBox();
+            this.campoImagem = new System.Windows.Forms.PictureBox();
             this.campoCpf = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.campoNome = new System.Windows.Forms.TextBox();
+            this.campoEspecie = new System.Windows.Forms.TextBox();
+            this.campoRaca = new System.Windows.Forms.TextBox();
+            this.campoData = new System.Windows.Forms.DateTimePicker();
             this.gridPet = new System.Windows.Forms.DataGridView();
             this.btnBuscarPedCod = new System.Windows.Forms.Button();
             this.btnBuscarCpf = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnRemoverPet = new System.Windows.Forms.Button();
+            this.btnListarPet = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.imgPet)).BeginInit();
+            this.rbMacho = new System.Windows.Forms.RadioButton();
+            this.rbFemea = new System.Windows.Forms.RadioButton();
+            ((System.ComponentModel.ISupportInitialize)(this.campoImagem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridPet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,13 +125,13 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Nascimento Pet";
             // 
-            // imgPet
+            // campoImagem
             // 
-            this.imgPet.Location = new System.Drawing.Point(528, 4);
-            this.imgPet.Name = "imgPet";
-            this.imgPet.Size = new System.Drawing.Size(380, 213);
-            this.imgPet.TabIndex = 8;
-            this.imgPet.TabStop = false;
+            this.campoImagem.Location = new System.Drawing.Point(528, 4);
+            this.campoImagem.Name = "campoImagem";
+            this.campoImagem.Size = new System.Drawing.Size(380, 213);
+            this.campoImagem.TabIndex = 8;
+            this.campoImagem.TabStop = false;
             // 
             // campoCpf
             // 
@@ -139,41 +140,34 @@
             this.campoCpf.Size = new System.Drawing.Size(262, 20);
             this.campoCpf.TabIndex = 9;
             // 
-            // textBox3
+            // campoNome
             // 
-            this.textBox3.Location = new System.Drawing.Point(122, 69);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(262, 20);
-            this.textBox3.TabIndex = 10;
+            this.campoNome.Location = new System.Drawing.Point(122, 69);
+            this.campoNome.Name = "campoNome";
+            this.campoNome.Size = new System.Drawing.Size(262, 20);
+            this.campoNome.TabIndex = 10;
             // 
-            // textBox4
+            // campoEspecie
             // 
-            this.textBox4.Location = new System.Drawing.Point(122, 102);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(262, 20);
-            this.textBox4.TabIndex = 11;
+            this.campoEspecie.Location = new System.Drawing.Point(122, 102);
+            this.campoEspecie.Name = "campoEspecie";
+            this.campoEspecie.Size = new System.Drawing.Size(262, 20);
+            this.campoEspecie.TabIndex = 11;
             // 
-            // textBox5
+            // campoRaca
             // 
-            this.textBox5.Location = new System.Drawing.Point(122, 130);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(262, 20);
-            this.textBox5.TabIndex = 12;
+            this.campoRaca.Location = new System.Drawing.Point(122, 130);
+            this.campoRaca.Name = "campoRaca";
+            this.campoRaca.Size = new System.Drawing.Size(262, 20);
+            this.campoRaca.TabIndex = 12;
             // 
-            // textBox6
+            // campoData
             // 
-            this.textBox6.Location = new System.Drawing.Point(122, 163);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(262, 20);
-            this.textBox6.TabIndex = 13;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 197);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(262, 20);
-            this.dateTimePicker1.TabIndex = 14;
+            this.campoData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.campoData.Location = new System.Drawing.Point(122, 197);
+            this.campoData.Name = "campoData";
+            this.campoData.Size = new System.Drawing.Size(262, 20);
+            this.campoData.TabIndex = 14;
             // 
             // gridPet
             // 
@@ -182,6 +176,7 @@
             this.gridPet.Name = "gridPet";
             this.gridPet.Size = new System.Drawing.Size(896, 325);
             this.gridPet.TabIndex = 15;
+            this.gridPet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.selecionarPet);
             // 
             // btnBuscarPedCod
             // 
@@ -212,23 +207,24 @@
             this.button3.Text = "Alterar Foto";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnRemoverPet
             // 
-            this.button4.Location = new System.Drawing.Point(403, 132);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 22);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Remover Pet";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnRemoverPet.Location = new System.Drawing.Point(403, 132);
+            this.btnRemoverPet.Name = "btnRemoverPet";
+            this.btnRemoverPet.Size = new System.Drawing.Size(109, 22);
+            this.btnRemoverPet.TabIndex = 19;
+            this.btnRemoverPet.Text = "Remover Pet";
+            this.btnRemoverPet.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnListarPet
             // 
-            this.button5.Location = new System.Drawing.Point(403, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(109, 23);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Listar Pet";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnListarPet.Location = new System.Drawing.Point(403, 12);
+            this.btnListarPet.Name = "btnListarPet";
+            this.btnListarPet.Size = new System.Drawing.Size(109, 23);
+            this.btnListarPet.TabIndex = 20;
+            this.btnListarPet.Text = "Listar Pet";
+            this.btnListarPet.UseVisualStyleBackColor = true;
+            this.btnListarPet.Click += new System.EventHandler(this.btnListarPet_Click);
             // 
             // button1
             // 
@@ -239,25 +235,48 @@
             this.button1.Text = "Editar Pet";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // rbMacho
+            // 
+            this.rbMacho.AutoSize = true;
+            this.rbMacho.Location = new System.Drawing.Point(122, 163);
+            this.rbMacho.Name = "rbMacho";
+            this.rbMacho.Size = new System.Drawing.Size(58, 17);
+            this.rbMacho.TabIndex = 22;
+            this.rbMacho.TabStop = true;
+            this.rbMacho.Text = "Macho";
+            this.rbMacho.UseVisualStyleBackColor = true;
+            // 
+            // rbFemea
+            // 
+            this.rbFemea.AutoSize = true;
+            this.rbFemea.Location = new System.Drawing.Point(248, 163);
+            this.rbFemea.Name = "rbFemea";
+            this.rbFemea.Size = new System.Drawing.Size(57, 17);
+            this.rbFemea.TabIndex = 23;
+            this.rbFemea.TabStop = true;
+            this.rbFemea.Text = "Femea";
+            this.rbFemea.UseVisualStyleBackColor = true;
+            // 
             // FormBuscarPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 548);
+            this.Controls.Add(this.rbFemea);
+            this.Controls.Add(this.rbMacho);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnListarPet);
+            this.Controls.Add(this.btnRemoverPet);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnBuscarCpf);
             this.Controls.Add(this.btnBuscarPedCod);
             this.Controls.Add(this.gridPet);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.campoData);
+            this.Controls.Add(this.campoRaca);
+            this.Controls.Add(this.campoEspecie);
+            this.Controls.Add(this.campoNome);
             this.Controls.Add(this.campoCpf);
-            this.Controls.Add(this.imgPet);
+            this.Controls.Add(this.campoImagem);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -268,7 +287,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormBuscarPet";
             this.Text = "FormBuscarPet";
-            ((System.ComponentModel.ISupportInitialize)(this.imgPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.campoImagem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridPet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,19 +304,20 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox imgPet;
+        private System.Windows.Forms.PictureBox campoImagem;
         private System.Windows.Forms.TextBox campoCpf;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox campoNome;
+        private System.Windows.Forms.TextBox campoEspecie;
+        private System.Windows.Forms.TextBox campoRaca;
+        private System.Windows.Forms.DateTimePicker campoData;
         private System.Windows.Forms.DataGridView gridPet;
         private System.Windows.Forms.Button btnBuscarPedCod;
         private System.Windows.Forms.Button btnBuscarCpf;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnRemoverPet;
+        private System.Windows.Forms.Button btnListarPet;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton rbMacho;
+        private System.Windows.Forms.RadioButton rbFemea;
     }
 }

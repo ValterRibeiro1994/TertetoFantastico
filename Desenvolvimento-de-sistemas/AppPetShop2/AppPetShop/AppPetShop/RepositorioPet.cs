@@ -21,6 +21,22 @@ namespace AppPetShop
             comandoSql = new StringBuilder();
         }
 
+        public bool removerPet(CodigoBanco codigo)
+        {
+            comandoSql.Clear();
+            comandoSql.Append("DELETE FROM tb_pet ");
+            comandoSql.Append("WHERE cod_pet = @codigo;");
+            try {
+                conexao.comandoSql.Parameters.Clear();
+                conexao.comandoSql.Parameters.AddWithValue("@codigo", codigo.getCodigo());
+                conexao.setStrComandoSql(comandoSql.ToString());
+                return conexao.executarComando() > 0;
+            } catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public bool cadastrarPet(Pet pet)
         {
             comandoSql.Clear();
@@ -48,6 +64,40 @@ namespace AppPetShop
             }
         }
 
+        public void listarPet(DataGridView grid)
+        {
+            // Criar comando de busca
+            comandoSql.Clear();
+
+            // insere o comando de busca
+            comandoSql.Append("SELECT ");
+            comandoSql.Append("cod_pet as 'Código', ");
+            comandoSql.Append("cpf_tutor as 'CPF Tutor', ");
+            comandoSql.Append("nascimento_pet as 'Data de nascimento', ");
+            comandoSql.Append("genero_pet as 'Genero', ");
+            comandoSql.Append("raca_pet as 'Raça', ");
+            comandoSql.Append("nome_pet as 'Nome', ");
+            comandoSql.Append("especie_pet as 'Especie', ");
+            comandoSql.Append("foto_pet as 'Foto' ");
+            comandoSql.Append("FROM tb_pet ");
+
+            try
+            {
+                // limpa os parametros anteriores da conexão
+                conexao.comandoSql.Parameters.Clear();
+
+                // adiciona a string de comando na conexão
+                conexao.setStrComandoSql(comandoSql.ToString());
+
+                DataSet dados = conexao.getDataSet();
+                DataTable tabela = dados.Tables[0];
+                grid.DataSource = tabela;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public void buscarPetCpf(Cpf cpf, DataGridView grid)
         {
             // Criar comando de busca

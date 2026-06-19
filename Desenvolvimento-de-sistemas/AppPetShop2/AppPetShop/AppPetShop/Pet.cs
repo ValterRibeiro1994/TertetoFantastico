@@ -81,6 +81,7 @@ namespace AppPetShop
             {
                 throw new Exception("Data de nascimento inválida para pet");
             }
+            this.nascimento = dataPet;
         }
 
         public void setFoto(byte[] foto)
