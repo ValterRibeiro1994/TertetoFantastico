@@ -36,22 +36,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.imgPet = new System.Windows.Forms.PictureBox();
+            this.campoCpf = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridPet = new System.Windows.Forms.DataGridView();
             this.btnBuscarPedCod = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBuscarCpf = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -124,20 +124,20 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Nascimento Pet";
             // 
-            // pictureBox1
+            // imgPet
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(528, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(275, 213);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.imgPet.Location = new System.Drawing.Point(528, 4);
+            this.imgPet.Name = "imgPet";
+            this.imgPet.Size = new System.Drawing.Size(380, 213);
+            this.imgPet.TabIndex = 8;
+            this.imgPet.TabStop = false;
             // 
-            // textBox2
+            // campoCpf
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 20);
-            this.textBox2.TabIndex = 9;
+            this.campoCpf.Location = new System.Drawing.Point(122, 39);
+            this.campoCpf.Name = "campoCpf";
+            this.campoCpf.Size = new System.Drawing.Size(262, 20);
+            this.campoCpf.TabIndex = 9;
             // 
             // textBox3
             // 
@@ -175,13 +175,13 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(262, 20);
             this.dateTimePicker1.TabIndex = 14;
             // 
-            // dataGridView1
+            // gridPet
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 223);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(791, 325);
-            this.dataGridView1.TabIndex = 15;
+            this.gridPet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridPet.Location = new System.Drawing.Point(12, 223);
+            this.gridPet.Name = "gridPet";
+            this.gridPet.Size = new System.Drawing.Size(896, 325);
+            this.gridPet.TabIndex = 15;
             // 
             // btnBuscarPedCod
             // 
@@ -193,14 +193,15 @@
             this.btnBuscarPedCod.UseVisualStyleBackColor = true;
             this.btnBuscarPedCod.Click += new System.EventHandler(this.btnBuscarPedCod_Click);
             // 
-            // button2
+            // btnBuscarCpf
             // 
-            this.button2.Location = new System.Drawing.Point(403, 80);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 23);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Buscar Pet Cpf";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnBuscarCpf.Location = new System.Drawing.Point(403, 80);
+            this.btnBuscarCpf.Name = "btnBuscarCpf";
+            this.btnBuscarCpf.Size = new System.Drawing.Size(109, 23);
+            this.btnBuscarCpf.TabIndex = 17;
+            this.btnBuscarCpf.Text = "Buscar Pet Cpf";
+            this.btnBuscarCpf.UseVisualStyleBackColor = true;
+            this.btnBuscarCpf.Click += new System.EventHandler(this.btnBuscarCpf_Click);
             // 
             // button3
             // 
@@ -247,16 +248,16 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnBuscarCpf);
             this.Controls.Add(this.btnBuscarPedCod);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridPet);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.campoCpf);
+            this.Controls.Add(this.imgPet);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -267,8 +268,8 @@
             this.Controls.Add(this.label1);
             this.Name = "FormBuscarPet";
             this.Text = "FormBuscarPet";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridPet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,16 +285,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.PictureBox imgPet;
+        private System.Windows.Forms.TextBox campoCpf;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridPet;
         private System.Windows.Forms.Button btnBuscarPedCod;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBuscarCpf;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;

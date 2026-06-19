@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AppPetShop
 {
@@ -47,6 +48,44 @@ namespace AppPetShop
             }
         }
 
+        public void buscarPetCpf(Cpf cpf, DataGridView grid)
+        {
+            // Criar comando de busca
+            comandoSql.Clear();
+
+            // insere o comando de busca
+            comandoSql.Append("SELECT ");
+            comandoSql.Append("cod_pet as 'Código', ");
+            comandoSql.Append("cpf_tutor as 'CPF Tutor', ");
+            comandoSql.Append("nascimento_pet as 'Data de nascimento', ");
+            comandoSql.Append("genero_pet as 'Genero', ");
+            comandoSql.Append("raca_pet as 'Raça', ");
+            comandoSql.Append("nome_pet as 'Nome', ");
+            comandoSql.Append("especie_pet as 'Especie', ");
+            comandoSql.Append("foto_pet as 'Foto' ");
+            comandoSql.Append("FROM tb_pet ");
+            comandoSql.Append("WHERE cpf_tutor = @cpf;");
+
+            try
+            {
+                // limpa os parametros anteriores da conexão
+                conexao.comandoSql.Parameters.Clear();
+
+                // adiciona o cpf como parametro na conexão
+                conexao.comandoSql.Parameters.AddWithValue("@cpf", cpf.getCpf());
+
+                // adiciona a string de comando na conexão
+                conexao.setStrComandoSql(comandoSql.ToString());
+
+                DataSet dados = conexao.getDataSet();
+                DataTable tabela = dados.Tables[0];
+                grid.DataSource = tabela;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public Pet buscarPetCodigo(CodigoBanco codigo)
         {
             // Criar comando de busca
