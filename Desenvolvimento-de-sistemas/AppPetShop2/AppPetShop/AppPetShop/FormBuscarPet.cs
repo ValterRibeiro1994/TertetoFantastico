@@ -56,4 +56,15 @@ namespace AppPetShop
             campoCodigo.Text = pet.getCodigo().ToString();
             campoCpf.Text = pet.getCpf();
         }
-}}
+
+        private void btnListarPet_Click(object sender, EventArgs e)
+        {
+            repositorio.buscarPets(gridPet);
+        }
+
+        private void btnRemoverPet_Click(object sender, EventArgs e)
+        {
+            
+        }
+    }
+}

@@ -47,8 +47,8 @@
             this.btnBuscarPedCod = new System.Windows.Forms.Button();
             this.btnBuscarCpf = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnRemoverPet = new System.Windows.Forms.Button();
+            this.btnListarPet = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgPet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridPet)).BeginInit();
@@ -212,23 +212,25 @@
             this.button3.Text = "Alterar Foto";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnRemoverPet
             // 
-            this.button4.Location = new System.Drawing.Point(403, 132);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 22);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Remover Pet";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnRemoverPet.Location = new System.Drawing.Point(403, 132);
+            this.btnRemoverPet.Name = "btnRemoverPet";
+            this.btnRemoverPet.Size = new System.Drawing.Size(109, 22);
+            this.btnRemoverPet.TabIndex = 19;
+            this.btnRemoverPet.Text = "Remover Pet";
+            this.btnRemoverPet.UseVisualStyleBackColor = true;
+            this.btnRemoverPet.Click += new System.EventHandler(this.btnRemoverPet_Click);
             // 
-            // button5
+            // btnListarPet
             // 
-            this.button5.Location = new System.Drawing.Point(403, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(109, 23);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Listar Pet";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnListarPet.Location = new System.Drawing.Point(403, 12);
+            this.btnListarPet.Name = "btnListarPet";
+            this.btnListarPet.Size = new System.Drawing.Size(109, 23);
+            this.btnListarPet.TabIndex = 20;
+            this.btnListarPet.Text = "Listar Pet";
+            this.btnListarPet.UseVisualStyleBackColor = true;
+            this.btnListarPet.Click += new System.EventHandler(this.btnListarPet_Click);
             // 
             // button1
             // 
@@ -245,8 +247,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 548);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnListarPet);
+            this.Controls.Add(this.btnRemoverPet);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnBuscarCpf);
             this.Controls.Add(this.btnBuscarPedCod);
@@ -296,8 +298,8 @@
         private System.Windows.Forms.Button btnBuscarPedCod;
         private System.Windows.Forms.Button btnBuscarCpf;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnRemoverPet;
+        private System.Windows.Forms.Button btnListarPet;
         private System.Windows.Forms.Button button1;
     }
 }
