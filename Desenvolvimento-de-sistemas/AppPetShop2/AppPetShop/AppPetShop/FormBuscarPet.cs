@@ -114,12 +114,17 @@ namespace AppPetShop
 
                 campoImagem.Image = img_pet;
             }
-
-            repositorio.buscarPets(gridPet);
         }
 
         private void btnRemoverPet_Click(object sender, EventArgs e)
         {
-        }
+            try
+            {
+                CodigoBanco codigo = new CodigoBanco(campoCodigo.Text);
+                repositorio.removerPet(codigo);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
     }
-}
+}}
