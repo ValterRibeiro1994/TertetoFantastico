@@ -14,11 +14,13 @@ namespace AppPetShop
     public partial class FormBuscarPet : Form
     {
         RepositorioPet repositorio;
+        byte[] fotoPet;
         public FormBuscarPet()
         {
             InitializeComponent();
             repositorio = new RepositorioPet();
         }
+        
 
         private void btnBuscarPedCod_Click(object sender, EventArgs e)
         {
@@ -68,12 +70,7 @@ namespace AppPetShop
             {
                 rbMacho.Checked = true;
             }
-            using (MemoryStream ms = new MemoryStream(pet.getFoto()))
-            {
-                Image img_pet = Image.FromStream(ms);
-
-                campoImagem.Image = img_pet;
-            }
+            exibirFoto(pet.getFoto());
         }
 
         private void btnListarPet_Click(object sender, EventArgs e)
@@ -107,13 +104,9 @@ namespace AppPetShop
                 rbFemea.Checked = false;
             }
             byte[] blob_pet = (byte[])gridPet.CurrentRow.Cells[7].Value;
+            exibirFoto(blob_pet);
+            fotoPet = blob_pet;
 
-            using (MemoryStream ms = new MemoryStream(blob_pet))
-            {
-                Image img_pet = Image.FromStream(ms);
-
-                campoImagem.Image = img_pet;
-            }
         }
 
         private void btnRemoverPet_Click(object sender, EventArgs e)
@@ -126,5 +119,86 @@ namespace AppPetShop
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void exibirFoto(byte[] foto)
+        {
+            using (MemoryStream ms = new MemoryStream(foto))
+            {
+                Image img_pet = Image.FromStream(ms);
+
+                campoImagem.Image = img_pet;
+            }
+        }
+
+        private Pet criarPet()
+        {
+            char genero;
+
+            if (rbFemea.Checked == false && rbMacho.Checked == false)
+            {
+                MessageBox.Show("Marque o genero do pet !!!");
+                return null;
+            }
+
+            if (rbFemea.Checked)
+            {
+                genero = 'F';
+            }
+            else
+            {
+                genero = 'M';
+            }
+
+            try
+            {
+
+                CodigoBanco codigo = new CodigoBanco(campoCodigo.Text);
+                Cpf cpf = new Cpf(campoCpf.Text);
+                Nome nome = new Nome(campoNome.Text, limite_max: 30);
+                Nome especie = new Nome(campoEspecie.Text, limite_max: 30);
+                Nome raca = new Nome(campoRaca.Text, limite_max: 30);
+               
+                Pet pet = new Pet();
+                pet.setFoto(fotoPet);
+                pet.setNascimento(campoData.Value);
+                pet.setGenero(genero);
+                pet.setEspecie(especie);
+                pet.setRaca(raca);
+                pet.setNomePet(nome);
+                pet.setCpfTutor(cpf);
+                pet.setCodigo(codigo);
+                return pet;
+            } catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+}
+
+        private void btnEditarPet_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Pet pet = criarPet();
+                if (pet == null)
+                {
+                    return;
+                }
+                if (repositorio.editarPet(pet))
+                {
+                    repositorio.listarPet(gridPet);
+                    MessageBox.Show("Pet editado com sucesso !!");
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao editar Pet");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
-}}
+}

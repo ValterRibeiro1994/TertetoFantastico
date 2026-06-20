@@ -129,13 +129,13 @@ namespace AppPetShop
 
                 byte[] foto_pet = File.ReadAllBytes(campoImagem.ImageLocation);
                 //muda os parametros
-                conexao_bd.comandoSql.Parameters.AddWithValue("@nascimento_pet", campoData.Value);
-                conexao_bd.comandoSql.Parameters.AddWithValue("@genero_pet", campoGenero.Text[0]);
-                conexao_bd.comandoSql.Parameters.AddWithValue("@raca_pet", campoRaca.Text);
-                conexao_bd.comandoSql.Parameters.AddWithValue("@nome_pet", campoNome.Text);
-                conexao_bd.comandoSql.Parameters.AddWithValue("@especie_pet", campoEspecie.Text);
-                conexao_bd.comandoSql.Parameters.AddWithValue("@foto_pet", foto_pet);
-                conexao_bd.comandoSql.Parameters.AddWithValue("@cod_pet", campoCodigo.Text);
+                conexao.comandoSql.Parameters.AddWithValue("@nascimento_pet", campoData.Value);
+                conexao.comandoSql.Parameters.AddWithValue("@genero_pet", campoGenero.Text[0]);
+                conexao.comandoSql.Parameters.AddWithValue("@raca_pet", campoRaca.Text);
+                conexao.comandoSql.Parameters.AddWithValue("@nome_pet", campoNome.Text);
+                conexao.comandoSql.Parameters.AddWithValue("@especie_pet", campoEspecie.Text);
+                conexao.comandoSql.Parameters.AddWithValue("@foto_pet", foto_pet);
+                conexao.comandoSql.Parameters.AddWithValue("@cod_pet", campoCodigo.Text);
 
                 // adiciona a string de comando na conexão
                 conexao_bd.setStrComandoSql(comandoSql.ToString());

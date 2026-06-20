@@ -250,5 +250,33 @@ namespace AppPetShop
             }
         }
 
+        public bool editarPet(Pet pet)
+        {
+            comandoSql.Clear();
+            comandoSql.Append("UPDATE tb_pet SET ");
+            comandoSql.Append("nascimento_pet = @nascimento_pet, ");
+            comandoSql.Append("genero_pet = @genero_pet, ");
+            comandoSql.Append("raca_pet = @raca_pet, ");
+            comandoSql.Append("nome_pet = @nome_pet, ");
+            comandoSql.Append("especie_pet = @especie_pet, ");
+            comandoSql.Append("foto_pet = @foto_pet ");
+            comandoSql.Append("where cod_pet = @cod_pet");
+
+            try
+            {
+                conexao.comandoSql.Parameters.Clear();
+                conexao.comandoSql.Parameters.AddWithValue("@nascimento_pet", pet.getNascimento());
+                conexao.comandoSql.Parameters.AddWithValue("@genero_pet", pet.getGenero());
+                conexao.comandoSql.Parameters.AddWithValue("@raca_pet", pet.getRaca());
+                conexao.comandoSql.Parameters.AddWithValue("@nome_pet", pet.getNome());
+                conexao.comandoSql.Parameters.AddWithValue("@especie_pet", pet.getEspecie());
+                conexao.comandoSql.Parameters.AddWithValue("@foto_pet", pet.getFoto());
+                conexao.comandoSql.Parameters.AddWithValue("@cod_pet", pet.getCodigo());
+                conexao.setStrComandoSql(comandoSql.ToString());
+                return conexao.executarComando() > 0;
+            } catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
     }
-}
+}}

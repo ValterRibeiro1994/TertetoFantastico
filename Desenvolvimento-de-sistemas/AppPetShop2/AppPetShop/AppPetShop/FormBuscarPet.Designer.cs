@@ -48,7 +48,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnRemoverPet = new System.Windows.Forms.Button();
             this.btnListarPet = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEditarPet = new System.Windows.Forms.Button();
             this.rbMacho = new System.Windows.Forms.RadioButton();
             this.rbFemea = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.campoImagem)).BeginInit();
@@ -216,7 +216,6 @@
             this.btnRemoverPet.Text = "Remover Pet";
             this.btnRemoverPet.UseVisualStyleBackColor = true;
             this.btnRemoverPet.Click += new System.EventHandler(this.btnRemoverPet_Click);
-
             // 
             // btnListarPet
             // 
@@ -228,14 +227,15 @@
             this.btnListarPet.UseVisualStyleBackColor = true;
             this.btnListarPet.Click += new System.EventHandler(this.btnListarPet_Click);
             // 
-            // button1
+            // btnEditarPet
             // 
-            this.button1.Location = new System.Drawing.Point(403, 160);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Editar Pet";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnEditarPet.Location = new System.Drawing.Point(403, 160);
+            this.btnEditarPet.Name = "btnEditarPet";
+            this.btnEditarPet.Size = new System.Drawing.Size(109, 23);
+            this.btnEditarPet.TabIndex = 21;
+            this.btnEditarPet.Text = "Editar Pet";
+            this.btnEditarPet.UseVisualStyleBackColor = true;
+            this.btnEditarPet.Click += new System.EventHandler(this.btnEditarPet_Click);
             // 
             // rbMacho
             // 
@@ -266,7 +266,7 @@
             this.ClientSize = new System.Drawing.Size(1010, 548);
             this.Controls.Add(this.rbFemea);
             this.Controls.Add(this.rbMacho);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEditarPet);
             this.Controls.Add(this.btnListarPet);
             this.Controls.Add(this.btnRemoverPet);
             this.Controls.Add(this.button3);
@@ -318,7 +318,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnRemoverPet;
         private System.Windows.Forms.Button btnListarPet;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEditarPet;
         private System.Windows.Forms.RadioButton rbMacho;
         private System.Windows.Forms.RadioButton rbFemea;
     }
