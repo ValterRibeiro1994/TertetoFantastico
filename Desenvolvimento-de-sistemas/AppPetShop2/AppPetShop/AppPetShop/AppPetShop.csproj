@@ -60,6 +60,12 @@
     <Compile Include="FormBuscarPet.Designer.cs">
       <DependentUpon>FormBuscarPet.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBuscarServicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarServicos.Designer.cs">
+      <DependentUpon>FormBuscarServicos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBuscarTutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="ValorServico.cs" />
     <EmbeddedResource Include="FormBuscarPet.resx">
       <DependentUpon>FormBuscarPet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBuscarServicos.resx">
+      <DependentUpon>FormBuscarServicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarTutor.resx">
       <DependentUpon>FormBuscarTutor.cs</DependentUpon>

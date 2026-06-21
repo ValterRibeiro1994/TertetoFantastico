@@ -108,3 +108,4 @@ C:\Users\lipe1\source\repos\ValterRibeiro1994\TertetoFantastico\Desenvolvimento-
 C:\Users\lipe1\source\repos\ValterRibeiro1994\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.exe
 C:\Users\lipe1\source\repos\ValterRibeiro1994\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.pdb
 C:\Users\lipe1\source\repos\ValterRibeiro1994\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormCadastrarServico.resources
+C:\Users\lipe1\source\repos\ValterRibeiro1994\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormBuscarServicos.resources

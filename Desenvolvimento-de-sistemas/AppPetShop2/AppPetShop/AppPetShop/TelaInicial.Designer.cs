@@ -68,14 +68,14 @@
             // cadastrarTutorToolStripMenuItem
             // 
             this.cadastrarTutorToolStripMenuItem.Name = "cadastrarTutorToolStripMenuItem";
-            this.cadastrarTutorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarTutorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.cadastrarTutorToolStripMenuItem.Text = "Cadastrar Tutor";
             this.cadastrarTutorToolStripMenuItem.Click += new System.EventHandler(this.cadastrarTutorToolStripMenuItem_Click);
             // 
             // pesquisarTutorToolStripMenuItem
             // 
             this.pesquisarTutorToolStripMenuItem.Name = "pesquisarTutorToolStripMenuItem";
-            this.pesquisarTutorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pesquisarTutorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.pesquisarTutorToolStripMenuItem.Text = "Pesquisar Tutor";
             this.pesquisarTutorToolStripMenuItem.Click += new System.EventHandler(this.pesquisarTutorToolStripMenuItem_Click);
             // 
@@ -91,14 +91,14 @@
             // cadastrarPetToolStripMenuItem
             // 
             this.cadastrarPetToolStripMenuItem.Name = "cadastrarPetToolStripMenuItem";
-            this.cadastrarPetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarPetToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cadastrarPetToolStripMenuItem.Text = "Cadastrar Pet";
             this.cadastrarPetToolStripMenuItem.Click += new System.EventHandler(this.cadastrarPetToolStripMenuItem_Click);
             // 
             // pesquisarPetToolStripMenuItem
             // 
             this.pesquisarPetToolStripMenuItem.Name = "pesquisarPetToolStripMenuItem";
-            this.pesquisarPetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pesquisarPetToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pesquisarPetToolStripMenuItem.Text = "Pesquisar Pet";
             this.pesquisarPetToolStripMenuItem.Click += new System.EventHandler(this.pesquisarPetToolStripMenuItem_Click);
             // 
@@ -123,6 +123,7 @@
             this.pesquisarServiçoToolStripMenuItem.Name = "pesquisarServiçoToolStripMenuItem";
             this.pesquisarServiçoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pesquisarServiçoToolStripMenuItem.Text = "Pesquisar Serviço";
+            this.pesquisarServiçoToolStripMenuItem.Click += new System.EventHandler(this.pesquisarServiçoToolStripMenuItem_Click);
             // 
             // TelaInicial
             // 

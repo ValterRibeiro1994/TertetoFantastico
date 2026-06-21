@@ -11,8 +11,15 @@ namespace AppPetShop
     {
         private string tipo;
 
-        public TipoServiço(ComboBox tipoS)
-        {
+        public TipoServiço(ComboBox tipoS = null, String tipoString = null)
+        {   
+            if (tipoString != null) 
+            {
+
+                tipoS.Text = tipoString;
+
+            }
+
             if (validarTipo(tipoS)) 
             {
                 this.tipo = tipoS.SelectedItem.ToString();

@@ -11,8 +11,13 @@ namespace AppPetShop
     {
         private DateTime dataServico;
 
-        public DataServico(DateTimePicker dataServico)
+        public DataServico(DateTimePicker dataServico = null, String dataString = null)
         {
+            if (dataString != null)
+            {
+                dataServico.Value = DateTime.Parse(dataString);
+            }
+
             if (validarDataServico(dataServico))
             {
                 this.dataServico = dataServico.Value;

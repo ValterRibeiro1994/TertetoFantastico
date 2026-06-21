@@ -11,8 +11,13 @@ namespace AppPetShop
     {
         private double valorServico;
 
-        public ValorServico(TextBox valorServico)
+        public ValorServico(TextBox valorServico = null , String valorString = null)
         {
+            if (valorString != null)
+            {
+                valorServico.Text = valorString;
+            }
+
             if (validarValorServico(valorServico))
             {
                 this.valorServico = Convert.ToDouble(valorServico.Text);

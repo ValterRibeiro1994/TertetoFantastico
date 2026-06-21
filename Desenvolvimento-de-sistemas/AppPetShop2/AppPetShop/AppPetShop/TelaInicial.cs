@@ -52,5 +52,11 @@ namespace AppPetShop
             FormCadastrarServico tela = new FormCadastrarServico();
             tela.ShowDialog();
         }
+
+        private void pesquisarServiçoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBuscarServicos tela = new FormBuscarServicos();
+            tela.ShowDialog();
+        }
     }
 }
