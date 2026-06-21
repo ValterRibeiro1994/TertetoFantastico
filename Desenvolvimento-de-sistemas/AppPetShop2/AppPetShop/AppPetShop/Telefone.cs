@@ -12,12 +12,16 @@ namespace AppPetShop
 
         public Telefone(string telefone)
         {
+            if (validarTelefone(telefone))
+            {
+                this.telefone = telefone;
+            }
 
         }
 
         public string getTelefone()
         {
-            return this.telefone; 
+            return telefone; 
         }
         private bool validarTelefone(string telefone)
         {

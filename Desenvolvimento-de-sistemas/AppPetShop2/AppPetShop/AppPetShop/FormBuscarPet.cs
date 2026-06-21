@@ -115,6 +115,8 @@ namespace AppPetShop
             {
                 CodigoBanco codigo = new CodigoBanco(campoCodigo.Text);
                 repositorio.removerPet(codigo);
+                campoImagem.Image = null;
+                repositorio.listarPet(gridPet);
             } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);

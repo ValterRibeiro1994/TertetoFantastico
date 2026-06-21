@@ -31,6 +31,7 @@ namespace AppPetShop
                 conexao.comandoSql.Parameters.AddWithValue("@codigo", codigo.getCodigo());
                 conexao.setStrComandoSql(comandoSql.ToString());
                 return conexao.executarComando() > 0;
+
             } catch (Exception ex)
             {
                 throw new Exception(ex.Message);

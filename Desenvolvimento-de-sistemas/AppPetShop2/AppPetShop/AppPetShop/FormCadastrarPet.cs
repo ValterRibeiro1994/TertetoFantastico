@@ -30,7 +30,7 @@ namespace AppPetShop
                 Nome raca = new Nome(inputRaca.Text, limite_max: 30);
                 byte[] foto = obterFoto();
                 Nome nome_pet = new Nome(inputNome.Text, limite_max: 30);
-                Nome especie = new Nome(inputRaca.Text, limite_max: 30);
+                Nome especie = new Nome(inputEspecie.Text, limite_max: 30);
 
                 Pet pet = new Pet();
                 pet.setCpfTutor(cpf);

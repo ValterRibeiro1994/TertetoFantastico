@@ -114,10 +114,23 @@ namespace AppPetShop
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            campoCpf.Text = "";
-            campoNome.Text = "";
-            campoEmail.Text = "";
-            campoTelefone.Text = "";
+            repositorio.limparTutor(campoCpf, campoNome, campoEmail, campoTelefone);
+        }
+
+        private void btnRemoverTut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cpf cpf = new Cpf(campoCpf.Text);
+                repositorio.removerTutor(cpf);
+                repositorio.listarTutores(gridTutor);
+                repositorio.limparTutor(campoCpf, campoNome, campoEmail, campoTelefone);
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
         }
     }
 

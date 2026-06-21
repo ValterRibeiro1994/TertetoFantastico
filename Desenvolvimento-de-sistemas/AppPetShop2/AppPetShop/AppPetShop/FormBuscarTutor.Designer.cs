@@ -42,6 +42,7 @@
             this.gridTutor = new System.Windows.Forms.DataGridView();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnRemoverTut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridTutor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,12 +198,25 @@
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // btnRemoverTut
+            // 
+            this.btnRemoverTut.BackColor = System.Drawing.Color.Gold;
+            this.btnRemoverTut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoverTut.Location = new System.Drawing.Point(172, 320);
+            this.btnRemoverTut.Name = "btnRemoverTut";
+            this.btnRemoverTut.Size = new System.Drawing.Size(110, 29);
+            this.btnRemoverTut.TabIndex = 14;
+            this.btnRemoverTut.Text = "Remover tutor";
+            this.btnRemoverTut.UseVisualStyleBackColor = false;
+            this.btnRemoverTut.Click += new System.EventHandler(this.btnRemoverTut_Click);
+            // 
             // FormBuscarTutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(805, 361);
+            this.Controls.Add(this.btnRemoverTut);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.gridTutor);
@@ -241,5 +255,6 @@
         private System.Windows.Forms.DataGridView gridTutor;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnRemoverTut;
     }
 }

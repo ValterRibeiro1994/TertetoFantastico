@@ -168,5 +168,13 @@ namespace AppPetShop
                 throw new Exception(ex.Message);
             }
         }
-    }
+
+        public void limparTutor(TextBox campoCpf, TextBox campoNome, TextBox campoEmail, TextBox campoTelefone)
+        {
+            campoCpf.Text = "";
+            campoNome.Text = "";
+            campoEmail.Text = "";
+            campoTelefone.Text = "";
+        }
+}
 }
