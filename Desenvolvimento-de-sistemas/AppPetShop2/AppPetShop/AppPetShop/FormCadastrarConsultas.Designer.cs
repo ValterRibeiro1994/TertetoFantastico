@@ -73,6 +73,7 @@
             this.btnCadastrar.TabIndex = 28;
             this.btnCadastrar.Text = "Registrar Serviço";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label4
             // 
