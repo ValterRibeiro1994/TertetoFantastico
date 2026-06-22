@@ -124,7 +124,7 @@ namespace AppPetShop
 
                 DataRow linha = tabela.Rows[0];
                 TipoServiço tipo = new TipoServiço(tipoString: linha["Tipo"].ToString());
-                DataServico data = new DataServico(dataString: linha["Data"].ToString());
+                DataServico data = new DataServico(dataBanco: (DateTime)linha["Data"]);
                 ValorServico valor = new ValorServico(valorString: linha["Valor"].ToString());
 
                 Servico Servico = new Servico();

@@ -9,36 +9,25 @@ namespace AppPetShop
 {
     internal class DataServico
     {
-        private DateTime dataServico;
+        private DateTime data;
 
-        public DataServico(DateTimePicker dataServico = null, String dataString = null)
+        public DataServico(DateTimePicker dataForm = null, DateTime dataBanco = new DateTime())
         {
-            if (dataString != null)
+            // verifica se o objeto veio do formulario
+            if (dataForm != null)
             {
-                dataServico.Value = DateTime.Parse(dataString);
-            }
-
-            if (validarDataServico(dataServico))
+                data = dataForm.Value;
+            } else // veio do banco
             {
-                this.dataServico = dataServico.Value;
+                data = dataBanco;
             }
-        }
+         }
 
         public DateTime getDataServico()
         {
-            return dataServico;
+            return data;
         }
 
-        public bool validarDataServico(DateTimePicker dataServico)
-        {
-
-            //Fiz, porem não consigo pensar como isso aconteceria. 
-            if (dataServico == null)
-            {
-                throw new Exception("Campo data do serviço não pode estar vazio !!!");
-            }
-                        
-            return true;
-        }
+        
     }
 }
