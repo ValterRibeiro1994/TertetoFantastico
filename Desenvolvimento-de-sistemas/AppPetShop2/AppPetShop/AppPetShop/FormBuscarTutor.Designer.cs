@@ -141,11 +141,12 @@
             // btnFiltrarCpf
             // 
             this.btnFiltrarCpf.BackColor = System.Drawing.Color.Gold;
+            this.btnFiltrarCpf.FlatAppearance.BorderSize = 2;
             this.btnFiltrarCpf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltrarCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFiltrarCpf.Location = new System.Drawing.Point(58, 235);
             this.btnFiltrarCpf.Name = "btnFiltrarCpf";
-            this.btnFiltrarCpf.Size = new System.Drawing.Size(110, 23);
+            this.btnFiltrarCpf.Size = new System.Drawing.Size(110, 25);
             this.btnFiltrarCpf.TabIndex = 9;
             this.btnFiltrarCpf.Text = "Buscar CPF";
             this.btnFiltrarCpf.UseVisualStyleBackColor = false;
@@ -155,11 +156,12 @@
             // 
             this.btnPesquisarTodos.BackColor = System.Drawing.Color.Gold;
             this.btnPesquisarTodos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnPesquisarTodos.FlatAppearance.BorderSize = 2;
             this.btnPesquisarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisarTodos.Location = new System.Drawing.Point(184, 235);
             this.btnPesquisarTodos.Name = "btnPesquisarTodos";
-            this.btnPesquisarTodos.Size = new System.Drawing.Size(98, 23);
+            this.btnPesquisarTodos.Size = new System.Drawing.Size(98, 25);
             this.btnPesquisarTodos.TabIndex = 10;
             this.btnPesquisarTodos.Text = "Buscar Todos";
             this.btnPesquisarTodos.UseVisualStyleBackColor = false;
@@ -180,11 +182,12 @@
             // btnAlterar
             // 
             this.btnAlterar.BackColor = System.Drawing.Color.Gold;
+            this.btnAlterar.FlatAppearance.BorderSize = 2;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Location = new System.Drawing.Point(58, 276);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(110, 23);
+            this.btnAlterar.Size = new System.Drawing.Size(110, 25);
             this.btnAlterar.TabIndex = 12;
             this.btnAlterar.Text = "Alterar Tutor";
             this.btnAlterar.UseVisualStyleBackColor = false;
@@ -193,11 +196,12 @@
             // btnLimpar
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.Gold;
+            this.btnLimpar.FlatAppearance.BorderSize = 2;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.Location = new System.Drawing.Point(184, 276);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(98, 23);
+            this.btnLimpar.Size = new System.Drawing.Size(98, 25);
             this.btnLimpar.TabIndex = 13;
             this.btnLimpar.Text = "Limpar Campos";
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -206,11 +210,12 @@
             // btnRemoverTut
             // 
             this.btnRemoverTut.BackColor = System.Drawing.Color.Gold;
+            this.btnRemoverTut.FlatAppearance.BorderSize = 2;
             this.btnRemoverTut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoverTut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoverTut.Location = new System.Drawing.Point(118, 321);
+            this.btnRemoverTut.Location = new System.Drawing.Point(118, 307);
             this.btnRemoverTut.Name = "btnRemoverTut";
-            this.btnRemoverTut.Size = new System.Drawing.Size(110, 29);
+            this.btnRemoverTut.Size = new System.Drawing.Size(110, 31);
             this.btnRemoverTut.TabIndex = 14;
             this.btnRemoverTut.Text = "Remover tutor";
             this.btnRemoverTut.UseVisualStyleBackColor = false;

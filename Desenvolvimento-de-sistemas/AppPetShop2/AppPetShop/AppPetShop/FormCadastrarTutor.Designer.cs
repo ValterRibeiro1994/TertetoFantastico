@@ -123,10 +123,12 @@
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.Gold;
+            this.btnCadastrar.FlatAppearance.BorderSize = 2;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Location = new System.Drawing.Point(46, 292);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(338, 35);
+            this.btnCadastrar.Size = new System.Drawing.Size(349, 35);
             this.btnCadastrar.TabIndex = 8;
             this.btnCadastrar.Text = "Cadastrar Tutor";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -150,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(497, 371);
+            this.ClientSize = new System.Drawing.Size(487, 371);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.inputTelefone);
