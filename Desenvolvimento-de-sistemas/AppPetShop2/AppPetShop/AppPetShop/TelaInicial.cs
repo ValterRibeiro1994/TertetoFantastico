@@ -76,5 +76,11 @@ namespace AppPetShop
             FormListaUm tela = new FormListaUm();
             tela.ShowDialog();
         }
+
+        private void faleConoscoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormFaleConosco tela = new FormFaleConosco();
+            tela.ShowDialog();
+        }
     }
 }

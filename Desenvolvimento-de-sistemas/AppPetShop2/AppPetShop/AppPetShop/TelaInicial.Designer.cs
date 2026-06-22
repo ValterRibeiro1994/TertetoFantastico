@@ -44,6 +44,7 @@
             this.listagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lista1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lista2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.faleConoscoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +57,8 @@
             this.petsToolStripMenuItem,
             this.serviçosToolStripMenuItem,
             this.consultaToolStripMenuItem,
-            this.listagemToolStripMenuItem});
+            this.listagemToolStripMenuItem,
+            this.faleConoscoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -76,14 +78,14 @@
             // cadastrarTutorToolStripMenuItem
             // 
             this.cadastrarTutorToolStripMenuItem.Name = "cadastrarTutorToolStripMenuItem";
-            this.cadastrarTutorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarTutorToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.cadastrarTutorToolStripMenuItem.Text = "Cadastrar Tutor";
             this.cadastrarTutorToolStripMenuItem.Click += new System.EventHandler(this.cadastrarTutorToolStripMenuItem_Click);
             // 
             // pesquisarTutorToolStripMenuItem
             // 
             this.pesquisarTutorToolStripMenuItem.Name = "pesquisarTutorToolStripMenuItem";
-            this.pesquisarTutorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pesquisarTutorToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.pesquisarTutorToolStripMenuItem.Text = "Pesquisar Tutor";
             this.pesquisarTutorToolStripMenuItem.Click += new System.EventHandler(this.pesquisarTutorToolStripMenuItem_Click);
             // 
@@ -168,15 +170,22 @@
             // lista1ToolStripMenuItem
             // 
             this.lista1ToolStripMenuItem.Name = "lista1ToolStripMenuItem";
-            this.lista1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lista1ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.lista1ToolStripMenuItem.Text = "lista 1";
             this.lista1ToolStripMenuItem.Click += new System.EventHandler(this.lista1ToolStripMenuItem_Click);
             // 
             // lista2ToolStripMenuItem
             // 
             this.lista2ToolStripMenuItem.Name = "lista2ToolStripMenuItem";
-            this.lista2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lista2ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.lista2ToolStripMenuItem.Text = "lista 2";
+            // 
+            // faleConoscoToolStripMenuItem
+            // 
+            this.faleConoscoToolStripMenuItem.Name = "faleConoscoToolStripMenuItem";
+            this.faleConoscoToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.faleConoscoToolStripMenuItem.Text = "FaleConosco";
+            this.faleConoscoToolStripMenuItem.Click += new System.EventHandler(this.faleConoscoToolStripMenuItem_Click);
             // 
             // TelaInicial
             // 
@@ -214,5 +223,6 @@
         private System.Windows.Forms.ToolStripMenuItem listagemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lista1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lista2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem faleConoscoToolStripMenuItem;
     }
 }

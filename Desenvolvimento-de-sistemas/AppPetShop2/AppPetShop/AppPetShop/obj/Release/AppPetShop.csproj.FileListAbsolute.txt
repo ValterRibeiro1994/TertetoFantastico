@@ -1,0 +1,15 @@
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.csproj.AssemblyReference.cache
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.FormBuscarConsultas.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.FormBuscarPet.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.FormBuscarServicos.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.FormBuscarTutor.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.FormCadastrarConsultas.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.FormCadastrarPet.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.FormCadastrarServico.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.FormCadastrarTutor.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.FormListaUm.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.TelaInicial.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.TelaSplash.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.Properties.Resources.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.csproj.GenerateResource.cache
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Release\AppPetShop.csproj.CoreCompileInputs.cache

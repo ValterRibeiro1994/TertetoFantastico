@@ -104,6 +104,12 @@
     <Compile Include="FormCadastrarTutor.Designer.cs">
       <DependentUpon>FormCadastrarTutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFaleConosco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaleConosco.Designer.cs">
+      <DependentUpon>FormFaleConosco.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListaUm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastrarTutor.resx">
       <DependentUpon>FormCadastrarTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaleConosco.resx">
+      <DependentUpon>FormFaleConosco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListaUm.resx">
       <DependentUpon>FormListaUm.cs</DependentUpon>
