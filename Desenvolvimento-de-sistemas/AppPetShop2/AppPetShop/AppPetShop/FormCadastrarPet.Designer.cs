@@ -61,6 +61,8 @@
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.Gold;
+            this.btnCadastrar.FlatAppearance.BorderSize = 3;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Location = new System.Drawing.Point(92, 368);
             this.btnCadastrar.Name = "btnCadastrar";
@@ -73,6 +75,8 @@
             // btnFoto
             // 
             this.btnFoto.BackColor = System.Drawing.Color.Gold;
+            this.btnFoto.FlatAppearance.BorderSize = 3;
+            this.btnFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFoto.Location = new System.Drawing.Point(415, 364);
             this.btnFoto.Name = "btnFoto";
@@ -158,6 +162,7 @@
             // 
             this.rbMacho.AutoSize = true;
             this.rbMacho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMacho.ForeColor = System.Drawing.Color.White;
             this.rbMacho.Location = new System.Drawing.Point(198, 331);
             this.rbMacho.Name = "rbMacho";
             this.rbMacho.Size = new System.Drawing.Size(73, 21);
@@ -170,6 +175,7 @@
             // 
             this.rbFemea.AutoSize = true;
             this.rbFemea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFemea.ForeColor = System.Drawing.Color.White;
             this.rbFemea.Location = new System.Drawing.Point(285, 331);
             this.rbFemea.Name = "rbFemea";
             this.rbFemea.Size = new System.Drawing.Size(74, 21);
