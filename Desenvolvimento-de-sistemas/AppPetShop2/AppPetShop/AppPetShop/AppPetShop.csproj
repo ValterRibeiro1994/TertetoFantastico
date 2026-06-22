@@ -57,6 +57,12 @@
     <Compile Include="DataServico.cs" />
     <Compile Include="DescConsulta.cs" />
     <Compile Include="Email.cs" />
+    <Compile Include="FormBuscarConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarConsultas.Designer.cs">
+      <DependentUpon>FormBuscarConsultas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBuscarPet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     <Compile Include="TipoServiço.cs" />
     <Compile Include="Tutor.cs" />
     <Compile Include="ValorServico.cs" />
+    <EmbeddedResource Include="FormBuscarConsultas.resx">
+      <DependentUpon>FormBuscarConsultas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarPet.resx">
       <DependentUpon>FormBuscarPet.cs</DependentUpon>
     </EmbeddedResource>

@@ -122,10 +122,10 @@ namespace AppPetShop
 
         private void clicarCelula(object sender, DataGridViewCellEventArgs e)
         {
-            String codigo = gridServico.CurrentRow.Cells[0].Value.ToString();
-            String tipo = gridServico.CurrentRow.Cells[1].Value.ToString();
-            DateTime data = Convert.ToDateTime(gridServico.CurrentRow.Cells[2].Value);
-            String valor = gridServico.CurrentRow.Cells[3].Value.ToString();
+            String codigo = gridServico.CurrentRow.Cells[1].Value.ToString();
+            String tipo = gridServico.CurrentRow.Cells[2].Value.ToString();
+            DateTime data = Convert.ToDateTime(gridServico.CurrentRow.Cells[3].Value);
+            String valor = gridServico.CurrentRow.Cells[4].Value.ToString();
 
             campoCodigo.Text = codigo;
             campoTipo.Text = tipo;
@@ -133,18 +133,7 @@ namespace AppPetShop
             campoValor.Text = valor;
         }
 
-        private void clicar_celula(object sender, DataGridViewCellEventArgs e)
-        {
-            String codigo = gridServico.CurrentRow.Cells[0].Value.ToString();
-            String tipo = gridServico.CurrentRow.Cells[1].Value.ToString();
-            DateTime data = Convert.ToDateTime(gridServico.CurrentRow.Cells[2].Value);
-            String valor = gridServico.CurrentRow.Cells[3].Value.ToString();
-
-            campoCodigo.Text = codigo;
-            campoTipo.Text = tipo;
-            campoData.Value = data;
-            campoValor.Text = valor;
-        }
+        
     }
 }
 
