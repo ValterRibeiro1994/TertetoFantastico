@@ -49,10 +49,9 @@
             // campoId
             // 
             this.campoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoId.Location = new System.Drawing.Point(228, 103);
-            this.campoId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoId.Location = new System.Drawing.Point(171, 84);
             this.campoId.Name = "campoId";
-            this.campoId.Size = new System.Drawing.Size(303, 30);
+            this.campoId.Size = new System.Drawing.Size(228, 26);
             this.campoId.TabIndex = 43;
             // 
             // label2
@@ -61,30 +60,27 @@
             this.label2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(68, 103);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(51, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 22);
+            this.label2.Size = new System.Drawing.Size(96, 18);
             this.label2.TabIndex = 42;
             this.label2.Text = "ID Consulta";
             // 
             // campoDesc
             // 
-            this.campoDesc.Location = new System.Drawing.Point(228, 278);
-            this.campoDesc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoDesc.Location = new System.Drawing.Point(171, 226);
             this.campoDesc.Multiline = true;
             this.campoDesc.Name = "campoDesc";
-            this.campoDesc.Size = new System.Drawing.Size(303, 244);
+            this.campoDesc.Size = new System.Drawing.Size(228, 199);
             this.campoDesc.TabIndex = 41;
             // 
             // dtpDataConsulta
             // 
             this.dtpDataConsulta.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDataConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataConsulta.Location = new System.Drawing.Point(228, 224);
-            this.dtpDataConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDataConsulta.Location = new System.Drawing.Point(171, 182);
             this.dtpDataConsulta.Name = "dtpDataConsulta";
-            this.dtpDataConsulta.Size = new System.Drawing.Size(303, 22);
+            this.dtpDataConsulta.Size = new System.Drawing.Size(228, 20);
             this.dtpDataConsulta.TabIndex = 40;
             this.dtpDataConsulta.Value = new System.DateTime(2026, 6, 21, 0, 0, 0, 0);
             // 
@@ -94,9 +90,10 @@
             this.label5.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gold;
-            this.label5.Location = new System.Drawing.Point(397, 22);
+            this.label5.Location = new System.Drawing.Point(298, 18);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(249, 36);
+            this.label5.Size = new System.Drawing.Size(202, 29);
             this.label5.TabIndex = 39;
             this.label5.Text = "Buscar Consulta";
             // 
@@ -106,10 +103,9 @@
             this.label4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(83, 278);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(62, 226);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 22);
+            this.label4.Size = new System.Drawing.Size(85, 18);
             this.label4.TabIndex = 38;
             this.label4.Text = "Descrição";
             // 
@@ -119,20 +115,18 @@
             this.label3.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(16, 224);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 182);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 22);
+            this.label3.Size = new System.Drawing.Size(135, 18);
             this.label3.TabIndex = 37;
             this.label3.Text = "Data da consulta";
             // 
             // campoCodPet
             // 
             this.campoCodPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodPet.Location = new System.Drawing.Point(228, 161);
-            this.campoCodPet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoCodPet.Location = new System.Drawing.Point(171, 131);
             this.campoCodPet.Name = "campoCodPet";
-            this.campoCodPet.Size = new System.Drawing.Size(303, 30);
+            this.campoCodPet.Size = new System.Drawing.Size(228, 26);
             this.campoCodPet.TabIndex = 36;
             // 
             // label1
@@ -141,10 +135,9 @@
             this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(73, 161);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(55, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 22);
+            this.label1.Size = new System.Drawing.Size(92, 18);
             this.label1.TabIndex = 35;
             this.label1.Text = "Codigo Pet";
             // 
@@ -153,11 +146,10 @@
             this.gridConsulta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridConsulta.BackgroundColor = System.Drawing.SystemColors.Info;
             this.gridConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridConsulta.Location = new System.Drawing.Point(613, 103);
-            this.gridConsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridConsulta.Location = new System.Drawing.Point(460, 84);
             this.gridConsulta.Name = "gridConsulta";
             this.gridConsulta.RowHeadersWidth = 51;
-            this.gridConsulta.Size = new System.Drawing.Size(565, 412);
+            this.gridConsulta.Size = new System.Drawing.Size(424, 335);
             this.gridConsulta.TabIndex = 44;
             this.gridConsulta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clicarCelula);
             // 
@@ -165,10 +157,9 @@
             // 
             this.btnRemover.BackColor = System.Drawing.Color.Gold;
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.Location = new System.Drawing.Point(54, 493);
-            this.btnRemover.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemover.Location = new System.Drawing.Point(40, 401);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(147, 29);
+            this.btnRemover.Size = new System.Drawing.Size(110, 24);
             this.btnRemover.TabIndex = 49;
             this.btnRemover.Text = "Remover serviço";
             this.btnRemover.UseVisualStyleBackColor = false;
@@ -178,10 +169,9 @@
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.Gold;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(54, 457);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpar.Location = new System.Drawing.Point(40, 371);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(147, 28);
+            this.btnLimpar.Size = new System.Drawing.Size(110, 23);
             this.btnLimpar.TabIndex = 48;
             this.btnLimpar.Text = "Limpar Campos";
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -191,10 +181,9 @@
             // 
             this.btnAlterar.BackColor = System.Drawing.Color.Gold;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Location = new System.Drawing.Point(54, 407);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlterar.Location = new System.Drawing.Point(40, 331);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(147, 28);
+            this.btnAlterar.Size = new System.Drawing.Size(110, 23);
             this.btnAlterar.TabIndex = 47;
             this.btnAlterar.Text = "Alterar Consulta";
             this.btnAlterar.UseVisualStyleBackColor = false;
@@ -204,10 +193,9 @@
             // 
             this.btnPesquisarTodos.BackColor = System.Drawing.Color.Gold;
             this.btnPesquisarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisarTodos.Location = new System.Drawing.Point(54, 335);
-            this.btnPesquisarTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPesquisarTodos.Location = new System.Drawing.Point(40, 272);
             this.btnPesquisarTodos.Name = "btnPesquisarTodos";
-            this.btnPesquisarTodos.Size = new System.Drawing.Size(147, 28);
+            this.btnPesquisarTodos.Size = new System.Drawing.Size(110, 23);
             this.btnPesquisarTodos.TabIndex = 46;
             this.btnPesquisarTodos.Text = "Buscar Todos";
             this.btnPesquisarTodos.UseVisualStyleBackColor = false;
@@ -217,10 +205,9 @@
             // 
             this.btnFitrarCod.BackColor = System.Drawing.Color.Gold;
             this.btnFitrarCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFitrarCod.Location = new System.Drawing.Point(54, 371);
-            this.btnFitrarCod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFitrarCod.Location = new System.Drawing.Point(40, 301);
             this.btnFitrarCod.Name = "btnFitrarCod";
-            this.btnFitrarCod.Size = new System.Drawing.Size(147, 28);
+            this.btnFitrarCod.Size = new System.Drawing.Size(110, 23);
             this.btnFitrarCod.TabIndex = 45;
             this.btnFitrarCod.Text = "Buscar Codigo";
             this.btnFitrarCod.UseVisualStyleBackColor = false;
@@ -228,10 +215,10 @@
             // 
             // FormBuscarConsultas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1211, 551);
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ClientSize = new System.Drawing.Size(908, 448);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnAlterar);
@@ -247,7 +234,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.campoCodPet);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormBuscarConsultas";
             this.Text = "FormBuscarConsultas";
             ((System.ComponentModel.ISupportInitialize)(this.gridConsulta)).EndInit();

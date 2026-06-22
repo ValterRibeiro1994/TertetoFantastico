@@ -15,6 +15,7 @@ namespace AppPetShop
         public FormFaleConosco()
         {
             InitializeComponent();
+            gr
         }
 
         private void label1_Click(object sender, EventArgs e)
