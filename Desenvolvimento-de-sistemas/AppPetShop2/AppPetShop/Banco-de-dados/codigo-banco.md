@@ -1,3 +1,18 @@
+show databases;
+
+use petshop_db;
+
+DESC tb_pet;
+DESC tb_tutor;
+desc tb_servicos;
+desc tb_consulta;
+
+show tables;
+
+#Tutor
+
+select nome_pet as 'Nome do Pet', nascimento_pet as 'Data de nascimento', nome_tutor as 'Nome do tutor'
+FROM tb_pet
 INNER JOIN tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor
 ORDER BY nascimento_pet;
 
@@ -20,8 +35,14 @@ select nome_tutor as 'Tutor', celular_tutor as 'Telefone', nome_pet as 'Nome do 
  select tipo_servico as 'Tipo', data_servico as 'Data', nome_tutor as 'Tutor', nome_pet as 'Nome' 
  from tb_pet
  inner join tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor inner join tb_servico on tb_servico.cod_pet = tb_pet.cod_pet
- where tipo_servico = @tipo && data_servico = @data order by 
+ where (tipo_servico = @tipo && data_servico = @data) order by nome_tutor,nome_pet asc;
 
+ 
+ # Consulta
+ select tb_consulta.cod_pet as 'codigo do pet',nome_pet as 'nome do pet',nome_tutor as 'Nome do tutor', data_consulta as 'data da consulta', prescricao_consulta as 'Prescrição'
+ from tb_pet 
+ inner join tb_tutor on  tb_tutor.cpf_tutor = tb_pet.cpf_tutor 
+ inner join tb_consulta on tb_consulta.cod_pet = tb_pet.cod_pet;
 
 
 create DATABASE if not EXISTS petshop_db;
