@@ -9,58 +9,49 @@ namespace AppPetShop
 {
     internal class ValorServico
     {
-        private double valorServico;
+        private double valor;
 
-        public ValorServico(TextBox valorServico = null , String valorString = null)
+        public ValorServico(TextBox valorForm = null , String valorBanco = null)
         {
-            if (valorString != null)
+            if (valorForm != null)
             {
-                valorServico.Text = valorString;
-            }
-
-            if (validarValorServico(valorServico))
+                validarValorServico(valorForm.Text);
+            } else
             {
-                this.valorServico = Convert.ToDouble(valorServico.Text);
+                validarValorServico(valorBanco);
             }
         }
 
         public double getValorServico()
         {
-            return valorServico;
+            return valor;
         }
 
-        public bool validarValorServico(TextBox valorServico)
+        public bool validarValorServico(string valorServico)
         {
-            String StringValor;
-            double valor;
+            string valor = valorServico;
+            int limite = "10000.00".Length; // limite maximo de caracteres
+            // verifica o comprimento da string de valor recebido
+            if (valor.Length > limite) {
+                throw new Exception("Valor de Serviço passou do limite permitido !!!");
+            }
 
+            // troca virgulas por ponto
+            valor = valorServico.Replace(",", ".");
+
+            // tenta converter a entrada para numeros
             try
             {
-                StringValor = valorServico.Text.Replace(",", ".");
-                valor =  Convert.ToDouble(StringValor);
-
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Valor do serviço deve ser um número !!!");
-            }
-
-            if (valor <= 0)
+                double n = double.Parse(valor);
+                if (n <= 0)
                 {
-                    throw new Exception("Valor do serviço deve ser maior que zero !!!");
-                    
+                    throw new Exception("Valor do serviço deve ser positivo");
                 }
-                int tamanho = StringValor.Length;
-                if (tamanho > 6)
-                {
-                    throw new Exception("Valor do serviço deve ser menor que 10 Mil");
-                    
-                }
-
-            
-
-                
-            return true;
+                this.valor = n;
+                return true;
+            } catch (Exception ex) {
+                throw new Exception("Número invalido !!! \n" + ex.Message);
+            }
         }
     }
 }
