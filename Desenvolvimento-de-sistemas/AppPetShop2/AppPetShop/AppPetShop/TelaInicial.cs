@@ -71,10 +71,10 @@ namespace AppPetShop
             tela.ShowDialog();
         }
 
-        private void faleConoscoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void lista1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormFaleConosco tela = new FormFaleConosco();
-            s
+            FormListaUm tela = new FormListaUm();
+            tela.ShowDialog();
         }
     }
 }

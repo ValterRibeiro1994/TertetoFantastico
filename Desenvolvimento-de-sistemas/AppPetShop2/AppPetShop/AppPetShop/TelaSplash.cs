@@ -44,7 +44,7 @@ namespace AppPetShop
             for (int x = 0; x < n; x++)
             {
                 label1.Text += texto[x];
-                await Task.Delay(50); // Pausa de 100 milissegundos entre cada letra
+                await Task.Delay(1); // Pausa de 100 milissegundos entre cada letra
             }
             await Task.Delay(500);
             // Instancia, exibe a Tela Inicial e esconde a Tela Splash atual
