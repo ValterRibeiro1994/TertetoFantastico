@@ -73,7 +73,7 @@ namespace AppPetShop
 
         private void lista1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormListaUm tela = new FormListaUm();
+            FormFiltroEspecie tela = new FormFiltroEspecie();
             tela.ShowDialog();
         }
 
