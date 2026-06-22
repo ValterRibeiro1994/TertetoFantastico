@@ -29,7 +29,7 @@ namespace AppPetShop
             // Define a mensagem multilinha que será exibida gradualmente na tela
             string texto = "Seja Bem Vindo " +
                 "\nAula: Desenvolvimento de Sistemas" +
-                "\nProfessor: Marcelo De LaTorre" +
+                "\nProfessor: Marcelo Della Torre" +
                 "\nProjeto: Sistema PetShop" +
                 "\nDevs = {" +
                 "\n\tLucas Braz," +
@@ -44,7 +44,7 @@ namespace AppPetShop
             for (int x = 0; x < n; x++)
             {
                 label1.Text += texto[x];
-                await Task.Delay(10); // Pausa de 100 milissegundos entre cada letra
+                await Task.Delay(50); // Pausa de 100 milissegundos entre cada letra
             }
             await Task.Delay(500);
             // Instancia, exibe a Tela Inicial e esconde a Tela Splash atual
