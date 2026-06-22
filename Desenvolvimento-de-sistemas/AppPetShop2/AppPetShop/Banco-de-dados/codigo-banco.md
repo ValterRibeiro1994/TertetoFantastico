@@ -38,6 +38,7 @@ insert into tb_pet(cpf_tutor, nascimento_pet, genero_pet, raca_pet, nome_pet, es
 
 
 create table if not exists tb_servicos(
+    id_servico int not null auto_increment primary key,
     cod_pet int not null,
     tipo_servico enum("banho", "tosa") not null,
     data_servico date not null,
@@ -52,6 +53,7 @@ insert into tb_servicos(cod_pet, tipo_servico, data_servico, valor_servico) valu
 (3, "banho", "2026-01-25", 115.70);
 
 create table if not exists tb_consulta(
+    id_consulta int not null auto_increment primary key,
     cod_pet int not null,
     data_consulta date not null,
     prescricao_consulta text not null,
