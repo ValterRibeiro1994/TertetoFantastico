@@ -41,6 +41,8 @@
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sobreNósToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.faleConoscoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +54,8 @@
             this.tutorToolStripMenuItem,
             this.petsToolStripMenuItem,
             this.serviçosToolStripMenuItem,
-            this.consultaToolStripMenuItem});
+            this.consultaToolStripMenuItem,
+            this.sobreNósToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -72,14 +75,14 @@
             // cadastrarTutorToolStripMenuItem
             // 
             this.cadastrarTutorToolStripMenuItem.Name = "cadastrarTutorToolStripMenuItem";
-            this.cadastrarTutorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.cadastrarTutorToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.cadastrarTutorToolStripMenuItem.Text = "Cadastrar Tutor";
             this.cadastrarTutorToolStripMenuItem.Click += new System.EventHandler(this.cadastrarTutorToolStripMenuItem_Click);
             // 
             // pesquisarTutorToolStripMenuItem
             // 
             this.pesquisarTutorToolStripMenuItem.Name = "pesquisarTutorToolStripMenuItem";
-            this.pesquisarTutorToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.pesquisarTutorToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.pesquisarTutorToolStripMenuItem.Text = "Pesquisar Tutor";
             this.pesquisarTutorToolStripMenuItem.Click += new System.EventHandler(this.pesquisarTutorToolStripMenuItem_Click);
             // 
@@ -89,20 +92,20 @@
             this.cadastrarPetToolStripMenuItem,
             this.pesquisarPetToolStripMenuItem});
             this.petsToolStripMenuItem.Name = "petsToolStripMenuItem";
-            this.petsToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.petsToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.petsToolStripMenuItem.Text = "Pets";
             // 
             // cadastrarPetToolStripMenuItem
             // 
             this.cadastrarPetToolStripMenuItem.Name = "cadastrarPetToolStripMenuItem";
-            this.cadastrarPetToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cadastrarPetToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.cadastrarPetToolStripMenuItem.Text = "Cadastrar Pet";
             this.cadastrarPetToolStripMenuItem.Click += new System.EventHandler(this.cadastrarPetToolStripMenuItem_Click);
             // 
             // pesquisarPetToolStripMenuItem
             // 
             this.pesquisarPetToolStripMenuItem.Name = "pesquisarPetToolStripMenuItem";
-            this.pesquisarPetToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pesquisarPetToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.pesquisarPetToolStripMenuItem.Text = "Pesquisar Pet";
             this.pesquisarPetToolStripMenuItem.Click += new System.EventHandler(this.pesquisarPetToolStripMenuItem_Click);
             // 
@@ -112,20 +115,20 @@
             this.cadastrarServiçoToolStripMenuItem,
             this.pesquisarServiçoToolStripMenuItem});
             this.serviçosToolStripMenuItem.Name = "serviçosToolStripMenuItem";
-            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.serviçosToolStripMenuItem.Text = "Serviços";
             // 
             // cadastrarServiçoToolStripMenuItem
             // 
             this.cadastrarServiçoToolStripMenuItem.Name = "cadastrarServiçoToolStripMenuItem";
-            this.cadastrarServiçoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.cadastrarServiçoToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.cadastrarServiçoToolStripMenuItem.Text = "Cadastrar Serviço";
             this.cadastrarServiçoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarServiçoToolStripMenuItem_Click);
             // 
             // pesquisarServiçoToolStripMenuItem
             // 
             this.pesquisarServiçoToolStripMenuItem.Name = "pesquisarServiçoToolStripMenuItem";
-            this.pesquisarServiçoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.pesquisarServiçoToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.pesquisarServiçoToolStripMenuItem.Text = "Pesquisar Serviço";
             this.pesquisarServiçoToolStripMenuItem.Click += new System.EventHandler(this.pesquisarServiçoToolStripMenuItem_Click);
             // 
@@ -135,22 +138,37 @@
             this.cadastrarConsultasToolStripMenuItem,
             this.buscarConsultasToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultaToolStripMenuItem.Text = "Consultas";
             // 
             // cadastrarConsultasToolStripMenuItem
             // 
             this.cadastrarConsultasToolStripMenuItem.Name = "cadastrarConsultasToolStripMenuItem";
-            this.cadastrarConsultasToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.cadastrarConsultasToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.cadastrarConsultasToolStripMenuItem.Text = "Cadastrar Consultas";
             this.cadastrarConsultasToolStripMenuItem.Click += new System.EventHandler(this.cadastrarConsultasToolStripMenuItem_Click);
             // 
             // buscarConsultasToolStripMenuItem
             // 
             this.buscarConsultasToolStripMenuItem.Name = "buscarConsultasToolStripMenuItem";
-            this.buscarConsultasToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.buscarConsultasToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.buscarConsultasToolStripMenuItem.Text = "Buscar Consultas";
             this.buscarConsultasToolStripMenuItem.Click += new System.EventHandler(this.buscarConsultasToolStripMenuItem_Click);
+            // 
+            // sobreNósToolStripMenuItem
+            // 
+            this.sobreNósToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.faleConoscoToolStripMenuItem});
+            this.sobreNósToolStripMenuItem.Name = "sobreNósToolStripMenuItem";
+            this.sobreNósToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.sobreNósToolStripMenuItem.Text = "Sobre nós";
+            // 
+            // faleConoscoToolStripMenuItem
+            // 
+            this.faleConoscoToolStripMenuItem.Name = "faleConoscoToolStripMenuItem";
+            this.faleConoscoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.faleConoscoToolStripMenuItem.Text = "Fale conosco";
+            this.faleConoscoToolStripMenuItem.Click += new System.EventHandler(this.faleConoscoToolStripMenuItem_Click);
             // 
             // TelaInicial
             // 
@@ -185,5 +203,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarConsultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarConsultasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sobreNósToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem faleConoscoToolStripMenuItem;
     }
 }

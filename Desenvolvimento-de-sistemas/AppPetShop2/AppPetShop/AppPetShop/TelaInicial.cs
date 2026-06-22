@@ -70,5 +70,11 @@ namespace AppPetShop
             FormBuscarConsultas tela = new FormBuscarConsultas();
             tela.ShowDialog();
         }
+
+        private void faleConoscoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormFaleConosco tela = new FormFaleConosco();
+            s
+        }
     }
 }
