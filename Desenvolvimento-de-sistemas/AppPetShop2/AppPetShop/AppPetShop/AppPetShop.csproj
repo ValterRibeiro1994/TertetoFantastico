@@ -110,11 +110,17 @@
     <Compile Include="FormFaleConosco.Designer.cs">
       <DependentUpon>FormFaleConosco.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormListaUm.cs">
+    <Compile Include="FormFiltroEspecie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormListaUm.Designer.cs">
-      <DependentUpon>FormListaUm.cs</DependentUpon>
+    <Compile Include="FormFiltroEspecie.Designer.cs">
+      <DependentUpon>FormFiltroEspecie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFiltroTipoData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFiltroTipoData.Designer.cs">
+      <DependentUpon>FormFiltroTipoData.cs</DependentUpon>
     </Compile>
     <Compile Include="Texto.cs" />
     <Compile Include="Pet.cs" />
@@ -168,8 +174,11 @@
     <EmbeddedResource Include="FormFaleConosco.resx">
       <DependentUpon>FormFaleConosco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormListaUm.resx">
-      <DependentUpon>FormListaUm.cs</DependentUpon>
+    <EmbeddedResource Include="FormFiltroEspecie.resx">
+      <DependentUpon>FormFiltroEspecie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFiltroTipoData.resx">
+      <DependentUpon>FormFiltroTipoData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>

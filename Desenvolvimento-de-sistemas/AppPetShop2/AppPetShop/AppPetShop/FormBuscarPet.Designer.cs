@@ -202,20 +202,22 @@
             // 
             this.gridPet.BackgroundColor = System.Drawing.SystemColors.Info;
             this.gridPet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridPet.Location = new System.Drawing.Point(597, 63);
+            this.gridPet.Location = new System.Drawing.Point(594, 63);
             this.gridPet.Name = "gridPet";
             this.gridPet.RowHeadersWidth = 51;
-            this.gridPet.Size = new System.Drawing.Size(404, 326);
+            this.gridPet.Size = new System.Drawing.Size(404, 355);
             this.gridPet.TabIndex = 15;
             this.gridPet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.selecionarPet);
             // 
             // btnBuscarPedCod
             // 
             this.btnBuscarPedCod.BackColor = System.Drawing.Color.Gold;
+            this.btnBuscarPedCod.FlatAppearance.BorderSize = 2;
+            this.btnBuscarPedCod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPedCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarPedCod.Location = new System.Drawing.Point(428, 308);
+            this.btnBuscarPedCod.Location = new System.Drawing.Point(429, 325);
             this.btnBuscarPedCod.Name = "btnBuscarPedCod";
-            this.btnBuscarPedCod.Size = new System.Drawing.Size(146, 23);
+            this.btnBuscarPedCod.Size = new System.Drawing.Size(146, 26);
             this.btnBuscarPedCod.TabIndex = 16;
             this.btnBuscarPedCod.Text = "Buscar Pet Codigo";
             this.btnBuscarPedCod.UseVisualStyleBackColor = false;
@@ -224,10 +226,12 @@
             // btnBuscarCpf
             // 
             this.btnBuscarCpf.BackColor = System.Drawing.Color.Gold;
+            this.btnBuscarCpf.FlatAppearance.BorderSize = 2;
+            this.btnBuscarCpf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarCpf.Location = new System.Drawing.Point(428, 337);
+            this.btnBuscarCpf.Location = new System.Drawing.Point(429, 357);
             this.btnBuscarCpf.Name = "btnBuscarCpf";
-            this.btnBuscarCpf.Size = new System.Drawing.Size(146, 23);
+            this.btnBuscarCpf.Size = new System.Drawing.Size(146, 29);
             this.btnBuscarCpf.TabIndex = 17;
             this.btnBuscarCpf.Text = "Buscar Cpf Pet";
             this.btnBuscarCpf.UseVisualStyleBackColor = false;
@@ -236,10 +240,12 @@
             // btnAlterarFoto
             // 
             this.btnAlterarFoto.BackColor = System.Drawing.Color.Gold;
+            this.btnAlterarFoto.FlatAppearance.BorderSize = 2;
+            this.btnAlterarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarFoto.Location = new System.Drawing.Point(428, 221);
             this.btnAlterarFoto.Name = "btnAlterarFoto";
-            this.btnAlterarFoto.Size = new System.Drawing.Size(146, 23);
+            this.btnAlterarFoto.Size = new System.Drawing.Size(146, 29);
             this.btnAlterarFoto.TabIndex = 18;
             this.btnAlterarFoto.Text = "Alterar Foto";
             this.btnAlterarFoto.UseVisualStyleBackColor = false;
@@ -248,10 +254,12 @@
             // btnRemoverPet
             // 
             this.btnRemoverPet.BackColor = System.Drawing.Color.Gold;
+            this.btnRemoverPet.FlatAppearance.BorderSize = 2;
+            this.btnRemoverPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoverPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoverPet.Location = new System.Drawing.Point(428, 250);
+            this.btnRemoverPet.Location = new System.Drawing.Point(429, 256);
             this.btnRemoverPet.Name = "btnRemoverPet";
-            this.btnRemoverPet.Size = new System.Drawing.Size(146, 22);
+            this.btnRemoverPet.Size = new System.Drawing.Size(146, 30);
             this.btnRemoverPet.TabIndex = 19;
             this.btnRemoverPet.Text = "Remover Pet";
             this.btnRemoverPet.UseVisualStyleBackColor = false;
@@ -260,10 +268,12 @@
             // btnListarPet
             // 
             this.btnListarPet.BackColor = System.Drawing.Color.Gold;
+            this.btnListarPet.FlatAppearance.BorderSize = 2;
+            this.btnListarPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListarPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarPet.Location = new System.Drawing.Point(428, 279);
+            this.btnListarPet.Location = new System.Drawing.Point(429, 292);
             this.btnListarPet.Name = "btnListarPet";
-            this.btnListarPet.Size = new System.Drawing.Size(146, 23);
+            this.btnListarPet.Size = new System.Drawing.Size(146, 25);
             this.btnListarPet.TabIndex = 20;
             this.btnListarPet.Text = "Listar Pet";
             this.btnListarPet.UseVisualStyleBackColor = false;
@@ -272,10 +282,12 @@
             // btnEditarPet
             // 
             this.btnEditarPet.BackColor = System.Drawing.Color.Gold;
+            this.btnEditarPet.FlatAppearance.BorderSize = 2;
+            this.btnEditarPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarPet.Location = new System.Drawing.Point(428, 366);
+            this.btnEditarPet.Location = new System.Drawing.Point(430, 392);
             this.btnEditarPet.Name = "btnEditarPet";
-            this.btnEditarPet.Size = new System.Drawing.Size(146, 23);
+            this.btnEditarPet.Size = new System.Drawing.Size(146, 26);
             this.btnEditarPet.TabIndex = 21;
             this.btnEditarPet.Text = "Editar Pet";
             this.btnEditarPet.UseVisualStyleBackColor = false;

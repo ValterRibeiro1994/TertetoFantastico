@@ -52,10 +52,12 @@
             // btnRemover
             // 
             this.btnRemover.BackColor = System.Drawing.Color.Gold;
+            this.btnRemover.FlatAppearance.BorderSize = 2;
+            this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.Location = new System.Drawing.Point(355, 210);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(128, 23);
+            this.btnRemover.Size = new System.Drawing.Size(128, 33);
             this.btnRemover.TabIndex = 29;
             this.btnRemover.Text = "Remover serviço";
             this.btnRemover.UseVisualStyleBackColor = false;
@@ -64,10 +66,12 @@
             // btnLimpar
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.Gold;
+            this.btnLimpar.FlatAppearance.BorderSize = 2;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.Location = new System.Drawing.Point(355, 254);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(128, 23);
+            this.btnLimpar.Size = new System.Drawing.Size(128, 33);
             this.btnLimpar.TabIndex = 28;
             this.btnLimpar.Text = "Limpar Campos";
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -76,10 +80,12 @@
             // btnAlterar
             // 
             this.btnAlterar.BackColor = System.Drawing.Color.Gold;
+            this.btnAlterar.FlatAppearance.BorderSize = 2;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Location = new System.Drawing.Point(355, 167);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(128, 23);
+            this.btnAlterar.Size = new System.Drawing.Size(128, 33);
             this.btnAlterar.TabIndex = 27;
             this.btnAlterar.Text = "Alterar Serviço";
             this.btnAlterar.UseVisualStyleBackColor = false;
@@ -93,17 +99,19 @@
             this.gridServico.Location = new System.Drawing.Point(527, 71);
             this.gridServico.Name = "gridServico";
             this.gridServico.RowHeadersWidth = 51;
-            this.gridServico.Size = new System.Drawing.Size(365, 276);
+            this.gridServico.Size = new System.Drawing.Size(410, 276);
             this.gridServico.TabIndex = 26;
             this.gridServico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clicarCelula);
             // 
             // btnPesquisarTodos
             // 
             this.btnPesquisarTodos.BackColor = System.Drawing.Color.Gold;
+            this.btnPesquisarTodos.FlatAppearance.BorderSize = 2;
+            this.btnPesquisarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisarTodos.Location = new System.Drawing.Point(355, 71);
             this.btnPesquisarTodos.Name = "btnPesquisarTodos";
-            this.btnPesquisarTodos.Size = new System.Drawing.Size(128, 23);
+            this.btnPesquisarTodos.Size = new System.Drawing.Size(128, 33);
             this.btnPesquisarTodos.TabIndex = 25;
             this.btnPesquisarTodos.Text = "Buscar Todos";
             this.btnPesquisarTodos.UseVisualStyleBackColor = false;
@@ -112,10 +120,12 @@
             // btnFitrarCod
             // 
             this.btnFitrarCod.BackColor = System.Drawing.Color.Gold;
+            this.btnFitrarCod.FlatAppearance.BorderSize = 2;
+            this.btnFitrarCod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFitrarCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFitrarCod.Location = new System.Drawing.Point(355, 117);
             this.btnFitrarCod.Name = "btnFitrarCod";
-            this.btnFitrarCod.Size = new System.Drawing.Size(128, 23);
+            this.btnFitrarCod.Size = new System.Drawing.Size(128, 33);
             this.btnFitrarCod.TabIndex = 24;
             this.btnFitrarCod.Text = "Buscar Codigo";
             this.btnFitrarCod.UseVisualStyleBackColor = false;
@@ -251,7 +261,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1062, 379);
+            this.ClientSize = new System.Drawing.Size(968, 379);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.campoId);

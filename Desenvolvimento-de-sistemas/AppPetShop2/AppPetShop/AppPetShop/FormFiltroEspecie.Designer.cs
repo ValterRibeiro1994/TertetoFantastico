@@ -30,9 +30,10 @@
         {
             this.gridEspecie = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.inputEspecie = new System.Windows.Forms.TextBox();
             this.btnBuscarEspecie = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridEspecie)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,13 +57,13 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Espécie do pet";
             // 
-            // textBox1
+            // inputEspecie
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(165, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 26);
-            this.textBox1.TabIndex = 8;
+            this.inputEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputEspecie.Location = new System.Drawing.Point(165, 128);
+            this.inputEspecie.Name = "inputEspecie";
+            this.inputEspecie.Size = new System.Drawing.Size(224, 26);
+            this.inputEspecie.TabIndex = 8;
             // 
             // btnBuscarEspecie
             // 
@@ -74,7 +75,7 @@
             this.btnBuscarEspecie.Name = "btnBuscarEspecie";
             this.btnBuscarEspecie.Size = new System.Drawing.Size(84, 27);
             this.btnBuscarEspecie.TabIndex = 9;
-            this.btnBuscarEspecie.Text = "Enviar";
+            this.btnBuscarEspecie.Text = "Buscar";
             this.btnBuscarEspecie.UseVisualStyleBackColor = false;
             // 
             // label11
@@ -83,21 +84,34 @@
             this.label11.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gold;
-            this.label11.Location = new System.Drawing.Point(179, 45);
+            this.label11.Location = new System.Drawing.Point(176, 30);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(244, 36);
             this.label11.TabIndex = 12;
             this.label11.Text = "Petshop PetAny";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(179, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(236, 16);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Confira aqui os pets cadastrados";
             // 
             // FormFiltroEspecie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(662, 507);
+            this.ClientSize = new System.Drawing.Size(641, 499);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnBuscarEspecie);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.inputEspecie);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.gridEspecie);
             this.Name = "FormFiltroEspecie";
@@ -112,8 +126,9 @@
 
         private System.Windows.Forms.DataGridView gridEspecie;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox inputEspecie;
         private System.Windows.Forms.Button btnBuscarEspecie;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -200,3 +200,5 @@ C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\A
 C:\Users\alunoinfo\Desktop\Nova pasta\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormListaUm.resources
 C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormListaUm.resources
 C:\Users\alunoinfo\Desktop\Nova pasta\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormFaleConosco.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormFiltroEspecie.resources
+C:\Users\alunoinfo\Desktop\Clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormFiltroTipoData.resources
