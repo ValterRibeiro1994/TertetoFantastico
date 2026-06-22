@@ -38,6 +38,9 @@
             this.serviçosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pesquisarServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +51,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tutorToolStripMenuItem,
             this.petsToolStripMenuItem,
-            this.serviçosToolStripMenuItem});
+            this.serviçosToolStripMenuItem,
+            this.consultaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -114,16 +118,38 @@
             // cadastrarServiçoToolStripMenuItem
             // 
             this.cadastrarServiçoToolStripMenuItem.Name = "cadastrarServiçoToolStripMenuItem";
-            this.cadastrarServiçoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarServiçoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.cadastrarServiçoToolStripMenuItem.Text = "Cadastrar Serviço";
             this.cadastrarServiçoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarServiçoToolStripMenuItem_Click);
             // 
             // pesquisarServiçoToolStripMenuItem
             // 
             this.pesquisarServiçoToolStripMenuItem.Name = "pesquisarServiçoToolStripMenuItem";
-            this.pesquisarServiçoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pesquisarServiçoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.pesquisarServiçoToolStripMenuItem.Text = "Pesquisar Serviço";
             this.pesquisarServiçoToolStripMenuItem.Click += new System.EventHandler(this.pesquisarServiçoToolStripMenuItem_Click);
+            // 
+            // consultaToolStripMenuItem
+            // 
+            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarConsultasToolStripMenuItem,
+            this.buscarConsultasToolStripMenuItem});
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.consultaToolStripMenuItem.Text = "Consultas";
+            // 
+            // cadastrarConsultasToolStripMenuItem
+            // 
+            this.cadastrarConsultasToolStripMenuItem.Name = "cadastrarConsultasToolStripMenuItem";
+            this.cadastrarConsultasToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.cadastrarConsultasToolStripMenuItem.Text = "Cadastrar Consultas";
+            this.cadastrarConsultasToolStripMenuItem.Click += new System.EventHandler(this.cadastrarConsultasToolStripMenuItem_Click);
+            // 
+            // buscarConsultasToolStripMenuItem
+            // 
+            this.buscarConsultasToolStripMenuItem.Name = "buscarConsultasToolStripMenuItem";
+            this.buscarConsultasToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.buscarConsultasToolStripMenuItem.Text = "Buscar Consultas";
             // 
             // TelaInicial
             // 
@@ -155,5 +181,8 @@
         private System.Windows.Forms.ToolStripMenuItem serviçosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarServiçoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pesquisarServiçoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarConsultasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarConsultasToolStripMenuItem;
     }
 }
