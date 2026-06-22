@@ -136,3 +136,8 @@ C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositor
 C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormBuscarConsultas.resources
 C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormBuscarConsultas.resources
 C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormCadastrarConsultas.resources
+C:\Users\brazl\OneDrive\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormBuscarConsultas.resources
+C:\Users\brazl\OneDrive\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormBuscarPet.resources
+C:\Users\brazl\OneDrive\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormBuscarServicos.resources
+C:\Users\brazl\OneDrive\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormCadastrarConsultas.resources
+C:\Users\brazl\OneDrive\Desktop\clone\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormCadastrarServico.resources

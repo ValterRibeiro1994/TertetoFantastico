@@ -44,98 +44,133 @@
             this.inputEspecie = new System.Windows.Forms.TextBox();
             this.inputCpf = new System.Windows.Forms.TextBox();
             this.inputNascimento = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fotoPet)).BeginInit();
             this.SuspendLayout();
             // 
             // fotoPet
             // 
-            this.fotoPet.Location = new System.Drawing.Point(335, 55);
+            this.fotoPet.BackColor = System.Drawing.SystemColors.Info;
+            this.fotoPet.Location = new System.Drawing.Point(553, 112);
+            this.fotoPet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fotoPet.Name = "fotoPet";
-            this.fotoPet.Size = new System.Drawing.Size(267, 202);
+            this.fotoPet.Size = new System.Drawing.Size(356, 314);
             this.fotoPet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPet.TabIndex = 0;
             this.fotoPet.TabStop = false;
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(12, 281);
+            this.btnCadastrar.BackColor = System.Drawing.Color.Gold;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Location = new System.Drawing.Point(122, 453);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(281, 23);
+            this.btnCadastrar.Size = new System.Drawing.Size(375, 37);
             this.btnCadastrar.TabIndex = 1;
             this.btnCadastrar.Text = "Cadastrar Pet";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnFoto
             // 
-            this.btnFoto.Location = new System.Drawing.Point(335, 281);
+            this.btnFoto.BackColor = System.Drawing.Color.Gold;
+            this.btnFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFoto.Location = new System.Drawing.Point(553, 448);
+            this.btnFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFoto.Name = "btnFoto";
-            this.btnFoto.Size = new System.Drawing.Size(267, 23);
+            this.btnFoto.Size = new System.Drawing.Size(356, 42);
             this.btnFoto.TabIndex = 2;
             this.btnFoto.Text = "Adicionar Foto";
-            this.btnFoto.UseVisualStyleBackColor = true;
+            this.btnFoto.UseVisualStyleBackColor = false;
             this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 86);
+            this.label2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(118, 117);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(95, 22);
             this.label2.TabIndex = 4;
             this.label2.Text = "Cpf Tutor";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 146);
+            this.label3.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(88, 233);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.Size = new System.Drawing.Size(125, 22);
             this.label3.TabIndex = 5;
             this.label3.Text = "Nome do Pet";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 177);
+            this.label4.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(35, 285);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 13);
+            this.label4.Size = new System.Drawing.Size(178, 22);
             this.label4.TabIndex = 6;
             this.label4.Text = "Nascimento do Pet";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 244);
+            this.label5.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(73, 404);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 13);
+            this.label5.Size = new System.Drawing.Size(140, 22);
             this.label5.TabIndex = 7;
             this.label5.Text = "Genero do Pet";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 122);
+            this.label6.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(68, 177);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 13);
+            this.label6.Size = new System.Drawing.Size(145, 22);
             this.label6.TabIndex = 8;
             this.label6.Text = "Especie do Pet";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 208);
+            this.label7.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(93, 343);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 13);
+            this.label7.Size = new System.Drawing.Size(120, 22);
             this.label7.TabIndex = 9;
             this.label7.Text = "Raça do Pet";
             // 
             // rbMacho
             // 
             this.rbMacho.AutoSize = true;
-            this.rbMacho.Location = new System.Drawing.Point(117, 240);
+            this.rbMacho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMacho.Location = new System.Drawing.Point(264, 407);
+            this.rbMacho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbMacho.Name = "rbMacho";
-            this.rbMacho.Size = new System.Drawing.Size(58, 17);
+            this.rbMacho.Size = new System.Drawing.Size(85, 24);
             this.rbMacho.TabIndex = 10;
             this.rbMacho.TabStop = true;
             this.rbMacho.Text = "Macho";
@@ -144,9 +179,11 @@
             // rbFemea
             // 
             this.rbFemea.AutoSize = true;
-            this.rbFemea.Location = new System.Drawing.Point(208, 240);
+            this.rbFemea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFemea.Location = new System.Drawing.Point(380, 407);
+            this.rbFemea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbFemea.Name = "rbFemea";
-            this.rbFemea.Size = new System.Drawing.Size(57, 17);
+            this.rbFemea.Size = new System.Drawing.Size(86, 24);
             this.rbFemea.TabIndex = 11;
             this.rbFemea.TabStop = true;
             this.rbFemea.Text = "Femea";
@@ -154,45 +191,69 @@
             // 
             // inputRaca
             // 
-            this.inputRaca.Location = new System.Drawing.Point(117, 208);
+            this.inputRaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputRaca.Location = new System.Drawing.Point(252, 343);
+            this.inputRaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.inputRaca.Name = "inputRaca";
-            this.inputRaca.Size = new System.Drawing.Size(177, 20);
+            this.inputRaca.Size = new System.Drawing.Size(235, 30);
             this.inputRaca.TabIndex = 13;
             // 
             // inputNome
             // 
-            this.inputNome.Location = new System.Drawing.Point(117, 146);
+            this.inputNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputNome.Location = new System.Drawing.Point(252, 228);
+            this.inputNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.inputNome.Name = "inputNome";
-            this.inputNome.Size = new System.Drawing.Size(177, 20);
+            this.inputNome.Size = new System.Drawing.Size(235, 30);
             this.inputNome.TabIndex = 14;
             // 
             // inputEspecie
             // 
-            this.inputEspecie.Location = new System.Drawing.Point(117, 119);
+            this.inputEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputEspecie.Location = new System.Drawing.Point(252, 172);
+            this.inputEspecie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.inputEspecie.Name = "inputEspecie";
-            this.inputEspecie.Size = new System.Drawing.Size(177, 20);
+            this.inputEspecie.Size = new System.Drawing.Size(235, 30);
             this.inputEspecie.TabIndex = 15;
             // 
             // inputCpf
             // 
-            this.inputCpf.Location = new System.Drawing.Point(117, 86);
+            this.inputCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputCpf.Location = new System.Drawing.Point(252, 112);
+            this.inputCpf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.inputCpf.Name = "inputCpf";
-            this.inputCpf.Size = new System.Drawing.Size(177, 20);
+            this.inputCpf.Size = new System.Drawing.Size(235, 30);
             this.inputCpf.TabIndex = 16;
             // 
             // inputNascimento
             // 
+            this.inputNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.inputNascimento.Location = new System.Drawing.Point(117, 177);
+            this.inputNascimento.Location = new System.Drawing.Point(252, 285);
+            this.inputNascimento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.inputNascimento.Name = "inputNascimento";
-            this.inputNascimento.Size = new System.Drawing.Size(177, 20);
+            this.inputNascimento.Size = new System.Drawing.Size(235, 30);
             this.inputNascimento.TabIndex = 18;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(374, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(209, 36);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Cadastrar Pet";
             // 
             // FormCadastrarPet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.inputNascimento);
             this.Controls.Add(this.inputCpf);
             this.Controls.Add(this.inputEspecie);
@@ -209,6 +270,7 @@
             this.Controls.Add(this.btnFoto);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.fotoPet);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormCadastrarPet";
             this.Text = "FormCadastrarPet";
             ((System.ComponentModel.ISupportInitialize)(this.fotoPet)).EndInit();
@@ -235,5 +297,6 @@
         private System.Windows.Forms.TextBox inputEspecie;
         private System.Windows.Forms.TextBox inputCpf;
         private System.Windows.Forms.DateTimePicker inputNascimento;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -52,18 +52,20 @@
             this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(253, 15);
+            this.label1.Location = new System.Drawing.Point(337, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 36);
+            this.label1.Size = new System.Drawing.Size(322, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Localizar Tutores";
             // 
             // campoCpf
             // 
             this.campoCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCpf.Location = new System.Drawing.Point(143, 66);
+            this.campoCpf.Location = new System.Drawing.Point(191, 81);
+            this.campoCpf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoCpf.Name = "campoCpf";
-            this.campoCpf.Size = new System.Drawing.Size(179, 26);
+            this.campoCpf.Size = new System.Drawing.Size(237, 30);
             this.campoCpf.TabIndex = 1;
             // 
             // label2
@@ -72,9 +74,10 @@
             this.label2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(41, 71);
+            this.label2.Location = new System.Drawing.Point(55, 87);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 18);
+            this.label2.Size = new System.Drawing.Size(103, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "CPF Tutor";
             // 
@@ -84,9 +87,10 @@
             this.label3.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(32, 113);
+            this.label3.Location = new System.Drawing.Point(43, 139);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 18);
+            this.label3.Size = new System.Drawing.Size(115, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nome Tutor";
             // 
@@ -96,9 +100,10 @@
             this.label4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(34, 158);
+            this.label4.Location = new System.Drawing.Point(45, 194);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 18);
+            this.label4.Size = new System.Drawing.Size(113, 22);
             this.label4.TabIndex = 4;
             this.label4.Text = "Email Tutor";
             // 
@@ -108,43 +113,48 @@
             this.label5.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(11, 196);
+            this.label5.Location = new System.Drawing.Point(15, 241);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 18);
+            this.label5.Size = new System.Drawing.Size(143, 22);
             this.label5.TabIndex = 5;
             this.label5.Text = "Telefone Tutor";
             // 
             // campoNome
             // 
             this.campoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoNome.Location = new System.Drawing.Point(143, 110);
+            this.campoNome.Location = new System.Drawing.Point(191, 135);
+            this.campoNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoNome.Name = "campoNome";
-            this.campoNome.Size = new System.Drawing.Size(179, 24);
+            this.campoNome.Size = new System.Drawing.Size(237, 28);
             this.campoNome.TabIndex = 6;
             // 
             // campoEmail
             // 
             this.campoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoEmail.Location = new System.Drawing.Point(143, 153);
+            this.campoEmail.Location = new System.Drawing.Point(191, 188);
+            this.campoEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoEmail.Name = "campoEmail";
-            this.campoEmail.Size = new System.Drawing.Size(179, 26);
+            this.campoEmail.Size = new System.Drawing.Size(237, 30);
             this.campoEmail.TabIndex = 7;
             // 
             // campoTelefone
             // 
             this.campoTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoTelefone.Location = new System.Drawing.Point(143, 191);
+            this.campoTelefone.Location = new System.Drawing.Point(191, 235);
+            this.campoTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoTelefone.Name = "campoTelefone";
-            this.campoTelefone.Size = new System.Drawing.Size(179, 26);
+            this.campoTelefone.Size = new System.Drawing.Size(237, 30);
             this.campoTelefone.TabIndex = 8;
             // 
             // btnFiltrarCpf
             // 
             this.btnFiltrarCpf.BackColor = System.Drawing.Color.Gold;
             this.btnFiltrarCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltrarCpf.Location = new System.Drawing.Point(58, 235);
+            this.btnFiltrarCpf.Location = new System.Drawing.Point(77, 289);
+            this.btnFiltrarCpf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFiltrarCpf.Name = "btnFiltrarCpf";
-            this.btnFiltrarCpf.Size = new System.Drawing.Size(110, 23);
+            this.btnFiltrarCpf.Size = new System.Drawing.Size(147, 28);
             this.btnFiltrarCpf.TabIndex = 9;
             this.btnFiltrarCpf.Text = "Buscar CPF";
             this.btnFiltrarCpf.UseVisualStyleBackColor = false;
@@ -154,9 +164,10 @@
             // 
             this.btnPesquisarTodos.BackColor = System.Drawing.Color.Gold;
             this.btnPesquisarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisarTodos.Location = new System.Drawing.Point(184, 235);
+            this.btnPesquisarTodos.Location = new System.Drawing.Point(245, 289);
+            this.btnPesquisarTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPesquisarTodos.Name = "btnPesquisarTodos";
-            this.btnPesquisarTodos.Size = new System.Drawing.Size(98, 23);
+            this.btnPesquisarTodos.Size = new System.Drawing.Size(131, 28);
             this.btnPesquisarTodos.TabIndex = 10;
             this.btnPesquisarTodos.Text = "Buscar Todos";
             this.btnPesquisarTodos.UseVisualStyleBackColor = false;
@@ -167,10 +178,11 @@
             this.gridTutor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridTutor.BackgroundColor = System.Drawing.SystemColors.Info;
             this.gridTutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTutor.Location = new System.Drawing.Point(345, 67);
+            this.gridTutor.Location = new System.Drawing.Point(460, 82);
+            this.gridTutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridTutor.Name = "gridTutor";
             this.gridTutor.RowHeadersWidth = 51;
-            this.gridTutor.Size = new System.Drawing.Size(424, 241);
+            this.gridTutor.Size = new System.Drawing.Size(565, 297);
             this.gridTutor.TabIndex = 11;
             this.gridTutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTutor_CellClick);
             // 
@@ -178,9 +190,10 @@
             // 
             this.btnAlterar.BackColor = System.Drawing.Color.Gold;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Location = new System.Drawing.Point(58, 276);
+            this.btnAlterar.Location = new System.Drawing.Point(77, 340);
+            this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(110, 23);
+            this.btnAlterar.Size = new System.Drawing.Size(147, 28);
             this.btnAlterar.TabIndex = 12;
             this.btnAlterar.Text = "Alterar Tutor";
             this.btnAlterar.UseVisualStyleBackColor = false;
@@ -190,9 +203,10 @@
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.Gold;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(184, 276);
+            this.btnLimpar.Location = new System.Drawing.Point(245, 340);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(98, 23);
+            this.btnLimpar.Size = new System.Drawing.Size(131, 28);
             this.btnLimpar.TabIndex = 13;
             this.btnLimpar.Text = "Limpar Campos";
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -202,9 +216,10 @@
             // 
             this.btnRemoverTut.BackColor = System.Drawing.Color.Gold;
             this.btnRemoverTut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoverTut.Location = new System.Drawing.Point(172, 320);
+            this.btnRemoverTut.Location = new System.Drawing.Point(158, 395);
+            this.btnRemoverTut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRemoverTut.Name = "btnRemoverTut";
-            this.btnRemoverTut.Size = new System.Drawing.Size(110, 29);
+            this.btnRemoverTut.Size = new System.Drawing.Size(147, 36);
             this.btnRemoverTut.TabIndex = 14;
             this.btnRemoverTut.Text = "Remover tutor";
             this.btnRemoverTut.UseVisualStyleBackColor = false;
@@ -212,10 +227,10 @@
             // 
             // FormBuscarTutor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(805, 361);
+            this.ClientSize = new System.Drawing.Size(1073, 444);
             this.Controls.Add(this.btnRemoverTut);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnAlterar);
@@ -231,6 +246,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.campoCpf);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormBuscarTutor";
             this.Text = "FormBuscarTutor";
             ((System.ComponentModel.ISupportInitialize)(this.gridTutor)).EndInit();
