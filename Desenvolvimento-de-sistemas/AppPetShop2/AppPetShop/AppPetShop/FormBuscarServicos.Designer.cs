@@ -53,10 +53,9 @@
             // 
             this.btnRemover.BackColor = System.Drawing.Color.Gold;
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.Location = new System.Drawing.Point(473, 259);
-            this.btnRemover.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemover.Location = new System.Drawing.Point(355, 210);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(131, 28);
+            this.btnRemover.Size = new System.Drawing.Size(128, 23);
             this.btnRemover.TabIndex = 29;
             this.btnRemover.Text = "Remover serviço";
             this.btnRemover.UseVisualStyleBackColor = false;
@@ -66,10 +65,9 @@
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.Gold;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Location = new System.Drawing.Point(473, 313);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpar.Location = new System.Drawing.Point(355, 254);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(131, 28);
+            this.btnLimpar.Size = new System.Drawing.Size(128, 23);
             this.btnLimpar.TabIndex = 28;
             this.btnLimpar.Text = "Limpar Campos";
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -79,10 +77,9 @@
             // 
             this.btnAlterar.BackColor = System.Drawing.Color.Gold;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Location = new System.Drawing.Point(473, 205);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlterar.Location = new System.Drawing.Point(355, 167);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(131, 28);
+            this.btnAlterar.Size = new System.Drawing.Size(128, 23);
             this.btnAlterar.TabIndex = 27;
             this.btnAlterar.Text = "Alterar Serviço";
             this.btnAlterar.UseVisualStyleBackColor = false;
@@ -93,11 +90,10 @@
             this.gridServico.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridServico.BackgroundColor = System.Drawing.SystemColors.Info;
             this.gridServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridServico.Location = new System.Drawing.Point(631, 87);
-            this.gridServico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridServico.Location = new System.Drawing.Point(527, 71);
             this.gridServico.Name = "gridServico";
             this.gridServico.RowHeadersWidth = 51;
-            this.gridServico.Size = new System.Drawing.Size(487, 340);
+            this.gridServico.Size = new System.Drawing.Size(365, 276);
             this.gridServico.TabIndex = 26;
             this.gridServico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clicarCelula);
             // 
@@ -105,10 +101,9 @@
             // 
             this.btnPesquisarTodos.BackColor = System.Drawing.Color.Gold;
             this.btnPesquisarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisarTodos.Location = new System.Drawing.Point(473, 87);
-            this.btnPesquisarTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPesquisarTodos.Location = new System.Drawing.Point(355, 71);
             this.btnPesquisarTodos.Name = "btnPesquisarTodos";
-            this.btnPesquisarTodos.Size = new System.Drawing.Size(131, 28);
+            this.btnPesquisarTodos.Size = new System.Drawing.Size(128, 23);
             this.btnPesquisarTodos.TabIndex = 25;
             this.btnPesquisarTodos.Text = "Buscar Todos";
             this.btnPesquisarTodos.UseVisualStyleBackColor = false;
@@ -118,10 +113,9 @@
             // 
             this.btnFitrarCod.BackColor = System.Drawing.Color.Gold;
             this.btnFitrarCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFitrarCod.Location = new System.Drawing.Point(473, 144);
-            this.btnFitrarCod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFitrarCod.Location = new System.Drawing.Point(355, 117);
             this.btnFitrarCod.Name = "btnFitrarCod";
-            this.btnFitrarCod.Size = new System.Drawing.Size(131, 28);
+            this.btnFitrarCod.Size = new System.Drawing.Size(128, 23);
             this.btnFitrarCod.TabIndex = 24;
             this.btnFitrarCod.Text = "Buscar Codigo";
             this.btnFitrarCod.UseVisualStyleBackColor = false;
@@ -133,20 +127,18 @@
             this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(320, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(240, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(340, 42);
+            this.label1.Size = new System.Drawing.Size(276, 36);
             this.label1.TabIndex = 15;
             this.label1.Text = "Localizar Serviços";
             // 
             // campoCodigo
             // 
             this.campoCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodigo.Location = new System.Drawing.Point(212, 145);
-            this.campoCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoCodigo.Location = new System.Drawing.Point(159, 118);
             this.campoCodigo.Name = "campoCodigo";
-            this.campoCodigo.Size = new System.Drawing.Size(237, 30);
+            this.campoCodigo.Size = new System.Drawing.Size(179, 26);
             this.campoCodigo.TabIndex = 16;
             // 
             // label2
@@ -155,10 +147,9 @@
             this.label2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(67, 150);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(50, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 22);
+            this.label2.Size = new System.Drawing.Size(92, 18);
             this.label2.TabIndex = 17;
             this.label2.Text = "Codigo Pet";
             // 
@@ -168,10 +159,9 @@
             this.label3.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(25, 206);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(19, 167);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 22);
+            this.label3.Size = new System.Drawing.Size(126, 18);
             this.label3.TabIndex = 18;
             this.label3.Text = "Tipo de Serviço";
             // 
@@ -181,10 +171,9 @@
             this.label4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(23, 265);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(17, 215);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 22);
+            this.label4.Size = new System.Drawing.Size(129, 18);
             this.label4.TabIndex = 19;
             this.label4.Text = "Data do Serviço";
             // 
@@ -194,30 +183,27 @@
             this.label5.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(18, 319);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(14, 259);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 22);
+            this.label5.Size = new System.Drawing.Size(133, 18);
             this.label5.TabIndex = 20;
             this.label5.Text = "Valor do Serviço";
             // 
             // campoValor
             // 
             this.campoValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoValor.Location = new System.Drawing.Point(212, 314);
-            this.campoValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoValor.Location = new System.Drawing.Point(159, 255);
             this.campoValor.Name = "campoValor";
-            this.campoValor.Size = new System.Drawing.Size(237, 30);
+            this.campoValor.Size = new System.Drawing.Size(179, 26);
             this.campoValor.TabIndex = 23;
             // 
             // campoData
             // 
             this.campoData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.campoData.Location = new System.Drawing.Point(212, 260);
-            this.campoData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoData.Location = new System.Drawing.Point(159, 211);
             this.campoData.Name = "campoData";
-            this.campoData.Size = new System.Drawing.Size(237, 28);
+            this.campoData.Size = new System.Drawing.Size(179, 24);
             this.campoData.TabIndex = 30;
             // 
             // campoTipo
@@ -227,28 +213,25 @@
             this.campoTipo.Items.AddRange(new object[] {
             "banho",
             "tosa"});
-            this.campoTipo.Location = new System.Drawing.Point(212, 203);
-            this.campoTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoTipo.Location = new System.Drawing.Point(159, 165);
             this.campoTipo.Name = "campoTipo";
-            this.campoTipo.Size = new System.Drawing.Size(237, 30);
+            this.campoTipo.Size = new System.Drawing.Size(179, 25);
             this.campoTipo.TabIndex = 31;
             // 
             // campoId
             // 
             this.campoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoId.Location = new System.Drawing.Point(212, 87);
-            this.campoId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoId.Location = new System.Drawing.Point(159, 71);
             this.campoId.Name = "campoId";
-            this.campoId.Size = new System.Drawing.Size(237, 28);
+            this.campoId.Size = new System.Drawing.Size(179, 24);
             this.campoId.TabIndex = 32;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(85, 42);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(64, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 16);
+            this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 33;
             // 
             // label7
@@ -257,19 +240,18 @@
             this.label7.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(75, 90);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(56, 73);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 22);
+            this.label7.Size = new System.Drawing.Size(84, 18);
             this.label7.TabIndex = 34;
             this.label7.Text = "ID serviço";
             // 
             // FormBuscarServicos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1131, 466);
+            this.ClientSize = new System.Drawing.Size(1062, 379);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.campoId);
@@ -288,7 +270,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.campoCodigo);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormBuscarServicos";
             this.Text = "FormBuscarServicos";
             ((System.ComponentModel.ISupportInitialize)(this.gridServico)).EndInit();
