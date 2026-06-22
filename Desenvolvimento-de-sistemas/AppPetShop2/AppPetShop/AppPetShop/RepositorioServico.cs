@@ -48,17 +48,17 @@ namespace AppPetShop
             }
         }
 
-        public bool removerServico(CodigoBanco cod)
+        public bool removerServico(CodigoBanco id)
         {
             // comando de remoção
             comando.Clear();
             comando.Append("DELETE FROM tb_Servicos ");
-            comando.Append("WHERE cod_pet = @cod;");
+            comando.Append("WHERE id_servico = @id;");
 
             try
             {
                 conexao.comandoSql.Parameters.Clear();
-                conexao.comandoSql.Parameters.AddWithValue("@cod", cod.getCodigo());
+                conexao.comandoSql.Parameters.AddWithValue("@id", id.getCodigo());
                 conexao.setStrComandoSql(comando.ToString());
 
                 return conexao.executarComando() > 0;
@@ -70,7 +70,7 @@ namespace AppPetShop
 
         }
 
-        public void listarServicoes(DataGridView grid)
+        public DataTable listarServicoes()
         {
             comando.Clear();
             comando.Append("SELECT ");
@@ -87,8 +87,8 @@ namespace AppPetShop
                 conexao.setStrComandoSql(comando.ToString());
 
                 DataSet dados = conexao.getDataSet();
-                DataTable tabela = dados.Tables[0];
-                grid.DataSource = tabela;
+                return dados.Tables[0];
+                
             }
             catch (Exception ex)
             {
@@ -96,44 +96,28 @@ namespace AppPetShop
             }
         }
 
-        public Servico buscarServico(CodigoBanco codigo, DataGridView grid)
+        public DataTable buscarServicosPet(CodigoBanco codigoPet)
         {
             // comando de localização
             comando.Clear();
             comando.Append("SELECT ");
+            comando.Append("id_servico as 'ID serviço', ");
             comando.Append("cod_pet as 'codigo do pet', ");
-            comando.Append("tipo_servico as 'Tipo', ");
-            comando.Append("data_servico as 'Data', ");
-            comando.Append("valor_servico as 'Valor' ");
-            comando.Append("FROM tb_Servicos ");
-            comando.Append("WHERE cod_pet = @codigo;");
+            comando.Append("tipo_servico as Tipo, ");
+            comando.Append("data_servico as Data, ");
+            comando.Append("valor_servico as Valor ");
+            comando.Append("FROM tb_servicos ");
+            comando.Append("WHERE cod_pet = @codigo");
 
             try
             {
                 conexao.comandoSql.Parameters.Clear();
-                conexao.comandoSql.Parameters.AddWithValue("@codigo", codigo.getCodigo());
+                conexao.comandoSql.Parameters.AddWithValue("@codigo", codigoPet.getCodigo());
                 conexao.setStrComandoSql(comando.ToString());
 
                 DataSet dados = conexao.getDataSet();
-                DataTable tabela = dados.Tables[0];
-                grid.DataSource = tabela;
-                if (tabela.Rows.Count == 0)
-                {
-                    throw new Exception("Servico não localizado na base de dados !!!");
-                }
-
-                DataRow linha = tabela.Rows[0];
-                TipoServiço tipo = new TipoServiço(tipoString: linha["Tipo"].ToString());
-                DataServico data = new DataServico(dataBanco: (DateTime)linha["Data"]);
-                ValorServico valor = new ValorServico(valorBanco: linha["Valor"].ToString());
-
-                Servico Servico = new Servico();
-                Servico.setCodigo(codigo);
-                Servico.setTipo(tipo);
-                Servico.setData(data);
-                Servico.setValor(valor);
-
-                return Servico;
+                return dados.Tables[0];
+                
             }
             catch (Exception ex)
             {
@@ -143,13 +127,17 @@ namespace AppPetShop
 
         public bool alterarServico(Servico Servico)
         {
+            /*
+                Metodo getCodigo está recebendo o ID do serviço no FormBuscarServiços
+                
+             */
             comando.Clear();
 
             comando.Append("UPDATE tb_Servicos set ");
             comando.Append("tipo_Servico = @tipo, ");
             comando.Append("data_Servico = @data, ");
             comando.Append("valor_Servico = @valor ");
-            comando.Append("WHERE cod_pet = @codigo");
+            comando.Append("WHERE id_servico = @id");
 
             try
             {
@@ -157,7 +145,7 @@ namespace AppPetShop
                 conexao.comandoSql.Parameters.AddWithValue("@tipo", Servico.getTipo());
                 conexao.comandoSql.Parameters.AddWithValue("@data", Servico.getData());
                 conexao.comandoSql.Parameters.AddWithValue("valor", Servico.getValor());
-                conexao.comandoSql.Parameters.AddWithValue("@codigo", Servico.getCodigo());
+                conexao.comandoSql.Parameters.AddWithValue("@id", Servico.getCodigo());
 
                 conexao.setStrComandoSql(comando.ToString());
                 return conexao.executarComando() > 0;
@@ -166,14 +154,6 @@ namespace AppPetShop
             {
                 throw new Exception(ex.Message);
             }
-        }
-
-        public void limparServico(TextBox campoCodigo, ComboBox campoTipo, DateTimePicker campoData, TextBox campoValor)
-        {
-            campoCodigo.Text = "";
-            campoTipo.SelectedItem = null;
-            campoData.Value = DateTime.Now;
-            campoValor.Text = "";
-        }
+        } 
     }
 }

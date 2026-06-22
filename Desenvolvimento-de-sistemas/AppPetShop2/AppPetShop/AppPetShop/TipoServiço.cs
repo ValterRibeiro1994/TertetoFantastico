@@ -12,24 +12,45 @@ namespace AppPetShop
         private string tipo;
 
         public TipoServiço(ComboBox tipoS = null, String tipoString = null)
-        {   
-            // se tem um combobox
-            if (tipoS != null) {
+        {
+            // se tem um combobox 
+            if (tipoS != null)
+            {
+                string[] servicos = { "banho", "tosa" };
+
+                string texto = tipoS.Text.Trim().ToLower();
+
                 // verifica se ele tem um valor selecionado
-                if (tipoS.SelectedText.Equals(""))
+                if (texto.Equals("") || texto.Equals("selecione um serviço"))
                 {
                     throw new Exception("Selecione o tipo de Serviço");
                 } else
                 {
-                    tipo = tipoS.SelectedText;
+                    bool encontrado = false;
+                    int n = servicos.Length;
+                    for (int i = 0; i < n; i++)
+                    {
+                        if (texto.Equals(servicos[i]))
+                        {
+                            tipo = texto;
+                            encontrado = true;
+                            break;
+                        }
+                    }
+
+                    if (!encontrado)
+                    {
+                        throw new Exception("Serviço não cadastrado no Sistema");
+                    }
                 }
-            } else // o valor veio do banco 
+            }
+            else // o valor veio do banco 
             {
-                if (tipoString  != null) {
+                if (tipoString != null)
+                {
                     tipo = tipoString;
                 }
             }
-
         }
 
         public string getTipo()
@@ -37,5 +58,4 @@ namespace AppPetShop
             return this.tipo;
         }
     }
-
 }

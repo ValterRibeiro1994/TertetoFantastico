@@ -43,6 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.campoData = new System.Windows.Forms.DateTimePicker();
             this.campoTipo = new System.Windows.Forms.ComboBox();
+            this.campoId = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridServico)).BeginInit();
             this.SuspendLayout();
             // 
@@ -213,11 +215,29 @@
             this.campoTipo.Size = new System.Drawing.Size(121, 21);
             this.campoTipo.TabIndex = 31;
             // 
+            // campoId
+            // 
+            this.campoId.Location = new System.Drawing.Point(131, 27);
+            this.campoId.Name = "campoId";
+            this.campoId.Size = new System.Drawing.Size(100, 20);
+            this.campoId.TabIndex = 32;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(64, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "ID Serviço";
+            // 
             // FormBuscarServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 379);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.campoId);
             this.Controls.Add(this.campoTipo);
             this.Controls.Add(this.campoData);
             this.Controls.Add(this.btnRemover);
@@ -258,5 +278,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker campoData;
         private System.Windows.Forms.ComboBox campoTipo;
+        private System.Windows.Forms.TextBox campoId;
+        private System.Windows.Forms.Label label6;
     }
 }

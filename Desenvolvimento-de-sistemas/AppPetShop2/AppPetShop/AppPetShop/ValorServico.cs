@@ -36,8 +36,8 @@ namespace AppPetShop
                 throw new Exception("Valor de Serviço passou do limite permitido !!!");
             }
 
-            // troca virgulas por ponto
-            valor = valorServico.Replace(",", ".");
+            // troca pontos por virgulas
+            valor = valorServico.Replace(".", ","); 
 
             // tenta converter a entrada para numeros
             try
