@@ -103,10 +103,18 @@ namespace AppPetShop
                 rbMacho.Checked = false;
                 rbFemea.Checked = false;
             }
-            byte[] blob_pet = (byte[])gridPet.CurrentRow.Cells[7].Value;
-            exibirFoto(blob_pet);
-            fotoPet = blob_pet;
 
+            try
+            {
+                byte[] blob_pet = (byte[])gridPet.CurrentRow.Cells[7].Value;
+                exibirFoto(blob_pet);
+                fotoPet = blob_pet;
+
+            } catch (Exception ex) {
+                MessageBox.Show("Pet Selecionado não tem Foto, Tire uma foto do Pet e adicione ao banco");
+                campoImagem.Image = null;
+                fotoPet = null;
+            }
         }
 
         private void btnRemoverPet_Click(object sender, EventArgs e)
@@ -200,6 +208,21 @@ namespace AppPetShop
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnAlterarFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog cxDialogo = new OpenFileDialog();
+
+            cxDialogo.Title = "Selecione imagem";
+            cxDialogo.Filter = "Imagens|*.jpg;*.jpeg;*.png;*.gif";
+
+
+            if (cxDialogo.ShowDialog() == DialogResult.OK)
+            {
+                campoImagem.ImageLocation = cxDialogo.FileName;
+                fotoPet = File.ReadAllBytes(campoImagem.ImageLocation);
             }
         }
     }

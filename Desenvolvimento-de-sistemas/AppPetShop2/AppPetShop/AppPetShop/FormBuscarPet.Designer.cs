@@ -45,7 +45,7 @@
             this.gridPet = new System.Windows.Forms.DataGridView();
             this.btnBuscarPedCod = new System.Windows.Forms.Button();
             this.btnBuscarCpf = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAlterarFoto = new System.Windows.Forms.Button();
             this.btnRemoverPet = new System.Windows.Forms.Button();
             this.btnListarPet = new System.Windows.Forms.Button();
             this.btnEditarPet = new System.Windows.Forms.Button();
@@ -198,14 +198,15 @@
             this.btnBuscarCpf.UseVisualStyleBackColor = true;
             this.btnBuscarCpf.Click += new System.EventHandler(this.btnBuscarCpf_Click);
             // 
-            // button3
+            // btnAlterarFoto
             // 
-            this.button3.Location = new System.Drawing.Point(403, 192);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 23);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Alterar Foto";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAlterarFoto.Location = new System.Drawing.Point(403, 192);
+            this.btnAlterarFoto.Name = "btnAlterarFoto";
+            this.btnAlterarFoto.Size = new System.Drawing.Size(109, 23);
+            this.btnAlterarFoto.TabIndex = 18;
+            this.btnAlterarFoto.Text = "Alterar Foto";
+            this.btnAlterarFoto.UseVisualStyleBackColor = true;
+            this.btnAlterarFoto.Click += new System.EventHandler(this.btnAlterarFoto_Click);
             // 
             // btnRemoverPet
             // 
@@ -269,7 +270,7 @@
             this.Controls.Add(this.btnEditarPet);
             this.Controls.Add(this.btnListarPet);
             this.Controls.Add(this.btnRemoverPet);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnAlterarFoto);
             this.Controls.Add(this.btnBuscarCpf);
             this.Controls.Add(this.btnBuscarPedCod);
             this.Controls.Add(this.gridPet);
@@ -315,7 +316,7 @@
         private System.Windows.Forms.DataGridView gridPet;
         private System.Windows.Forms.Button btnBuscarPedCod;
         private System.Windows.Forms.Button btnBuscarCpf;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAlterarFoto;
         private System.Windows.Forms.Button btnRemoverPet;
         private System.Windows.Forms.Button btnListarPet;
         private System.Windows.Forms.Button btnEditarPet;

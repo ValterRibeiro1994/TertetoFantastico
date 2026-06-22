@@ -48,13 +48,13 @@ namespace AppPetShop
             if (valor <= 0)
                 {
                     throw new Exception("Valor do serviço deve ser maior que zero !!!");
-                    return false;
+                    
                 }
                 int tamanho = StringValor.Length;
                 if (tamanho > 6)
                 {
                     throw new Exception("Valor do serviço deve ser menor que 10 Mil");
-                    return false;
+                    
                 }
 
             

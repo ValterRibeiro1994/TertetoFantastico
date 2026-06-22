@@ -61,7 +61,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(338, 35);
             this.btnCadastrar.TabIndex = 18;
-            this.btnCadastrar.Text = "Cadastrar Tutor";
+            this.btnCadastrar.Text = "Registrar Serviço";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
