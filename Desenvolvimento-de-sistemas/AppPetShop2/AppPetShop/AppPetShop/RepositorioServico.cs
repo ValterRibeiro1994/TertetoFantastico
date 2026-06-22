@@ -53,7 +53,7 @@ namespace AppPetShop
             // comando de remoção
             comando.Clear();
             comando.Append("DELETE FROM tb_Servicos ");
-            comando.Append("WHERE id_servico = @id;");
+            comando.Append("WHERE id_servico = @id");
 
             try
             {
@@ -67,16 +67,15 @@ namespace AppPetShop
             {
                 throw new Exception(ex.Message);
             }
-
         }
 
-        public DataTable listarServicoes()
+        public DataTable listarServicos()
         {
             comando.Clear();
             comando.Append("SELECT ");
             comando.Append("id_servico as 'ID serviço', ");
             comando.Append("cod_pet as 'codigo do pet', ");
-            comando.Append("tipo_servico as Tipo, ");            
+            comando.Append("tipo_servico as Tipo, ");
             comando.Append("data_servico as Data, ");
             comando.Append("valor_servico as Valor ");
             comando.Append("FROM tb_Servicos; ");
@@ -88,7 +87,6 @@ namespace AppPetShop
 
                 DataSet dados = conexao.getDataSet();
                 return dados.Tables[0];
-                
             }
             catch (Exception ex)
             {
@@ -117,7 +115,6 @@ namespace AppPetShop
 
                 DataSet dados = conexao.getDataSet();
                 return dados.Tables[0];
-                
             }
             catch (Exception ex)
             {
@@ -129,10 +126,8 @@ namespace AppPetShop
         {
             /*
                 Metodo getCodigo está recebendo o ID do serviço no FormBuscarServiços
-                
              */
             comando.Clear();
-
             comando.Append("UPDATE tb_Servicos set ");
             comando.Append("tipo_Servico = @tipo, ");
             comando.Append("data_Servico = @data, ");
@@ -144,7 +139,7 @@ namespace AppPetShop
                 conexao.comandoSql.Parameters.Clear();
                 conexao.comandoSql.Parameters.AddWithValue("@tipo", Servico.getTipo());
                 conexao.comandoSql.Parameters.AddWithValue("@data", Servico.getData());
-                conexao.comandoSql.Parameters.AddWithValue("valor", Servico.getValor());
+                conexao.comandoSql.Parameters.AddWithValue("@valor", Servico.getValor());
                 conexao.comandoSql.Parameters.AddWithValue("@id", Servico.getCodigo());
 
                 conexao.setStrComandoSql(comando.ToString());
@@ -154,6 +149,36 @@ namespace AppPetShop
             {
                 throw new Exception(ex.Message);
             }
-        } 
+        }
+
+        public int obterUltimoId()
+        {
+            comando.Clear();
+            comando.Append("SELECT id_servico FROM tb_servicos ORDER BY id_servico DESC");
+
+            try
+            {
+                conexao.comandoSql.Parameters.Clear();
+                conexao.setStrComandoSql(comando.ToString());
+
+                DataSet dados = conexao.getDataSet();
+
+                // Verifica se o banco retornou alguma linha (se a tabela não estiver vazia)
+                if (dados.Tables[0].Rows.Count > 0)
+                {
+                    // Pega o valor da primeira linha (índice 0) e primeira coluna (índice 0)
+                    return Convert.ToInt32(dados.Tables[0].Rows[0][0]);
+                }
+                else
+                {
+                    // Retorna 0 caso a tabela esteja completamente vazia
+                    return 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao obter o último ID: " + ex.Message);
+            }
+        }
     }
 }
