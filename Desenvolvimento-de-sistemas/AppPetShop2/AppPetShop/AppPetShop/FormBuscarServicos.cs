@@ -13,11 +13,12 @@ namespace AppPetShop
     public partial class FormBuscarServicos : Form
     {
         RepositorioServico repositorio;
+        Servico servico;
         public FormBuscarServicos()
         {
             InitializeComponent();
             repositorio = new RepositorioServico();
-            limparCampos();
+            servico = null;
         }
 
         private void btnFitrarCod_Click(object sender, EventArgs e)
@@ -25,8 +26,15 @@ namespace AppPetShop
 
             try
             {
-                CodigoBanco codigo = new CodigoBanco(campoCodigo.Text);
-                gridServico.DataSource = repositorio.buscarServicosPet(codigo);
+                CodigoBanco codigo = new CodigoBanco(campoCodigo.Text.ToString());
+                
+                servico = repositorio.buscarServico(codigo,gridServico);
+
+                // Completa os campos em branco
+                campoTipo.Text = servico.getTipo();
+                campoData.Value = servico.getData();
+                campoValor.Text = (servico.getValor()).ToString();
+
             }
             catch (Exception ex)
             {
@@ -43,8 +51,7 @@ namespace AppPetShop
         {
             try
             {
-                DataTable tabela_de_dados = repositorio.listarServicoes();
-                gridServico.DataSource = tabela_de_dados;
+                repositorio.listarServicoes(gridServico);
             }
             catch (Exception ex)
             {
@@ -54,29 +61,36 @@ namespace AppPetShop
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (campoId.Text.Equals(""))
+            string codigo = gridServico.CurrentRow.Cells[0].Value.ToString();
+            if (!campoCodigo.Text.Equals(codigo))
             {
-                // se o Id tiver vazio ele não selecionou nenhum item da tabela
-                MessageBox.Show("Campo Id Obrigatorio para alteração dos dados, clique no serviço que deseja ser editado antes");
+                MessageBox.Show("CPF não pode ser alterado !!!");
                 return;
             }
 
             try
             {
+                CodigoBanco codigoBanco = new CodigoBanco(codigo);
+                TipoServiço tipo = new TipoServiço(campoTipo);
+                DataServico data = new DataServico(campoData);
+                ValorServico valor = new ValorServico(campoValor);
+                
                 Servico servico = new Servico();
-                servico.setCodigo(new CodigoBanco(codigo: campoId.Text)); // CodigoBanco envia o Id do serviço e não o código do pet
-                servico.setTipo(new TipoServiço(tipoS: campoTipo));
-                servico.setData(new DataServico(dataForm: campoData));
-                servico.setValor(new ValorServico(valorForm: campoValor));
-            
-            if (repositorio.alterarServico(servico)){
-                MessageBox.Show("Dados Alterados com sucesso !!!");
-            } else
-            {
-               MessageBox.Show("Dados não foram alterados !!!");
-            }
+                servico.setCodigo(codigoBanco);
+                servico.setTipo(tipo);
+                servico.setData(data);
+                servico.setValor(valor);
 
-             chamarGrid();
+                if (repositorio.alterarServico(servico))
+                {
+                    chamarGrid();
+                    MessageBox.Show("Dados Alterados com sucesso !!!");
+                }
+                else
+                {
+                    MessageBox.Show("Dados não foram alterados !!!");
+                }
+
             }
             catch (Exception ex)
             {
@@ -86,27 +100,18 @@ namespace AppPetShop
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            limparCampos();
+            repositorio.limparServico(campoCodigo, campoTipo, campoData, campoValor);
         }
 
-        private void limparCampos()
-        {
-            campoCodigo.Text = "";
-            campoTipo.SelectedItem = null;
-            campoData.Value = DateTime.Now;
-            campoValor.Text = "";
-            campoTipo.Text = "Escolha um Serviço";
-            campoId.Text = "Selecione um Serviço";
-        }
-        
         private void btnRemover_Click(object sender, EventArgs e)
         {
             try
             {
-                CodigoBanco id = new CodigoBanco(campoId.Text);
-                repositorio.removerServico(id);
-                chamarGrid();
-                
+                CodigoBanco codigoBanco = new CodigoBanco(campoCodigo.Text);
+                repositorio.removerServico(codigoBanco);
+                repositorio.listarServicoes(gridServico);
+                repositorio.limparServico(campoCodigo, campoTipo, campoData, campoValor);
+
             }
             catch (Exception ex)
             {
@@ -115,20 +120,20 @@ namespace AppPetShop
             }
         }
 
-        private void clicar_celula(object sender, DataGridViewCellEventArgs e)
+        private void clicarCelula(object sender, DataGridViewCellEventArgs e)
         {
-            String id = gridServico.CurrentRow.Cells[0].Value.ToString();
             String codigo = gridServico.CurrentRow.Cells[1].Value.ToString();
             String tipo = gridServico.CurrentRow.Cells[2].Value.ToString();
-            DateTime data = (DateTime) gridServico.CurrentRow.Cells[3].Value;
+            DateTime data = Convert.ToDateTime(gridServico.CurrentRow.Cells[3].Value);
             String valor = gridServico.CurrentRow.Cells[4].Value.ToString();
 
-            campoId.Text = id;
             campoCodigo.Text = codigo;
             campoTipo.Text = tipo;
             campoData.Value = data;
             campoValor.Text = valor;
         }
+
+        
     }
 }
 

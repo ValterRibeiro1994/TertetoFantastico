@@ -34,13 +34,13 @@
             this.gridServico = new System.Windows.Forms.DataGridView();
             this.btnPesquisarTodos = new System.Windows.Forms.Button();
             this.btnFitrarCod = new System.Windows.Forms.Button();
-            this.campoValor = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.campoCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.campoCodigo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.campoValor = new System.Windows.Forms.TextBox();
             this.campoData = new System.Windows.Forms.DateTimePicker();
             this.campoTipo = new System.Windows.Forms.ComboBox();
             this.campoId = new System.Windows.Forms.TextBox();
@@ -94,7 +94,7 @@
             this.gridServico.RowHeadersWidth = 51;
             this.gridServico.Size = new System.Drawing.Size(424, 241);
             this.gridServico.TabIndex = 26;
-            this.gridServico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clicar_celula);
+            this.gridServico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clicarCelula);
             // 
             // btnPesquisarTodos
             // 
@@ -120,49 +120,25 @@
             this.btnFitrarCod.UseVisualStyleBackColor = false;
             this.btnFitrarCod.Click += new System.EventHandler(this.btnFitrarCod_Click);
             // 
-            // campoValor
+            // label1
             // 
-            this.campoValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoValor.Location = new System.Drawing.Point(138, 180);
-            this.campoValor.Name = "campoValor";
-            this.campoValor.Size = new System.Drawing.Size(179, 26);
-            this.campoValor.TabIndex = 23;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(241, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(276, 36);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Localizar Serviços";
             // 
-            // label5
+            // campoCodigo
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(-1, 185);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(133, 18);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Valor do Serviço";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(12, 147);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 18);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Data do Serviço";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(17, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 18);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Tipo de Serviço";
+            this.campoCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoCodigo.Location = new System.Drawing.Point(131, 55);
+            this.campoCodigo.Name = "campoCodigo";
+            this.campoCodigo.Size = new System.Drawing.Size(179, 26);
+            this.campoCodigo.TabIndex = 16;
             // 
             // label2
             // 
@@ -176,25 +152,49 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Codigo Pet";
             // 
-            // campoCodigo
+            // label3
             // 
-            this.campoCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodigo.Location = new System.Drawing.Point(131, 55);
-            this.campoCodigo.Name = "campoCodigo";
-            this.campoCodigo.Size = new System.Drawing.Size(179, 26);
-            this.campoCodigo.TabIndex = 16;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(17, 102);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 18);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Tipo de Serviço";
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(241, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 36);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Localizar Serviços";
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Window;
+            this.label4.Location = new System.Drawing.Point(12, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 18);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Data do Serviço";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Window;
+            this.label5.Location = new System.Drawing.Point(-1, 185);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(133, 18);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Valor do Serviço";
+            // 
+            // campoValor
+            // 
+            this.campoValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoValor.Location = new System.Drawing.Point(138, 180);
+            this.campoValor.Name = "campoValor";
+            this.campoValor.Size = new System.Drawing.Size(179, 26);
+            this.campoValor.TabIndex = 23;
             // 
             // campoData
             // 
@@ -269,13 +269,13 @@
         private System.Windows.Forms.DataGridView gridServico;
         private System.Windows.Forms.Button btnPesquisarTodos;
         private System.Windows.Forms.Button btnFitrarCod;
-        private System.Windows.Forms.TextBox campoValor;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox campoCodigo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox campoCodigo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox campoValor;
         private System.Windows.Forms.DateTimePicker campoData;
         private System.Windows.Forms.ComboBox campoTipo;
         private System.Windows.Forms.TextBox campoId;

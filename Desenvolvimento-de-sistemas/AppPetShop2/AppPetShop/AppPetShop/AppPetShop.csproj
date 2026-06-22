@@ -51,9 +51,18 @@
   <ItemGroup>
     <Compile Include="CodigoBanco.cs" />
     <Compile Include="Conexao.cs" />
+    <Compile Include="Consulta.cs" />
     <Compile Include="Cpf.cs" />
+    <Compile Include="DataConsulta.cs" />
     <Compile Include="DataServico.cs" />
+    <Compile Include="DescConsulta.cs" />
     <Compile Include="Email.cs" />
+    <Compile Include="FormBuscarConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBuscarConsultas.Designer.cs">
+      <DependentUpon>FormBuscarConsultas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBuscarPet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +107,7 @@
     </Compile>
     <Compile Include="Nome.cs" />
     <Compile Include="Pet.cs" />
+    <Compile Include="RepositorioConsulta.cs" />
     <Compile Include="RepositorioPet.cs" />
     <Compile Include="RepositorioServico.cs" />
     <Compile Include="RepositorioTutor.cs" />
@@ -120,6 +130,9 @@
     <Compile Include="TipoServiço.cs" />
     <Compile Include="Tutor.cs" />
     <Compile Include="ValorServico.cs" />
+    <EmbeddedResource Include="FormBuscarConsultas.resx">
+      <DependentUpon>FormBuscarConsultas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarPet.resx">
       <DependentUpon>FormBuscarPet.cs</DependentUpon>
     </EmbeddedResource>

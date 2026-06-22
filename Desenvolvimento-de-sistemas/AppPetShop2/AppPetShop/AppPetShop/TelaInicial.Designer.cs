@@ -150,6 +150,7 @@
             this.buscarConsultasToolStripMenuItem.Name = "buscarConsultasToolStripMenuItem";
             this.buscarConsultasToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.buscarConsultasToolStripMenuItem.Text = "Buscar Consultas";
+            this.buscarConsultasToolStripMenuItem.Click += new System.EventHandler(this.buscarConsultasToolStripMenuItem_Click);
             // 
             // TelaInicial
             // 
