@@ -42,6 +42,7 @@ namespace AppPetShop
         {
             try
             {
+                // atualiza o grid view
                 gridConsulta.DataSource = repositorio.listarConsultas(gridConsulta);
             }
             catch (Exception ex)
@@ -102,7 +103,7 @@ namespace AppPetShop
             {
                 CodigoBanco id = new CodigoBanco(campoId.Text);
                 repositorio.removerConsulta(id);
-                repositorio.listarConsultas(gridConsulta);
+                chamarGrid();
                 limparCampos();
             }
             catch (Exception ex)
