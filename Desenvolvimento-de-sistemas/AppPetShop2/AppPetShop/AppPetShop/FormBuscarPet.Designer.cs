@@ -62,20 +62,18 @@
             this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(55, 83);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(41, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 22);
+            this.label1.Size = new System.Drawing.Size(92, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Código Pet";
             // 
             // campoCodigo
             // 
             this.campoCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodigo.Location = new System.Drawing.Point(197, 78);
-            this.campoCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoCodigo.Location = new System.Drawing.Point(148, 63);
             this.campoCodigo.Name = "campoCodigo";
-            this.campoCodigo.Size = new System.Drawing.Size(348, 30);
+            this.campoCodigo.Size = new System.Drawing.Size(262, 26);
             this.campoCodigo.TabIndex = 1;
             // 
             // label2
@@ -84,10 +82,9 @@
             this.label2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(69, 137);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(52, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 22);
+            this.label2.Size = new System.Drawing.Size(79, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Cpf Tutor";
             // 
@@ -97,10 +94,9 @@
             this.label3.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(67, 192);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(50, 156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 22);
+            this.label3.Size = new System.Drawing.Size(83, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Nome Pet";
             // 
@@ -110,10 +106,9 @@
             this.label4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(47, 247);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(35, 201);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 22);
+            this.label4.Size = new System.Drawing.Size(98, 18);
             this.label4.TabIndex = 4;
             this.label4.Text = "Especie Pet";
             // 
@@ -123,10 +118,9 @@
             this.label5.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(72, 302);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(54, 245);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 22);
+            this.label5.Size = new System.Drawing.Size(77, 18);
             this.label5.TabIndex = 5;
             this.label5.Text = "Raça Pet";
             // 
@@ -136,10 +130,9 @@
             this.label6.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(52, 352);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(39, 286);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 22);
+            this.label6.Size = new System.Drawing.Size(94, 18);
             this.label6.TabIndex = 6;
             this.label6.Text = "Gênero Pet";
             // 
@@ -149,78 +142,70 @@
             this.label7.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(14, 410);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(10, 333);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 22);
+            this.label7.Size = new System.Drawing.Size(128, 18);
             this.label7.TabIndex = 7;
             this.label7.Text = "Nascimento Pet";
             // 
             // campoImagem
             // 
             this.campoImagem.BackColor = System.Drawing.Color.White;
-            this.campoImagem.Location = new System.Drawing.Point(570, 78);
-            this.campoImagem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoImagem.Location = new System.Drawing.Point(428, 63);
             this.campoImagem.Name = "campoImagem";
-            this.campoImagem.Size = new System.Drawing.Size(196, 186);
+            this.campoImagem.Size = new System.Drawing.Size(147, 151);
             this.campoImagem.TabIndex = 8;
             this.campoImagem.TabStop = false;
             // 
             // campoCpf
             // 
             this.campoCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCpf.Location = new System.Drawing.Point(197, 132);
-            this.campoCpf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoCpf.Location = new System.Drawing.Point(148, 107);
             this.campoCpf.Name = "campoCpf";
-            this.campoCpf.Size = new System.Drawing.Size(348, 30);
+            this.campoCpf.Size = new System.Drawing.Size(262, 26);
             this.campoCpf.TabIndex = 9;
             // 
             // campoNome
             // 
             this.campoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoNome.Location = new System.Drawing.Point(197, 187);
-            this.campoNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoNome.Location = new System.Drawing.Point(148, 152);
             this.campoNome.Name = "campoNome";
-            this.campoNome.Size = new System.Drawing.Size(348, 30);
+            this.campoNome.Size = new System.Drawing.Size(262, 26);
             this.campoNome.TabIndex = 10;
             // 
             // campoEspecie
             // 
             this.campoEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoEspecie.Location = new System.Drawing.Point(197, 242);
-            this.campoEspecie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoEspecie.Location = new System.Drawing.Point(148, 197);
             this.campoEspecie.Name = "campoEspecie";
-            this.campoEspecie.Size = new System.Drawing.Size(348, 30);
+            this.campoEspecie.Size = new System.Drawing.Size(262, 26);
             this.campoEspecie.TabIndex = 11;
             // 
             // campoRaca
             // 
             this.campoRaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoRaca.Location = new System.Drawing.Point(197, 297);
-            this.campoRaca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoRaca.Location = new System.Drawing.Point(148, 241);
             this.campoRaca.Name = "campoRaca";
-            this.campoRaca.Size = new System.Drawing.Size(348, 30);
+            this.campoRaca.Size = new System.Drawing.Size(262, 26);
             this.campoRaca.TabIndex = 12;
             // 
             // campoData
             // 
             this.campoData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.campoData.Location = new System.Drawing.Point(197, 403);
-            this.campoData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoData.Location = new System.Drawing.Point(148, 327);
             this.campoData.Name = "campoData";
-            this.campoData.Size = new System.Drawing.Size(348, 30);
+            this.campoData.Size = new System.Drawing.Size(262, 26);
             this.campoData.TabIndex = 14;
             // 
             // gridPet
             // 
             this.gridPet.BackgroundColor = System.Drawing.SystemColors.Info;
             this.gridPet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridPet.Location = new System.Drawing.Point(796, 78);
-            this.gridPet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridPet.Location = new System.Drawing.Point(597, 63);
             this.gridPet.Name = "gridPet";
             this.gridPet.RowHeadersWidth = 51;
-            this.gridPet.Size = new System.Drawing.Size(538, 401);
+            this.gridPet.Size = new System.Drawing.Size(404, 326);
             this.gridPet.TabIndex = 15;
             this.gridPet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.selecionarPet);
             // 
@@ -228,10 +213,9 @@
             // 
             this.btnBuscarPedCod.BackColor = System.Drawing.Color.Gold;
             this.btnBuscarPedCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarPedCod.Location = new System.Drawing.Point(570, 379);
-            this.btnBuscarPedCod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarPedCod.Location = new System.Drawing.Point(428, 308);
             this.btnBuscarPedCod.Name = "btnBuscarPedCod";
-            this.btnBuscarPedCod.Size = new System.Drawing.Size(195, 28);
+            this.btnBuscarPedCod.Size = new System.Drawing.Size(146, 23);
             this.btnBuscarPedCod.TabIndex = 16;
             this.btnBuscarPedCod.Text = "Buscar Pet Codigo";
             this.btnBuscarPedCod.UseVisualStyleBackColor = false;
@@ -241,10 +225,9 @@
             // 
             this.btnBuscarCpf.BackColor = System.Drawing.Color.Gold;
             this.btnBuscarCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarCpf.Location = new System.Drawing.Point(570, 415);
-            this.btnBuscarCpf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarCpf.Location = new System.Drawing.Point(428, 337);
             this.btnBuscarCpf.Name = "btnBuscarCpf";
-            this.btnBuscarCpf.Size = new System.Drawing.Size(195, 28);
+            this.btnBuscarCpf.Size = new System.Drawing.Size(146, 23);
             this.btnBuscarCpf.TabIndex = 17;
             this.btnBuscarCpf.Text = "Buscar Cpf Pet";
             this.btnBuscarCpf.UseVisualStyleBackColor = false;
@@ -254,10 +237,9 @@
             // 
             this.btnAlterarFoto.BackColor = System.Drawing.Color.Gold;
             this.btnAlterarFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterarFoto.Location = new System.Drawing.Point(570, 272);
-            this.btnAlterarFoto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlterarFoto.Location = new System.Drawing.Point(428, 221);
             this.btnAlterarFoto.Name = "btnAlterarFoto";
-            this.btnAlterarFoto.Size = new System.Drawing.Size(195, 28);
+            this.btnAlterarFoto.Size = new System.Drawing.Size(146, 23);
             this.btnAlterarFoto.TabIndex = 18;
             this.btnAlterarFoto.Text = "Alterar Foto";
             this.btnAlterarFoto.UseVisualStyleBackColor = false;
@@ -267,10 +249,9 @@
             // 
             this.btnRemoverPet.BackColor = System.Drawing.Color.Gold;
             this.btnRemoverPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoverPet.Location = new System.Drawing.Point(570, 308);
-            this.btnRemoverPet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRemoverPet.Location = new System.Drawing.Point(428, 250);
             this.btnRemoverPet.Name = "btnRemoverPet";
-            this.btnRemoverPet.Size = new System.Drawing.Size(195, 27);
+            this.btnRemoverPet.Size = new System.Drawing.Size(146, 22);
             this.btnRemoverPet.TabIndex = 19;
             this.btnRemoverPet.Text = "Remover Pet";
             this.btnRemoverPet.UseVisualStyleBackColor = false;
@@ -280,10 +261,9 @@
             // 
             this.btnListarPet.BackColor = System.Drawing.Color.Gold;
             this.btnListarPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarPet.Location = new System.Drawing.Point(570, 343);
-            this.btnListarPet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnListarPet.Location = new System.Drawing.Point(428, 279);
             this.btnListarPet.Name = "btnListarPet";
-            this.btnListarPet.Size = new System.Drawing.Size(195, 28);
+            this.btnListarPet.Size = new System.Drawing.Size(146, 23);
             this.btnListarPet.TabIndex = 20;
             this.btnListarPet.Text = "Listar Pet";
             this.btnListarPet.UseVisualStyleBackColor = false;
@@ -293,10 +273,9 @@
             // 
             this.btnEditarPet.BackColor = System.Drawing.Color.Gold;
             this.btnEditarPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarPet.Location = new System.Drawing.Point(570, 451);
-            this.btnEditarPet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditarPet.Location = new System.Drawing.Point(428, 366);
             this.btnEditarPet.Name = "btnEditarPet";
-            this.btnEditarPet.Size = new System.Drawing.Size(195, 28);
+            this.btnEditarPet.Size = new System.Drawing.Size(146, 23);
             this.btnEditarPet.TabIndex = 21;
             this.btnEditarPet.Text = "Editar Pet";
             this.btnEditarPet.UseVisualStyleBackColor = false;
@@ -306,10 +285,9 @@
             // 
             this.rbMacho.AutoSize = true;
             this.rbMacho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMacho.Location = new System.Drawing.Point(197, 352);
-            this.rbMacho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbMacho.Location = new System.Drawing.Point(148, 286);
             this.rbMacho.Name = "rbMacho";
-            this.rbMacho.Size = new System.Drawing.Size(84, 26);
+            this.rbMacho.Size = new System.Drawing.Size(72, 22);
             this.rbMacho.TabIndex = 22;
             this.rbMacho.TabStop = true;
             this.rbMacho.Text = "Macho";
@@ -319,10 +297,9 @@
             // 
             this.rbFemea.AutoSize = true;
             this.rbFemea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFemea.Location = new System.Drawing.Point(324, 352);
-            this.rbFemea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbFemea.Location = new System.Drawing.Point(243, 286);
             this.rbFemea.Name = "rbFemea";
-            this.rbFemea.Size = new System.Drawing.Size(86, 26);
+            this.rbFemea.Size = new System.Drawing.Size(72, 22);
             this.rbFemea.TabIndex = 23;
             this.rbFemea.TabStop = true;
             this.rbFemea.Text = "Femea";
@@ -334,19 +311,18 @@
             this.label8.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gold;
-            this.label8.Location = new System.Drawing.Point(418, 9);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(314, 7);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(247, 42);
+            this.label8.Size = new System.Drawing.Size(200, 36);
             this.label8.TabIndex = 24;
             this.label8.Text = "Localizar Pet";
             // 
             // FormBuscarPet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(1347, 560);
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.ClientSize = new System.Drawing.Size(1010, 455);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.rbFemea);
             this.Controls.Add(this.rbMacho);
@@ -371,7 +347,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.campoCodigo);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormBuscarPet";
             this.Text = "FormBuscarPet";
             ((System.ComponentModel.ISupportInitialize)(this.campoImagem)).EndInit();
