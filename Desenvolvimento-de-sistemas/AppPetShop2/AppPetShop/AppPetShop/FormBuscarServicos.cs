@@ -27,6 +27,7 @@ namespace AppPetShop
             try
             {
                 CodigoBanco codigo = new CodigoBanco(campoCodigo.Text.ToString());
+                
                 servico = repositorio.buscarServico(codigo,gridServico);
 
                 // Completa os campos em branco

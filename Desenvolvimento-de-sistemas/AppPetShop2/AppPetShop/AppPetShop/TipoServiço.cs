@@ -13,16 +13,21 @@ namespace AppPetShop
 
         public TipoServiço(ComboBox tipoS = null, String tipoString = null)
         {   
-            if (tipoString != null) 
+            // se tem um combobox
+            if (tipoS != null) {
+                // verifica se ele tem um valor selecionado
+                if (tipoS.SelectedText.Equals(""))
+                {
+                    throw new Exception("Selecione o tipo de Serviço");
+                } else
+                {
+                    tipo = tipoS.SelectedText;
+                }
+            } else // o valor veio do banco 
             {
-
-                tipoS.Text = tipoString;
-
-            }
-
-            if (validarTipo(tipoS)) 
-            {
-                this.tipo = tipoS.SelectedItem.ToString();
+                if (tipoString  != null) {
+                    tipo = tipoString;
+                }
             }
 
         }
@@ -30,15 +35,6 @@ namespace AppPetShop
         public string getTipo()
         {
             return this.tipo;
-        }
-
-        public bool validarTipo(ComboBox tipoS)
-        {
-            if (tipoS.SelectedItem == null)
-            {
-                throw new Exception("Selecione um tipo de serviço !!!");
-            }
-            return true;
         }
     }
 

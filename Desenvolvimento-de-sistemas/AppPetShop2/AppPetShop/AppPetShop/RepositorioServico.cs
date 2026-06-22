@@ -102,9 +102,9 @@ namespace AppPetShop
             comando.Clear();
             comando.Append("SELECT ");
             comando.Append("cod_pet as 'codigo do pet', ");
-            comando.Append("tipo_servico as Tipo, ");
-            comando.Append("data_servico as Data, ");
-            comando.Append("valor_servico as Valor ");
+            comando.Append("tipo_servico as 'Tipo', ");
+            comando.Append("data_servico as 'Data', ");
+            comando.Append("valor_servico as 'Valor' ");
             comando.Append("FROM tb_Servicos ");
             comando.Append("WHERE cod_pet = @codigo;");
 
