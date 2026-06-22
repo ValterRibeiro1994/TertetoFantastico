@@ -29,6 +29,14 @@ namespace AppPetShop
                 Data dataConsulta = new Data(dataForm: campoData);
                 Texto descricao = new Texto(campoDesc.Text, limite_max: 65000);
 
+                // verificar se existe o Pet 
+                RepositorioPet petRepo = new RepositorioPet();
+                Pet pet = petRepo.buscarPetCodigo(codigoPet);
+                if (pet == null)
+                {
+                    MessageBox.Show("Pet não existe !!!");
+                }
+
                 Consulta Consulta = new Consulta();
                 Consulta.setCodigo(codigoPet);
                 Consulta.setData(dataConsulta);
@@ -42,13 +50,12 @@ namespace AppPetShop
                 else
                 {
                     MessageBox.Show("Erro ao cadastrar a consulta.");
-                } 
-                Consulta = null;
+                }
 
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao cadastrar a consulta: " + ex.Message);
+                MessageBox.Show("Erro ao cadastrar a consulta: " + ex.Message);
             }
         }
     }

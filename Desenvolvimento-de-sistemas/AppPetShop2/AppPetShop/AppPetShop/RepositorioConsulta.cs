@@ -67,7 +67,7 @@ namespace AppPetShop
         {
             // comando de consulta
             comando.Clear();
-            comando.Append("SELECT id_consulta, cod_pet, data_consulta, prescricao_consulta ");
+            comando.Append("SELECT id_consulta as 'Id Consulta', cod_pet as 'Código Pet', data_consulta as 'Data', prescricao_consulta as 'Preescrição' ");
             comando.Append("FROM tb_consulta;");
             try
             {

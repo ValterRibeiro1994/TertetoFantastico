@@ -93,7 +93,7 @@ namespace AppPetShop
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            repositorio.limparConsulta(campoId, campoCodPet, dtpDataConsulta , campoDesc);
+            limparCampos();
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
