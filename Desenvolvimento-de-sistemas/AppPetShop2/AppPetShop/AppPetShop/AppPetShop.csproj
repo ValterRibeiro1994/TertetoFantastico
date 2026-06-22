@@ -72,6 +72,12 @@
     <Compile Include="FormBuscarTutor.Designer.cs">
       <DependentUpon>FormBuscarTutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCadastrarConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastrarConsultas.Designer.cs">
+      <DependentUpon>FormCadastrarConsultas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastrarPet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarTutor.resx">
       <DependentUpon>FormBuscarTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastrarConsultas.resx">
+      <DependentUpon>FormCadastrarConsultas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastrarPet.resx">
       <DependentUpon>FormCadastrarPet.cs</DependentUpon>

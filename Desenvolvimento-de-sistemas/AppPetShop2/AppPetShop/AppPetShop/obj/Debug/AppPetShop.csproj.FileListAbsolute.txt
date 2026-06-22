@@ -111,3 +111,25 @@ C:\Users\lipe1\source\repos\ValterRibeiro1994\TertetoFantastico\Desenvolvimento-
 C:\Users\lipe1\source\repos\ValterRibeiro1994\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormBuscarServicos.resources
 C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormBuscarServicos.resources
 C:\Users\valte\Desktop\Mundo da programacao\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormCadastrarServico.resources
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\bin\Debug\AppPetShop.exe.config
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\bin\Debug\AppPetShop.exe
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\bin\Debug\AppPetShop.pdb
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\bin\Debug\MySql.Data.dll
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\bin\Debug\System.Memory.dll
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.csproj.AssemblyReference.cache
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormBuscarPet.resources
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormBuscarServicos.resources
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormBuscarTutor.resources
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormCadastrarPet.resources
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormCadastrarServico.resources
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormCadastrarTutor.resources
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.TelaInicial.resources
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.TelaSplash.resources
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.Properties.Resources.resources
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.csproj.GenerateResource.cache
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.csproj.CoreCompileInputs.cache
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.csproj.Up2Date
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.exe
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.pdb
+C:\Users\lipe1\OneDrive\Área de Trabalho\Coisas de programador do kai\repositorio\TertetoFantastico\Desenvolvimento-de-sistemas\AppPetShop2\AppPetShop\AppPetShop\obj\Debug\AppPetShop.FormCadastrarConsultas.resources
