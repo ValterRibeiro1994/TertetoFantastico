@@ -1,3 +1,29 @@
+INNER JOIN tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor
+ORDER BY nascimento_pet;
+
+# Pet por ordem de nascimento
+
+select nome_tutor as 'Nome do Tutor',  celular_tutor as 'Celular', nome_pet as 'Nome do Pet', 
+genero_pet as 'Gênero', raca_pet as 'Raça'
+FROM tb_pet
+INNER JOIN tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor;
+
+#Pet + Tutor
+select nome_tutor as 'Tutor', celular_tutor as 'Telefone', nome_pet as 'Nome do Pet', genero_pet as 'Genero do Pet', raca_pet as 'Raça do pet'
+ from tb_pet 
+ inner join tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor;
+ 
+ #Pet filtrado por especie/ substituir @especie pelo valor digitado
+ select nome_pet as 'Nome', especie_pet as 'Especie', raca_pet as 'Raça' where especie_pet = @especie;
+ 
+ # Serviços
+ select tipo_servico as 'Tipo', data_servico as 'Data', nome_tutor as 'Tutor', nome_pet as 'Nome' 
+ from tb_pet
+ inner join tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor inner join tb_servico on tb_servico.cod_pet = tb_pet.cod_pet
+ where tipo_servico = @tipo && data_servico = @data order by 
+
+
+
 create DATABASE if not EXISTS petshop_db;
 use petshop_db;
 
