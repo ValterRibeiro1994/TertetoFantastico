@@ -170,15 +170,15 @@
             // lista1ToolStripMenuItem
             // 
             this.lista1ToolStripMenuItem.Name = "lista1ToolStripMenuItem";
-            this.lista1ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
-            this.lista1ToolStripMenuItem.Text = "lista 1";
+            this.lista1ToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.lista1ToolStripMenuItem.Text = "Filtrar por espécie";
             this.lista1ToolStripMenuItem.Click += new System.EventHandler(this.lista1ToolStripMenuItem_Click);
             // 
             // lista2ToolStripMenuItem
             // 
             this.lista2ToolStripMenuItem.Name = "lista2ToolStripMenuItem";
-            this.lista2ToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
-            this.lista2ToolStripMenuItem.Text = "lista 2";
+            this.lista2ToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.lista2ToolStripMenuItem.Text = "Filtrar por tipo e data";
             // 
             // faleConoscoToolStripMenuItem
             // 
@@ -191,7 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

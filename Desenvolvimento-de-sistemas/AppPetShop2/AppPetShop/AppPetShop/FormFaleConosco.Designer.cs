@@ -85,7 +85,7 @@
             this.label4.Size = new System.Drawing.Size(461, 108);
             this.label4.TabIndex = 2;
             this.label4.Text = "Somos um PetShop novo no mercado que tem como visão atualizar a forma como a area" +
-    " evolui, sempre visando as novas tendencias, atualidades e automação";
+    " evolui, sempre visando as novas tendencias, atualidades e automação.";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
@@ -218,10 +218,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label12.BackColor = System.Drawing.Color.Gold;
             this.label12.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Gold;
+            this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(17, 16);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(148, 20);
@@ -231,9 +232,9 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label13.BackColor = System.Drawing.Color.Gold;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Gold;
+            this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(20, 16);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(86, 20);

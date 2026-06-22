@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AppPetShop
 {
-    public partial class FormListaUm : Form
+    public partial class FormFiltroTipoData : Form
     {
-        public FormListaUm()
+        public FormFiltroTipoData()
         {
             InitializeComponent();
         }
