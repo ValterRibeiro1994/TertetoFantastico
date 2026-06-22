@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 22/06/2026 às 10:40
--- Versão do servidor: 8.4.7
--- Versão do PHP: 8.3.28
+-- Tempo de geração: 22/06/2026 às 20:28
+-- Versão do servidor: 8.3.0
+-- Versão do PHP: 8.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `tb_consulta` (
   `id_consulta` int NOT NULL AUTO_INCREMENT,
   `cod_pet` int NOT NULL,
   `data_consulta` date NOT NULL,
-  `prescricao_consulta` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `prescricao_consulta` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id_consulta`),
   KEY `cod_pet` (`cod_pet`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -52,19 +52,35 @@ INSERT INTO `tb_consulta` (`id_consulta`, `cod_pet`, `data_consulta`, `prescrica
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `tb_fale_conosco`
+--
+
+DROP TABLE IF EXISTS `tb_fale_conosco`;
+CREATE TABLE IF NOT EXISTS `tb_fale_conosco` (
+  `id_fale` int NOT NULL AUTO_INCREMENT,
+  `nome_fale` varchar(80) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_fale` varchar(80) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `msg_fale` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `resposta_fale` enum('V','F') COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id_fale`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `tb_pet`
 --
 
 DROP TABLE IF EXISTS `tb_pet`;
 CREATE TABLE IF NOT EXISTS `tb_pet` (
   `cod_pet` int NOT NULL AUTO_INCREMENT,
-  `cpf_tutor` char(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cpf_tutor` char(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `nascimento_pet` date DEFAULT NULL,
-  `genero_pet` enum('M','F') COLLATE utf8mb4_unicode_ci NOT NULL,
-  `raca_pet` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `genero_pet` enum('M','F') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `raca_pet` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `foto_pet` blob,
-  `nome_pet` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `especie_pet` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_pet` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `especie_pet` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`cod_pet`),
   KEY `cpf_tutor` (`cpf_tutor`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -94,7 +110,7 @@ DROP TABLE IF EXISTS `tb_servicos`;
 CREATE TABLE IF NOT EXISTS `tb_servicos` (
   `id_servico` int NOT NULL AUTO_INCREMENT,
   `cod_pet` int NOT NULL,
-  `tipo_servico` enum('banho','tosa') COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipo_servico` enum('banho','tosa') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `data_servico` date NOT NULL,
   `valor_servico` decimal(6,2) NOT NULL,
   PRIMARY KEY (`id_servico`),
@@ -121,10 +137,10 @@ INSERT INTO `tb_servicos` (`id_servico`, `cod_pet`, `tipo_servico`, `data_servic
 
 DROP TABLE IF EXISTS `tb_tutor`;
 CREATE TABLE IF NOT EXISTS `tb_tutor` (
-  `cpf_tutor` char(11) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nome_tutor` varchar(80) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `celular_tutor` char(11) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_tutor` varchar(80) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cpf_tutor` char(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nome_tutor` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `celular_tutor` char(11) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_tutor` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`cpf_tutor`),
   UNIQUE KEY `cpf_tutor` (`cpf_tutor`),
   UNIQUE KEY `celular_tutor` (`celular_tutor`),
