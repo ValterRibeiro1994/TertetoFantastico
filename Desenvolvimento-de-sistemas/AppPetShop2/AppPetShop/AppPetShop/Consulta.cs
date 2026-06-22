@@ -9,9 +9,8 @@ namespace AppPetShop
     internal class Consulta
     {
         private CodigoBanco codigoPet;
-        private CodigoBanco idConsulta;
-        private DataConsulta data;
-        private DescConsulta descConsulta;
+        private Data data;
+        private Texto descConsulta;
 
 
         public void setCodigo(CodigoBanco codigoPet)
@@ -19,17 +18,12 @@ namespace AppPetShop
             this.codigoPet = codigoPet;
         }
 
-        public void setId(CodigoBanco idConsulta)
-        {
-            this.idConsulta = idConsulta;
-        }
-
-        public void setData(DataConsulta data)
+        public void setData(Data data)
         {
             this.data = data;
         }
 
-        public void setDesc(DescConsulta descConsulta)
+        public void setDesc(Texto descConsulta)
         {
             this.descConsulta = descConsulta;
         }
@@ -40,19 +34,14 @@ namespace AppPetShop
 
         }
 
-        public int getId()
-        {
-            return this.idConsulta.getCodigo();
-        }
-
         public DateTime getData()
         {
-            return this.data.getDataConsulta();
+            return this.data.getData();
         }
 
         public string getDesc()
         {
-            return this.descConsulta.getDesc();
+            return this.descConsulta.getNome();
         }
     }
 }

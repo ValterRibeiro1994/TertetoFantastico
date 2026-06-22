@@ -18,7 +18,7 @@ namespace AppPetShop
         
         // dados a serem armazenados no banco
         private Cpf cpf;
-        private Nome nome;
+        private Texto nome;
         private Email email;
         private Telefone telefone;
 
@@ -27,7 +27,7 @@ namespace AppPetShop
             this.cpf = cpf;
         }
 
-        public void setNome(Nome nome)
+        public void setNome(Texto nome)
         {
             this.nome = nome;
         }

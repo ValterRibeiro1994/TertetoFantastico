@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.campoCodCons = new System.Windows.Forms.TextBox();
+            this.campoId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.campoDesc = new System.Windows.Forms.TextBox();
             this.dtpDataConsulta = new System.Windows.Forms.DateTimePicker();
@@ -46,13 +46,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridConsulta)).BeginInit();
             this.SuspendLayout();
             // 
-            // campoCodCons
+            // campoId
             // 
-            this.campoCodCons.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodCons.Location = new System.Drawing.Point(171, 84);
-            this.campoCodCons.Name = "campoCodCons";
-            this.campoCodCons.Size = new System.Drawing.Size(228, 26);
-            this.campoCodCons.TabIndex = 43;
+            this.campoId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoId.Location = new System.Drawing.Point(171, 84);
+            this.campoId.Name = "campoId";
+            this.campoId.Size = new System.Drawing.Size(228, 26);
+            this.campoId.TabIndex = 43;
             // 
             // label2
             // 
@@ -60,18 +60,18 @@
             this.label2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(22, 92);
+            this.label2.Location = new System.Drawing.Point(51, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 18);
+            this.label2.Size = new System.Drawing.Size(96, 18);
             this.label2.TabIndex = 42;
-            this.label2.Text = "Codigo Consulta";
+            this.label2.Text = "ID Consulta";
             // 
             // campoDesc
             // 
-            this.campoDesc.Location = new System.Drawing.Point(142, 226);
+            this.campoDesc.Location = new System.Drawing.Point(171, 226);
             this.campoDesc.Multiline = true;
             this.campoDesc.Name = "campoDesc";
-            this.campoDesc.Size = new System.Drawing.Size(219, 91);
+            this.campoDesc.Size = new System.Drawing.Size(228, 128);
             this.campoDesc.TabIndex = 41;
             // 
             // dtpDataConsulta
@@ -103,7 +103,7 @@
             this.label4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(31, 226);
+            this.label4.Location = new System.Drawing.Point(62, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 18);
             this.label4.TabIndex = 38;
@@ -115,7 +115,7 @@
             this.label3.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(31, 182);
+            this.label3.Location = new System.Drawing.Point(12, 182);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 18);
             this.label3.TabIndex = 37;
@@ -135,7 +135,7 @@
             this.label1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(41, 136);
+            this.label1.Location = new System.Drawing.Point(55, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 18);
             this.label1.TabIndex = 35;
@@ -224,7 +224,7 @@
             this.Controls.Add(this.btnPesquisarTodos);
             this.Controls.Add(this.btnFitrarCod);
             this.Controls.Add(this.gridConsulta);
-            this.Controls.Add(this.campoCodCons);
+            this.Controls.Add(this.campoId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.campoDesc);
             this.Controls.Add(this.dtpDataConsulta);
@@ -243,7 +243,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox campoCodCons;
+        private System.Windows.Forms.TextBox campoId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox campoDesc;
         private System.Windows.Forms.DateTimePicker dtpDataConsulta;

@@ -165,9 +165,9 @@ namespace AppPetShop
 
                 CodigoBanco codigo = new CodigoBanco(campoCodigo.Text);
                 Cpf cpf = new Cpf(campoCpf.Text);
-                Nome nome = new Nome(campoNome.Text, limite_max: 30);
-                Nome especie = new Nome(campoEspecie.Text, limite_max: 30);
-                Nome raca = new Nome(campoRaca.Text, limite_max: 30);
+                Texto nome = new Texto(campoNome.Text, limite_max: 30);
+                Texto especie = new Texto(campoEspecie.Text, limite_max: 30);
+                Texto raca = new Texto(campoRaca.Text, limite_max: 30);
                
                 Pet pet = new Pet();
                 pet.setFoto(fotoPet);

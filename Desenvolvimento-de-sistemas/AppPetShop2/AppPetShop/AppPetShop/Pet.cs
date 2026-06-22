@@ -12,9 +12,9 @@ namespace AppPetShop
     {
         CodigoBanco codigo;
         Cpf cpf;
-        Nome nome_pet;
-        Nome especie;
-        Nome raca;
+        Texto nome_pet;
+        Texto especie;
+        Texto raca;
         char genero;
         DateTime nascimento;
         byte[] foto;
@@ -29,17 +29,17 @@ namespace AppPetShop
             this.cpf = cpf;
         }
 
-        public void setNomePet(Nome nomePet)
+        public void setNomePet(Texto nomePet)
         {
             this.nome_pet = nomePet;
         }
 
-        public void setEspecie(Nome especiePet)
+        public void setEspecie(Texto especiePet)
         {
             this.especie = especiePet;
         }
 
-        public void setRaca(Nome racapet)
+        public void setRaca(Texto racapet)
         {
             this.raca = racapet;
         }

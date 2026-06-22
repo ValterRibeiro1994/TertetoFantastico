@@ -28,7 +28,7 @@ namespace AppPetShop
             {
                 CodigoBanco codigo = new CodigoBanco(inputCodigo.Text);
                 TipoServiço tipo = new TipoServiço(tipoS: inputServiço);
-                DataServico data = new DataServico(dataForm: dtpDataServico);
+                Data data = new Data(dataForm: dtpDataServico);
                 ValorServico valor = new ValorServico(valorForm: inputValor);
                
                 // checa se o pet Existe

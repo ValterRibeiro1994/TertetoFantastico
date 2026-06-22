@@ -27,10 +27,10 @@ namespace AppPetShop
             {
                 Cpf cpf = new Cpf(inputCpf.Text);
                 char genero = obterGenero();
-                Nome raca = new Nome(inputRaca.Text, limite_max: 30);
+                Texto raca = new Texto(inputRaca.Text, limite_max: 30);
                 byte[] foto = obterFoto();
-                Nome nome_pet = new Nome(inputNome.Text, limite_max: 30);
-                Nome especie = new Nome(inputEspecie.Text, limite_max: 30);
+                Texto nome_pet = new Texto(inputNome.Text, limite_max: 30);
+                Texto especie = new Texto(inputEspecie.Text, limite_max: 30);
 
                 Pet pet = new Pet();
                 pet.setCpfTutor(cpf);

@@ -10,7 +10,7 @@ namespace AppPetShop
     {
         private CodigoBanco codigo;
         private TipoServiço tipo;
-        private DataServico data;
+        private Data data;
         private ValorServico valor;
 
         public void setCodigo(CodigoBanco codigo)
@@ -23,7 +23,7 @@ namespace AppPetShop
             this.tipo = tipo;
         }
 
-        public void setData(DataServico data)
+        public void setData(Data data)
         {
             this.data = data;
         }
@@ -45,7 +45,7 @@ namespace AppPetShop
 
         public DateTime getData()
         {
-            return this.data.getDataServico();
+            return this.data.getData();
         }
 
         public double getValor()

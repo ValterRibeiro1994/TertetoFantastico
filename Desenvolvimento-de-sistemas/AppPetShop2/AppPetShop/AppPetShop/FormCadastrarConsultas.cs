@@ -25,16 +25,14 @@ namespace AppPetShop
         {
             try
             {
-                CodigoBanco id = new CodigoBanco(campoCodCons.Text);
                 CodigoBanco codigoPet = new CodigoBanco(campoCodPet.Text);
-                DataConsulta data = new DataConsulta(dtpDataConsulta);
-                DescConsulta desc = new DescConsulta(campoDesc.Text);
+                Data dataConsulta = new Data(dataForm: campoData);
+                Texto descricao = new Texto(campoDesc.Text, limite_max: 65000);
 
                 Consulta Consulta = new Consulta();
-                Consulta.setId(id);
                 Consulta.setCodigo(codigoPet);
-                Consulta.setData(data);
-                Consulta.setDesc(desc);
+                Consulta.setData(dataConsulta);
+                Consulta.setDesc(descricao);
 
                 if (repositorio.salvarConsulta(Consulta))
                 {

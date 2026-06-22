@@ -26,7 +26,7 @@ namespace AppPetShop
             try
             {
                 Cpf cpf = new Cpf(inputCpf.Text);
-                Nome nome = new Nome(inputNome.Text);
+                Texto nome = new Texto(inputNome.Text);
                 Email email = new Email(inputEmail.Text);
                 Telefone telefone = new Telefone(inputTelefone.Text)    ;
 

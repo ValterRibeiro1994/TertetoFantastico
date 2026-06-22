@@ -124,7 +124,7 @@ namespace AppPetShop
                 }
 
                 DataRow linha = tabela.Rows[0];
-                Nome nomeBanco = new Nome(linha["Nome"].ToString());
+                Texto nomeBanco = new Texto(linha["Nome"].ToString());
                 Email emailBanco = new Email(linha["Email"].ToString());
                 Telefone contatoBanco = new Telefone(linha["Contato"].ToString());
 

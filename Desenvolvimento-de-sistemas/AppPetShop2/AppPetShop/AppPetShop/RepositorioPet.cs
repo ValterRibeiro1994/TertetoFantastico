@@ -185,9 +185,9 @@ namespace AppPetShop
                 Cpf cpfTutor = new Cpf(linha["CPF Tutor"].ToString());
                 DateTime dataNascimento = (DateTime)linha["Data de nascimento"];
                 string genero = linha["Genero"].ToString();
-                Nome raca = new Nome(linha["Raça"].ToString());
-                Nome nome = new Nome(linha["Nome"].ToString());
-                Nome especie = new Nome(linha["Especie"].ToString());
+                Texto raca = new Texto(linha["Raça"].ToString());
+                Texto nome = new Texto(linha["Nome"].ToString());
+                Texto especie = new Texto(linha["Especie"].ToString());
                 byte[] foto = (byte[])linha["Foto"];
 
                 Pet pet = new Pet();

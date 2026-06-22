@@ -7,13 +7,12 @@ using System.Windows.Forms;
 
 namespace AppPetShop
 {
-    internal class DataConsulta
+    internal class Data
     {
         private DateTime data;
 
-        public DataConsulta(DateTimePicker dataForm = null, DateTime dataBanco = new DateTime())
+        public Data(DateTimePicker dataForm = null, DateTime dataBanco = new DateTime())
         {
-
             // verifica se o objeto veio do formulario
             if (dataForm != null)
             {
@@ -22,12 +21,13 @@ namespace AppPetShop
             {
                 data = dataBanco;
             }
+         }
 
-        }
-
-        public DateTime getDataConsulta()
+        public DateTime getData()
         {
             return data;
         }
+
+        
     }
 }

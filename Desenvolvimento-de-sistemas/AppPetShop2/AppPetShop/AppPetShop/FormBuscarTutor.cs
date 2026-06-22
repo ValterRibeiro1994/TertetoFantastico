@@ -73,7 +73,7 @@ namespace AppPetShop
             try
             {
                 Cpf cpfObj = new Cpf(cpf);
-                Nome nome = new Nome(campoNome.Text);
+                Texto nome = new Texto(campoNome.Text);
                 Email email = new Email(campoEmail.Text);
                 Telefone telefone = new Telefone(campoTelefone.Text);
 

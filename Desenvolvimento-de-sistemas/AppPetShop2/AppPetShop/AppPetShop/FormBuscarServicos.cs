@@ -69,7 +69,7 @@ namespace AppPetShop
                 Servico servico = new Servico();
                 servico.setCodigo(new CodigoBanco(campoId.Text));
                 servico.setTipo(new TipoServiço(tipoS: campoTipo));
-                servico.setData(new DataServico(dataForm: campoData));
+                servico.setData(new Data(dataForm: campoData));
                 servico.setValor(new ValorServico(valorForm: campoValor));
 
                 if (repositorio.alterarServico(servico))
@@ -106,9 +106,16 @@ namespace AppPetShop
         {
             try
             {
-                CodigoBanco codigoBanco = new CodigoBanco(campoCodigo.Text);
-                repositorio.removerServico(codigoBanco);
-                limparCampos();
+                CodigoBanco codigoBanco = new CodigoBanco(campoId.Text);
+                if (repositorio.removerServico(codigoBanco))
+                {
+                    chamarGrid();
+                    limparCampos();
+                    MessageBox.Show("Serviço removido com sucesso !!!");
+                    return;
+                }
+
+                MessageBox.Show("Falha ao remover Serviço !!!");
             }
             catch (Exception ex)
             {
@@ -131,4 +138,6 @@ namespace AppPetShop
             campoValor.Text = valor;
         }
     }
+
+    
 }

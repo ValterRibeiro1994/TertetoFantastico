@@ -53,8 +53,7 @@
     <Compile Include="Conexao.cs" />
     <Compile Include="Consulta.cs" />
     <Compile Include="Cpf.cs" />
-    <Compile Include="DataConsulta.cs" />
-    <Compile Include="DataServico.cs" />
+    <Compile Include="Data.cs" />
     <Compile Include="DescConsulta.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="FormBuscarConsultas.cs">
@@ -105,7 +104,7 @@
     <Compile Include="FormCadastrarTutor.Designer.cs">
       <DependentUpon>FormCadastrarTutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nome.cs" />
+    <Compile Include="Texto.cs" />
     <Compile Include="Pet.cs" />
     <Compile Include="RepositorioConsulta.cs" />
     <Compile Include="RepositorioPet.cs" />

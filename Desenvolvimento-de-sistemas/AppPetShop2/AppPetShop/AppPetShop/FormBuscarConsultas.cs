@@ -23,18 +23,13 @@ namespace AppPetShop
 
         private void btnFitrarCod_Click(object sender, EventArgs e)
         {
-
+            /*
+             Metodo filtra as consultas pelo código do PET
+             */
             try
             {
-                CodigoBanco id = new CodigoBanco(campoCodCons.Text.ToString());
-
-                consulta = repositorio.buscarConsulta(id, gridConsulta);
-
-                // Completa os campos em branco
-                campoCodPet.Text = (consulta.getCodigo()).ToString();
-                campoDesc.Text = consulta.getDesc();
-                dtpDataConsulta.Value = consulta.getData();
-                
+                CodigoBanco codigoPet = new CodigoBanco(campoCodPet.Text);
+                gridConsulta.DataSource = repositorio.buscarConsultaPet(codigoPet: codigoPet);
 
             }
             catch (Exception ex)
@@ -47,7 +42,7 @@ namespace AppPetShop
         {
             try
             {
-                repositorio.listarConsultas(gridConsulta);
+                gridConsulta.DataSource = repositorio.listarConsultas(gridConsulta);
             }
             catch (Exception ex)
             {
@@ -62,28 +57,22 @@ namespace AppPetShop
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            string idCons = gridConsulta.CurrentRow.Cells[0].Value.ToString();
-            if (!campoCodCons.Text.Equals(idCons))
-            {
-                MessageBox.Show("CPF não pode ser alterado !!!");
-                return;
-            }
-
-
             try
             {
-                CodigoBanco id = new CodigoBanco(campoCodCons.Text);
-                CodigoBanco codigoPet = new CodigoBanco(campoCodPet.Text);
-                DataConsulta data = new DataConsulta(dtpDataConsulta);
-                DescConsulta desc= new DescConsulta (campoDesc.Text);
+                // captura o codigo do PET que foi armazenado no banco
+                string codigoPetGrid = gridConsulta.CurrentRow.Cells[1].Value.ToString();
                 
+                // verifica se ele não foi modificado, porque a consulta do PET x deve ser sempre do pet x
+                if (!codigoPetGrid.Equals(campoCodPet.Text))
+                {
+                    MessageBox.Show("O Pet não deve ser alterado para essa consulta !!!");
+                    return;
+                }
 
                 Consulta consulta = new Consulta();
-
-                consulta.setId(id);
-                consulta.setCodigo(codigoPet);
-                consulta.setData(data);
-                consulta.setDesc(desc);
+                consulta.setCodigo(new CodigoBanco(campoId.Text));
+                consulta.setData(new Data(dataForm: dtpDataConsulta));
+                consulta.setDesc(new Texto(campoDesc.Text, limite_max: 65000));
 
                 if (repositorio.alterarConsulta(consulta))
                 {
@@ -104,17 +93,17 @@ namespace AppPetShop
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            repositorio.limparConsulta(campoCodCons, campoCodPet, dtpDataConsulta , campoDesc);
+            repositorio.limparConsulta(campoId, campoCodPet, dtpDataConsulta , campoDesc);
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
             try
             {
-                CodigoBanco id = new CodigoBanco(campoCodCons.Text);
+                CodigoBanco id = new CodigoBanco(campoId.Text);
                 repositorio.removerConsulta(id);
                 repositorio.listarConsultas(gridConsulta);
-                repositorio.limparConsulta(campoCodCons, campoCodPet, dtpDataConsulta, campoDesc);
+                limparCampos();
             }
             catch (Exception ex)
             {
@@ -129,10 +118,18 @@ namespace AppPetShop
             DateTime data = Convert.ToDateTime(gridConsulta.CurrentRow.Cells[2].Value);
             String desc = gridConsulta.CurrentRow.Cells[3].Value.ToString();
 
-            campoCodCons.Text = id;
+            campoId.Text = id;
             campoCodPet.Text = codPet;
             dtpDataConsulta.Value = data;
             campoDesc.Text = desc;
+        }
+
+        private void limparCampos()
+        {
+            campoId.Text = "";
+            campoCodPet.Text = "";
+            dtpDataConsulta.Value = DateTime.Now;
+            campoDesc.Text = "";
         }
     }
 }

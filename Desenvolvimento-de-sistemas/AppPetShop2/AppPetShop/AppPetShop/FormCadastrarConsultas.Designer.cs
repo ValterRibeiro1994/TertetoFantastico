@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dtpDataConsulta = new System.Windows.Forms.DateTimePicker();
+            this.campoData = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -36,19 +36,17 @@
             this.campoCodPet = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.campoDesc = new System.Windows.Forms.TextBox();
-            this.campoCodCons = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // dtpDataConsulta
+            // campoData
             // 
-            this.dtpDataConsulta.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataConsulta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataConsulta.Location = new System.Drawing.Point(181, 174);
-            this.dtpDataConsulta.Name = "dtpDataConsulta";
-            this.dtpDataConsulta.Size = new System.Drawing.Size(228, 20);
-            this.dtpDataConsulta.TabIndex = 31;
-            this.dtpDataConsulta.Value = new System.DateTime(2026, 6, 21, 0, 0, 0, 0);
+            this.campoData.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoData.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.campoData.Location = new System.Drawing.Point(181, 174);
+            this.campoData.Name = "campoData";
+            this.campoData.Size = new System.Drawing.Size(228, 20);
+            this.campoData.TabIndex = 31;
+            this.campoData.Value = new System.DateTime(2026, 6, 21, 0, 0, 0, 0);
             // 
             // label5
             // 
@@ -127,35 +125,13 @@
             this.campoDesc.Size = new System.Drawing.Size(219, 91);
             this.campoDesc.TabIndex = 32;
             // 
-            // campoCodCons
-            // 
-            this.campoCodCons.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodCons.Location = new System.Drawing.Point(181, 76);
-            this.campoCodCons.Name = "campoCodCons";
-            this.campoCodCons.Size = new System.Drawing.Size(228, 26);
-            this.campoCodCons.TabIndex = 34;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(32, 84);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 18);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Codigo Consulta";
-            // 
             // FormCadastrarConsultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 395);
-            this.Controls.Add(this.campoCodCons);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.campoDesc);
-            this.Controls.Add(this.dtpDataConsulta);
+            this.Controls.Add(this.campoData);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label4);
@@ -171,7 +147,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dtpDataConsulta;
+        private System.Windows.Forms.DateTimePicker campoData;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label4;
@@ -179,7 +155,5 @@
         private System.Windows.Forms.TextBox campoCodPet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox campoDesc;
-        private System.Windows.Forms.TextBox campoCodCons;
-        private System.Windows.Forms.Label label2;
     }
 }
