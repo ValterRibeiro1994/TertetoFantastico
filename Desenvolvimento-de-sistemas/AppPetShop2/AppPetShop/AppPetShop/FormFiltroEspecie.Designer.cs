@@ -41,9 +41,11 @@
             // 
             this.gridEspecie.BackgroundColor = System.Drawing.SystemColors.Info;
             this.gridEspecie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridEspecie.Location = new System.Drawing.Point(27, 176);
+            this.gridEspecie.Location = new System.Drawing.Point(40, 271);
+            this.gridEspecie.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridEspecie.Name = "gridEspecie";
-            this.gridEspecie.Size = new System.Drawing.Size(575, 299);
+            this.gridEspecie.RowHeadersWidth = 62;
+            this.gridEspecie.Size = new System.Drawing.Size(862, 460);
             this.gridEspecie.TabIndex = 0;
             // 
             // label3
@@ -51,18 +53,20 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(24, 132);
+            this.label3.Location = new System.Drawing.Point(36, 203);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 18);
+            this.label3.Size = new System.Drawing.Size(189, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "Espécie do pet";
             // 
             // inputEspecie
             // 
             this.inputEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputEspecie.Location = new System.Drawing.Point(165, 128);
+            this.inputEspecie.Location = new System.Drawing.Point(248, 197);
+            this.inputEspecie.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.inputEspecie.Name = "inputEspecie";
-            this.inputEspecie.Size = new System.Drawing.Size(224, 26);
+            this.inputEspecie.Size = new System.Drawing.Size(334, 35);
             this.inputEspecie.TabIndex = 8;
             // 
             // btnBuscarEspecie
@@ -71,12 +75,14 @@
             this.btnBuscarEspecie.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnBuscarEspecie.FlatAppearance.BorderSize = 2;
             this.btnBuscarEspecie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarEspecie.Location = new System.Drawing.Point(395, 129);
+            this.btnBuscarEspecie.Location = new System.Drawing.Point(592, 198);
+            this.btnBuscarEspecie.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBuscarEspecie.Name = "btnBuscarEspecie";
-            this.btnBuscarEspecie.Size = new System.Drawing.Size(84, 27);
+            this.btnBuscarEspecie.Size = new System.Drawing.Size(126, 42);
             this.btnBuscarEspecie.TabIndex = 9;
             this.btnBuscarEspecie.Text = "Buscar";
             this.btnBuscarEspecie.UseVisualStyleBackColor = false;
+            this.btnBuscarEspecie.Click += new System.EventHandler(this.btnBuscarEspecie_Click);
             // 
             // label11
             // 
@@ -84,9 +90,10 @@
             this.label11.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Gold;
-            this.label11.Location = new System.Drawing.Point(176, 30);
+            this.label11.Location = new System.Drawing.Point(264, 46);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(244, 36);
+            this.label11.Size = new System.Drawing.Size(360, 52);
             this.label11.TabIndex = 12;
             this.label11.Text = "Petshop PetAny";
             // 
@@ -96,24 +103,26 @@
             this.label2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(179, 80);
+            this.label2.Location = new System.Drawing.Point(268, 123);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(236, 16);
+            this.label2.Size = new System.Drawing.Size(329, 25);
             this.label2.TabIndex = 21;
             this.label2.Text = "Confira aqui os pets cadastrados";
             // 
             // FormFiltroEspecie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(641, 499);
+            this.ClientSize = new System.Drawing.Size(962, 768);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnBuscarEspecie);
             this.Controls.Add(this.inputEspecie);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.gridEspecie);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormFiltroEspecie";
             this.Text = "FormListaUm";
             ((System.ComponentModel.ISupportInitialize)(this.gridEspecie)).EndInit();
