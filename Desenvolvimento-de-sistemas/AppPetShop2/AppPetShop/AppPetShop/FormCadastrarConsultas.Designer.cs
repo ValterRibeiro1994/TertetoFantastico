@@ -65,8 +65,6 @@
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.Gold;
-            this.btnCadastrar.FlatAppearance.BorderSize = 2;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Location = new System.Drawing.Point(44, 328);
             this.btnCadastrar.Name = "btnCadastrar";
