@@ -56,6 +56,7 @@
     <Compile Include="Data.cs" />
     <Compile Include="DescConsulta.cs" />
     <Compile Include="Email.cs" />
+    <Compile Include="FaleConosco.cs" />
     <Compile Include="FormBuscarConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,7 +111,6 @@
     <Compile Include="FormFaleConosco.Designer.cs">
       <DependentUpon>FormFaleConosco.cs</DependentUpon>
     </Compile>
-
     <Compile Include="FormFiltroEspecie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,7 +124,6 @@
       <DependentUpon>FormFiltroTipoData.cs</DependentUpon>
     </Compile>
     <Compile Include="RepositorioFiltros.cs" />
-
     <Compile Include="Texto.cs" />
     <Compile Include="Pet.cs" />
     <Compile Include="RepositorioConsulta.cs" />
@@ -177,14 +176,12 @@
     <EmbeddedResource Include="FormFaleConosco.resx">
       <DependentUpon>FormFaleConosco.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="FormFiltroEspecie.resx">
       <DependentUpon>FormFiltroEspecie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFiltroTipoData.resx">
       <DependentUpon>FormFiltroTipoData.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
