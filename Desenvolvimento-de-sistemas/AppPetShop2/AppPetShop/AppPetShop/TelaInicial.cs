@@ -73,12 +73,10 @@ namespace AppPetShop
 
         private void lista1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
+
             FormFiltroEspecie tela = new FormFiltroEspecie();
             tela.ShowDialog();
-=======
-            
->>>>>>> Stashed changes
+
         }
 
         private void faleConoscoToolStripMenuItem_Click(object sender, EventArgs e)
