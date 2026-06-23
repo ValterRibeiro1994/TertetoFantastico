@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.IO;
 
 namespace AppPetShop
 {
@@ -72,7 +66,7 @@ namespace AppPetShop
                 throw new Exception("Genero de Pet não indentificado !!!");
             }
         }
-        
+
         public void setNascimento(DateTime dataPet)
         {
             DateTime dataHoje = DateTime.Now;
@@ -116,7 +110,7 @@ namespace AppPetShop
 
         public string getRaca()
         {
-            return this.raca.getNome() ;
+            return this.raca.getNome();
         }
 
         public char getGenero()
@@ -126,7 +120,7 @@ namespace AppPetShop
 
         public DateTime getNascimento()
         {
-            return this.nascimento; 
+            return this.nascimento;
         }
 
         public byte[] getFoto()

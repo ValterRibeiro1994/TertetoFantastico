@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppPetShop
 {
     public partial class FormCadastrarServico : Form
     {
-        
+
         RepositorioServico repositorio;
         Servico servico;
         public FormCadastrarServico()
@@ -30,32 +23,34 @@ namespace AppPetShop
                 TipoServiço tipo = new TipoServiço(tipoS: inputServiço);
                 Data data = new Data(dataForm: dtpDataServico);
                 ValorServico valor = new ValorServico(valorForm: inputValor);
-               
+
                 // checa se o pet Existe
                 RepositorioPet repos = new RepositorioPet();
                 Pet pet = repos.buscarPetCodigo(codigo);
-                if (pet != null) {
-                        servico = new Servico();
-                        servico.setCodigo(codigo);
-                        servico.setTipo(tipo);
-                        servico.setData(data);
-                        servico.setValor(valor);
+                if (pet != null)
+                {
+                    servico = new Servico();
+                    servico.setCodigo(codigo);
+                    servico.setTipo(tipo);
+                    servico.setData(data);
+                    servico.setValor(valor);
 
 
-                        if (repositorio.salvarServico(servico))
-                        {
-                            MessageBox.Show("Servico Registrado com Sucesso !!!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Servico Não registrado !!!");
-                        }
-                        servico = null;
+                    if (repositorio.salvarServico(servico))
+                    {
+                        MessageBox.Show("Servico Registrado com Sucesso !!!");
                     }
+                    else
+                    {
+                        MessageBox.Show("Servico Não registrado !!!");
+                    }
+                    servico = null;
+                }
 
                 repos = null;
-                
-            } catch (Exception ex)
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }

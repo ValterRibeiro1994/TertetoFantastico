@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppPetShop
@@ -54,7 +47,7 @@ namespace AppPetShop
 
             campoNome.Text = nome;
             campoCpf.Text = cpf;
-            campoEmail.Text= email;
+            campoEmail.Text = email;
             campoTelefone.Text = telefone;
 
         }
@@ -99,7 +92,7 @@ namespace AppPetShop
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
         private void chamarGrid()
         {
             try
@@ -126,7 +119,8 @@ namespace AppPetShop
                 repositorio.listarTutores(gridTutor);
                 repositorio.limparTutor(campoCpf, campoNome, campoEmail, campoTelefone);
 
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
 

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppPetShop
@@ -18,7 +11,7 @@ namespace AppPetShop
         {
             InitializeComponent();
             repositorio = new RepositorioTutor();
-            tutor = null; 
+            tutor = null;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -28,7 +21,7 @@ namespace AppPetShop
                 Cpf cpf = new Cpf(inputCpf.Text);
                 Texto nome = new Texto(inputNome.Text);
                 Email email = new Email(inputEmail.Text);
-                Telefone telefone = new Telefone(inputTelefone.Text)    ;
+                Telefone telefone = new Telefone(inputTelefone.Text);
 
                 tutor = new Tutor();
                 tutor.setNome(nome);

@@ -13,13 +13,19 @@ namespace AppPetShop
         private Texto nome;
         private Texto msg;
         private bool status;
-
+        
         public FaleConosco(Email email, Texto nome, Texto msg)
         {
             this.email = email;
             this.nome = nome;
             this.msg = msg;
             this.status = false;
+            
+        }
+
+        public void setEmail(Email emailNovo)
+        {
+            this.email = emailNovo;
         }
 
         public bool getStatusResposta()

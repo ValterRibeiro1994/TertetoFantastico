@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppPetShop
@@ -20,7 +14,7 @@ namespace AppPetShop
             InitializeComponent();
             repositorio = new RepositorioPet();
         }
-        
+
 
         private void btnBuscarPedCod_Click(object sender, EventArgs e)
         {
@@ -36,12 +30,13 @@ namespace AppPetShop
                 MessageBox.Show("Pet Localizado");
                 enviarDados(pet);
 
-                
-            } catch (Exception ex)
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-    }
+        }
 
         private void btnBuscarCpf_Click(object sender, EventArgs e)
         {
@@ -49,13 +44,15 @@ namespace AppPetShop
             {
                 Cpf cpf = new Cpf(campoCpf.Text);
                 repositorio.buscarPetCpf(cpf, gridPet);
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void enviarDados(Pet pet) {
+        private void enviarDados(Pet pet)
+        {
             campoCodigo.Text = pet.getCodigo().ToString();
             campoCpf.Text = pet.getCpf();
             campoData.Value = pet.getNascimento();
@@ -66,7 +63,8 @@ namespace AppPetShop
             if (genero.Equals('F'))
             {
                 rbFemea.Checked = true;
-            } else
+            }
+            else
             {
                 rbMacho.Checked = true;
             }
@@ -78,7 +76,9 @@ namespace AppPetShop
             try
             {
                 repositorio.listarPet(gridPet);
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
         }
@@ -95,10 +95,12 @@ namespace AppPetShop
             if (genero.Equals("F"))
             {
                 rbFemea.Checked = true;
-            } else if (genero.Equals("M"))
+            }
+            else if (genero.Equals("M"))
             {
                 rbMacho.Checked = true;
-            } else
+            }
+            else
             {
                 rbMacho.Checked = false;
                 rbFemea.Checked = false;
@@ -110,7 +112,9 @@ namespace AppPetShop
                 exibirFoto(blob_pet);
                 fotoPet = blob_pet;
 
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show("Pet Selecionado não tem Foto, Tire uma foto do Pet e adicione ao banco");
                 campoImagem.Image = null;
                 fotoPet = null;
@@ -125,7 +129,8 @@ namespace AppPetShop
                 repositorio.removerPet(codigo);
                 campoImagem.Image = null;
                 repositorio.listarPet(gridPet);
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -168,7 +173,7 @@ namespace AppPetShop
                 Texto nome = new Texto(campoNome.Text, limite_max: 30);
                 Texto especie = new Texto(campoEspecie.Text, limite_max: 30);
                 Texto raca = new Texto(campoRaca.Text, limite_max: 30);
-               
+
                 Pet pet = new Pet();
                 pet.setFoto(fotoPet);
                 pet.setNascimento(campoData.Value);
@@ -179,12 +184,13 @@ namespace AppPetShop
                 pet.setCpfTutor(cpf);
                 pet.setCodigo(codigo);
                 return pet;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
 
-}
+        }
 
         private void btnEditarPet_Click(object sender, EventArgs e)
         {

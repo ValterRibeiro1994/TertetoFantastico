@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppPetShop
@@ -26,13 +23,15 @@ namespace AppPetShop
             comandoSql.Clear();
             comandoSql.Append("DELETE FROM tb_pet ");
             comandoSql.Append("WHERE cod_pet = @codigo;");
-            try {
+            try
+            {
                 conexao.comandoSql.Parameters.Clear();
                 conexao.comandoSql.Parameters.AddWithValue("@codigo", codigo.getCodigo());
                 conexao.setStrComandoSql(comandoSql.ToString());
                 return conexao.executarComando() > 0;
 
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
@@ -275,9 +274,11 @@ namespace AppPetShop
                 conexao.comandoSql.Parameters.AddWithValue("@cod_pet", pet.getCodigo());
                 conexao.setStrComandoSql(comandoSql.ToString());
                 return conexao.executarComando() > 0;
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
+        }
     }
-}}
+}

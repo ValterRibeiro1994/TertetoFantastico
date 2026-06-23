@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppPetShop
 {
@@ -10,16 +6,21 @@ namespace AppPetShop
     {
         private string email;
 
-        public Email(string email) {
+        public Email(string email)
+        {
             if (validarEmail(email))
             {
                 this.email = email;
+            }
+            else
+            {
+                throw new Exception("Email invalido");
             }
         }
 
         public string getEmail()
         {
-            return email; 
+            return email;
         }
 
         private bool validarEmail(string email)

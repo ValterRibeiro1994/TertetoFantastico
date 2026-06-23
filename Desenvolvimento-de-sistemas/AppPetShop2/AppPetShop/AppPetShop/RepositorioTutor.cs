@@ -1,10 +1,6 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppPetShop
@@ -62,7 +58,7 @@ namespace AppPetShop
                 conexao.comandoSql.Parameters.Clear();
                 conexao.comandoSql.Parameters.AddWithValue("@cpf", cpf.getCpf());
                 conexao.setStrComandoSql(string_comando.ToString());
-                
+
                 return conexao.executarComando() > 0;
             }
             catch (Exception ex)
@@ -141,7 +137,7 @@ namespace AppPetShop
                 throw new Exception(ex.Message);
             }
         }
-            
+
         public bool alterarTutor(Tutor tutor)
         {
             string_comando.Clear();
@@ -176,5 +172,5 @@ namespace AppPetShop
             campoEmail.Text = "";
             campoTelefone.Text = "";
         }
-}
+    }
 }

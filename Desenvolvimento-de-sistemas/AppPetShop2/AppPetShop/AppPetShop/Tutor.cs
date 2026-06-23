@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AppPetShop
+﻿namespace AppPetShop
 {
     internal class Tutor
     {
@@ -15,7 +9,7 @@ namespace AppPetShop
             ela deve ser instanciada sem passagem de parametros, os dados devem
             ser adicionados com os Setter's que fazem a validação dos dados
          */
-        
+
         // dados a serem armazenados no banco
         private Cpf cpf;
         private Texto nome;
@@ -41,7 +35,7 @@ namespace AppPetShop
         {
             this.telefone = telefone;
         }
-        
+
         public string getNome()
         {
             return this.nome.getNome();
@@ -49,7 +43,7 @@ namespace AppPetShop
 
         public string getEmail()
         {
-            return this.email.getEmail(); 
+            return this.email.getEmail();
         }
 
         public string getCpf()

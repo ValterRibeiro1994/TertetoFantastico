@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppPetShop
 {
@@ -21,7 +18,7 @@ namespace AppPetShop
 
         public string getTelefone()
         {
-            return telefone; 
+            return telefone;
         }
         private bool validarTelefone(string telefone)
         {

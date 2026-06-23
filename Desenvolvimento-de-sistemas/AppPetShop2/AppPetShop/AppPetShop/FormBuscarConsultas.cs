@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppPetShop
@@ -62,7 +55,7 @@ namespace AppPetShop
             {
                 // captura o codigo do PET que foi armazenado no banco
                 string codigoPetGrid = gridConsulta.CurrentRow.Cells[1].Value.ToString();
-                
+
                 // verifica se ele não foi modificado, porque a consulta do PET x deve ser sempre do pet x
                 if (!codigoPetGrid.Equals(campoCodPet.Text))
                 {

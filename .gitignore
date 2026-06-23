@@ -1,1 +1,13 @@
-*.vs
+# Build
+bin/
+obj/
+
+# Visual Studio
+.vs/
+
+# User-specific
+*.user
+*.suo
+
+# NuGet
+packages/

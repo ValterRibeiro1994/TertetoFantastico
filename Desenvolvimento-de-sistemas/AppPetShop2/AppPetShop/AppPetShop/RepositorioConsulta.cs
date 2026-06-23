@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppPetShop
@@ -76,7 +73,7 @@ namespace AppPetShop
 
                 DataSet dados = conexao.getDataSet();
                 return dados.Tables[0];
-                
+
             }
             catch (Exception ex)
             {
@@ -98,7 +95,7 @@ namespace AppPetShop
 
                 DataSet dados = conexao.getDataSet();
                 return dados.Tables[0];
-                
+
             }
             catch (Exception ex)
             {
@@ -106,7 +103,7 @@ namespace AppPetShop
             }
         }
 
-        public bool alterarConsulta(Consulta consulta) 
+        public bool alterarConsulta(Consulta consulta)
         {
             comando.Clear();
 

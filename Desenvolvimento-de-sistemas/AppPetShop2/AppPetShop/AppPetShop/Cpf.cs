@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppPetShop
 {
     internal class Cpf
     {
         private string cpf;
-        public Cpf(string cpf) {
+        public Cpf(string cpf)
+        {
             if (validarCpf(cpf))
             {
                 this.cpf = cpf;
             }
         }
-        public string getCpf() 
-        {  
-            return this.cpf; 
+        public string getCpf()
+        {
+            return this.cpf;
         }
 
         private bool validarCpf(string cpf)

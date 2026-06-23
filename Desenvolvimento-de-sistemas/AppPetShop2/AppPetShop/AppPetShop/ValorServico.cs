@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppPetShop
@@ -11,12 +7,13 @@ namespace AppPetShop
     {
         private double valor;
 
-        public ValorServico(TextBox valorForm = null , String valorBanco = null)
+        public ValorServico(TextBox valorForm = null, String valorBanco = null)
         {
             if (valorForm != null)
             {
                 validarValorServico(valorForm.Text);
-            } else
+            }
+            else
             {
                 validarValorServico(valorBanco);
             }
@@ -32,12 +29,13 @@ namespace AppPetShop
             string valor = valorServico;
             int limite = "10000.00".Length; // limite maximo de caracteres
             // verifica o comprimento da string de valor recebido
-            if (valor.Length > limite) {
+            if (valor.Length > limite)
+            {
                 throw new Exception("Valor de Serviço passou do limite permitido !!!");
             }
 
             // troca pontos por virgulas
-            valor = valorServico.Replace(".", ","); 
+            valor = valorServico.Replace(".", ",");
 
             // tenta converter a entrada para numeros
             try
@@ -49,7 +47,9 @@ namespace AppPetShop
                 }
                 this.valor = n;
                 return true;
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 throw new Exception("Número invalido !!! \n" + ex.Message);
             }
         }

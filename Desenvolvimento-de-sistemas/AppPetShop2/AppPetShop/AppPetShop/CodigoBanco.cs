@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppPetShop
 {
@@ -23,7 +19,8 @@ namespace AppPetShop
         {
             return this.cod;
         }
-        private bool validarCodigo(string codigoStr) {
+        private bool validarCodigo(string codigoStr)
+        {
             if (String.IsNullOrEmpty(codigoStr))
             {
                 throw new Exception("Campo código não deve estar vazio !!!");

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppPetShop
@@ -17,17 +13,18 @@ namespace AppPetShop
             if (dataForm != null)
             {
                 data = dataForm.Value;
-            } else // veio do banco
+            }
+            else // veio do banco
             {
                 data = dataBanco;
             }
-         }
+        }
 
         public DateTime getData()
         {
             return data;
         }
 
-        
+
     }
 }

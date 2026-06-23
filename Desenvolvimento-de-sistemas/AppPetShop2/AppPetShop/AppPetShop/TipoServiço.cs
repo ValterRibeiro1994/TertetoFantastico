@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppPetShop
@@ -24,7 +20,8 @@ namespace AppPetShop
                 if (texto.Equals("") || texto.Equals("selecione um serviço"))
                 {
                     throw new Exception("Selecione o tipo de Serviço");
-                } else
+                }
+                else
                 {
                     bool encontrado = false;
                     int n = servicos.Length;
