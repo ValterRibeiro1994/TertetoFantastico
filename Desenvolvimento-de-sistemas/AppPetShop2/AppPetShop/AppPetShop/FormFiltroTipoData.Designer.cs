@@ -30,12 +30,14 @@
         {
             this.label11 = new System.Windows.Forms.Label();
             this.btnBuscarServico = new System.Windows.Forms.Button();
-            this.inputServico = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gridServico = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.inputDataServico = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
+            this.inputServico = new System.Windows.Forms.ComboBox();
+            this.btnBuscarData = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridServico)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,20 +59,13 @@
             this.btnBuscarServico.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnBuscarServico.FlatAppearance.BorderSize = 2;
             this.btnBuscarServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarServico.Location = new System.Drawing.Point(422, 180);
+            this.btnBuscarServico.Location = new System.Drawing.Point(422, 121);
             this.btnBuscarServico.Name = "btnBuscarServico";
-            this.btnBuscarServico.Size = new System.Drawing.Size(84, 27);
+            this.btnBuscarServico.Size = new System.Drawing.Size(138, 31);
             this.btnBuscarServico.TabIndex = 16;
-            this.btnBuscarServico.Text = "Buscar";
+            this.btnBuscarServico.Text = "Buscar por serviço";
             this.btnBuscarServico.UseVisualStyleBackColor = false;
-            // 
-            // inputServico
-            // 
-            this.inputServico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputServico.Location = new System.Drawing.Point(177, 122);
-            this.inputServico.Name = "inputServico";
-            this.inputServico.Size = new System.Drawing.Size(224, 26);
-            this.inputServico.TabIndex = 15;
+            this.btnBuscarServico.Click += new System.EventHandler(this.btnBuscarServico_Click);
             // 
             // label3
             // 
@@ -87,9 +82,9 @@
             // 
             this.gridServico.BackgroundColor = System.Drawing.SystemColors.Info;
             this.gridServico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridServico.Location = new System.Drawing.Point(29, 226);
+            this.gridServico.Location = new System.Drawing.Point(29, 256);
             this.gridServico.Name = "gridServico";
-            this.gridServico.Size = new System.Drawing.Size(585, 243);
+            this.gridServico.Size = new System.Drawing.Size(585, 213);
             this.gridServico.TabIndex = 13;
             // 
             // label1
@@ -124,22 +119,62 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Confira aqui seus serviços cadastrados";
             // 
+            // inputServico
+            // 
+            this.inputServico.FormattingEnabled = true;
+            this.inputServico.ItemHeight = 13;
+            this.inputServico.Location = new System.Drawing.Point(177, 127);
+            this.inputServico.Name = "inputServico";
+            this.inputServico.Size = new System.Drawing.Size(224, 21);
+            this.inputServico.TabIndex = 21;
+            // 
+            // btnBuscarData
+            // 
+            this.btnBuscarData.BackColor = System.Drawing.Color.Gold;
+            this.btnBuscarData.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscarData.FlatAppearance.BorderSize = 2;
+            this.btnBuscarData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarData.Location = new System.Drawing.Point(422, 179);
+            this.btnBuscarData.Name = "btnBuscarData";
+            this.btnBuscarData.Size = new System.Drawing.Size(138, 27);
+            this.btnBuscarData.TabIndex = 22;
+            this.btnBuscarData.Text = "Buscar por data";
+            this.btnBuscarData.UseVisualStyleBackColor = false;
+            this.btnBuscarData.Click += new System.EventHandler(this.btnBuscarData_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Gold;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(177, 212);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(224, 38);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Buscar por serviço e data";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FormFiltroTipoData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(640, 482);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnBuscarData);
+            this.Controls.Add(this.inputServico);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.inputDataServico);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnBuscarServico);
-            this.Controls.Add(this.inputServico);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.gridServico);
             this.Name = "FormFiltroTipoData";
             this.Text = "FormFiltroTipoData";
+            this.Load += new System.EventHandler(this.FormFiltroTipoData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridServico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -150,11 +185,13 @@
 
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnBuscarServico;
-        private System.Windows.Forms.TextBox inputServico;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView gridServico;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker inputDataServico;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox inputServico;
+        private System.Windows.Forms.Button btnBuscarData;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -37,5 +37,47 @@ namespace AppPetShop
                 throw new Exception(ex.Message);
             }
         }
+            public DataTable buscarDataServico(Data data, TipoServiço servico)
+        {
+            comando.Clear();
+
+            comando.Append("SELECT ");
+            comando.Append("tipo_servico AS 'Tipo', ");
+            comando.Append("data_servico AS 'Data', ");
+            comando.Append("nome_tutor AS 'Tutor', ");
+            comando.Append("nome_pet AS 'Nome' ");
+
+            comando.Append("FROM tb_pet ");
+
+            comando.Append("INNER JOIN tb_tutor ");
+            comando.Append("ON tb_pet.cpf_tutor = tb_tutor.cpf_tutor ");
+
+            comando.Append("INNER JOIN tb_servicos ");
+            comando.Append("ON tb_servicos.cod_pet = tb_pet.cod_pet ");
+
+            comando.Append("WHERE tipo_servico = @tipo ");
+            comando.Append("AND data_servico = @data ");
+
+            comando.Append("ORDER BY nome_tutor, nome_pet ASC");
+
+            try
+            {
+                conexao.comandoSql.Parameters.Clear();
+
+                conexao.comandoSql.Parameters.AddWithValue("@tipo", servico.getTipo());
+                conexao.comandoSql.Parameters.AddWithValue("@data", data.getData());
+
+                conexao.setStrComandoSql(comando.ToString());
+
+                DataSet dados = conexao.getDataSet();
+
+                return dados.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
-}
+    }
+

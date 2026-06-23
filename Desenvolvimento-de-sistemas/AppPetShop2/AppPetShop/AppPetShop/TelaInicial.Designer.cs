@@ -72,20 +72,20 @@
             this.cadastrarTutorToolStripMenuItem,
             this.pesquisarTutorToolStripMenuItem});
             this.tutorToolStripMenuItem.Name = "tutorToolStripMenuItem";
-            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.tutorToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.tutorToolStripMenuItem.Text = "Tutor";
             // 
             // cadastrarTutorToolStripMenuItem
             // 
             this.cadastrarTutorToolStripMenuItem.Name = "cadastrarTutorToolStripMenuItem";
-            this.cadastrarTutorToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.cadastrarTutorToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.cadastrarTutorToolStripMenuItem.Text = "Cadastrar Tutor";
             this.cadastrarTutorToolStripMenuItem.Click += new System.EventHandler(this.cadastrarTutorToolStripMenuItem_Click);
             // 
             // pesquisarTutorToolStripMenuItem
             // 
             this.pesquisarTutorToolStripMenuItem.Name = "pesquisarTutorToolStripMenuItem";
-            this.pesquisarTutorToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.pesquisarTutorToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.pesquisarTutorToolStripMenuItem.Text = "Pesquisar Tutor";
             this.pesquisarTutorToolStripMenuItem.Click += new System.EventHandler(this.pesquisarTutorToolStripMenuItem_Click);
             // 
@@ -179,6 +179,7 @@
             this.lista2ToolStripMenuItem.Name = "lista2ToolStripMenuItem";
             this.lista2ToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.lista2ToolStripMenuItem.Text = "Filtrar por tipo e data";
+            this.lista2ToolStripMenuItem.Click += new System.EventHandler(this.lista2ToolStripMenuItem_Click);
             // 
             // faleConoscoToolStripMenuItem
             // 
