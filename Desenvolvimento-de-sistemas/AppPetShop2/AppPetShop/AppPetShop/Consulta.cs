@@ -37,7 +37,7 @@ namespace AppPetShop
 
         public string getDesc()
         {
-            return this.descConsulta.getNome();
+            return this.descConsulta.getTexto();
         }
     }
 }

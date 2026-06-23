@@ -100,17 +100,17 @@ namespace AppPetShop
 
         public string getNome()
         {
-            return this.nome_pet.getNome();
+            return this.nome_pet.getTexto();
         }
 
         public string getEspecie()
         {
-            return this.especie.getNome();
+            return this.especie.getTexto();
         }
 
         public string getRaca()
         {
-            return this.raca.getNome();
+            return this.raca.getTexto();
         }
 
         public char getGenero()

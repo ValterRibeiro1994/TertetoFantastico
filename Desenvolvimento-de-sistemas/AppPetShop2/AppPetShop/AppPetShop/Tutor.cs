@@ -38,7 +38,7 @@
 
         public string getNome()
         {
-            return this.nome.getNome();
+            return this.nome.getTexto();
         }
 
         public string getEmail()

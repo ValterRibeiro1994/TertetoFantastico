@@ -77,6 +77,7 @@
             this.btnBuscarEspecie.TabIndex = 9;
             this.btnBuscarEspecie.Text = "Buscar";
             this.btnBuscarEspecie.UseVisualStyleBackColor = false;
+            this.btnBuscarEspecie.Click += new System.EventHandler(this.btnBuscarEspecie_Click);
             // 
             // label11
             // 

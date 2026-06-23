@@ -15,7 +15,7 @@ namespace AppPetShop
 
         }
 
-        public string getNome()
+        public string getTexto()
         {
             return this.nome;
         }
