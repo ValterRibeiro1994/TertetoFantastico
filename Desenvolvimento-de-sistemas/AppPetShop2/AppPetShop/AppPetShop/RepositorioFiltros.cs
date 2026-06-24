@@ -58,14 +58,13 @@ namespace AppPetShop
             comando.Append("WHERE tipo_servico = @tipo ");
             comando.Append("AND data_servico = @data ");
 
-            comando.Append("ORDER BY nome_tutor, nome_pet ASC");
+            comando.Append("ORDER BY nome_tutor, nome_pet ASC;");
 
             try
             {
                 conexao.comandoSql.Parameters.Clear();
-                // por algum motivo a busca não da retornos, acredito que adicionar.vakue na data resolve, porem estou editando o arquivo pelo celular teste ele, se falhar remova o .value
                 conexao.comandoSql.Parameters.AddWithValue("@tipo", servico.getTipo());
-                conexao.comandoSql.Parameters.AddWithValue("@data", data.getData().value);
+                conexao.comandoSql.Parameters.AddWithValue("@data", data.getData().Date);
 
                 conexao.setStrComandoSql(comando.ToString());
 
