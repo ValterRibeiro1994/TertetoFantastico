@@ -37,7 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.inputServico = new System.Windows.Forms.ComboBox();
             this.btnBuscarData = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBuscarDataServico = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridServico)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,19 +142,19 @@
             this.btnBuscarData.UseVisualStyleBackColor = false;
             this.btnBuscarData.Click += new System.EventHandler(this.btnBuscarData_Click);
             // 
-            // button2
+            // btnBuscarDataServico
             // 
-            this.button2.BackColor = System.Drawing.Color.Gold;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(177, 212);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(224, 38);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Buscar por serviço e data";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnBuscarDataServico.BackColor = System.Drawing.Color.Gold;
+            this.btnBuscarDataServico.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscarDataServico.FlatAppearance.BorderSize = 2;
+            this.btnBuscarDataServico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarDataServico.Location = new System.Drawing.Point(177, 212);
+            this.btnBuscarDataServico.Name = "btnBuscarDataServico";
+            this.btnBuscarDataServico.Size = new System.Drawing.Size(224, 38);
+            this.btnBuscarDataServico.TabIndex = 23;
+            this.btnBuscarDataServico.Text = "Buscar por serviço e data";
+            this.btnBuscarDataServico.UseVisualStyleBackColor = false;
+            this.btnBuscarDataServico.Click += new System.EventHandler(this.btnBuscarDataServico_Click);
             // 
             // FormFiltroTipoData
             // 
@@ -162,7 +162,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(640, 482);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnBuscarDataServico);
             this.Controls.Add(this.btnBuscarData);
             this.Controls.Add(this.inputServico);
             this.Controls.Add(this.label2);
@@ -192,6 +192,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox inputServico;
         private System.Windows.Forms.Button btnBuscarData;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBuscarDataServico;
     }
 }

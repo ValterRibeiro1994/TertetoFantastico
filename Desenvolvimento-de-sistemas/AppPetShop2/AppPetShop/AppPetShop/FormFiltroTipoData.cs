@@ -45,7 +45,7 @@ namespace AppPetShop
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnBuscarDataServico_Click(object sender, EventArgs e)
         {
             try
             {
@@ -57,7 +57,6 @@ namespace AppPetShop
             {
                 MessageBox.Show("Erro: " + ex.Message);
             }
-
         }
     }
 }

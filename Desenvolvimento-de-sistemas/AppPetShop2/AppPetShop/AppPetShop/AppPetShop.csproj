@@ -57,6 +57,12 @@
     <Compile Include="DescConsulta.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="FaleConosco.cs" />
+    <Compile Include="FiltrarPet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltrarPet.Designer.cs">
+      <DependentUpon>FiltrarPet.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBuscarConsultas.cs">
       <SubType>Form</SubType>
     </Compile>

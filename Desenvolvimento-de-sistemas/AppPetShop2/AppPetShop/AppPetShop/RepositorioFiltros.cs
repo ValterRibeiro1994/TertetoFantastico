@@ -76,7 +76,7 @@ namespace AppPetShop
             comando.Append("select nome_pet as 'Nome',");
             comando.Append("especie_pet as 'Especie', ");
             comando.Append("raca_pet as 'Raça' FROM tb_pet ");
-            comando.Append("where especie_pet = @especie;");
+            comando.Append("where especie_pet = @especie; ");
 
             try
             {

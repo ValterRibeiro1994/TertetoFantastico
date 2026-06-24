@@ -45,6 +45,7 @@
             this.lista1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lista2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faleConoscoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filtrarPetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -162,7 +163,8 @@
             // 
             this.listagemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lista1ToolStripMenuItem,
-            this.lista2ToolStripMenuItem});
+            this.lista2ToolStripMenuItem,
+            this.filtrarPetToolStripMenuItem});
             this.listagemToolStripMenuItem.Name = "listagemToolStripMenuItem";
             this.listagemToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.listagemToolStripMenuItem.Text = "Listagem";
@@ -187,6 +189,12 @@
             this.faleConoscoToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.faleConoscoToolStripMenuItem.Text = "FaleConosco";
             this.faleConoscoToolStripMenuItem.Click += new System.EventHandler(this.faleConoscoToolStripMenuItem_Click);
+            // 
+            // filtrarPetToolStripMenuItem
+            // 
+            this.filtrarPetToolStripMenuItem.Name = "filtrarPetToolStripMenuItem";
+            this.filtrarPetToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.filtrarPetToolStripMenuItem.Text = "Filtrar Pet";
             // 
             // TelaInicial
             // 
@@ -225,5 +233,6 @@
         private System.Windows.Forms.ToolStripMenuItem lista1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lista2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem faleConoscoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filtrarPetToolStripMenuItem;
     }
 }
