@@ -63,9 +63,9 @@ namespace AppPetShop
             try
             {
                 conexao.comandoSql.Parameters.Clear();
-
+                // por algum motivo a busca não da retornos, acredito que adicionar.vakue na data resolve, porem estou editando o arquivo pelo celular teste ele, se falhar remova o .value
                 conexao.comandoSql.Parameters.AddWithValue("@tipo", servico.getTipo());
-                conexao.comandoSql.Parameters.AddWithValue("@data", data.getData());
+                conexao.comandoSql.Parameters.AddWithValue("@data", data.getData().value);
 
                 conexao.setStrComandoSql(comando.ToString());
 
