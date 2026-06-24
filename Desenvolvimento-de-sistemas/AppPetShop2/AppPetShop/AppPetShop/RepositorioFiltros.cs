@@ -15,6 +15,61 @@ namespace AppPetShop
             comando = new StringBuilder();
         }
 
+        public DataTable buscarData(Data data)
+        {
+            comando.Clear();
+            comando.Append("SELECT ");
+            comando.Append("tipo_servico as 'Tipo', ");
+            comando.Append("data_servico as 'Data', ");
+            comando.Append("nome_tutor as 'Tutor', ");
+            comando.Append("nome_pet as 'Nome' ");
+            comando.Append("FROM tb_pet ");
+            comando.Append("INNER JOIN tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor ");
+            comando.Append("INNER JOIN tb_servicos on tb_servicos.cod_pet = tb_pet.cod_pet ");
+            comando.Append("WHERE data_servico = @data ");
+            comando.Append("ORDER BY nome_tutor ");
+            comando.Append("ASC");
+
+            try
+            {
+                conexao.comandoSql.Parameters.Clear();
+                conexao.comandoSql.Parameters.AddWithValue("@data", data.getData().Date);
+                conexao.setStrComandoSql(comando.ToString());
+                DataSet dados = conexao.getDataSet();
+                return dados.Tables[0];
+            } catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public DataTable buscarServico(TipoServiço servico)
+        {
+            comando.Clear();
+            comando.Append("SELECT ");
+            comando.Append("tipo_servico as 'Tipo', ");
+            comando.Append("data_servico as 'Data', ");
+            comando.Append("nome_tutor as 'Tutor', ");
+            comando.Append("nome_pet as 'Nome' ");
+            comando.Append("FROM tb_pet ");
+            comando.Append("INNER JOIN tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor ");
+            comando.Append("INNER JOIN tb_servicos on tb_servicos.cod_pet = tb_pet.cod_pet ");
+            comando.Append("WHERE tipo_servico = @servico ");
+            comando.Append("ORDER BY nome_tutor ");
+            comando.Append("ASC");
+
+            try
+            {
+                conexao.comandoSql.Parameters.Clear();
+                conexao.comandoSql.Parameters.AddWithValue("@servico", servico.getTipo());
+                conexao.setStrComandoSql(comando.ToString());
+                DataSet dados = conexao.getDataSet();
+                return dados.Tables[0];
+            } catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public DataTable BuscarEspecie(Texto especie)
         {
             comando.Clear();

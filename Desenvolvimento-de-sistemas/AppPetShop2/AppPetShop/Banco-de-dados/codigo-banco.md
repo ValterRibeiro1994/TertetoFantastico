@@ -32,7 +32,11 @@ select nome_tutor as 'Tutor', celular_tutor as 'Telefone', nome_pet as 'Nome do 
  select nome_pet as 'Nome', especie_pet as 'Especie', raca_pet as 'Raça' where especie_pet = @especie;
  
  # Serviços
- select tipo_servico as 'Tipo', data_servico as 'Data', nome_tutor as 'Tutor', nome_pet as 'Nome' 
+ select 
+ tipo_servico as 'Tipo', 
+ data_servico as 'Data', 
+ nome_tutor as 'Tutor', 
+ nome_pet as 'Nome' 
  from tb_pet
  inner join tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor inner join tb_servico on tb_servico.cod_pet = tb_pet.cod_pet
  where (tipo_servico = @tipo && data_servico = @data) order by nome_tutor,nome_pet asc;

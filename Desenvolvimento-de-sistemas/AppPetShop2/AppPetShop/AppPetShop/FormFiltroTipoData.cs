@@ -26,7 +26,7 @@ namespace AppPetShop
             try
             {
                 TipoServiço servico = new TipoServiço(tipoS: inputServico);
-                //gridServico.DataSource = repositorio.buscarServico(servico);
+                gridServico.DataSource = repositorio.buscarServico(servico);
 
             } catch (Exception ex) {
                 MessageBox.Show("Erro: " + ex.Message);
@@ -35,7 +35,14 @@ namespace AppPetShop
 
         private void btnBuscarData_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+                Data data = new Data(dataForm: inputDataServico);
+                gridServico.DataSource = repositorio.buscarData(data);
+            } catch(Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
