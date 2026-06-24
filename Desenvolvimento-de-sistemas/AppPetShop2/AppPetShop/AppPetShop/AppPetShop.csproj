@@ -155,6 +155,9 @@
     <Compile Include="TipoServiço.cs" />
     <Compile Include="Tutor.cs" />
     <Compile Include="ValorServico.cs" />
+    <EmbeddedResource Include="FiltrarPet.resx">
+      <DependentUpon>FiltrarPet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBuscarConsultas.resx">
       <DependentUpon>FormBuscarConsultas.cs</DependentUpon>
     </EmbeddedResource>

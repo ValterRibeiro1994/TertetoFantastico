@@ -195,6 +195,7 @@
             this.filtrarPetToolStripMenuItem.Name = "filtrarPetToolStripMenuItem";
             this.filtrarPetToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.filtrarPetToolStripMenuItem.Text = "Filtrar Pet";
+            this.filtrarPetToolStripMenuItem.Click += new System.EventHandler(this.filtrarPetToolStripMenuItem_Click);
             // 
             // TelaInicial
             // 

@@ -83,5 +83,11 @@ namespace AppPetShop
             FormFiltroTipoData tela = new FormFiltroTipoData();
             tela.ShowDialog();
         }
+
+        private void filtrarPetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FiltrarPet tela = new FiltrarPet();
+            tela.ShowDialog();
+        }
     }
 }
