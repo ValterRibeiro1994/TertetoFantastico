@@ -8,6 +8,7 @@ obj/
 # User-specific
 *.user
 *.suo
+*.env
 
 # NuGet
 packages/
