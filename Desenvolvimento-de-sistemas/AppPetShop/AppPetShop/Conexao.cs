@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
+using System.Data.SqlClient;
 namespace AppPetShop
 {
     internal class Conexao
@@ -36,7 +32,8 @@ namespace AppPetShop
 
         private void fecharBanco(SqlConnection conexao)
         {
-            if (conexao.State == System.Data.ConnectionState.Open) {
+            if (conexao.State == System.Data.ConnectionState.Open)
+            {
                 conexao.Close();
             }
         }
@@ -108,18 +105,22 @@ namespace AppPetShop
                     }
                     // para erros dentro do código ainda não descoberto
                     throw new Exception("Erro 1452 ao executar consulta: " + ex.Message + "-> " + ex.Number);
-                } else if (codigo_erro == 1062) // Registro duplicado
+                }
+                else if (codigo_erro == 1062) // Registro duplicado
                 {
                     if (ex.Message.Contains("tb_tutor.PRIMARY"))
                     {
                         throw new Exception("Cpf já cadastrado no banco de dados");
-                    } else if (ex.Message.Contains("tb_tutor.celular_tutor"))
+                    }
+                    else if (ex.Message.Contains("tb_tutor.celular_tutor"))
                     {
                         throw new Exception("Celular já registrado no banco de dados");
-                    } else if (ex.Message.Contains("tb_tutor.email_tutor"))
+                    }
+                    else if (ex.Message.Contains("tb_tutor.email_tutor"))
                     {
                         throw new Exception("Email já cadastrado no banco de dados");
-                    } else
+                    }
+                    else
                     {
                         throw new Exception("Campo duplicado: " + ex.Message);
                     }

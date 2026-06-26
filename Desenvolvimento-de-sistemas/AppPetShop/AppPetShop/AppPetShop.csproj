@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{79B65B76-362E-4A8A-B72B-A5A676CD774B}</ProjectGuid>
+    <ProjectGuid>{2A383A20-A3BC-4BEE-A2A7-14FA9D4048F5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>AppPetShop</RootNamespace>
     <AssemblyName>AppPetShop</AssemblyName>
@@ -34,11 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>..\MySql.Data.dll</HintPath>
+      <HintPath>..\..\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
-    </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,69 +49,153 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodigoBanco.cs" />
     <Compile Include="Conexao.cs" />
-    <Compile Include="FormConsulta.cs">
+    <Compile Include="Consulta.cs" />
+    <Compile Include="Cpf.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="DescConsulta.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="FaleConosco.cs" />
+    <Compile Include="FiltrarPet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormConsulta.Designer.cs">
-      <DependentUpon>FormConsulta.cs</DependentUpon>
+    <Compile Include="FiltrarPet.Designer.cs">
+      <DependentUpon>FiltrarPet.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPesquisarConsulta.cs">
+    <Compile Include="FormBuscarConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPesquisarConsulta.Designer.cs">
-      <DependentUpon>FormPesquisarConsulta.cs</DependentUpon>
+    <Compile Include="FormBuscarConsultas.Designer.cs">
+      <DependentUpon>FormBuscarConsultas.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPesquisarPet.cs">
+    <Compile Include="FormBuscarPet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPesquisarPet.Designer.cs">
-      <DependentUpon>FormPesquisarPet.cs</DependentUpon>
+    <Compile Include="FormBuscarPet.Designer.cs">
+      <DependentUpon>FormBuscarPet.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPet.cs">
+    <Compile Include="FormBuscarServicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPet.Designer.cs">
-      <DependentUpon>FormPet.cs</DependentUpon>
+    <Compile Include="FormBuscarServicos.Designer.cs">
+      <DependentUpon>FormBuscarServicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTutor.cs">
+    <Compile Include="FormBuscarTutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTutor.Designer.cs">
-      <DependentUpon>FormTutor.cs</DependentUpon>
+    <Compile Include="FormBuscarTutor.Designer.cs">
+      <DependentUpon>FormBuscarTutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaInicial.cs">
+    <Compile Include="FormCadastrarConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaInicial.Designer.cs">
-      <DependentUpon>TelaInicial.cs</DependentUpon>
+    <Compile Include="FormCadastrarConsultas.Designer.cs">
+      <DependentUpon>FormCadastrarConsultas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormCadastrarPet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastrarPet.Designer.cs">
+      <DependentUpon>FormCadastrarPet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastrarServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastrarServico.Designer.cs">
+      <DependentUpon>FormCadastrarServico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastrarTutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastrarTutor.Designer.cs">
+      <DependentUpon>FormCadastrarTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFaleConosco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaleConosco.Designer.cs">
+      <DependentUpon>FormFaleConosco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFiltroEspecie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFiltroEspecie.Designer.cs">
+      <DependentUpon>FormFiltroEspecie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFiltroTipoData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFiltroTipoData.Designer.cs">
+      <DependentUpon>FormFiltroTipoData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepositorioFiltros.cs" />
+    <Compile Include="Texto.cs" />
+    <Compile Include="Pet.cs" />
+    <Compile Include="RepositorioConsulta.cs" />
+    <Compile Include="RepositorioPet.cs" />
+    <Compile Include="RepositorioServico.cs" />
+    <Compile Include="RepositorioTutor.cs" />
+    <Compile Include="Servico.cs" />
     <Compile Include="TelaSplash.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TelaSplash.Designer.cs">
       <DependentUpon>TelaSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilidades.cs" />
-    <EmbeddedResource Include="FormConsulta.resx">
-      <DependentUpon>FormConsulta.cs</DependentUpon>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaInicial.Designer.cs">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telefone.cs" />
+    <Compile Include="TipoServiço.cs" />
+    <Compile Include="Tutor.cs" />
+    <Compile Include="ValorServico.cs" />
+    <EmbeddedResource Include="FiltrarPet.resx">
+      <DependentUpon>FiltrarPet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPesquisarConsulta.resx">
-      <DependentUpon>FormPesquisarConsulta.cs</DependentUpon>
+    <EmbeddedResource Include="FormBuscarConsultas.resx">
+      <DependentUpon>FormBuscarConsultas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPesquisarPet.resx">
-      <DependentUpon>FormPesquisarPet.cs</DependentUpon>
+    <EmbeddedResource Include="FormBuscarPet.resx">
+      <DependentUpon>FormBuscarPet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPet.resx">
-      <DependentUpon>FormPet.cs</DependentUpon>
+    <EmbeddedResource Include="FormBuscarServicos.resx">
+      <DependentUpon>FormBuscarServicos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTutor.resx">
-      <DependentUpon>FormTutor.cs</DependentUpon>
+    <EmbeddedResource Include="FormBuscarTutor.resx">
+      <DependentUpon>FormBuscarTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastrarConsultas.resx">
+      <DependentUpon>FormCadastrarConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastrarPet.resx">
+      <DependentUpon>FormCadastrarPet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastrarServico.resx">
+      <DependentUpon>FormCadastrarServico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastrarTutor.resx">
+      <DependentUpon>FormCadastrarTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaleConosco.resx">
+      <DependentUpon>FormFaleConosco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFiltroEspecie.resx">
+      <DependentUpon>FormFiltroEspecie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFiltroTipoData.resx">
+      <DependentUpon>FormFiltroTipoData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaSplash.resx">
+      <DependentUpon>TelaSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,9 +206,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TelaSplash.resx">
-      <DependentUpon>TelaSplash.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

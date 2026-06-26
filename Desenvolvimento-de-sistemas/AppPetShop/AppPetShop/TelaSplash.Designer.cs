@@ -3,14 +3,14 @@
     partial class TelaSplash
     {
         /// <summary>
-        /// Required designer variable.
+        /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Limpar os recursos que estão sendo usados.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,36 +20,35 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código gerado pelo Windows Form Designer
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Método necessário para suporte ao Designer - não modifique 
+        /// o conteúdo deste método com o editor de código.
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblContador = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblContador
+            // label1
             // 
-            this.lblContador.AutoSize = true;
-            this.lblContador.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContador.Location = new System.Drawing.Point(182, 113);
-            this.lblContador.Name = "lblContador";
-            this.lblContador.Size = new System.Drawing.Size(458, 76);
-            this.lblContador.TabIndex = 0;
-            this.lblContador.Text = "Carregando ...";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Seja Bem vindo";
             // 
             // TelaSplash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 333);
-            this.Controls.Add(this.lblContador);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Name = "TelaSplash";
-            this.Text = "TelaSplash";
-            this.Shown += new System.EventHandler(this.iniciarSplash_Shown);
+            this.Shown += new System.EventHandler(this.TelaSplash_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -57,6 +56,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblContador;
+        private System.Windows.Forms.Label label1;
     }
 }
+

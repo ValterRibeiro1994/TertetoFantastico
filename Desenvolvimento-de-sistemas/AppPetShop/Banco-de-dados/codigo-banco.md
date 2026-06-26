@@ -1,3 +1,54 @@
+show databases;
+
+use petshop_db;
+
+DESC tb_pet;
+DESC tb_tutor;
+desc tb_servicos;
+desc tb_consulta;
+
+show tables;
+
+#Tutor
+
+select nome_pet as 'Nome do Pet', nascimento_pet as 'Data de nascimento', nome_tutor as 'Nome do tutor'
+FROM tb_pet
+INNER JOIN tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor
+ORDER BY nascimento_pet;
+
+# Pet por ordem de nascimento
+
+select nome_tutor as 'Nome do Tutor',  celular_tutor as 'Celular', nome_pet as 'Nome do Pet', 
+genero_pet as 'Gênero', raca_pet as 'Raça'
+FROM tb_pet
+INNER JOIN tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor;
+
+#Pet + Tutor
+select nome_tutor as 'Tutor', celular_tutor as 'Telefone', nome_pet as 'Nome do Pet', genero_pet as 'Genero do Pet', raca_pet as 'Raça do pet'
+ from tb_pet 
+ inner join tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor;
+ 
+ #Pet filtrado por especie/ substituir @especie pelo valor digitado
+ select nome_pet as 'Nome', especie_pet as 'Especie', raca_pet as 'Raça' where especie_pet = @especie;
+ 
+ # Serviços
+ select 
+ tipo_servico as 'Tipo', 
+ data_servico as 'Data', 
+ nome_tutor as 'Tutor', 
+ nome_pet as 'Nome' 
+ from tb_pet
+ inner join tb_tutor on tb_pet.cpf_tutor = tb_tutor.cpf_tutor inner join tb_servico on tb_servico.cod_pet = tb_pet.cod_pet
+ where (tipo_servico = @tipo && data_servico = @data) order by nome_tutor,nome_pet asc;
+
+ 
+ # Consulta
+ select tb_consulta.cod_pet as 'codigo do pet',nome_pet as 'nome do pet',nome_tutor as 'Nome do tutor', data_consulta as 'data da consulta', prescricao_consulta as 'Prescrição'
+ from tb_pet 
+ inner join tb_tutor on  tb_tutor.cpf_tutor = tb_pet.cpf_tutor 
+ inner join tb_consulta on tb_consulta.cod_pet = tb_pet.cod_pet;
+
+
 create DATABASE if not EXISTS petshop_db;
 use petshop_db;
 
@@ -38,6 +89,7 @@ insert into tb_pet(cpf_tutor, nascimento_pet, genero_pet, raca_pet, nome_pet, es
 
 
 create table if not exists tb_servicos(
+    id_servico int not null auto_increment primary key,
     cod_pet int not null,
     tipo_servico enum("banho", "tosa") not null,
     data_servico date not null,
@@ -52,6 +104,7 @@ insert into tb_servicos(cod_pet, tipo_servico, data_servico, valor_servico) valu
 (3, "banho", "2026-01-25", 115.70);
 
 create table if not exists tb_consulta(
+    id_consulta int not null auto_increment primary key,
     cod_pet int not null,
     data_consulta date not null,
     prescricao_consulta text not null,

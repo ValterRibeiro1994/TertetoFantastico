@@ -10,39 +10,84 @@ namespace AppPetShop
             InitializeComponent();
         }
 
-        private void tutorToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cadastrarTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormTutor tela = new FormTutor();
-            tela.Show();
+            FormCadastrarTutor tela = new FormCadastrarTutor();
+            tela.ShowDialog();
+
         }
 
-        private void petToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pesquisarTutorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormPet tela = new FormPet();
-            tela.Show();
+            FormBuscarTutor tela = new FormBuscarTutor();
+            tela.ShowDialog();
         }
 
-        private void fecharApp_FormClosing(object sender, FormClosingEventArgs e)
+        private void fecharApp(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        private void petToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void cadastrarPetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormPesquisarPet tela = new FormPesquisarPet();
-            tela.Show();
+            FormCadastrarPet tela = new FormCadastrarPet();
+            tela.ShowDialog();
         }
 
-        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void pesquisarPetToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormConsulta tela = new FormConsulta();
-            tela.Show();
+            FormBuscarPet tela = new FormBuscarPet();
+            tela.ShowDialog();
         }
 
-        private void consultasToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void cadastrarServiçoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormPesquisarConsulta tela = new FormPesquisarConsulta();
-            tela.Show();
+            FormCadastrarServico tela = new FormCadastrarServico();
+            tela.ShowDialog();
+        }
+
+        private void pesquisarServiçoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBuscarServicos tela = new FormBuscarServicos();
+            tela.ShowDialog();
+        }
+
+        private void cadastrarConsultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCadastrarConsultas tela = new FormCadastrarConsultas();
+            tela.ShowDialog();
+        }
+
+        private void buscarConsultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBuscarConsultas tela = new FormBuscarConsultas();
+            tela.ShowDialog();
+        }
+
+        private void lista1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            FormFiltroEspecie tela = new FormFiltroEspecie();
+            tela.ShowDialog();
+
+        }
+
+        private void faleConoscoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormFaleConosco tela = new FormFaleConosco();
+            tela.ShowDialog();
+        }
+
+        private void lista2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormFiltroTipoData tela = new FormFiltroTipoData();
+            tela.ShowDialog();
+        }
+
+        private void filtrarPetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FiltrarPet tela = new FiltrarPet();
+            tela.ShowDialog();
         }
     }
 }
