@@ -23,35 +23,12 @@ class Componentes {
     }
 
     public function headerPagina(string $conteudo, string $classes = ""){
-        return "<header class='p-1 $classes'> $conteudo </header>";
+        return "<header class='container-fluid p-1 $classes'> $conteudo </header>";
     }
 
     public function nav(array $links){
         $n = count($links);
-        $nav = "
-            <style>
-            .nav-tabs .nav-link:hover {
-                background-color: transparent;
-                color: #3d3003;
-                border-color: #d4af37 #d4af37 transparent #d4af37;
-            }
-            
-            .nav-link {
-                color: black;
-                font-size: larger;
-            }
-            .nav-tabs {
-            border-bottom: 1px solid #ebc857;
-            }
-
-            .nav-tabs .nav-link.active,
-            .nav-tabs .nav-link.active:hover {
-                color: #3d3003;
-                border-color: #d4af37 #d4af37 transparent #d4af37;
-            }
-            </style>
-        ";
-        $nav .= "<ul class='nav nav-tabs nav-justified'>";
+        $nav = "<ul class='nav nav-tabs nav-justified my-3'>";
         for ($x = 0; $x < $n; $x++){
             $nav .= "<li class='nav-item'>" . $links[$x] . "</li>";
         }
@@ -73,7 +50,7 @@ class Componentes {
         <figure class="col-4">
             <img class="img-fluid" src="./app/imagens/logo_p.png" alt="">
         </figure>
-        <h1 style="color: #644f03;" class="display-2 col text-center my-auto">Pet shop dos Amigos</h1>';
+        <h1 class="display-2 col text-center my-auto">Pet shop dos Amigos</h1>';
         return $banner;
     }
 
@@ -105,6 +82,36 @@ class Componentes {
 
     public function criarInputSubmit(string $value){
         return "<input type='submit' value='$value' class='btn btn-outline-dark my-3 p-2'>";
+    }
+
+    public function rodapePagina(){
+        return "
+        <footer class=' container-fluid m-2 p-2'>
+            <div class='row'>
+                <h3 class='text-center display-6'>Amor é a única coisa que recebemos dos nossos pets</h3>
+            </div>
+            <div class='row '>
+                <figure class='p-3'>
+                    <img src='./app/imagens/logo_transparente.png' alt='' class='d-block mx-auto'>
+                </figure>
+            </div>
+        </footer>
+        ";
+    }
+
+    public function criarInputFormCheck(string $rotulo, string $name){
+        return '
+            <!-- Campo checkbox -->
+            <div class="my-auto p-2">
+            <label class="form-check-label">' . $rotulo . '</label>
+
+            <input 
+                type="checkbox" 
+                name="' . $name . '" 
+                class="form-check-input bg-primary"
+            >
+            </div>
+        '; 
     }
 }
 

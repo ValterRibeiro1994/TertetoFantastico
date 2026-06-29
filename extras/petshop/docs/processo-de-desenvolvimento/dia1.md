@@ -27,10 +27,14 @@
     **Continuei o trabalho das 10:00 as 13:00** 
     Finalizei o Formulario de login da classe LoginTemplate, foram adicionados novos componentes a classe Componentes e fiquei em duvida sobre o que seria melhor, Passar todos as classes do bootstrap como parametros dentro dos metodos ou simplesmente não permitir a passagem de parametros para modificar as classes de estilo, porém em algumas situações seria desnecessario estar passando parametros de classe como no cabeçalho do site que vai se manter o mesmo em todo site na visão do cliente/visitante, talvez algo mude para o painel administrativo, fiz um meio a meio em alguns casos não permiti classes como parametros, e em outros sim, como no template de login na qual o formulario pode ser devolvido com uma mensagem de erro.
 
+    **continuei o trabalho das 16:00 as 18:00**
+    Elaborei um rodapé padrão para pagina, finalizei a classe loginTemplate, fiz varios testes de design para encontrar o estilo da página. 
+    
+
 
 # informações do trabalho
 - **Data: 29/06/2026**
-- **Tempo gasto: 3 horas + 3 horas**
+- **Tempo gasto: 3 horas + 3 horas + 2 horas**
 
 # **Lucas Ubraz**
 

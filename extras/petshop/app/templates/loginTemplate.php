@@ -4,6 +4,7 @@ require_once("./app/templates/componentes.php");
 
 class LoginTemplate {
     private Componentes $componentes;
+
     public function __construct(){
         $this->componentes = new Componentes();
     }
@@ -12,14 +13,19 @@ class LoginTemplate {
         $header = $this->criarHeader(); // criar metodo interno para criar header
         $form_login = $this->criarFormLogin($erro, $msg);
         $main = $this->criarMain($form_login); // criar conteudo principal
-        $footer = ""; // criar rodape da pagina
+        $footer = $this->criarRodape(); // criar rodape da pagina
         $conteudo = $header . " " . $main . " " . $footer;
         $body = $this->componentes->bodyPagina($conteudo, "p-2");
         return $this->componentes->documentoHtml($body, "Conectar");
     }
 
+    public function criarRodape(){
+        $footer = $this->componentes->rodapePagina();
+        return $footer;
+    }
+
     public function criarMain(string $conteudo, string $classes = ""){
-        return "<main class='p-3 $classes'> $conteudo </main>";
+        return "<main class='container-fluid p-3 $classes'> $conteudo </main>";
     }
 
     public function criarFormLogin(bool $erro = false, string $msg = ""){
@@ -28,14 +34,15 @@ class LoginTemplate {
         $label_senha = $this->componentes->criarLabelForm("Senha");
         $input_senha = $this->componentes->criarInputForm("inputSenha", "password", "Digite sua senha aqui...");
         $input_submit = $this->componentes->criarInputSubmit("Conectar");
-        $subtitulo = $this->componentes->subTitulo("Conecte-se", "bg-primary border border-primary shadow-lg rounded-5 my-2 mx-auto");
+        $input_lembrar = $this->componentes->criarInputFormCheck("Lembrar", "inputLembrar");
+        $subtitulo = $this->componentes->subTitulo("Conecte-se", "rounded-5 my-2 mx-auto");
 
         if ($erro){
-            $subtitulo = $this->componentes->subTitulo("Conecte-se", "bg-primary border border-danger rounded-5 m-1");
-            $label_erro = "<br>" . $this->componentes->criarLabelForm("ERRO: Email Inválido $msg", "bg-danger border border-1 border-primary m-1 p-1 rounded-3 fs-2 text-white") . "<br>";
-            $elementos = [$subtitulo, $label_email, $input_email, $label_senha, $input_senha, $label_erro, $input_submit ];
+            $subtitulo = $this->componentes->subTitulo("Conecte-se", " m-1");
+            $label_erro = "<br>" . $this->componentes->criarLabelForm("ERRO: $msg", "bg-danger border border-1 m-1 p-1 rounded-3 fs-2 text-white") . "<br>";
+            $elementos = [$subtitulo, $label_email, $input_email, $label_senha, $input_senha, $label_erro, $input_lembrar, $input_submit ];
         } else {
-            $elementos = [$subtitulo, $label_email, $input_email, $label_senha, $input_senha, $input_submit];
+            $elementos = [$subtitulo, $label_email, $input_email, $label_senha, $input_senha, $input_lembrar, $input_submit];
         }
 
         $form = $this->componentes->criarForm($elementos, "");
