@@ -5,11 +5,11 @@ class Componentes {
     public function documentoHtml(string $body, string $titulo){
         return "
         <!DOCTYPE html>
-        <html lang=\"pt-br\">
+        <html lang='pt-br'>
         <head>
-            <meta charset=\"UTF-8\">
-            <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-            <link rel=\"stylesheet\" href=\"./app/recursos/bootstrap-5.3.8-dist/css/bootstrap.min.css\">
+            <meta charset='UTF-8'>
+            <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+            <link rel='stylesheet' href='./app/recursos/bootstrap-5.3.8-dist/css/bootstrap.min.css'>
             <title>$titulo</title>
         </head> 
         $body
@@ -56,6 +56,32 @@ class Componentes {
 
     public function divRow(string $conteudo, string $classes = ""){
         return "<div class='row $classes'>  $conteudo </div>";
+    }
+
+    public function subTitulo(string $texto, string $classes = ""){
+        return "<h3 class='display-5 text-center $classes'> $texto </h3>";
+    }
+
+    public function criarForm(array $elementos, string $action, string $metodo = "post"){
+        $n = count($elementos);
+        $form = "<form action='$action' method='$metodo'>";
+        for ($x = 0; $x < $n; $x++){
+            $form .= " " . $elementos[$x];
+        }
+        $form .= "</form> ";
+        return $form;
+    }
+
+    public function criarInputForm(string $name, string $type = "text", string $placeholder = ""){
+        return "<input type='$type' name='$name' placeholder='$placeholder' class='form-control' required>";
+    }
+
+    public function criarLabelForm(string $label, string $classes = ""){
+        return "<label class='display-6 form-label $classes'> $label </label>";
+    }
+
+    public function criarInputSubmit(string $value){
+        return "<input type='submit' value='$value' class='btn btn-outline-dark my-3 p-2'>";
     }
 }
 

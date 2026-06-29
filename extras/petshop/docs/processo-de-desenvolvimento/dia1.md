@@ -19,7 +19,19 @@
     Essa classe por enquanto só possui o header, na pasta modelo-templates o arquivo login.html já possui o formulario, no esboço falta desenvolver o rodape da pagina.
     É preciso decompor os componentes do formulario e passar eles para a classe componentes.
 
+- Criação do caso de uso para Cliente e Processos do sistema
+    Desenhei um diagrama simples de caso de uso fazendo uma relação entre o visitante/cliente e as funções que deve conter no site.
+
+- Observações Finais 
+
+    **Continuei o trabalho das 10:00 as 13:00** 
+    Finalizei o Formulario de login da classe LoginTemplate, foram adicionados novos componentes a classe Componentes e fiquei em duvida sobre o que seria melhor, Passar todos as classes do bootstrap como parametros dentro dos metodos ou simplesmente não permitir a passagem de parametros para modificar as classes de estilo, porém em algumas situações seria desnecessario estar passando parametros de classe como no cabeçalho do site que vai se manter o mesmo em todo site na visão do cliente/visitante, talvez algo mude para o painel administrativo, fiz um meio a meio em alguns casos não permiti classes como parametros, e em outros sim, como no template de login na qual o formulario pode ser devolvido com uma mensagem de erro.
+
 
 # informações do trabalho
 - **Data: 29/06/2026**
-- **Tempo gasto: 3 horas**
+- **Tempo gasto: 3 horas + 3 horas**
+
+# **Lucas Ubraz**
+
+# **Felipe Rodrigo**
