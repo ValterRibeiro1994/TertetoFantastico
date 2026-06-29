@@ -14,7 +14,7 @@ class LoginTemplate {
         $main = $this->criarMain($form_login); // criar conteudo principal
         $footer = ""; // criar rodape da pagina
         $conteudo = $header . " " . $main . " " . $footer;
-        $body = $this->componentes->bodyPagina($conteudo);
+        $body = $this->componentes->bodyPagina($conteudo, "p-2");
         return $this->componentes->documentoHtml($body, "Conectar");
     }
 

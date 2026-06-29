@@ -28,7 +28,30 @@ class Componentes {
 
     public function nav(array $links){
         $n = count($links);
-        $nav = "<ul class='nav nav-tabs nav-justified'>";
+        $nav = "
+            <style>
+            .nav-tabs .nav-link:hover {
+                background-color: transparent;
+                color: #3d3003;
+                border-color: #d4af37 #d4af37 transparent #d4af37;
+            }
+            
+            .nav-link {
+                color: black;
+                font-size: larger;
+            }
+            .nav-tabs {
+            border-bottom: 1px solid #ebc857;
+            }
+
+            .nav-tabs .nav-link.active,
+            .nav-tabs .nav-link.active:hover {
+                color: #3d3003;
+                border-color: #d4af37 #d4af37 transparent #d4af37;
+            }
+            </style>
+        ";
+        $nav .= "<ul class='nav nav-tabs nav-justified'>";
         for ($x = 0; $x < $n; $x++){
             $nav .= "<li class='nav-item'>" . $links[$x] . "</li>";
         }
@@ -50,7 +73,7 @@ class Componentes {
         <figure class="col-4">
             <img class="img-fluid" src="./app/imagens/logo_p.png" alt="">
         </figure>
-        <h1 class="display-2 col text-center ">Pet shop dos Amigos</h1>';
+        <h1 style="color: #644f03;" class="display-2 col text-center my-auto">Pet shop dos Amigos</h1>';
         return $banner;
     }
 
