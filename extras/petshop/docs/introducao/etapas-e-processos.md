@@ -26,3 +26,4 @@
 
 - Pasta templates: Responsavel pelo gerenciamento dos layouts do site, elas controem o front-end do projeto se comunicando com os usuarios do sistema.
     - arquivos PHP: Esses arquivos possuem classes para a renderização das páginas.
+

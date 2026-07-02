@@ -86,12 +86,12 @@ class Componentes {
 
     public function rodapePagina(){
         return "
-        <footer class=' container-fluid m-2 p-2'>
+        <footer class='container-sm my-3 justify-content-end'>
             <div class='row'>
                 <h3 class='text-center display-6'>Amor é a única coisa que recebemos dos nossos pets</h3>
             </div>
-            <div class='row '>
-                <figure class='p-3'>
+            <div class='row'>
+                <figure class='p-0 m-0'>
                     <img src='./app/imagens/logo_transparente.png' alt='' class='d-block mx-auto'>
                 </figure>
             </div>

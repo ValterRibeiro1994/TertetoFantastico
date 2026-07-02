@@ -35,7 +35,7 @@
 # informações do trabalho
 - **Data: 29/06/2026**
 - **Tempo gasto: 3 horas + 3 horas + 2 horas**
-
+ 
 # **Lucas Ubraz**
 
 # **Felipe Rodrigo**
