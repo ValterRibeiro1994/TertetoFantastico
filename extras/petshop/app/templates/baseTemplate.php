@@ -1,13 +1,13 @@
 <?php
 
-require_once("./app/templates/componentes.php");
+// require_once("./app/templates/componentesTemplate.php");
 
 
 class BaseTemplate {
-    protected Componentes $componentes;
+    protected ComponentesTemplate $componentes;
 
     public function __construct(){
-        $this->componentes = new Componentes();
+        $this->componentes = new ComponentesTemplate();
     }    
 
     protected function criarMain(string $conteudo, string $classes = ""){
@@ -30,12 +30,12 @@ class BaseTemplate {
     protected function criarNav(string $pagina){
         $pagina = strtolower($pagina);
         $paginas = [
-            "home"=> ["#", false],
+            "home"=> ["/petshop/home", false],
             "produtos"=> ["#", false],
             "serviços"=> ["#", false],
             "contato"=> ["#", false],
-            "cadastrar"=> ["#", false],
-            "conectar"=> ["./app/modelo-templates/login.html", false]
+            "cadastrar"=> ["/petshop/cadastro", false],
+            "conectar"=> ["/petshop/login", false]
         ];
 
         if (!array_key_exists($pagina, $paginas)) {

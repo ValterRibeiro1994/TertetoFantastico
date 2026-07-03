@@ -1,6 +1,6 @@
 <?php
 
-class Componentes {
+class ComponentesTemplate {
 
     public function documentoHtml(string $body, string $titulo){
         return "
@@ -80,8 +80,8 @@ class Componentes {
         return "<label class='display-6 form-label $classes'> $label </label>";
     }
 
-    public function criarInputSubmit(string $value){
-        return "<input type='submit' value='$value' class='btn btn-outline-dark my-3 p-2'>";
+    public function criarInputSubmit(string $value, string $name){
+        return "<input type='submit' name='$name' value='$value' class='btn btn-outline-dark my-3 p-2'>";
     }
 
     public function rodapePagina(){

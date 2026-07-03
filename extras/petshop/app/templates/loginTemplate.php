@@ -1,7 +1,7 @@
 <?php
 
-require_once("./app/templates/componentes.php");
-require_once("./app/templates/baseTemplate.php");
+// require_once("./app/templates/componentes.php");
+// require_once("./app/templates/baseTemplate.php");
 
 class LoginTemplate extends BaseTemplate {
 
@@ -26,7 +26,7 @@ class LoginTemplate extends BaseTemplate {
         $input_email = $this->componentes->criarInputForm("inputEmail", type: "email", placeholder: "Digite seu email aqui...");
         $label_senha = $this->componentes->criarLabelForm("Senha");
         $input_senha = $this->componentes->criarInputForm("inputSenha", "password", "Digite sua senha aqui...");
-        $input_submit = $this->componentes->criarInputSubmit("Conectar");
+        $input_submit = $this->componentes->criarInputSubmit("Conectar", "formLogin");
         $input_lembrar = $this->componentes->criarInputFormCheck("Lembrar", "inputLembrar");
         $subtitulo = $this->componentes->subTitulo("Conecte-se", "rounded-5 my-2 mx-auto");
 
@@ -38,7 +38,7 @@ class LoginTemplate extends BaseTemplate {
             $elementos = [$subtitulo, $label_email, $input_email, $label_senha, $input_senha, $input_lembrar, $input_submit];
         }
 
-        $form = $this->componentes->criarForm($elementos, "");
+        $form = $this->componentes->criarForm($elementos, "/petshop/login");
         $div = $this->componentes->divRow($form, "p-1 shadow-lg rounded-5 border border-1 border-primary w-50 mx-auto");
         return $div;
     }

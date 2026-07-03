@@ -1,7 +1,10 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
-require_once("./app/templates/cadastroTemplate.php");
 
-// Teste da pagina de Login
-$pagina = new CadastroTemplate();
-echo($pagina->criarPagina());
+require_once("./autoload.php");
+require_once("./app/rotas/roteador.php");
+
+
+new AutoLoad();
+
+new Roteador();

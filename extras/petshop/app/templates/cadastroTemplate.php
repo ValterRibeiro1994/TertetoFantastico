@@ -1,6 +1,6 @@
 <?php
 
-require_once("./app/templates/baseTemplate.php");
+// require_once("./app/templates/baseTemplate.php");
 
 class CadastroTemplate extends BaseTemplate {
 
@@ -9,7 +9,7 @@ class CadastroTemplate extends BaseTemplate {
         }
 
         public function criarPagina(bool $erro = false, string $msg = ""){
-            $header = $this->criarHeader("Cadastrar"); // criar metodo interno para criar header
+            $header = $this->criarHeader("cadastrar"); // criar metodo interno para criar header
             $form = $this->criarForm($erro, $msg);
             $main = $this->criarMain($form); // criar conteudo principal
             $footer = $this->criarRodape(); // criar rodape da pagina
@@ -33,7 +33,7 @@ class CadastroTemplate extends BaseTemplate {
             $confirmar_senha_input = $this->componentes->criarInputForm("inputConfirmarSenha", "password");
             $whatsapp_input = $this->componentes->criarInputForm("inputWhatsapp", "tel", "(xx) x-xxxx-xxxx");
             
-            $submit = $this->componentes->criarInputSubmit("Cadastrar");
+            $submit = $this->componentes->criarInputSubmit("Cadastrar", "formCadastro");
             $subtitulo = $this->componentes->subTitulo("Cadastre-se", "rounded-5 my-2 mx-auto");
             if ($erro){
                 $subtitulo = $this->componentes->subTitulo("Cadastre-se", " m-1");
@@ -62,7 +62,7 @@ class CadastroTemplate extends BaseTemplate {
                     ];
             }
 
-            $form = $this->componentes->criarForm($elementos, "");
+            $form = $this->componentes->criarForm($elementos, "/cadastro");
             $div = $this->componentes->divRow($form, "p-1 shadow-lg rounded-5 border border-1 border-primary w-50 mx-auto");
             return $div;
             }
