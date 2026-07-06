@@ -2,9 +2,13 @@
 header('Content-Type: text/html; charset=utf-8');
 
 require_once("./autoload.php");
-require_once("./app/rotas/roteador.php");
 
 
 new AutoLoad();
 
-new Roteador();
+try {
+    $request = new Request();
+    $endpoint = new Endpoint($request->getRequest());
+} catch(Exception $erro) {
+    var_dump($erro);
+}

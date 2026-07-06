@@ -1,7 +1,7 @@
 <?php
 
-// capturar $_GET['url']
-class Roteador {
+class Request {
+    private array $request;
     public function __construct()
     {
          $requisicao = $_SERVER['REQUEST_METHOD'];
@@ -49,30 +49,44 @@ class Roteador {
             }
 
             $classe = mb_strtolower($classe);
-            if ($classe == "home") {
-                $nav = <<<HTML
-                <div class="row">  
-                    <ul class="nav nav-tabs nav-justified my-3">
-                        <li class="nav-item"><a class="nav-link" href="/petshop/home">HOME</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">PRODUTOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">SERVIÇOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">CONTATO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/petshop/cadastro">CADASTRAR</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="/petshop/login">CONECTAR</a></li>
-                    </ul> 
-                </div>
-                HTML;
-                echo($nav);
-            } else if ($classe == "login") {
-                new LoginController($requisicao, $metodo, $parametros);
-            } else {
-                echo("PAGE NOT FOUND 404");
-            }
+            $this->request = [
+                "metodo" => $requisicao,
+                "classe" => $classe,
+                "funcao" => $metodo,
+                "dados" => $parametros
+            ];
+            
+
+            // if ($classe == "home") {
+            //     new HomeController();
+            // } else if ($classe == "login") {
+            //     new LoginController($requisicao, $request);
+            // } else if ($classe == 'cadastro'){
+            //     new CadastroController($requisicao, $metodo, $parametros);
+            // } else {
+            //     echo("PAGE NOT FOUND 404");
+            // }
             // new Roteador($requisicao, $classe, $metodo, $parametros);
         }  else if ($requisicao == "POST"){
             if (isset($_POST['formLogin'])){
-                echo("isso mesmo");
+                $this->request = [
+                    "metodo" => $requisicao,
+                    "classe" => "login",
+                    "funcao" => "autenticar",
+                    "dados" => $_POST
+                ];
+            } else if (isset($_POST['formCadastro'])){
+                $this->request = [
+                    "metodo" => $requisicao,
+                    "classe" => "cadastro",
+                    "funcao" => "cadastrar",
+                    "dados" => $_POST
+                ];
             }
         } 
+    }
+
+    public function getRequest(): array {
+        return $this->request;
     }
 }

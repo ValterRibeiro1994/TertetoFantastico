@@ -2,14 +2,20 @@
 
 class LoginController {
     private LoginTemplate $template;
-    public function __construct(string $requisicao, string $metodo, array $parametros = []){
+    private array $response;
+
+    public function __construct(array $dados){
         $this->template = new LoginTemplate();
-        if ($requisicao == "GET"){
-            if ($metodo == "index"){
+        if ($dados['metodo'] == "GET"){
+            // quando se requisita a pagina com get ela é iniciada virgem
+            try {
                 echo($this->template->criarPagina());
+                $this->response = [
+                    ""
+                ];
+            } catch (Exception $error){
+                echo($error->getMessage());
             }
-        } else if ($requisicao == "POST"){
-            var_dump($_POST);
         }
     }
 

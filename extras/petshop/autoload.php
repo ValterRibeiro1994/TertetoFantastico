@@ -33,6 +33,13 @@ class AutoLoad {
                         require_once("app/$pasta/$classe");
                     }
                 }
+            } else if ($pasta == "request-server"){
+                $classes = scandir("app/$pasta");
+                foreach($classes as $classe){
+                    if (str_contains($classe, ".php") ){
+                        require_once("app/$pasta/$classe");
+                    }
+                }
             } else {
                 continue;
             }
