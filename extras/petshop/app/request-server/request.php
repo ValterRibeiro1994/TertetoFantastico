@@ -55,18 +55,7 @@ class Request {
                 "funcao" => $metodo,
                 "dados" => $parametros
             ];
-            
-
-            // if ($classe == "home") {
-            //     new HomeController();
-            // } else if ($classe == "login") {
-            //     new LoginController($requisicao, $request);
-            // } else if ($classe == 'cadastro'){
-            //     new CadastroController($requisicao, $metodo, $parametros);
-            // } else {
-            //     echo("PAGE NOT FOUND 404");
-            // }
-            // new Roteador($requisicao, $classe, $metodo, $parametros);
+ 
         }  else if ($requisicao == "POST"){
             if (isset($_POST['formLogin'])){
                 $this->request = [

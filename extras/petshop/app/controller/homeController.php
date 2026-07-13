@@ -3,7 +3,6 @@
 class HomeController {
     private HomeTemplate $template;
     public function __construct(array $request){
-        var_dump($request);
         $this->template = new HomeTemplate();
         $produtos = $this->getProdutos();
         $categorias = $this->getCategorias("1");
@@ -72,6 +71,8 @@ class HomeController {
     }
 
     public function adicionarCarrinho(string $id){
+        // usar repositorio para localizar produto
+        
         echo("Produto  de id $id salvo no carrinho");
     }
 }

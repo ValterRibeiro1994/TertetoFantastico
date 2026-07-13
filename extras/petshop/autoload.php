@@ -40,7 +40,22 @@ class AutoLoad {
                         require_once("app/$pasta/$classe");
                     }
                 }
-            } else {
+            } else if ($pasta == "util"){
+                $classes = scandir("app/$pasta");
+                foreach($classes as $classe){
+                    if (str_contains($classe, ".php") ){
+                        require_once("app/$pasta/$classe");
+                    }
+                } 
+            } else if ($pasta == "object-value"){
+                $classes = scandir("app/$pasta");
+                foreach($classes as $classe){
+                    if (str_contains($classe, ".php") ){
+                        require_once("app/$pasta/$classe");
+                    }
+                }
+            } 
+            else {
                 continue;
             }
         }

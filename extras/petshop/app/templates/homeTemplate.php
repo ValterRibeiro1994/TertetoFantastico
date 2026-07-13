@@ -28,6 +28,7 @@ class HomeTemplate extends BaseTemplate {
         $div .= "</div>";
         return $div;
     }
+    
     private function criarAside(array $dadosCategoria){
         $aside = "<aside class='col-2'>";
         $nav = "<nav>";

@@ -35,7 +35,7 @@ class BaseTemplate {
             "serviços"=> ["#", false],
             "contato"=> ["#", false],
             "cadastrar"=> ["/petshop/cadastro", false],
-            "conectar"=> ["/petshop/login", false]
+            "conectar"=> ["/petshop/login", false],
         ];
 
         if (!array_key_exists($pagina, $paginas)) {
