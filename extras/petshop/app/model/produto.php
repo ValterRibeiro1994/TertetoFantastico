@@ -1,12 +1,12 @@
 <?php
 
 class Produto {
-    private int $idProduto;
+    private Id $idProduto;
     private NomeProduto $nome;
-    private string $categoria;
-    private string $descricao;
-    private string $valor;
-    private string $imagem;
+    private Categoria $categoria;
+    private Descricao $descricao;
+    private Dinheiro $valor;
+    private Imagem $imagem;
 
     /**
      * Getter dinâmico para acessar propriedades privadas.

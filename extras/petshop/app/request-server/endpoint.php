@@ -14,7 +14,10 @@ class Endpoint {
             new LoginController($request);
         } else if ($request['classe'] == "cadastro"){
             new CadastroController($request);
-        } else {
+        } else if ($request['classe'] == "adm"){
+            new AdmController();
+        } 
+        else {
             echo("PAGINA NÂO CONHECIDA ");
             new HomeController($request);
         }

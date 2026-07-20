@@ -38,4 +38,26 @@
  
 # **Lucas Ubraz**
 
-# **Felipe Rodrigo**
+# Diário de Desenvolvimento — Dia 1
+
+Responsável: Valter Tertuliano
+
+Resumo das atividades
+- Estruturou a documentação inicial do projeto e definiu convenções para o diário de desenvolvimento.
+- Criou a estrutura de diretórios seguindo arquitetura em camadas: `model/`, `repository/`, `controller/`, `templates/` e `recursos/`.
+- Implementou a base para a camada de templates e a classe `Componentes` para modularizar trechos HTML reutilizáveis.
+- Iniciou a `LoginTemplate` (herda de `BaseTemplate`) e montou o header; iniciou testes de layout e composição de componentes.
+- Desenhou um diagrama de caso de uso inicial relacionando visitantes, clientes e ações disponíveis no sistema.
+
+Decisões e observações técnicas
+- A estratégia adotada foi: criar um esboço HTML, decompor componentes e implementar classes PHP para renderização.
+- Debate técnico: permitir passagem de classes CSS como parâmetro nos componentes vs. usar estilos fixos. Decidiu-se adotar flexibilidade seletiva — parâmetros quando o componente pode variar, classes fixas para elementos persistentes.
+- Imagens de produto serão armazenadas via referência (caminho/URL) em vez de blob no banco de dados.
+
+Tempo registrado
+- Data: 29/06/2026
+- Duração aproximada: 8 horas (divididas em sessões de estudo e implementação)
+
+Contribuidores pendentes
+- Lucas Ubraz — sem registro nesta entrada.
+- Felipe Rodrigo — sem registro nesta entrada.

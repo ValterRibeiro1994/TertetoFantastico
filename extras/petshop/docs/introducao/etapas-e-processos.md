@@ -1,29 +1,27 @@
-## **Etapas e processos**
+## Etapas e Processos
 
-## *Convenções do projeto*
-- Todo trabalho será documentado na pasta docs/processo-de-desenvolvimento
-    - Todo trabalho feito deve ser registrado diariamente, os arquivos devem ser nomeados com dia1, dia2 e etc...
-    - Cada arquivo deve ter 3 titulos (# do md para destaque) com o nome do participante do projeto abaixo do titulo deve ter o que o participante realizou, qual arquivo modificou ou criou, o porque dos mesmos assim como o tempo que ele levou para executar seu trabalho
+Convenções de documentação
+- Registre o trabalho diário em `docs/processo-de-desenvolvimento` como arquivos `dia1.md`, `dia2.md`, etc.
+- Cada entrada deve conter:
+  - Título com a data e o responsável.
+  - Descrição do que foi feito (arquivos afetados, decisões técnicas e motivações).
+  - Tempo gasto.
 
+Fluxo de trabalho sugerido
+- Planejar a tarefa em uma nota rápida (escopo e critérios de aceitação).
+- Implementar em uma branch dedicada.
+- Criar/atualizar testes quando aplicável.
+- Atualizar a documentação relacionada (`docs/`) e o diário de desenvolvimento.
 
-## *Pastas criadas dentro do projeto*
+Estrutura de diretórios (resumo)
+- `docs/`: Documentação do projeto e diário de desenvolvimento.
+- `recursos/`: Bibliotecas e assets (ex.: Bootstrap).
+- `modelo-templates/`: Esboços em HTML usados para criar classes de template.
+- `imagens/`: Imagens do site (produtos, banners, logos).
+- `templates/`: Classes PHP responsáveis pela renderização do front-end.
 
-- Pasta docs: Responsavel pela documentação do projeto (objetivos e processos)
-    - Pasta introducao: Nessa pasta se encontra o objetivo inicial do sistema, uma introdução simulando o caso real de um projeto, e as metodologia de trabalho utilizado dentro do projeto.
-
-    - Pasta processo-de-desenvolvimento: Responsavel pelo Diario do projeto, todo trabalho realizado deve ser escrito e documentado nesta pasta seguindo as convenções do projeto
-
-    - Pasta banco-de-dados: Responsavel por documentar todas as etapas relacionadas ao planejamento do banco de dados.
-
-- Pasta Recursos: Responsavel por guardar bibliotecas e ferramentas do projeto
-    - BootStrap 5.3.8: framework para agilizar o desenvolvimento do design do projeto.
-
-- Pasta modelo-templates: Responsavel pelo armazenamento temporario dos layouts do site
-    - arquivos HTML: Esses arquivos servem de esboço para a construção das classes de Template do projeto.
-
-- Pasta imagens: Reponsavel por armazenar as imagems do Site, logo, banners e etc..
-    imagens: As imagens dessa pagina devem ser usadas pelo site, imagens de produtos e pets devem ser armazenadas diretamente em banco de dados.
-
-- Pasta templates: Responsavel pelo gerenciamento dos layouts do site, elas controem o front-end do projeto se comunicando com os usuarios do sistema.
-    - arquivos PHP: Esses arquivos possuem classes para a renderização das páginas.
+Práticas recomendadas
+- Favor manter commits pequenos e atômicos com mensagens descritivas.
+- Documente decisões de arquitetura importantes no `docs/`.
+- Prefira convenções claras ao nomear rotas, controllers e métodos para facilitar manutenção.
 

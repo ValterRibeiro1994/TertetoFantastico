@@ -1,56 +1,37 @@
 <?php
 
-
 class Texto {
+    
+    // Conta caracteres reais (UTF-8) em vez de bytes
     public static function validarLimite(string $text, int $min = 3, int $max = 80): void {
-        $n = strlen($text);
-        if ($n < $min || $n > $max){
+        $n = mb_strlen($text, 'UTF-8');
+        if ($n < $min || $n > $max) {
             throw new Exception("Texto Invalido");
         }
     }
 
+    // Mantém apenas números usando expressão regular direta
     public static function limparTextoNumerico(string $texto): string {
-        $n = strlen($texto);
-        $texto_limpo = "";
-        for ($x = 0; $x < $n; $x++){
-            $letra = $texto[$x];
-            if (ctype_digit($letra)){
-                $texto_limpo .= $letra;
-            }
-        }
-        return $texto_limpo;
+        return preg_replace('/[^\d]/', '', $texto);
     }
 
-    public static function limparTextoPuro(string $texto): string{
-        $n = strlen($texto);
-        $texto_limpo = "";
-        for  ($x = 0; $x < $n; $x++){
-            $letra = $texto[$x];
-            if (ctype_alpha($letra) || ctype_space($letra)){
-                $texto_limpo .= $letra;
-            }
-        }
-
-        return $texto_limpo;
+    // Mantém letras (com acento), números e espaços
+    public static function limparTextoPuro(string $texto): string {
+        // Remove tudo que NÃO for letra (\p{L}) ou espaço (\s)
+        return preg_replace('/[^\p{L}\s]/u', '', $texto);
     }
 
+    // Valida se a string contém APENAS letras (com acento) e espaços
     public static function validarLetras(string $texto): void {
-        $n = strlen($texto);
-        for ($x = 0; $x < $n; $x++){
-            $letra = $texto[$x];
-            if (!(ctype_alpha($letra) || ctype_space($letra))){
-                throw new Exception("Texto Invalido");
-            }
+        if (!preg_match('/^[\p{L}\s]+$/u', $texto)) {
+            throw new Exception("Texto Invalido");
         }
     }
 
+    // Valida se a string contém APENAS letras, números e espaços
     public static function validarLetrasNumeros(string $texto): void {
-        $n = strlen($texto);
-        for ($x = 0; $x < $n; $x++){
-            $letra = $texto[$x];
-            if (!(ctype_alpha($letra) || ctype_space($letra) || ctype_digit($letra))){
-                throw new Exception("Texto Invalido");
-            }
+        if (!preg_match('/^[\p{L}\p{N}\s]+$/u', $texto)) {
+            throw new Exception("Texto Invalido");
         }
     }
 }
