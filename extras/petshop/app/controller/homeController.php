@@ -2,10 +2,12 @@
 
 class HomeController {
     private HomeTemplate $template;
+    private string $notif = "";
     public function __construct(array $request){
         $this->template = new HomeTemplate();
         $produtos = $this->getProdutos();
         $categorias = $this->getCategorias("1");
+        $this->notif = "";
         if ($request['funcao'] == "adicionarCarrinho"){
             $this->adicionarCarrinho($request['dados'][0]);
             header("Location: /petshop/home");
@@ -21,7 +23,7 @@ class HomeController {
             header("Location: /petshop/home");
             exit();
         }
-        echo($this->template->criarPagina($categorias, $produtos));
+        echo($this->template->criarPagina($categorias, $produtos, $this->notif));
     }
 
     public function getCategorias(string $id){
@@ -72,7 +74,10 @@ class HomeController {
 
     public function adicionarCarrinho(string $id){
         // usar repositorio para localizar produto
-        
-        echo("Produto  de id $id salvo no carrinho");
+        $alerta = "<script>
+            alert('Produto salvo no carrinho !!!');
+            </script>
+        ";
+        $this->notif = $alerta;
     }
 }

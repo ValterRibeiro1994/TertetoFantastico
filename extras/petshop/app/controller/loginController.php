@@ -2,7 +2,6 @@
 
 class LoginController {
     private LoginTemplate $template;
-    private array $response;
 
     public function __construct(array $dados){
         $this->template = new LoginTemplate();
@@ -10,9 +9,7 @@ class LoginController {
             // quando se requisita a pagina com get ela é iniciada virgem
             try {
                 echo($this->template->criarPagina());
-                $this->response = [
-                    ""
-                ];
+                
             } catch (Exception $error){
                 echo($error->getMessage());
             }

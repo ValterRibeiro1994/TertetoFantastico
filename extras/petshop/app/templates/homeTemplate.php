@@ -6,11 +6,11 @@ class HomeTemplate extends BaseTemplate {
         parent::__construct();
     }
 
-    public function criarPagina(array $categorias, array $produtos){
+    public function criarPagina(array $categorias, array $produtos, string $noti = ""){
         $header = $this->criarHeader("home");
         $footer = $this->criarRodape();
         $layout = $this->criarLayout($categorias, $produtos);
-        $main = $this->criarMain($layout);
+        $main = $this->criarMain($layout . $noti);
         $conteudo = $header . $main . $footer;
         $body = $this->componentes->bodyPagina($conteudo);
         return $this->componentes->documentoHtml($body, "HOME");
