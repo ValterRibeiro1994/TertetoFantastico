@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+ <html lang="pt-br" ng-app>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Simples</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+ </head>
+
+ <body>
+    <h1>Cadastro Simples</h1>
+    <label>Nome:</label>
+    <input type="text" ng-model="nome">
+    <br><br>
+
+    <label>Idade:</label>
+    <input type="number" ng-model="idade">
+    <br><br>
+
+    <label>Curso:</label>
+    <input type="text" ng-model="curso">
+    <br><br>
+
+    <label>Cidade:</label>
+    <input type="text" ng-model="cidade">
+     
+    <hr>
+    <h2>Resultado</h2>
+
+    <p><strong>Nome:</strong> {{nome}}</p>
+    <p><strong>Idade:</strong> {{idade}}</p>
+    <p><strong>Curso:</strong> {{curso}}</p>
+    <p><strong>Cidade:</strong> {{cidade}}</p>
+
+    
+ </body>
+ </html>

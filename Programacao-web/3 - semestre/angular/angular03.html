@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appAluno">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularTREE</title>
+</head>
+<body>
+     <!-- Biblioteca AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+ 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+ 
+        h1,
+        h2 {
+            color: #263238;
+        }
+ 
+        .formulario,
+        .lista-alunos {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+ 
+        label {
+            font-weight: bold;
+        }
+ 
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+ 
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #1976d2;
+        }
+ 
+        button {
+            padding: 10px 18px;
+            margin-right: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+ 
+        .btn-cadastrar {
+            background-color: #1976d2;
+            color: white;
+        }
+ 
+        .btn-limpar {
+            background-color: #757575;
+            color: white;
+        }
+ 
+        .btn-excluir {
+            background-color: #d32f2f;
+            color: white;
+            padding: 7px 12px;
+        }
+ 
+        button:hover {
+            opacity: 0.85;
+        }
+ 
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+ 
+        .mensagem {
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+ 
+        .sucesso {
+            background-color: #d4edda;
+            color: #155724;
+        }
+ 
+        .erro {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+ 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+ 
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #cccccc;
+            text-align: left;
+        }
+ 
+        th {
+            background-color: #263238;
+            color: white;
+        }
+ 
+        tr:nth-child(even) {
+            background-color: #eeeeee;
+        }
+ 
+        .sem-alunos {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+        }
+ 
+        .contador {
+            font-weight: bold;
+            color: #1976d2;
+        }
+    </style>
+</head>
+ 
+<body ng-controller="AlunoController">
+ 
+    <h1>Sistema de Cadastro de Alunos</h1>
+ 
+    <!-- Mensagem de sucesso ou erro -->
+    <div
+        class="mensagem"
+        ng-class="tipoMensagem"
+        ng-show="mensagem">
+ 
+        {{ mensagem }}
+ 
+    </div>
+ 
+    <!-- Formulário -->
+    <div class="formulario">
+ 
+        <h2>Novo aluno</h2>
+ 
+        <form name="formAluno" ng-submit="cadastrarAluno()" novalidate>
+ 
+            <label>Nome:</label>
+ 
+            <input
+                type="text"
+                name="nome"
+                ng-model="novoAluno.nome"
+                placeholder="Digite o nome do aluno"
+                required>
+ 
+            <label>Idade:</label>
+ 
+            <input
+                type="number"
+                name="idade"
+                ng-model="novoAluno.idade"
+                placeholder="Digite a idade"
+                min="10"
+                max="100"
+                required>
+ 
+            <label>Curso:</label>
+ 
+            <select
+                name="curso"
+                ng-model="novoAluno.curso"
+                required>
+ 
+                <option value="">Selecione um curso</option>
+                <option value="Informática para Internet">
+                    Informática para Internet
+                </option>
+                <option value="Desenvolvimento de Sistemas">
+                    Desenvolvimento de Sistemas
+                </option>
+                <option value="Administração">
+                    Administração
+                </option>
+                <option value="Recursos Humanos">
+                    Recursos Humanos
+                </option>
+ 
+            </select>
+ 
+            <label>Cidade:</label>
+ 
+            <input
+                type="text"
+                name="cidade"
+                ng-model="novoAluno.cidade"
+                placeholder="Digite a cidade"
+                required>
+ 
+            <button
+                type="submit"
+                class="btn-cadastrar"
+                ng-disabled="formAluno.$invalid">
+ 
+                Cadastrar aluno
+ 
+            </button>
+ 
+            <button
+                type="button"
+                class="btn-limpar"
+                ng-click="limparFormulario()">
+ 
+                Limpar
+ 
+            </button>
+ 
+        </form>
+ 
+    </div>
+ 
+    <!-- Lista de alunos -->
+    <div class="lista-alunos">
+ 
+        <h2>Alunos cadastrados</h2>
+ 
+        <p class="contador">
+            Total de alunos: {{ alunos.length }}
+        </p>
+ 
+        <!-- Aparece quando não existem alunos -->
+        <div
+            class="sem-alunos"
+            ng-show="alunos.length === 0">
+ 
+            Nenhum aluno foi cadastrado.
+ 
+        </div>
+ 
+        <!-- Tabela -->
+        <table ng-show="alunos.length > 0">
+ 
+            <thead>
+                <tr>
+                    <th>Nº</th>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Curso</th>
+                    <th>Cidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+ 
+            <tbody>
+ 
+                <tr ng-repeat="aluno in alunos">
+ 
+                    <td>{{ $index + 1 }}</td>
+ 
+                    <td>{{ aluno.nome | uppercase }}</td>
+ 
+                    <td>{{ aluno.idade }} anos</td>
+ 
+                    <td>{{ aluno.curso }}</td>
+ 
+                    <td>{{ aluno.cidade }}</td>
+ 
+                    <td>
+                        <button
+                            class="btn-excluir"
+                            ng-click="excluirAluno($index)">
+ 
+                            Excluir
+ 
+                        </button>
+                    </td>
+ 
+                </tr>
+ 
+            </tbody>
+ 
+        </table>
+ 
+    </div>
+
+    <script>
+        
+        //criação do modulo angular
+        const app = angular.module("appAluno",[]);
+
+        //criação do controller
+        app.controller("AlunoContraller",function ($scope) {
+
+            //Lista que armazenara os alunos
+            $scope.alunos = [];
+
+            //Objeto que recebe os dados do formulario
+            $scope.novoAluno = {};
+
+            //função para cadastrar um aluno
+            $scope.cadastrarAluno = function () {
+
+                //cria uma copia dos dados do formulario
+                const aluno = angular.copy($scope.novoAluno);
+
+                // Adicionar o aluno na lista
+                $scope.alunos.push(aluno);
+
+                //exibe uma mensagem
+                $scope.mensagem = "Aluno cadastrado com sucesso";
+                $scope.tipoMensagem = "sucesso";
+
+                //limpa o formulario 
+                $scope.limparFormulario();
+
+            };
+
+            //Função para excluir um aluno
+            $scope.excluirAluno = function (indice) {
+                const nomeAluno = $scope.alunos[indice].nome;
+
+                // Remove um aluno da lista
+                $scope.alunos.splice(indice,1);
+                $scope.mensagem = "O aluno " + nomeAluno + "foi excluido.";
+                $scope.tipoMensagem = "erro";
+            };
+
+            // Função para limpar o formulario
+            $scope.limparFormulario = function () {
+                $scope.nomeAluno = {};
+
+                if ($scope.formAluno){
+                    $scope.formAluno.$setPristine();
+                    $scope.formAluno.$setUntouched();
+                }
+
+             
+            };
+        });
+    </script>
+</body>
+</html>

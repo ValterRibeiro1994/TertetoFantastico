@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtvRosinha</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+ 
+    <style>
+        body{
+            font-family: Arial;
+            width: 600px;
+            margin: auto;
+            margin-top: 30px;
+            background-color: rgb(255, 255, 255);
+        }
+        input{
+            width: 300px;
+            padding: 6px;
+            margin-bottom: 10px;
+        }
+        button{
+            padding: 10px;
+            margin: 7px;
+            border-radius: 12px;
+            color: black;
+            font-weight: bold;
+        }
+        .Resultado{
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            color: rgb(0, 0, 0) !important;
+             border: solid;
+            border-radius: 10px;
+            background-color: rgb(145, 132, 132);
+        }
+
+        .form{
+            text-align: center;
+            border: solid;
+            border-radius: 10px;
+            background-color: rgb(49, 45, 45);
+            color: white;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15)
+        }
+       
+        
+    </style>
+
+    
+</head>
+<body>
+    <form action="" class="form" method="post">
+
+    
+    <h1>Cadastro de aluno</h1>
+    <label><strong>Login</strong></label><br>
+    <input type="text" ng-model="login">
+    <BR></BR>
+
+    <label><strong>Senha</strong></label> <br>
+    <input type="text" ng-model="senha">
+    <br><br>
+    
+    <input type="submit" name="enviar" id="enviar" onclick="enviarDados(login,senha)">
+
+    </form>
+
+    
+</body>
+</html>
