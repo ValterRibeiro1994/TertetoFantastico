@@ -4991,596 +4991,58 @@ class PHPMailer
      * Map a file name to a MIME type.
      * Defaults to 'application/octet-stream', i.e.. arbitrary binary data.
      *
-     * @param string $filename A file name or full path, does not need to exist as a file
-     *
-     * @return string
-     */
-    public static function filenameToType($filename)
-    {
-        //In case the path is a URL, strip any query string before getting extension
-        $qpos = strpos($filename, '?');
-        if (false !== $qpos) {
-            $filename = substr($filename, 0, $qpos);
-        }
-        $ext = static::mb_pathinfo($filename, PATHINFO_EXTENSION);
+     * @param string $filename A file name or full path, does not need‡ ´¸NLñµ¶ªÌYA™kÁºkd»™ÌAÌµàİÚéoæaæÚ`UµÈŞÌô`æ Uw™9 x•†5›¹Ô¹Æˆ•–7›¹Ü\;ÌÊÆ¢éÔÊ\—wî†¹ßš<¶]Ô¿ÏªÎqÎ.ak$~ Æçè¤GÖÙ7í±î]ÿğbí#N'¦šØò¾Ç®šY^Hº¥n¥ˆpØ[ŞÔş[-“™½<,À‡ß‡’µDWß`@áldt£UQñ8R¹(ÚËh;CÆÎ::!!àú:;! /ü‰"HŞ1¿IåjŸq!rÜ;"µ¨‘ƒõ$}íbNª;Q)©o§Ø¡: tˆ³tŒÃ-J>å\eºÇ3‡½"÷3¶`È“áDS8ÊdĞ¸Ç.qÂî±ÆË	^#â  E±B2¥²1j!Uhj	èñcKÛbÁİ!8Ñöq¹-“p$z”µ‹»LqÅÆ¬¬Ã*»ÓYw'Êˆ±DğÓ'xÈ1¿jRê­¡ˆg‡{(bŒÆ‘±î¯ñ
+òÊ†e–,R|ìQò.r)6Ñ"‚T©!ªT³,ª±N4Å*?.gå“7N-öiø÷‚kİ‰ µD j$+kŞ›ÁFeÖ€¾¯fF­D&Ë³÷»Ä¬xòÿ°²fy¼hp2?ñ¹šîÈº½<,Pµéµå‹m¶"V	ã9NIMXg5.Í÷.¶]–Ğ¡»„&øÊà¼	×õÛ?cÀaƒ³^i~ìÜ¾ØqzÉ“=°îÚ<aú¡Vû¿åºÁfn;?¼è¶Â-\-YfYòø¼©o$œ."u;óuAÙ­vãuö€“-1ˆâğyã É›¿D:Ğ•]Ÿ&ÈòtßEƒL–uØóTıHbmıñLÀÆ´ñaänQÒ^õ€w@UÄ‰¦Ç Rç7íwîö]À5ãpNé ÙGçÏ€ıICÍî_xxÑL´Fó«ªÎ»Rß¾Ã‚DŞ=ú÷n9z|këQˆxºÈ¬ÂƒÌ%RĞe¯nŠ].¡‚-	=€m˜›\,'ğ~³o(®üÙY©5Ì¢OÿÕÁ…œÒ€şAšv¤ëY<n&Z&@6Ñøü®#&Òøû²p÷ç‡ÛH÷à‡z'?áé"ªCSÎCç|[7ı(ß%UÊøƒıïµ]/ïÚ”Ä!(CĞÂœXÂKÿ||ùéî¢uez¦ãgõ¯®L'ùÆé“Lté İØUfÃøA^¶ÔÁ„´kèè²@÷5·òzeü9*ó(SŠ uõßœy-Lr^½ö'uÂm,Â*†÷/U<ìzŸ«{pc7ÖÂ¦Æú{ëÛ¿ º±^¤)ñ’X4SŞ{lgOWhÀ-ÜC—,3?‹0	¶÷ß¢9ƒÊp²²¯ÜÆ´Ÿ 0µË¸ßZ°ã:ı™+Ê½×!/ÙïÑA}ÅÌé®»ÃIa0\i7²&#ùÍñ£lW‡õO–‘Õ/°¨_BwÂ*Ó	wWVÖjÓ 6áåë`ĞÆô=ÕÒĞkix!x>g?›#üÖZš¿9:®aí¼®ØÁ#Ú]†Á¦Á»ƒ<8» šñg®×š’9o9æ’P»àŞ–Ğ¸ ş¥NqZ×f§íjb;İ¸ªÃqHì'µ*Â™^ûµíŒ·ÏXºã4¨±G#5‹'ãÏLÁ12x3=ëèK*pü¶$š!<ˆùÌ©å¹üÔG 6jXOÑiØîAVnwì+S¹ƒ!ê-2Fv.K…
+P¸·>q)^r^s!±€yf’'Ò't2EöŒô¯»Š‡¶»¢dÖØü7Üœõ^î©òÿò4öEèÌMk³ãØ*Â{ƒşšºóOPWV“'gÄü|›]ïíaX?Ækòf…¬“çz4#ÄŸ½ëbÃ_§nğÇå€Lÿz¸tç{ÜO'ä;ÑË*ûİäŸøâf±\H€ÇíÆ|:'ÖuÉ,Ê@vZ;·Í„çFÎGøÂâDt^yyO´ùÜ4&€ü ¼º^^ØâåEÊaêÖı,Q¥_è¦îè,ú5àmm~ŸqUÒeD6yq$-àµ‹‹Eûj^[ˆ­O·<’\Ş~L>d®ó¼ğ$; {œ$$f2á‹‰V#Ê LÊBÉ¦øZ¨šZBz¤Ø6Xp0·ôM«$ùŞVØ¹î;ækÀì˜\³yÇsí!€á:æØdÒÎfğ<Èà0îW¬™Æ–vìÿß°yP²o»-FÃ&Ë/ON3C¶äyWˆÈˆwÎñ(TKĞŒ_Ö\>º\BlZzAÖ6¶XMĞhÔ-™¿ñÂJíõ¢)^ÈÄßy UƒÊ¾®DÉmrğ]pÊ½„Z~ó5|ŸÄA~µã©ĞËhÓÓ[P«Z‹èW“ù–éuÃêS³ ±Îú®l©ìØNdãç±ÙµÜázéõÏŒn©/°×šc^²I»„ş¦9Ò¸şæ«;óËı–kôó®&ıªufv®µıÛ«S?ãjŞ¿Úîè«í´-ˆWƒzx£}dlMŸÖäı«Hèõ×LKDZ4$¬nÌ’Ÿ,ÿRun§¡mÀ”ëŒœ-ÂïÌ~Óşo«ÌBR6?"©W´üt`’~şÁ—ÙŠ‰àä.ªhcõaÿz»ËÛñ,vw€`â'dn†L>¬Ê›j,0»ZM}p®@Š×˜ZˆÛ^ö-#|r£Şq›ğB••ù5ÓÉ3À°½7œ¹Ñê†½cK…gz4v,@$ÆÃÓxÓãGÑ¬€RüİÁ‚’à6BYóJMSHCgKB˜[ú&	Êî‰ïğ+,º˜Xv0LçĞ2³ÚpÿÔ=ÌGR»‰¡¬.fö¸‹´FWş¹Vµ½èÅ¯<ê¤^¯l*b¿£I=Û‹’6ı%®Û¥oÉ_s=V“ë*…Ç;èß'û;w±´å¼e2zşçĞï[<é¬Ô¼œbyb¯Æš¦ÚŞ96]Ñ{«p´ejw²€³¿fû–r·V—÷Ë’†.è•6Ù†7ËLñ†rãFŞ~M±"ä“T i*šU0›`—°52ÒMà*ÄRª#åBSKÇ¹-¡|‚Ç¸Åo‚aıv\:`VïE½=Ó	Ò´.8?¼!Vum—çdµø·¦×¿º`3P; ‚œ-²ßãß
+|t¡³“j«—+‚ùª]uo,.Ÿ™5¡v|,2—·Oú–ÒpH/™kã÷ŒË·Í ùò¶<$Ÿ€šósg*f"8¬>1¾káVE%’Åá{(S¼/§q¤¦#qC‡G±c¬b¸ÈÒ¡M(K¾0Îcl<º\BÌ\z<Ë‰—‚¤Åj‚~s“­ªitù-ŞkI7İdıä:Eğ¨Hs»ÍÃîbÎï7¡Ûí~äU±°óÿñzÄŸyÀıX6´ğš/Ì!Ğ‚®Ë,?f®ÕEsÅ!Ìëµµn‘Í‰5AØ»
+}â±?_—ÙÍ"Ášµ{ÿ*Î¿xâ÷â8	ıSfæù¬eşü!n’¯„Ø&Éœø¡âø§kG«ÿñ!ë°fó~’;CfjÿÔ¼wéÏ•ùûœaÔŒg¢÷äß˜‰6ğ×Ü‡¿€Û9ÍÌâ‡‰6ÕMG´ü¥v.ÆĞÚPÒMÒõ¨¹²Kœå ÎĞ:û‡¼şkÍñ-gøÇœ»cëßÖŸ‘ÅæXè2¤»YÔó©û"“ÚÔ]¢obPÇê6}¯‹‰Y]üíSv~
+éBoaQ¼œÛz»Ø²ªÇJû%=!¿×3Ï—ÍÔÄ]şipş³Væá8ÑË±È†\vw¦[©7”½ĞÊxÂœš'Ë[˜·‡ş±@äY¬dŞãB4Gs×l$ÖˆŸŞz…4d©ü‹]ËŸW•=ìI÷Iˆ($Jmşo#éîæ,É¸J„¿éÍ›»±5'D©Å®qkÇ¥_³Ü.Í©kD ¬Øo¸Ù…5Ë%å³soO”~×Z¬ÚˆÖ…TÁr—W=G¸óX\WÜ0ÌıCÜÛdr^5tZ*Å]s=—~³.NÁ¹‹RvHÚ?]Şz´¤ëéæ¸‹¡nßEÀœ„G8ñ_²»½¶TÙé¥Wôiî·Ò.‰¦“m²”X6€_±ß›UÕPY^ï':Â'4C³ã.t<ãş}œ¼¼D­´}è ¶“ôi¨¤^B6ıWgÆ+{½pOÑu‚/+¸ß,kuÊlL‹¿ú—t¼e7~À¤V'º"}!Ô|uÊä©&½Ç	Öî'dëº¹ÿtŞN(ú”èršô Q-¸t7få'Ã×ÆÖ›µ±„%¾umÌ¸q$!ÖÕ¦z¥7öÁYâK#wô	ø°#y
+»¿{sä˜¥ÿiêş“”â2‹ÿñ“İJÃˆİ"¡êÿ£,xyÂæ¿JŞ§¼úò,åUç h29×Æ“Ì¹GÖ£ÄÒ.$>kyÎ-“pAT¿Ğù2‰Í:ûGÄıLj_ ›cĞ™Şƒğ´©šFö¸”¯@JväÉ¶úH;@o©Üp<³S½\ˆ“¶†UgÁqÒz3»¥œÜ-Àò9©¨ºÃu“l É­»Ûæt³ê € è^ò³VeìD,\aqcá-ïšã8ìZkÄ][ÁæÙƒ³'Ù½‘ÇŸš½!—6˜²}&ÕDœÍ§$*Ì3‰V„³ØÔ›X#€Ú=:Äæ©:C!ÀÎ::!!æú:‰ (õ±ØùØ>ˆ{¤;™àÀ¹Üñ]Q¿}ù©üÓ>ĞY¦mfÛü<£j¥i6vMı¦…3¶¶¾.
+æé;Ğ¡¦=ƒ¦şv÷«ÆmkÿÄ©yìúLÕûÏïB“ Ây]7ï¯Fs"Ã±d`LløÄÙ/¨7 Ç©…4 ±%¡Ç¸-w‹‡‚ã;ıXNÊ¥ßùNb62ça¼Å0+ñ~›
+"¸¼<˜,Ê;{ìbŠNEy’zÓyjÎo$#Ä;6Lögˆw%€ÁÈ•AÅüh¼Ú¹huˆĞCv†!şÊ::!!àò:¥x<ÃÒ"K‰Ùã{‚İMrä+}£1UNYŠ¢oË@İÌHºõ¤Ş[ˆä2^ŞÑ?è÷´e¸Ã\ ı(_ Œùê¬Ì;ğå,Ò÷`ZW·¶q¼R–"3éYìï‘k °†òÌÚ§XÏW0>\lº^B=>n	› ,ØP\$'&Ú•wÌM_d¥‚n&ç-H1ô£ÿÎÈÎMÔ{Ôœ;H"ÍkÙñA½“IÓ¯äÙŠAR¤gÀ››2ÙCã´_ZPšÁK¤Ö;Yğ%§¦ù…L¡©%ÇÅ.¡dõ';Áë´t4¨åYıÙB-²`.AûB%ÁŞÚÅ\_Hëz£áƒi~¨ég¬t7Í²t‘5WK¯Ë4g…ÂØı÷Xv_¯;^_øƒ«şNXeº‡«jzN–RYÀK*:ÈzÌ;V,¶XŠ <4vFÔ\„K&¶Âñeuy‡êZB&X¨À³	Ò…óK±{ÌxÀDJIÈäô»éWÒÜ Ëİ‰Rq€ìÅ[íF‹ïíë€ÔÆ@Ş ‰øİV^v‡·Ë"!‰˜©"Í—ïĞi2A“ˆë “{)€Î~_µ{&êC½ÿk/½Èµ*4=üJ˜eÔ¤Cq…İÛL›a›Hâ‹ÜpzÀ1tºŒ2­ªA ÕBÂDOÅçR:NH$ÖÎğˆ¦ŞN'DXZ'ÂG[4øx%U›èšñ%I-«Nò@4	-¢>Òô–†jshyòÀÔÿ:èâ'¤ôp/Ïİg>z/›>)ÃxÏ’>/ÔN ä7ÄÚÈÚÎõ-‚"—9d¨GİIº‚ğ°™¥Áe°fº%zÅ¬¡Ë%Ç¡-¡,T`‹ÙüÂmR,ó…Æ­H	ÆÖHeLYã¥òÙ,Àû›,
+£²V¶¼Òâ©l![KgËñwšòÈ§Ü#§üeE®¹=ª®‹×"’Ç¤›‚Í8ÊåÔjQ^D+[uˆ!æ.­	Å‚Áã*:-H¢òÄE<’"2%š°æ—–O	^AÙ˜%[ÛºË­| èıİí=0‘³àLe> {,f@ím,NœYƒÎi
+)–EŠ.2„v"W!Ôclw‚©Çb9—¨¡6–9©E†¢-¤(±…§ås
+)·Ã„O¸²ğFzVu´$@%‰æYñàBØğƒS±¿úŞö»ºyÎ5ôf9×æ•Ì¹5±gÎ× œ9\«sæs­v™Ü{uÇîÉ¹<ìO¼Õé–òàa¤\#µödé#E³lEÅ¶G:ÛÑ9á¶²¸7à¢*BÎŠŠ4 ó“Ú­3Œb¯°âB²¼íàj0õJçĞ%ˆÛ Ü¹…‹u¥
+Âé1ßV3İ/k€y•¹z•tõÂv¡d?Èã/›Ó•ùèËÄ·³¼xt#ç=¬z7¤
+XÕhnÊ‚Ã›å¸;_\Äº-¡=Şp	œà,p8_,<˜4‘3Åí¦sB¦UU&¥Tï4º)Û–ËŸV=ğJ«,(§L;5kœë˜Ú«ÑWĞ’ù– 0Bo1Mo‹~bUÿú…2½:şœX;¹˜óypHÛY…îMV&‡·ÌÑ7²e\p-„0ùqu@SKhç‹e “ĞB4Áº\`ŠåwZÎÊşnĞœà,úşÚ8Ë÷Eq/»ƒË7öìºìÎœã0à`‘EÃßUBB'Ñ–#¢ƒ6´÷˜;]àÂ‘¸¹q8äVš0¬EsQ´Ñbíihêí„Bà„uuBA¤LX·›“9‘BœptQ	\Oì¢c¬š¼¬E…‚‹5cqƒ^á<-ZòÚî{hù€aãëÕ{7ÊK]ºßÑ¸‚Z¹ë
+uÜ[^ÛP^Bò¢İG¨0è{÷À2‘»se#³`“ˆnhOH… ÅÉĞÎHÔi´™ª3‚ñ·Ö		q×«¼Lir‘vi’Ä–Á6ıZ Ÿ‹7…Zı¯ù[Èær]nn¯/nÖ.9¾A»¡­G”cÜæ¨Ùƒ«—
+A0ÚGª1CKHé‹e€óëBš üPi/g£R,Óí‚92"Å0ÜÜSìBd'Ûò2ön„¹é½<,ğ·E!Äærö`­72/)<7>"Uã@;qoXç0'¶ÎNˆ¹ÁNNˆÅi"©dŠø`ëDÌˆ‘!²h7 9†\:Ût‹#¾µæB$oİyšln¤¹É¶¼Y€s*z<;è]€Ñ‘ı¨¶Ã.:+mÇ™¤7­-NÅÒĞÎD§Cœú©3B1·Õ		ñxÜU‚º¦TºdåQÅ¢Ë- SÇ]¤Âtª_yÎ§áøÚf¿§.9?ÈÑÜågÁ,Ndçö#¯Bœ@½Áè¥˜^ìE˜vğï.ª]\B,°NYñª 3´XMp.<K›´:3×,«ômšqZ¬;ü!hÆ_4f«ª=ÓĞ{óÎ_µ(ÃjK,OvºÀ*
+¼{P*ë`…Å`xâuùÔEÂ Ë%4Çº/¡	`‚ÆÍÅeÀ3nš•¼¹I³á°‘ÚØû=•ˆ‚ä[´…ÏX¾„^a† ã0BÅ˜½óó”boI[ì'.Ö]-¡=&j	€üœ-p	ÿMvUÚR,§ß¤iØèón·o(³íêÉo!ÍSº¼ùÜ¼©X»î,úÿ†î(G±›ƒndwÈèbc¤FïHó"i¨r	±  }¾L~`]J°RÁí ßõ²çgUİğéè…`Øˆ]ŠrCã|ÅÎãÏ-çQÂx<jŞ =ZßDrdçÊ×È<N¼\!2RsQ´
+Ñw†@ÄuuBBì(vvB|HB ùù!5«@‚ÉHÁñı}/KD4¨-\[¾±UŸ7RÆxÖRTC(ìøn-²É2PÙ#_qÁC³GšÙĞ‘7²/’1”F*.jƒv#ZÊÎ¡P'Ã¡l:;!^MDÌÿ³‹“Ê–O¦•5Ÿ ,¾JCDKÏOS ’èpÉ_gp(Şj“oÑKLøà¥M¡•(óÅ-¯|‹eø37Æ¨bÁáÕÜ¤Ü“„Ñk7OÀt }7ÎÎó~Õ¦}şî%ºG1×<»(¾“,®¤ñˆÁÌJ(\3<íŒlé*ÁáV
+È•PÇÔB4Ğã%Ğãâ–½	Å‚ÅAr_%#!ï±†%$–`M-ÀMK¾’êİù÷;å²<Ï¶aİd[Ş,X§—N=Ú0.Ğ™‘¸ºƒ&!.RM¬[5‚ $@;mP§˜õRg'ÄUX''ÄY?<óçY0±\tKHÖa)åÖ3æ€Óp…°µå}kÚHğÖëò² 7r;$zô8t]€ª‘E0¬ÇN!*OHéÅLçÒâåb>,µYâu¥ğ±JHK¢É'f”·ºe	 U×l–EóíFWÕ—(â)µ¨ÇQCÌÖV†İF¢  
+¬…2%Ö1µP4µ„ôx±%m‚±€ànœ÷ŠUN\@¶„ÖæÖ%Å†ünB[ˆ¹;´<2º_7^ŞÜ]Q‡‡†×@µÓá62Á/ÀÂ;Â"ÅIKHš/‹×~&	”ÇÜ0ÜŞÅ<_ í’Ì:Ò
+Åf®Å®ùÇfp2×“×Œd3O‚®aò,Û—†é»
+³´q¶eÉ=ØĞYçØõSÃ<«|îÚB\İè{„iLEHÂ=cm6£)×SÔ¢¼èW¶êB:Ì][‹‚ÇÃmKCéV¯Ä6ò=ez&ø÷E<Y ºu–®¯Ò‡»Š×Î-Dn¸NkãmbˆªÈ‘ÄM rr³§çÎ–âfˆ—)>Y,À¶:ñ!ÀjÒèFÊ,LEc]kcØÜ¸uŞcåÂeáPeˆxhwQ7ì¨Ÿ1ÄİàUÚ Eo˜"«ùËE4 «%¡ÇŒ-l‹w‚àŸüØÙÆ–‹v¸„ıWJZ<)°ğïéø!ºmòètîntz3ky³ {;„z:²]€¾‘µ©ÇV!dWVÿw`»èö<Íz²!@`gx-@YBù@ğ(Ú/Î	æèZµ¼ßÌ²ÓkŒàÉğ´è	ğ´3)„ØÎnü
+é<ÅæÁ\¶ ÚF)yÄpTÓØ#K‚n;å‰ìÇŞHúíÆFÀñÖ%°@©p_!‡á4#¬d¡Äl@¼J\cb¦„)—„z²ÄKÍëbšÀ_h&´XÎİ¥$)" t‹³ÈK\,<8F÷öòßà™Ÿ€l*‹£jç›Òã6*?–‚ cnZÉ7]·VÁ¸¡ÅÇÇÑ¸1Ñ\dêxñ‘“fY÷Í}.;ÄÎg–‘²†-!.ƒjjâb•µ–²!9©Ô‹ŞÑÍ8¡w &öJ¿oŸÒEªkî ’{
+[gÑñåR¯®^-j¼¬;¼´ˆi7µ´ZfÇ×È9XŒQ¹åa©\¼	í$Ú/C¥X;J¼N¯|€lLÚ/ç.-t-s€©yŒÆ„ó4˜)æiO“ÀÙä6´ÒÛÓ¦ÍÓâ%Î¦uœàO{%;;×Ù•¹áàá
+A3â§‘¹uãa÷t/,h§4ön µj² ›ä3 {à¹.d²]±sÕSh@}KBX\('´OL¼$Øí«æĞò’6ØŠpJG¯-mÎ„³pAOö¨’`ËòJväo”şKÉÕxÇwã®Rs/‡À“Ãtœ‘×²Ñº5 „^¤.êvîEv.„Î#RËá¦):C!t::!‘ö¬Ç;‡¦u_CG.^¬÷àKİˆw›qyæ€9z=JÚNÑôõÙàı¡›n×W¾AïnÀ‘âÍ|•şºCğC/¼ó„tÿÄŸç·×ó_'3e	³~}çqìf‹&ã:Ğx¼~ğl„+óµBP=?ôÚ)eĞœ‰²ü¾àPe_ä«‹­i½2Ö‘²Š2×=D`,ÇÖÈ0¸ƒ»0Rs±'´5I;Ãµ4;:!MSt†BüuAñõÄî©Sl±ü0¨LL~ö»Ã´‘²a3foâÆœx3îxÿ#íÄ}b™ö—-G>Ó‰=jN%›Û!ê}_Rı+’œÔ„å³Ó{pxĞ*ò8­UÌĞÏ 2°FÖ:ôaFü‚Ì0)Äé»A!2äí¶Y¥lJ-ØN•Z°M7µ°ıá'åqè=¾³á{§ÌJÈş¦±ŞğÂ1âÚé÷…;Cl¾Ig;i•ñ?Ûñ¡ vØ(Ùˆlí¥JºDÆoã°ò³huâ/çµïÆg>„Êİ†ÎW§É^d¡ò²†÷“…2h'£é¶ï&y
+ü4?„§‘ÊBç$“~6€gßˆUª“Åã˜M?ân\ÂÇ¢ÍsW¼ä[(Ÿ‰.?ÂÆp[Ü“·lêæ?œóä.›îm LıñkF#Î\û6éïİõ@º~ÎòflXnHì‘Ş¸w+ÌÁÔä…‹ä‘zEåĞÎFk×º½Ø	¡!ÙÙ		Á=Óú¿®¡ô7ÙñÆÓ7ñ¨ùZ2m2ÕG.ÆòÉ›³š’„óB4ˆ‹ÎÂ‚YøbÄ=²İ•ñgÛ5åÔŞá!‰4¯~f3tIÏNşÊî;5r’ÀO­ Ââv ÂÊÍİjKµè~Kñt¹íÌ‘‰„Û³±f«6ĞŠ…óIø;?m½˜Àš+é.Vòô0ø¦óşñ¼Ïzn€=:
+è‰TôÎ=…¼‘=Xº1^á ŒT\äíš¤lC¨î:;!!;;!2n½åÿ¦@3q|pV%xuŠ7³»¤ÍRdÁONûíWdıRi‹>ã­x¨‰è½³Rçs$,~HU8¥^5âÅğ»”¶Ù;Šß„×cš¿‚t È9‡™…÷©óéÍ‚‰¾c"ÜhÊtí.N"íbù?W]zÜ"Â¤]=jÎ”î.”¨ºƒÅ—kÒ™9Õ”)P](çtQèÓesı]„ıË6z^uCòc±J‹¬3p´ùS]P“î"Ìk™Ô!íšQg÷%ÏÉS¹şË{šiÖáş[ªÖIÙ²KşV—ş“JÄüW(’íøõñv›e˜ ğ³m=[–píÛ,J#ºä@í˜Õ¡aÎvH$>&Ş"èÚ¶âÌU%1§ÌÁtâ,ijcÿSk‰eß²Ìú„'¢³ÿµm-˜e®èíÚæP¾âàÇÙ47¤‹È+&—Íöï£ÒËáôØÙwAĞÍÃ	vÍ*¿O,Lø:Çßàø§ÚÕã=äT§ÚjÈÛœÊT·Í¦ÕxË:ÒT¦Õ˜5ª©MµªqVxã©¦ÕÔö6º©M5|èe!=Ãƒ%(wş²7 EÍ¯Ü*„•Dú–¦ó»äd½OÀ»ZØNeƒ¬jnÄçÃ2¥õl!ja^ıVuâGâPVUÿşwßZš¢ßö»;!Í²ìÖ “¿sDÂ;ôÑÀÉTÕ±.P…ñ;5ô™ˆÑïk¹CB´åğ:©Şã½‡›İù¶Ø²ìöß\ÊmÌ³±,1>İS|=ARZ·˜şÀâæG
+ãHÈGŸá_ßj²œ¨éÇåÇÂö:­Úm’¡7±×X€OÛò ÷R³(Odlz' #
+œ#Px…NBÒÔ£ˆêšZBş]	=àl€›[,'è>÷súIVvõ¥¢äUNÅJ<Lïë6Âúõ§5‚Aˆÿ*Õ~Ø‹‰§HÈñ—:aÕäèY‰ÀÓ Üá©mšµß" Û®}¥w¢XÊt©?£ë#\ÔH»êœßƒ¤V…«HUE¢ĞÎH®3Hõag'Ä„cy'Â›¥ƒ¨1àQDŞR[íøu–¤8°’t­9÷„\á¿àHÓ+úæY®;s¹vÇÌÑµ8¿şĞ}WH¿”Ènf“DÑIğki½iıõŠäÌá^óé!x™¼"CïÚ25k‚Ç™_éö¢yoEœ¥ÛeªPtsºæËQjÙvÍĞT¢°ËÒîíõ»£í-¾QAD6Õ-/0_-Fv¸Ï—g‡a”!ÍÇ Áµ‚Öxílv¯°A`°…-£HçÅUËp÷ëBš ,Pà]_îu®®‘¹cÆ6v¶@ÜıH"±‘)Nóçºªğ–ª¬Fñşn«œ×<bÁ¢íHöw÷ÔB…Ü[ğ8Ô–wĞ#)C¥–î ®;Ì}ğ³®Œöñaàr´«bÚH¼É*EˆGAˆ"B( ÿ‹*€}wÌ×<İ1\+_ÇæZ
+;1×Ãİ].K\TKæ]µ-%€‚ÕØì—KöÌã;{G6Fşe©©Lİè‹º¦¯õ\/¼ÕÚ¿%	úeªŸË‰.{Ûô8¹“N|ş·Àck»vÎ;%z®Æš]òõâÔËR»Q‰9„½˜kìı1Y¿fşâ@¦H ­Lg_°°^wdé`Õó.Jo!®d¢­³¤· ªğtn]ƒ¬‘Îh3ü·²o·7]Äyµ¼Y NN@mªî‚‘ÅÅSô6©ƒñ›d‚jZZš/¡¤mxW`-4¼î‰ê´à1§kÜÊ\Ü ;G‹WCn«Æ®è‚n½Y†æòÖcô78g–&½Æ›^âu©BÛ&éÕcÁ1í‚qÔLƒ~w…%¼1Ú¡ªhj	 {¹XN h¾,ñ°ğ3ö¾£Ì5Êv1×kÛÇ\U:æØ´ÑÎ—l¬…7„‘*R$ãÒü<M-D:à—÷X-ãFo,›,{Bo‡|†VÙÈZ©¦Ç7øY ¾ó1‹[@—Khp[B'è(ô	ı‚Ğ)›{*Ë¬‚+š¦JDŞèwÑ@ıf?Õo‘*	óÕ®^0¯ˆ]ckMoyÌ¸AÊAó“½†w7GÚ1Id r[söí2ÚÛóÿhÌ£4K­7ÒãfTè…'mxÎÍ€7Á­ï#pO‹qÚeãşa,œø,H\¼'ä>Á÷@\
+&Ø¾U‘{@Ë¯iÁó«
+ƒç%„#Oı«ğ†~&U¼UŠUŠŞŠ÷"¢·U ÚŠõ"?¡<Ò…À6ãÆxÑ7VŞ8<<´X~’b†ĞO,Æ6b½Ü‹C¶vâO°cŞ™%ìädÏW„ì/°l¬Šh_ï,Doîç¿ÄeßYsVò©™à°wŒ,¥mS¼¾@ÖØâ=ŞV¶)7Z÷Œßqo¬ª{Ç¾1x“kñ4ßÜwç€svWu®óJ½Ñ_¸ÛÂìfv®=ãÚweëÏ_¶…áöËáwŒmßØw»Òh»Öêñ¬vÏÔ9jL˜­Mo³U#‹yUo!¯j/&U´ªİ‘¶j—¨­«J*`‚ò4€+ƒØXÜÓvy½°ã:¡+›g6’È¡&Ò2ˆäÎ>›ëaw'±á?g.¾\W°±˜#¾Äkìy”-W˜n)¥¦Q¿ı3ïJ¾e\¼ _QğùÛëüû€dÿÖ{Hî;ØnoY&ñçã1]şçS÷º°ká£—E‘sû`´ù7?ˆ–v“‡–_ts4tÁ]Iv ı©CFWØ® ™Hİ^şÛ_à¥‚ÙÒ_^<[~ßíÜ£¥¨œH\îÙS0A7™*Í‘ÎEÄĞ µl«áƒ–T¿ï¿2y?…G¥XÍ£¶•%G×ü¬TÕ¤ö3ø¡v«Ñ¤÷pPa	¶Ã³n›K›°OgÏÎùî‡	Êì‡dÇı(×GnÖ:€İ~ı7&’yõ7ÖÜÀ1fA:Ï6ŞJ-sä·×Å®dB.üâµêE=®’á¸[ŞwµÜí²4üß~½cĞ¡Ó	èˆ’R×õ7ÍW°¢=]RˆE]Ş’ÒÓj!hŞĞã—É	ÅÎufŸà“‡°¤<Ë¯Q:¦ÀUˆXàëÓ´AÛûæ—'ÖuèËÎ$™ 8ĞBĞ›¨Şº(—+hÏ‹:|À—øds5kç™DWœ.Z³uùyCÔE´jÇ^dƒ/À+‹}u¡5DÛŞTB@à"j( "„"´ˆÒ~ÄféG{¸dñ2	œ«õÉ_ô«Š‰n{EsIæ-4ëB7ÛòfÜù~
+“şyÖ¼W—…Ş%ÖkÅ_J¸XNW¸f-	8M-4M-¡=Ö{	N 4h.)‡à­ë,˜µÑ|jûÿÙ¡Y4 åDp¼‰p¢ØÿkmÄ–“àæN'Uv Î~J›ŠÎc{íş^„¹	>)9<ÁOï„L$š¶Õ•S™ØúQ(?ªıÂ¢Æ¦Ó=g\ò$ î±³×¬Ë·0î‚]Èƒ„´¡;#uC;´²ÓÜ¥3$<§3Bâ¨©â=•öß[F˜?»‘µH­]tî²vk\¶ÎŠ-ö{­3wØ}&RHÅ­¹‡ùvÙ‡¸`±t¯/c»÷ŞIòÎªöI%æñìŸúÿ[ª×d¯¡[Ìº[bÓÿ ¢)ÂÈÜ €·gÑBnÈ+ªÿ…¾‡›êI„İ§V ™½D÷7¦ˆnõ‰X—	úƒk µ%fÿrµ¡Ş,qç¾*…ÆWşÏ³sÑÎş.÷Îó
+g½tk¢î±¥n :İ[dª-2jÔ‹lÑq›{³‹8äÚ>¿-gX;qÑO½ğq&×køfü½¹_‘ú6Äu-²â‘uî*ê]~1là‘*~¿c5Ô$IX1ß,O.<îôkÈ[u~•äv¬G¼Z$Î;Åó±YÙÛ|Ù¿*¤^¤±É_½ï	—ÇŞíÒU14ÿ·EìÍÊ‡·ÑVîA}ó,djjV{¼Š+Ãwal3îñ¸ºıÎV8ŸSh@lKB¸['	…ÌPúiP27ìæÛ€_x÷r7‚Ûø&íƒ¹¡á>XçX8qÃå uğBJ‡Üè{´;$,†Ã‹ø7”^ÃëUV4œÅ[ ‹wÄ£á ‰Œ„PRE¾¨ïôcÑ!–bÃå<ãa©/qÀáTÁfØ“’> L½ÚUD#_{^îÚ]„]Æ‡ëÖA'_/…²u•!RFË\‰€“M/¹¨@¸?‘Qß|¶íŞµš9Õ|?«g”ûî—#‰O˜PéxØª5^ö¸mdPFòâ™U¡YZ| Äá'	•ÑmKè{Ááäb>üp>}' ,J	OÀW³T•ZÕXWÀoZ&~CMí¹+­4¥]·$^±Ñ<Rñ<öÄäÌ—ûÅ¼¹¼c/£{mO/¯â¢=â9fïQmDÍ¼zâuƒ™bÁÄ|E´ É%4Ç¶-¡äØÈÅsAÁ1æŞÄòHâr nN²ö•Å.
+A»@°…(ñ_Ùò0ÁÚ¡dp:bo;AV <Rz+ñ¸LÔ,[ c"ËĞåãĞ–Ğ	–ª°Ål%á_¹S¹†èæ§;˜kìÇ\MvmtÉË{(ZHV¸´_St¸³İB×Ôòˆ,$ßú.%Ìâz‡LL¦¬Cnd	Â Sˆ“Q5R¼(jê\B,à×YñØ:Z,&x®Ô'ƒ$ŞÜ÷Z@›‘ú8üç’½ˆ‚é[É…Hq÷Şy™}9Y6,ºCtz„6ª+¼šÆNê‚'ùÄÅ Ë%4Ç¶-¡äØÈÅs%AQ_Ñù ,9ZÔ:æ×rÔ1¹6×æÚh;˜kÁíc®†·¹5®wÌ×Ü1]sK^.ÊVŸ@ HãúbÚ[ˆ÷Ó,OŒ§õFÓüªËÊ‚Ùõ„bÄ7«+(¢‘"¬óuÅ¬Îå‡8x_gÈÄbe''øIgØ‡M¦½*d-Åk „C5Rm±£ÕØiÛıpËQã%½å¹Aêe(w8w¸ö =¯]	F8A¬	°…€Š°4ñ¨´s÷u?u†BlŒuuBB¸Üu*AŒÒé¨‘~9ZìÚè…,qÆ
+ÄŸ@ñqŒmßR7ë²	o!–ÇŸRüînA°wÿÉ#â¯o„Á.x[ßRı¯Ôóm°Ætj7©˜Ó#)½·–¾¼,@ÙÈag<íÑQ”+àJh°´É¸m^)¥ij¡vh¶„ôx¹%o‚± `q œVIh•-ï±%£, ‘S¤äbmÿÀqº#¬óÆ~Bü¸åmÜå4E(ubq;œ+Ô¶mÈÃ6R0ñE³·t¹„ÄºzAÓÀ;[,&Ò–&ƒŞÜ}[˜P‘"‰¸œMc d-„{à–Çg_ÖFÇ9„–7µ!á¡Ûãà˜uqHAÈT…€‹º‘¢E»JçRàãb9XÎ²âIagZ%ÙZËÚÇ\MlmtB¹Ó"4î—·j‘ş—J—ù~6ó2‰gïª>Fú²?”YYqcúWMW|ŞÊãD—„ÙKWõ-øvö7a7LÃ¿“kcº÷J¯èê†o>7oÿˆ¥ûçœ)³]¦ßñ_‹)ß6…&¸tùzYæÚÌŸ5T»ÇÿÅ¼šš^¼¹%×Åï¡GÎ´‚^0l‘ñÂï³õÏ¾xÈ'r0scpkĞXº",ÉYë€ì6AºkÔø»&‚·6Ê»#6»–1*ÿÖÖ›¼Ñà[´i3¼ÛÙo¶y|m7šçl^Şˆ§êÈbÈÓ˜õØe.²yHÑàĞR%E€P¤6¹¨t´„ô¨Ş%5Xğ¶ÄM»/×©¹†ëæ;1×¶Ø¹¶È´3)˜‹|A”§5eElÖxÓÊ‡åíV†1q¹Üy…XÊÑ}c³–‹Ú†;ÔFï1#sh.àfn…‹6 “‰Ö¦g¨Âk©¢"«¬ß!zH9Ü	y)Q‹Ş”>ÇL8Cß‰Şcç$/\#ì·‚½ßÏî4Ç¿"* ÊÌRsû÷cŸ„|ğUZ­ÕIxÄ»è@ç™rd0P/ÿ~'Î×Xİ…\i(:RRn‡Vå" í.ÅuÀÎæåeAuÌvHõÈcĞ²ØŒ.yeìO#*U<ìP¾Ò¥	-®ÅÒ Ë%4ãÖ–Ğ	‚«±Åm‚} ÑĞ’—µã._Æx®,É¶sÏ´³R§3	¶ ¥ÇBÂ ¯Ä®ƒdOsDAèd¥^X–˜!hjåÉbWù›‰Å×Ğ4¯’szF·¹ÚŞuæ¿b3Z´ÑWrÆk±íğ‹”Ìø×¿uãA$ç)†àyĞïo÷ÒH„üË‹r±HÚìBiá6=Vu®GŞÆ]~| âÊºÇNk½¹€‘Ê˜RZ÷ì1`0W†÷–=±õJzÁÎ-^EØ¡ÉŠx$G„FŒÈ¹»/iÍ‰ñgi×†(ÜÛë³F¾zLïˆL›n€f^‰Ğ·ibşqØ[§fC²c„61Ş†lT¸ã·æ¤KÅî:ÑX)Íè¿¾¯ˆÏ¦d¾§Ëö‚º7Š7»qóğêPìñÕpƒ9ï ®ÆÔÈ2x_²t#<R¹ÚIu†˜¤uuBBÄ vvB~(Ä¸ SsHé±Â'J2¥É´=Üúõ`nåDko¼¥³ğ;íëÅò$ ó÷–Gâğ4<°Ä¼ÇšAÙG[N‰õAæ$ãš«Ë†¬&—ÓÔBjĞÒĞã®–°	Å¶cn<îoÙmA<ıßÖ…ûÁFÍ´—ïoéó­q7ó‡éTø«t¹h>˜3Gé‚Ì€|’Oò	÷falˆC6ıè<K‹7’>,oæ|Oğ	¨Î…øíI(K¢›?ë²í¶bmî%åå³ì_÷Ïòˆï~ï»ŒZØ!¿:Ğ8á¼ÑĞ¦,SË£r-mI;¼@Ô5»{ìÎ)2LCãi·P"¿•H5<’ÙÄeÚZ¨š]B=âl	› ,H¨[ 'U÷²¯ú¦ü»#ş&Ã¾t/×İŸw<€Õ&³«°³eŞŞ „¶ÍáW@Ì¾l“€¨&5²Ú³Aİöœ½{4Ñfœ¢\RHqñ¸Oå‚ï¹óEm¾à],œŞ˜ Ÿs¯PDÔ’f ¼É‘:N£¾Ë…¸àš»µU§Ï‘¢ÆòípŞZÍÅ=ÛïìÍ|sûCûEŠç•¦?ûõs=¼ƒ0Î9›#I1Áİ‹ãL×†YÜ ğRSP6Y#KİL	hø¶„ôè½%p‚±à@r8Ÿª,÷¦Ÿ•iÇèü­õcÊ¿“r66V&ğr¶-íÿ—‚Œ¢ä*…áØ7MË"oLİ@oôD7M¼jÔƒcn—{ÇD]û‹ªı áQIXåØdA:ñä†÷KûÏØæ:{ôn¼!ºµw“ãİy3gmÃ–_ò½›Òiëï—4Ş8<®KÆàyÕ&)6œ~£ı.h·º@<H‹Ÿôs÷Î†ñ[Z^Ñîòï†÷ E//iÛå"?ì÷mRG¼¸gIf?£“HÔ'>Ô²(.İÜåáAßeÀ,şêÔ+é²˜*ë¦£0®² ™ˆ6aCSKHœYBÉÕuâX°ğ´\M®,/™Ú‰fOõº‰Ô¦²h9]İ.­½qj¤¹(ó=¥­èE:´Öh¯¸Ò÷ÑÎO_´®ºü£ã1kQ¢ Ğôu4™	ì<ƒ–a6dHñ0±…<%Ÿ±ƒ»¦Ó+Æeá§x²)À®Ê& -Ñ…ËétÌx˜FJ$ÎıZ¿ÌvÚ'TƒGéç>}m~
+Æ»Ïty;¶â„2 ¥í€.0­^¦˜0Ö² ˜ššör€¦—ĞÎ3‹¼¹M-,	TQ¿Ü=Aòg7œÙ?¨Që8ÑôQ¨ÃÆŞ§HÃmE¤üİôÉÕMÕ·Pào¢ì­ï¸»½ è›:·K¹™o¤[ Z	*l¤Ô]†ã;ÁDo;ñ'Ğ¶R¬]øi—˜óN½¢
+“ãË'¸=Ï¦]mÌÌÀ¤RP7SYKQMSC¶%¡Çä-ØÅÈCsÒHmYÔŠº‘
 
-        return static::_mime_types($ext);
-    }
-
-    /**
-     * Multi-byte-safe pathinfo replacement.
-     * Drop-in replacement for pathinfo(), but multibyte- and cross-platform-safe.
-     *
-     * @see https://www.php.net/manual/en/function.pathinfo.php#107461
-     *
-     * @param string     $path    A filename or path, does not need to exist as a file
-     * @param int|string $options Either a PATHINFO_* constant,
-     *                            or a string name to return only the specified piece
-     *
-     * @return string|array
-     */
-    public static function mb_pathinfo($path, $options = null)
-    {
-        $ret = ['dirname' => '', 'basename' => '', 'extension' => '', 'filename' => ''];
-        $pathinfo = [];
-        if (preg_match('#^(.*?)[\\\\/]*(([^/\\\\]*?)(\.([^.\\\\/]+?)|))[\\\\/.]*$#m', $path, $pathinfo)) {
-            if (array_key_exists(1, $pathinfo)) {
-                $ret['dirname'] = $pathinfo[1];
-            }
-            if (array_key_exists(2, $pathinfo)) {
-                $ret['basename'] = $pathinfo[2];
-            }
-            if (array_key_exists(5, $pathinfo)) {
-                $ret['extension'] = $pathinfo[5];
-            }
-            if (array_key_exists(3, $pathinfo)) {
-                $ret['filename'] = $pathinfo[3];
-            }
-        }
-        switch ($options) {
-            case PATHINFO_DIRNAME:
-            case 'dirname':
-                return $ret['dirname'];
-            case PATHINFO_BASENAME:
-            case 'basename':
-                return $ret['basename'];
-            case PATHINFO_EXTENSION:
-            case 'extension':
-                return $ret['extension'];
-            case PATHINFO_FILENAME:
-            case 'filename':
-                return $ret['filename'];
-            default:
-                return $ret;
-        }
-    }
-
-    /**
-     * Set or reset instance properties.
-     * You should avoid this function - it's more verbose, less efficient, more error-prone and
-     * harder to debug than setting properties directly.
-     * Usage Example:
-     * `$mail->set('SMTPSecure', static::ENCRYPTION_STARTTLS);`
-     *   is the same as:
-     * `$mail->SMTPSecure = static::ENCRYPTION_STARTTLS;`.
-     *
-     * @param string $name  The property name to set
-     * @param mixed  $value The value to set the property to
-     *
-     * @return bool
-     */
-    public function set($name, $value = '')
-    {
-        if (property_exists($this, $name)) {
-            $this->{$name} = $value;
-
-            return true;
-        }
-        $this->setError(self::lang('variable_set') . $name);
-
-        return false;
-    }
-
-    /**
-     * Strip newlines to prevent header injection.
-     *
-     * @param string $str
-     *
-     * @return string
-     */
-    public function secureHeader($str)
-    {
-        return trim(str_replace(["\r", "\n"], '', $str));
-    }
-
-    /**
-     * Normalize line breaks in a string.
-     * Converts UNIX LF, Mac CR and Windows CRLF line breaks into a single line break format.
-     * Defaults to CRLF (for message bodies) and preserves consecutive breaks.
-     *
-     * @param string $text
-     * @param string $breaktype What kind of line break to use; defaults to static::$LE
-     *
-     * @return string
-     */
-    public static function normalizeBreaks($text, $breaktype = null)
-    {
-        if (null === $breaktype) {
-            $breaktype = static::$LE;
-        }
-        //Normalise to \n
-        $text = str_replace([self::CRLF, "\r"], "\n", $text);
-        //Now convert LE as needed
-        if ("\n" !== $breaktype) {
-            $text = str_replace("\n", $breaktype, $text);
-        }
-
-        return $text;
-    }
-
-    /**
-     * Remove trailing whitespace from a string.
-     *
-     * @param string $text
-     *
-     * @return string The text to remove whitespace from
-     */
-    public static function stripTrailingWSP($text)
-    {
-        return rtrim($text, " \r\n\t");
-    }
-
-    /**
-     * Strip trailing line breaks from a string.
-     *
-     * @param string $text
-     *
-     * @return string The text to remove breaks from
-     */
-    public static function stripTrailingBreaks($text)
-    {
-        return rtrim($text, "\r\n");
-    }
-
-    /**
-     * Return the current line break format string.
-     *
-     * @return string
-     */
-    public static function getLE()
-    {
-        return static::$LE;
-    }
-
-    /**
-     * Set the line break format string, e.g. "\r\n".
-     *
-     * @param string $le
-     */
-    protected static function setLE($le)
-    {
-        static::$LE = $le;
-    }
-
-    /**
-     * Set the public and private key files and password for S/MIME signing.
-     *
-     * @param string $cert_filename
-     * @param string $key_filename
-     * @param string $key_pass            Password for private key
-     * @param string $extracerts_filename Optional path to chain certificate
-     */
-    public function sign($cert_filename, $key_filename, $key_pass, $extracerts_filename = '')
-    {
-        $this->sign_cert_file = $cert_filename;
-        $this->sign_key_file = $key_filename;
-        $this->sign_key_pass = $key_pass;
-        $this->sign_extracerts_file = $extracerts_filename;
-    }
-
-    /**
-     * Quoted-Printable-encode a DKIM header.
-     *
-     * @param string $txt
-     *
-     * @return string
-     */
-    public function DKIM_QP($txt)
-    {
-        $line = '';
-        $len = strlen($txt);
-        for ($i = 0; $i < $len; ++$i) {
-            $ord = ord($txt[$i]);
-            if (((0x21 <= $ord) && ($ord <= 0x3A)) || $ord === 0x3C || ((0x3E <= $ord) && ($ord <= 0x7E))) {
-                $line .= $txt[$i];
-            } else {
-                $line .= '=' . sprintf('%02X', $ord);
-            }
-        }
-
-        return $line;
-    }
-
-    /**
-     * Generate a DKIM signature.
-     *
-     * @param string $signHeader
-     *
-     * @throws Exception
-     *
-     * @return string The DKIM signature value
-     */
-    public function DKIM_Sign($signHeader)
-    {
-        if (!defined('PKCS7_TEXT')) {
-            if ($this->exceptions) {
-                throw new Exception(self::lang('extension_missing') . 'openssl');
-            }
-
-            return '';
-        }
-        $privKeyStr = !empty($this->DKIM_private_string) ?
-            $this->DKIM_private_string :
-            file_get_contents($this->DKIM_private);
-        if ('' !== $this->DKIM_passphrase) {
-            $privKey = openssl_pkey_get_private($privKeyStr, $this->DKIM_passphrase);
-        } else {
-            $privKey = openssl_pkey_get_private($privKeyStr);
-        }
-        if (openssl_sign($signHeader, $signature, $privKey, 'sha256WithRSAEncryption')) {
-            if (\PHP_MAJOR_VERSION < 8) {
-                // phpcs:ignore PHPCompatibility.FunctionUse.RemovedFunctions.openssl_pkey_freeDeprecated
-                openssl_pkey_free($privKey);
-            }
-
-            return base64_encode($signature);
-        }
-        if (\PHP_MAJOR_VERSION < 8) {
-            // phpcs:ignore PHPCompatibility.FunctionUse.RemovedFunctions.openssl_pkey_freeDeprecated
-            openssl_pkey_free($privKey);
-        }
-
-        return '';
-    }
-
-    /**
-     * Generate a DKIM canonicalization header.
-     * Uses the 'relaxed' algorithm from RFC6376 section 3.4.2.
-     * Canonicalized headers should *always* use CRLF, regardless of mailer setting.
-     *
-     * @see https://www.rfc-editor.org/rfc/rfc6376#section-3.4.2
-     *
-     * @param string $signHeader Header
-     *
-     * @return string
-     */
-    public function DKIM_HeaderC($signHeader)
-    {
-        //Normalize breaks to CRLF (regardless of the mailer)
-        $signHeader = static::normalizeBreaks($signHeader, self::CRLF);
-        //Unfold header lines
-        //Note PCRE \s is too broad a definition of whitespace; RFC5322 defines it as `[ \t]`
-        //@see https://www.rfc-editor.org/rfc/rfc5322#section-2.2
-        //That means this may break if you do something daft like put vertical tabs in your headers.
-        $signHeader = preg_replace('/\r\n[ \t]+/', ' ', $signHeader);
-        //Break headers out into an array
-        $lines = explode(self::CRLF, $signHeader);
-        foreach ($lines as $key => $line) {
-            //If the header is missing a :, skip it as it's invalid
-            //This is likely to happen because the explode() above will also split
-            //on the trailing LE, leaving an empty line
-            if (strpos($line, ':') === false) {
-                continue;
-            }
-            list($heading, $value) = explode(':', $line, 2);
-            //Lower-case header name
-            $heading = strtolower($heading);
-            //Collapse white space within the value, also convert WSP to space
-            $value = preg_replace('/[ \t]+/', ' ', $value);
-            //RFC6376 is slightly unclear here - it says to delete space at the *end* of each value
-            //But then says to delete space before and after the colon.
-            //Net result is the same as trimming both ends of the value.
-            //By elimination, the same applies to the field name
-            $lines[$key] = trim($heading, " \t") . ':' . trim($value, " \t");
-        }
-
-        return implode(self::CRLF, $lines);
-    }
-
-    /**
-     * Generate a DKIM canonicalization body.
-     * Uses the 'simple' algorithm from RFC6376 section 3.4.3.
-     * Canonicalized bodies should *always* use CRLF, regardless of mailer setting.
-     *
-     * @see https://www.rfc-editor.org/rfc/rfc6376#section-3.4.3
-     *
-     * @param string $body Message Body
-     *
-     * @return string
-     */
-    public function DKIM_BodyC($body)
-    {
-        if (empty($body)) {
-            return self::CRLF;
-        }
-        //Normalize line endings to CRLF
-        $body = static::normalizeBreaks($body, self::CRLF);
-
-        //Reduce multiple trailing line breaks to a single one
-        return static::stripTrailingBreaks($body) . self::CRLF;
-    }
-
-    /**
-     * Create the DKIM header and body in a new message header.
-     *
-     * @param string $headers_line Header lines
-     * @param string $subject      Subject
-     * @param string $body         Body
-     *
-     * @throws Exception
-     *
-     * @return string
-     */
-    public function DKIM_Add($headers_line, $subject, $body)
-    {
-        $DKIMsignatureType = 'rsa-sha256'; //Signature & hash algorithms
-        $DKIMcanonicalization = 'relaxed/simple'; //Canonicalization methods of header & body
-        $DKIMquery = 'dns/txt'; //Query method
-        $DKIMtime = time();
-        //Always sign these headers without being asked
-        //Recommended list from https://www.rfc-editor.org/rfc/rfc6376#section-5.4.1
-        $autoSignHeaders = [
-            'from',
-            'to',
-            'cc',
-            'date',
-            'subject',
-            'reply-to',
-            'message-id',
-            'content-type',
-            'mime-version',
-            'x-mailer',
-        ];
-        if (stripos($headers_line, 'Subject') === false) {
-            $headers_line .= 'Subject: ' . $subject . static::$LE;
-        }
-        $headerLines = explode(static::$LE, $headers_line);
-        $currentHeaderLabel = '';
-        $currentHeaderValue = '';
-        $parsedHeaders = [];
-        $headerLineIndex = 0;
-        $headerLineCount = count($headerLines);
-        foreach ($headerLines as $headerLine) {
-            $matches = [];
-            if (preg_match('/^([^ \t]*?)(?::[ \t]*)(.*)$/', $headerLine, $matches)) {
-                if ($currentHeaderLabel !== '') {
-                    //We were previously in another header; This is the start of a new header, so save the previous one
-                    $parsedHeaders[] = ['label' => $currentHeaderLabel, 'value' => $currentHeaderValue];
-                }
-                $currentHeaderLabel = $matches[1];
-                $currentHeaderValue = $matches[2];
-            } elseif (preg_match('/^[ \t]+(.*)$/', $headerLine, $matches)) {
-                //This is a folded continuation of the current header, so unfold it
-                $currentHeaderValue .= ' ' . $matches[1];
-            }
-            ++$headerLineIndex;
-            if ($headerLineIndex >= $headerLineCount) {
-                //This was the last line, so finish off this header
-                $parsedHeaders[] = ['label' => $currentHeaderLabel, 'value' => $currentHeaderValue];
-            }
-        }
-        $copiedHeaders = [];
-        $headersToSignKeys = [];
-        $headersToSign = [];
-        foreach ($parsedHeaders as $header) {
-            //Is this header one that must be included in the DKIM signature?
-            if (in_array(strtolower($header['label']), $autoSignHeaders, true)) {
-                $headersToSignKeys[] = $header['label'];
-                $headersToSign[] = $header['label'] . ': ' . $header['value'];
-                if ($this->DKIM_copyHeaderFields) {
-                    $copiedHeaders[] = $header['label'] . ':' . //Note no space after this, as per RFC
-                        str_replace('|', '=7C', $this->DKIM_QP($header['value']));
-                }
-                continue;
-            }
-            //Is this an extra custom header we've been asked to sign?
-            if (in_array($header['label'], $this->DKIM_extraHeaders, true)) {
-                //Find its value in custom headers
-                foreach ($this->CustomHeader as $customHeader) {
-                    if ($customHeader[0] === $header['label']) {
-                        $headersToSignKeys[] = $header['label'];
-                        $headersToSign[] = $header['label'] . ': ' . $header['value'];
-                        if ($this->DKIM_copyHeaderFields) {
-                            $copiedHeaders[] = $header['label'] . ':' . //Note no space after this, as per RFC
-                                str_replace('|', '=7C', $this->DKIM_QP($header['value']));
-                        }
-                        //Skip straight to the next header
-                        continue 2;
-                    }
-                }
-            }
-        }
-        $copiedHeaderFields = '';
-        if ($this->DKIM_copyHeaderFields && count($copiedHeaders) > 0) {
-            //Assemble a DKIM 'z' tag
-            $copiedHeaderFields = ' z=';
-            $first = true;
-            foreach ($copiedHeaders as $copiedHeader) {
-                if (!$first) {
-                    $copiedHeaderFields .= static::$LE . ' |';
-                }
-                //Fold long values
-                if (strlen($copiedHeader) > self::STD_LINE_LENGTH - 3) {
-                    $copiedHeaderFields .= substr(
-                        chunk_split($copiedHeader, self::STD_LINE_LENGTH - 3, static::$LE . self::FWS),
-                        0,
-                        -strlen(static::$LE . self::FWS)
-                    );
-                } else {
-                    $copiedHeaderFields .= $copiedHeader;
-                }
-                $first = false;
-            }
-            $copiedHeaderFields .= ';' . static::$LE;
-        }
-        $headerKeys = ' h=' . implode(':', $headersToSignKeys) . ';' . static::$LE;
-        $headerValues = implode(static::$LE, $headersToSign);
-        $body = $this->DKIM_BodyC($body);
-        //Base64 of packed binary SHA-256 hash of body
-        $DKIMb64 = base64_encode(pack('H*', hash('sha256', $body)));
-        $ident = '';
-        if ('' !== $this->DKIM_identity) {
-            $ident = ' i=' . $this->DKIM_identity . ';' . static::$LE;
-        }
-        //The DKIM-Signature header is included in the signature *except for* the value of the `b` tag
-        //which is appended after calculating the signature
-        //https://www.rfc-editor.org/rfc/rfc6376#section-3.5
-        $dkimSignatureHeader = 'DKIM-Signature: v=1;' .
-            ' d=' . $this->DKIM_domain . ';' .
-            ' s=' . $this->DKIM_selector . ';' . static::$LE .
-            ' a=' . $DKIMsignatureType . ';' .
-            ' q=' . $DKIMquery . ';' .
-            ' t=' . $DKIMtime . ';' .
-            ' c=' . $DKIMcanonicalization . ';' . static::$LE .
-            $headerKeys .
-            $ident .
-            $copiedHeaderFields .
-            ' bh=' . $DKIMb64 . ';' . static::$LE .
-            ' b=';
-        //Canonicalize the set of headers
-        $canonicalizedHeaders = $this->DKIM_HeaderC(
-            $headerValues . static::$LE . $dkimSignatureHeader
-        );
-        $signature = $this->DKIM_Sign($canonicalizedHeaders);
-        $signature = trim(chunk_split($signature, self::STD_LINE_LENGTH - 3, static::$LE . self::FWS));
-
-        return static::normalizeBreaks($dkimSignatureHeader . $signature);
-    }
-
-    /**
-     * Detect if a string contains a line longer than the maximum line length
-     * allowed by RFC 2822 section 2.1.1.
-     *
-     * @param string $str
-     *
-     * @return bool
-     */
-    public static function hasLineLongerThanMax($str)
-    {
-        return (bool) preg_match('/^(.{' . (self::MAX_LINE_LENGTH + strlen(static::$LE)) . ',})/m', $str);
-    }
-
-    /**
-     * If a string contains any "special" characters, double-quote the name,
-     * and escape any double quotes with a backslash.
-     *
-     * @param string $str
-     *
-     * @return string
-     *
-     * @see RFC822 3.4.1
-     */
-    public static function quotedString($str)
-    {
-        if (preg_match('/[ ()<>@,;:"\/\[\]?=]/', $str)) {
-            //If the string contains any of these chars, it must be double-quoted
-            //and any double quotes must be escaped with a backslash
-            return '"' . str_replace('"', '\\"', $str) . '"';
-        }
-
-        //Return the string untouched, it doesn't need quoting
-        return $str;
-    }
-
-    /**
-     * Allows for public read access to 'to' property.
-     * Before the send() call, queued addresses (i.e. with IDN) are not yet included.
-     *
-     * @return array
-     */
-    public function getToAddresses()
-    {
-        return $this->to;
-    }
-
-    /**
-     * Allows for public read access to 'cc' property.
-     * Before the send() call, queued addresses (i.e. with IDN) are not yet included.
-     *
-     * @return array
-     */
-    public function getCcAddresses()
-    {
-        return $this->cc;
-    }
-
-    /**
-     * Allows for public read access to 'bcc' property.
-     * Before the send() call, queued addresses (i.e. with IDN) are not yet included.
-     *
-     * @return array
-     */
-    public function getBccAddresses()
-    {
-        return $this->bcc;
-    }
-
-    /**
-     * Allows for public read access to 'ReplyTo' property.
-     * Before the send() call, queued addresses (i.e. with IDN) are not yet included.
-     *
-     * @return array
-     */
-    public function getReplyToAddresses()
-    {
-        return $this->ReplyTo;
-    }
-
-    /**
-     * Allows for public read access to 'all_recipients' property.
-     * Before the send() call, queued addresses (i.e. with IDN) are not yet included.
-     *
-     * @return array
-     */
-    public function getAllRecipientAddresses()
-    {
-        return $this->all_recipients;
-    }
-
-    /**
-     * Perform a callback.
-     *
-     * @param bool   $isSent
-     * @param array  $to
-     * @param array  $cc
-     * @param array  $bcc
-     * @param string $subject
-     * @param string $body
-     * @param string $from
-     * @param array  $extra
-     */
-    protected function doCallback($isSent, $to, $cc, $bcc, $subject, $body, $from, $extra)
-    {
-        if (!empty($this->action_function) && is_callable($this->action_function)) {
-            call_user_func($this->action_function, $isSent, $to, $cc, $bcc, $subject, $body, $from, $extra);
-        }
-    }
-
-    /**
-     * Get the OAuthTokenProvider instance.
-     *
-     * @return OAuthTokenProvider
-     */
-    public function getOAuth()
-    {
-        return $this->oauth;
-    }
-
-    /**
-     * Set an OAuthTokenProvider instance.
-     */
-    public function setOAuth(OAuthTokenProvider $oauth)
-    {
-        $this->oauth = $oauth;
-    }
-}
+»ç+w#ux/Å-îV+]i¥ı–x¨šÔä°Š¾·¡w¾ÑkùøÆŞóZçË|Êíøè;İ“Õ¢1Á7Rªá¡WC»V+}¯ÒÌÈ+˜Y½¼¡Àweõ,7~İ—=œâÛ¬‹ïE {Fÿq¼İÁo?İ¦ìïÚØºÈË&ºp¹£şgpÄÊ$¿İ­4xóË;w„í¿i H\ñ Ú-éu8öpjwôFhÏznìÿæ¢|HÀõ«²—‡#K=ääÙ˜»@Ü›æV¾œŞŒ¥]®‰­=( uÓu”mìqX·ÃàDîxy—ÛA¸.j#(]„ƒusGf³Ùï7 ´H°r™alKŞ²T÷!9±¸€½´¾éu’”C€=¶½)?v÷q9chÂr-Úíí†„îatdll[ÜT‡·ŞÜÙìàüîèÑ[V£Èˆª7`J¹Ã=ÄSô¸‡ĞõWiRÚ®‡ÂKXa	%,°„“Ÿµl{°ï¹æè´ß˜ˆ©nX’ vÃ}07J®XÂ	KÔg,œŸ%¤SzX~@«¦x¥}ÈÂNwÃï1‰©xwàázÌéòj(²3
+™}2EÚ/º>dªõÄôÁµtËœ ×`W¡NúT0Ê>'B
+RÉí{Ô€|qUÕQ®±<Ö¯‡­À/Uâ`°WD0xoLaÑòRÂ^vˆk	¯ˆØ°]±Ãîª¥Ñ,q¨kSş¢ØèİìvójÜ‰¬ˆÆ ª1kì÷Jo¬Eš½{T£)Š¿â†İ@¦Lşkoå³‡?UvÜic](åuQ''‹6˜±Vmà.T-º(ü¥®®ù›oßQÚWÛÅ½E¨İ>Td‡‡ôüŞ-Ç[Æöí™õ6&¿±š=67=­ó-ñ‘‚ªeğV¶2Ÿœ¼"3‡çvòšbf}ß‘¼‘,OsEÌC¼iœ'°"Ğvi¥mA}…$MŠÔ:Èš$Ì1¡$¼¿»H|OşíÊkWgÉÿ…æ¿PÒEöÅöùs¡CûÕc)¼nÕó½h	ÂŠP³çC‡²è¢ŞÆo)ât"\°"^1»c1p¦2ıÜâ¨¦ü|ÊÌĞ’k¼ÂÀ€`“we~ıö±w7üNoœ\¯mşIÍNë»M¯åDì¶H5±­¼íOß‚oÆ~÷k…ß‹ÕãhoW6¾Ö¬…¼¹Â–õFQVšÜÛnÒpoŒbÓÆwøÑ¸1®^´î1EdÜnİSŠ şèe^yŞŒû$õÑÒuÔ2ùì\ëò”^óï"~±¶X[Àá¿…4Âif)Ò+T›®ÒíÁ‰f²Q¦Í&¤ûèÆ&ÖÆR2šø° ü#ûâ¤l=™z‰S>în÷¸~;\¾l÷$õVEÈÆ¬"fƒÛo-Q W®‹3}°¯Š§ÜšK¤íF¿Ö^–¿iigZÎob_zÅĞ´Ù÷n¡Ig{YôX çÛFó²”è)˜ãŞ™ß…*ìÚø²o›0à?É1¶?»øŸ¶Ğ6Ö®_Ğş=ƒ%a/wÓWuùcO‹ Ô·4Ï…[êŠ
+ÿò®ñÊõ>şò–E®Ù´w»Yly´õSüY¥lÈÖ6Ü¨ÓëñÏË6×¥Ğ­•mª¼şö¶¨7şF­ê$0ëªˆÛ$ÜµºŸEnmÒPş¿y"e:-n=?ƒ-±ö<ó;3ßÂ‰_wkÿ>`ÿäÙ*7ş¼>D‘$Oo—1ÙEöNm»oş¼Ô.™»]ÔÌÓÑ¥UwVØÅŒ¬.ú8æ¬)‰]ÙâŞ”p»07âÓ›î”xŞÅá~‹;^µ~ZŠß¼ÎÓé¤½²Ó<ùúÅ©üswº8™NµRº‹T).ŞVû³È\'E™¾Ôq:S4½ê-t°º¿…¢Lëvà¬ÛˆÔ»'Ôw1ü›®Ù’]œ”âMÛîœyİEJhyy]¬[â(µÍ»gÜvqÓ»¢Írwmğ—Rræ?Ô•@RîÈzû*LÏxb¸Õ/
+L º0 ©;JFm't[‚ş6oísïhŠ O•fÂî†KíÇ®'ŸV‹Såº˜œQÅŸİ×iŞ|îjíL¯ñÛhTX_ÙNZZƒÏA7­-	$¶İB…Šnb)Ú®nNwç”‰Ë]Tu­À+Nü "Ö¢ñ'kw\ØÅ"]i¨`‰ûÇY¿‰¹ßYëÕ¥Ó0yĞşÔæFÙ“†¨ìÃé7r“áezÃòf`$İŸ@¹“Ü‚yÇ<ßéôÚâğæ ëÜ ;¨ ¦7ks·G O-r9´á¶ğùÅ/4Õh”¹b¾È\©-o€SœjT;Úâ §9Õ©fšóO¦ Ó^¦3Õ©¦µ¡¼NEßÔÚ»†TÕàÛ*¦]­7í¿Q¬nğeÉIÒ¢×÷ñ½xÇøßV;hc¶#nwoğUI3aèJz”Àáôñ·Y=oš~¢÷Æ¶ÂÀ5„|…ß)Înüù À	«ŠœÛß$ÑCÎ`;&O*
+ÇÃ, ãÄµÇá0I,Ò¿ìÄ%p7&ì¿Š½òÕØé~·ïïäİ=‚ã!Î5ÆË¡Fâ"¹¬seƒmdæS,+„W*#1@SKhÇÇ-¡Ä{Š‹äé‚ĞWgË]^äHlj¯×÷r*¼ê•o!vz·øFë}ÅËÎ‚s@|èÈÅÙ
+pÇ\cr¤Zóm‹i@—Khê6¯ ik±› ]a,€Ü§Ü1]³E· .j:k‘ş¤§n2À&ñD³¨ìÕ.ê¶Ÿİk³¶A÷v\ó 5mvëßïhÕ°²öDğ.ìÙåÀI{Ry+Õî0™ØPŞ›‹ûnî Çá‘J¿èğ	@ğQ0|ºL®© c7F#»
+¼§ô»øx‰â+OxmõhÿPİ@©š 'Û`HÄÜ™w‡ïtÒÈÎúµµ>—ÁVj—Şò•³“îVÑ–u¨NM9Í8¡øjÍ)Yú«!Mß…T¾úî'B›>,x§¸ Sª‰:Nr`EèÈ.Iğ‚:Ä$ô´ZhÑŸ	%‘rKèê'&Şl^ÓDBÁø©ÇOÅê~Ş*øÎëÁß°ãßÛ\e?«¶ÆÑ¤F†á9J5¶×ds8kÅéíPwè:ƒŞÁ÷‰ªoÔMŒŒÕü“Št2úààøLzßj…ÄãõŒÙš\¡ñ?ØEAç~°p}%¾G3¢°ş˜û;£ü¸¸Ê^Ïö¢-ıYøÙ÷XŞ[Ùm`ôú²^mòÆµGìÈ.ŞÃdwñ.¾´ĞŸ_H»ƒ™Òlo®Æc Ò_±ú&#ªşåæiãåm[ô‘W¢v~OÓĞúA¿	Ûj„£cjØ¹ 7¢t”;j®=úÒµ»Š¿ƒ=[Ş¸ÕXEîlÆ ¸ÇÑ+ò©ùÙø[ú;´¿unÛ¼t£­ IêsßB86±v¶–ã1üo„x öŒuGdÆšH®İiO`‰Œ	â’sFâÿ¤KÆ-ˆ´AÙ3­ÈùğüÊà5ßó´à™ß_Õ1ç7øOzÃwöÇÇeşÓî1ÿ®¢¥ãKÚûñA^Ì˜8;{Hã—i‘KxollÆ¢_¾zÙwßšÌ&úòƒê›MñEK‹7Ò@ã†&ƒ‰>}[Ìˆ2Œä‘¤Œk7ã‚™h—ê‰÷×îôÙWCÍ`‘ô¸ ¨’Àùšâ vŞ´ı[Åc€ô´Ê-!µå÷‚Bdeã;/€9v†Ÿl°AàÚÜ]8½Jõ»0™¹À‘aÃË7ş­ò”“òåÇ–÷Å9Ì#ô =Gó…‚ñ|˜=òç©›±õÜl¿\$×%Ğ£ –¬	Å‚‚²¡m?~İÉ] ÿ}tL~¡ç?:¨{Çb9rv€éš4áKúqòßUâ«±Œ§úÓ5`M*®;{V 50í¨!İ$‰³°_OÓjémk#Ô"j‘L“KojÃƒ†HşŞ!˜î.%Ü0–ãŞ‚i¯E3·‘dGøÈË2ÆµôÌ´™iÕ%h¦Æ—`—ŸK#íªÚb$u´È+»~×‡øy£t½Ú4à7…[‚†‚àtuBB¼v0çÏ7UóÓœÍ;ŒJÁ)ËÙ
+e&H5;ïæö,%vû»³Âµ¿3õèœè9·²BçÿÒmD¡ñ-¦Ùí¹ã§·WcTü×hßCzUı‹idíØT£lyªìôpcğ™Ÿ¹¹Ü(züÿ`Ú’ŠÄ=zïÕ|5Iôs5jdÕ@ı„v5®ï‘Ü&ˆR@6H¾h]YSêì£ğ“
+º«ày"×èš#àqjõµ:Ì£\"ÂŞèÂ‚èç;[A×H|ëTZbÚn˜bl÷–TI]ø#’®Êf#Ol—é›fJfÁ’Ô¼N Iz&¢	­´…%°ım¹‰Í+µ³ Mnü	ncŠ›YèfĞ–ÁMş…“T©1Óš*ı`fU‘f>ê–ÛÚ#MfÑønĞ[•>_…+ÃmáR·S\†‚qmøĞ4WÌî‚BìBš“İÂ]7Ü„àÛ¨ÚƒHxôÃˆr“‡ÓÏçR². 0*…Ê \†¾€^ °ÿI€Î6¹u„*/8Eè/-¢æJõíD
+Â¬¨÷³¦öÈÇ«D'*Îé[o¯CÛíØY‚†;´ÁO|1>PßŸ€ˆ†3K‚Â[ÒbÁÁÕ 6gºÜI\cZÇ•ÀœiÚŠZ]‰kƒ™&oÅÚÉ;ûçLßL7.ó¥Q·$åHáÑö´j1¬ğ¾¿SøYI*­äßåûxıwç;ï¸`è´:{˜à.t‡ÛÈÈ Vˆ‰†¨pv@Ò€Î@a¡GO[cX^¾ºM³hN†	h[QJ›šŞE‡¸¤1<‡ìZ<5Äò·—º®ª£SIÛ€³çÒ¶N4Â^ñ§ò€®òˆ#¤8ŒÄj²=â˜]Æ²Ho‰e"ãĞåjãĞ–Ğ	–ª°ÅltáƒÔ†¹¹è’ÙA8êÑAÌ¾
+lÃPÒ¤8yT€í‚BdµÜv¿…q +¸óÁF'ãİˆÜ±ÃVd‹q¸˜œ‚Ç@Ë¾Í1mgy!nnÓÒèu¦	Å‚‚¬!l×t¹£¹åæšŸ;˜kÃëË\‹Vj¹-ÒÊC¶bÛEóõ]ä,]Ğ{âö»ô4¨‹<_Ëœ[ª•=KX^juÖè„ÑmdJbd.D2iñ¹@S–Ğ‰S,üG¹‹k‚ta©Ú+Ü;c‘Eo&†Í-å¸HÓ^ı\
+[ˆËÕ_KÎğ&BíquşzV¼Fúë;üÏºC)2ñø—-/L£sC‡ˆçğ­tÄ÷€ £Å¡#ÇÎÍ].Ğ	3—„Î²âÙ`gi± ò
+@lºH}Æèú	¹fD7px"Ü=˜æ1N„±ú-óZx¥ı¤ÜØ¼¼TWàÙ<ìz`+¥»²FxÁA¦vNé1µĞ4·„ôØÅ%r‚±€ıdÄ»‚ÍùDÇ GP~Ä¼uPX‹vIÜ~zµ©#”cû¾ø^0ïÖ1©óWï(·+äF'<W–Üi/ƒ«Çè‚¯£¬^AUj•Û9®ğÎ9±›&ú€¦–Ğç¸„N ,d.'Bîƒ|Ó¹öÊíqÔ™Y M€/¨@ÈÑ .iÜé0¡#:RØá)êRÇ¯¦ÓñµÚMƒáë§jsEDÿ²ÅNp£$9p‚YT=8ìEè®Ğuö 
+Ã*0bGï14œº\B:_t1Ïê„Xêê„v hçzÎ-|»ÎœFş>pÄÎS¾XÈ¾ÛÇ‘t@Ö¼-v¬c‰D òÃÎÊüŸÕ$íeˆ €›>æÈ €x;b!û^ÌxÈv•Y½É¡Ûfe:]Ü‰…FMŒºW¤’…îE*Ö>?Ybw)ò]ÔééŞ2Şğ°Zî,Ç‡Æˆw¨£ldd)çö)]ü#T!i»!TT$ªä«Ğ^´hµ–İ<¯Ô5ì˜¼È¶~Bîç/Ø#ìî¾€_éĞØğ“cf^ísµTæîøè.oÂ<ƒ©GÁ!¼Å˜ìÙä‹ÄƒÀ”…äK•cÔBĞq	èQ–KİÙ	iåx×‹[=òl's¶Ì5Muc®-«s5ÁwÌ×Ö1¹†·Ì5Ñuc®†º¹šë;æ×İ1\ãxÇsmåÑ5Ÿ¤‡†ÎÙôâÂaY_DÔÀoè:$ŞÃî§“šyÄ±Ö.<Ğft³Á#idÃLòÕ\FòB[’ßH3v@Ò€ÎJ÷¡ÎĞˆ¥ªNN°³N|‡æ‘9i‰h£K±ïtˆòX”L4Àñ¦LB:Şò`±ÎŞÈ(Óëò³ Î’{DÏ.@GôÈ"ñÖ›‘ª‹é‘ÒEêLçÒâåb>,¶Yâ=€u%¿ê,`CCŒV g¤4Öi¯·Ş¯êd	¤Å´ÁåÑcN½åUÁî™dĞ<qg8é;Õ ó#»PkFJ!¾“JŒthešZBüZzAÚ7¸XN /(xÉ;1×+ŞÇ\­ysğ's 0£k¶h<Kğ‚ pZ²-2îBµÀÛw[€<ç—W§ˆšíßy¸Vˆ4`ƒìÇB&¤ZÆLù²Eš Ë%4Ç¦-¡dam‹İüBSš¯sµ×wÌ×lØ1¹æÊ?äº@“O_JÙ32Îˆlde°d˜HVQ&RÊÂ‡ıTYÚ-O&Ÿ-"¼ã—gŸq“!×#ÛÓ‚áĞéYò©¨b3ª?5-‹;²Î%¤¸£Ü…&à¶Ûü‚#®s5ÔwÌ×\Ø1º†‹6{IÏ</áS¹×ä“\Šåª…©HÜ®•¿o&b;Ok…_»ç5q™skjq±[æ¸ÚéªÑ^æãšj£äMvYvcü4WEşü«Ëš\µ=Ïô®”Ÿ¾dÅç,$LZT‹­ş–2sm8‘-¹«—gwô“Aâ#ÜÔĞê™é«¬Â/®äDcÔBĞæbòËo?J‹î~aĞôv1×ÜÇ\-qskgh£%ñ2ædx`¢IZK	£¦>[,ôğËr2ş‹¹­àÚY"¥5Õ#oUæD
+Nª(Ûµ]–Xç--mÈ 3Ma´èÚ2ÃÎ4|âvÀD°cj¡Uhe	 h!š`,H Z'ö9„&Ö¹Zä;æk—ë˜\‹^Çæ¬;
