@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="appDenuncia">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Sistema de Denúncias Urbanas</title>
+
+    <!-- Biblioteca AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1,
+        h2 {
+            color: #263238;
+        }
+
+        .formulario,
+        .lista-denuncias,
+        .estatisticas {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            box-sizing: border-box;
+            border: 1px solid #aaaaaa;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #1976d2;
+        }
+
+        /* Campo inválido */
+        input.ng-invalid.ng-touched,
+        select.ng-invalid.ng-touched,
+        textarea.ng-invalid.ng-touched {
+            border: 2px solid #d32f2f;
+        }
+
+        /* Campo válido */
+        input.ng-valid.ng-touched,
+        select.ng-valid.ng-touched,
+        textarea.ng-valid.ng-touched {
+            border: 2px solid green;
+        }
+
+        /* Mensagens de validação */
+
+        .erro-validacao {
+            color: #d32f2f;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        /* Botões */
+
+        button {
+            padding: 10px 18px;
+            margin-right: 8px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-cadastrar {
+            background-color: #1976d2;
+            color: white;
+        }
+
+        .btn-limpar {
+            background-color: #757575;
+            color: white;
+        }
+
+        .btn-editar {
+            background-color: #ff9800;
+            color: white;
+            padding: 7px 12px;
+        }
+
+        .btn-excluir {
+            background-color: #d32f2f;
+            color: white;
+            padding: 7px 12px;
+        }
+
+        .btn-status {
+            background-color: #455a64;
+            color: white;
+            padding: 7px 12px;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        /* Mensagens */
+
+        .mensagem {
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .sucesso {
+            background-color: green;
+            color: white;
+        }
+
+        .erro {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        .aviso {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        /* Tabela */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #cccccc;
+            text-align: left;
+        }
+
+        th {
+            background-color: #263238;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eeeeee;
+        }
+
+        /* Mensagem sem denúncias */
+
+        .sem-denuncias {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        /* Contador */
+
+        .contador {
+            font-weight: bold;
+            color: #1976d2;
+        }
+
+        /* Filtros */
+
+        .filtros {
+            margin-bottom: 20px;
+        }
+
+        /* Estatísticas */
+
+        .estatisticas p {
+            font-size: 18px;
+        }
+
+        /* Status */
+
+        .status-pendente {
+            font-weight: bold;
+            color: #d32f2f;
+        }
+
+        .status-analise {
+            font-weight: bold;
+            color: #ff9800;
+        }
+
+        .status-resolvida {
+            font-weight: bold;
+            color: green;
+        }
+
+        /* Responsividade */
+
+        @media (max-width: 800px) {
+
+            body {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th,
+            td {
+                padding: 7px;
+            }
+
+            button {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body ng-controller="DenunciaController">
+
+
+    <!-- ================================= -->
+    <!-- TÍTULO -->
+    <!-- ================================= -->
+
+    <h1>
+        Sistema de Denúncias Urbanas
+    </h1>
+
+
+    <!-- ================================= -->
+    <!-- MENSAGEM -->
+    <!-- ================================= -->
+
+    <div
+        class="mensagem"
+        ng-class="tipoMensagem"
+        ng-show="mensagem">
+
+        {{ mensagem }}
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- FORMULÁRIO -->
+    <!-- ================================= -->
+
+    <div class="formulario">
+
+        <h2 ng-if="indiceEdicao === -1">
+            Nova Denúncia
+        </h2>
+
+        <h2 ng-if="indiceEdicao !== -1">
+            Editar Denúncia
+        </h2>
+
+
+        <form
+            name="formDenuncia"
+            ng-submit="salvarDenuncia()"
+            novalidate>
+
+
+            <!-- NOME -->
+
+            <label>
+                Nome do denunciante:
+            </label>
+
+            <input
+                type="text"
+                name="nome"
+                ng-model="novaDenuncia.nome"
+                placeholder="Digite seu nome"
+                minlength="3"
+                required>
+
+
+            <div
+                class="erro-validacao"
+                ng-show="
+                    formDenuncia.nome.$touched &&
+                    formDenuncia.nome.$invalid
+                ">
+
+                <span
+                    ng-show="
+                        formDenuncia.nome.$error.required
+                    ">
+
+                    O nome é obrigatório.
+
+                </span>
+
+
+                <span
+                    ng-show="
+                        formDenuncia.nome.$error.minlength
+                    ">
+
+                    O nome deve possuir pelo menos
+                    3 caracteres.
+
+                </span>
+
+            </div>
+
+
+            <!-- DESCRIÇÃO -->
+
+            <label>
+                Descrição da denúncia:
+            </label>
+
+            <textarea
+                name="descricao"
+                ng-model="novaDenuncia.descricao"
+                minlength="10"
+                maxlength="200"
+                placeholder="Descreva o problema encontrado"
+                required>
+            </textarea>
+
+
+            <div
+                class="erro-validacao"
+                ng-show="
+                    formDenuncia.descricao.$touched &&
+                    formDenuncia.descricao.$invalid
+                ">
+
+                <span
+                    ng-show="
+                        formDenuncia.descricao.$error.required
+                    ">
+
+                    A descrição é obrigatória.
+
+                </span>
+
+
+                <span
+                    ng-show="
+                        formDenuncia.descricao.$error.minlength
+                    ">
+
+                    A descrição deve possuir pelo menos
+                    10 caracteres.
+
+                </span>
+
+
+                <span
+                    ng-show="
+                        formDenuncia.descricao.$error.maxlength
+                    ">
+
+                    A descrição deve possuir no máximo
+                    200 caracteres.
+
+                </span>
+
+            </div>
+
+
+            <!-- TIPO DE DENÚNCIA -->
+
+            <label>
+                Tipo de denúncia:
+            </label>
+
+            <select
+                name="tipoDenuncia"
+                ng-model="novaDenuncia.tipoDenuncia"
+                ng-options="tipo for tipo in tiposDenuncia"
+                required>
+
+                <option value="">
+                    Selecione o tipo de denúncia
+                </option>
+
+            </select>
+
+
+            <div
+                class="erro-validacao"
+                ng-show="
+                    formDenuncia.tipoDenuncia.$touched &&
+                    formDenuncia.tipoDenuncia.$invalid
+                ">
+
+                Selecione o tipo da denúncia.
+
+            </div>
+
+
+            <!-- LOCAL -->
+
+            <label>
+                Local da ocorrência:
+            </label>
+
+            <input
+                type="text"
+                name="local"
+                ng-model="novaDenuncia.local"
+                placeholder="Digite o local da ocorrência"
+                required>
+
+
+            <div
+                class="erro-validacao"
+                ng-show="
+                    formDenuncia.local.$touched &&
+                    formDenuncia.local.$invalid
+                ">
+
+                O local é obrigatório.
+
+            </div>
+
+
+            <!-- BOTÕES -->
+
+            <button
+                type="submit"
+                class="btn-cadastrar"
+                ng-disabled="formDenuncia.$invalid">
+
+                {{
+                    indiceEdicao === -1
+                    ? 'Cadastrar denúncia'
+                    : 'Salvar alterações'
+                }}
+
+            </button>
+
+
+            <button
+                type="button"
+                class="btn-limpar"
+                ng-click="limparFormulario()">
+
+                Limpar
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- ESTATÍSTICAS -->
+    <!-- ================================= -->
+
+    <div class="estatisticas">
+
+        <h2>
+            Estatísticas
+        </h2>
+
+
+        <p>
+
+            Total de denúncias:
+
+            <strong>
+                {{ totalDenuncias() }}
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Denúncias pendentes:
+
+            <strong>
+                {{ contarPendentes() }}
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Denúncias em análise:
+
+            <strong>
+                {{ contarEmAnalise() }}
+            </strong>
+
+        </p>
+
+
+        <p>
+
+            Denúncias resolvidas:
+
+            <strong>
+                {{ contarResolvidas() }}
+            </strong>
+
+        </p>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- LISTAGEM -->
+    <!-- ================================= -->
+
+    <div class="lista-denuncias">
+
+        <h2>
+            Denúncias Cadastradas
+        </h2>
+
+
+        <!-- ================================= -->
+        <!-- FILTROS -->
+        <!-- ================================= -->
+
+        <div class="filtros">
+
+
+            <label>
+                Pesquisar:
+            </label>
+
+            <input
+                type="text"
+                ng-model="pesquisa"
+                placeholder="Digite nome, denúncia, descrição ou local">
+
+
+            <label>
+                Filtrar por tipo de denúncia:
+            </label>
+
+            <select ng-model="filtroTipo">
+
+                <option value="">
+                    Todas as denúncias
+                </option>
+
+
+                <option
+                    ng-repeat="tipo in tiposDenuncia"
+                    value="{{ tipo }}">
+
+                    {{ tipo }}
+
+                </option>
+
+            </select>
+
+
+            <label>
+                Ordenar por:
+            </label>
+
+            <select ng-model="ordenacao">
+
+                <option value="nome">
+                    Nome
+                </option>
+
+                <option value="descricao">
+                    Descrição
+                </option>
+
+                <option value="tipoDenuncia">
+                    Denúncia
+                </option>
+
+                <option value="local">
+                    Local
+                </option>
+
+                <option value="status">
+                    Situação
+                </option>
+
+            </select>
+
+
+            <label>
+                Ordem:
+            </label>
+
+            <select ng-model="ordemInversa">
+
+                <option ng-value="false">
+                    Crescente
+                </option>
+
+                <option ng-value="true">
+                    Decrescente
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- CONTADOR -->
+        <!-- ================================= -->
+
+        <p class="contador">
+
+            Total encontrado:
+
+            {{ denunciasFiltradas.length }}
+
+        </p>
+
+
+        <!-- ================================= -->
+        <!-- NENHUMA DENÚNCIA -->
+        <!-- ================================= -->
+
+        <div
+            class="sem-denuncias"
+            ng-show="denuncias.length === 0">
+
+            Nenhuma denúncia foi cadastrada.
+
+        </div>
+
+
+        <div
+            class="sem-denuncias"
+            ng-show="
+                denuncias.length > 0 &&
+                denunciasFiltradas.length === 0
+            ">
+
+            Nenhuma denúncia encontrada
+            com os filtros informados.
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- TABELA -->
+        <!-- ================================= -->
+
+        <table
+            ng-show="denunciasFiltradas.length > 0">
+
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Nº
+                    </th>
+
+                    <th>
+                        Nome
+                    </th>
+
+                    <th>
+                        Descrição
+                    </th>
+
+                    <th>
+                        Denúncia
+                    </th>
+
+                    <th>
+                        Local
+                    </th>
+
+                    <th>
+                        Situação
+                    </th>
+
+                    <th>
+                        Ações
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <tr
+                    ng-repeat="
+                        denuncia in
+                        (
+                            denunciasFiltradas =
+                            (
+                                denuncias
+                                | filter:pesquisa
+                                | filter:{
+                                    tipoDenuncia:filtroTipo
+                                }
+                                | orderBy:
+                                    ordenacao:
+                                    ordemInversa
+                            )
+                        )
+                    ">
+
+
+                    <!-- NÚMERO -->
+
+                    <td>
+                        {{ $index + 1 }}
+                    </td>
+
+
+                    <!-- NOME -->
+
+                    <td>
+                        {{ denuncia.nome | uppercase }}
+                    </td>
+
+
+                    <!-- DESCRIÇÃO -->
+
+                    <td>
+                        {{ denuncia.descricao }}
+                    </td>
+
+
+                    <!-- TIPO -->
+
+                    <td>
+                        {{ denuncia.tipoDenuncia }}
+                    </td>
+
+
+                    <!-- LOCAL -->
+
+                    <td>
+                        {{ denuncia.local }}
+                    </td>
+
+
+                    <!-- SITUAÇÃO -->
+
+                    <td>
+
+                        <span
+                            ng-class="
+                                classeStatus(
+                                    denuncia.status
+                                )
+                            ">
+
+                            {{ denuncia.status }}
+
+                        </span>
+
+                    </td>
+
+
+                    <!-- AÇÕES -->
+
+                    <td>
+
+                        <button
+                            class="btn-editar"
+                            ng-click="
+                                editarDenuncia(
+                                    denuncia
+                                )
+                            ">
+
+                            Editar
+
+                        </button>
+
+
+                        <button
+                            class="btn-excluir"
+                            ng-click="
+                                excluirDenuncia(
+                                    denuncia
+                                )
+                            ">
+
+                            Excluir
+
+                        </button>
+
+
+                        <button
+                            class="btn-status"
+                            ng-click="
+                                alterarStatus(
+                                    denuncia
+                                )
+                            ">
+
+                            Alterar situação
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- ANGULARJS -->
+    <!-- ================================= -->
+
+    <script>
+
+        // =========================================
+        // CRIANDO O MÓDULO
+        // =========================================
+
+        const app = angular.module(
+            "appDenuncia",
+            []
+        );
+
+
+        // =========================================
+        // CONTROLLER
+        // =========================================
+
+        app.controller(
+            "DenunciaController",
+            function ($scope) {
+
+
+                // =================================
+                // TIPOS DE DENÚNCIA
+                // =================================
+
+                $scope.tiposDenuncia = [
+
+                    "Iluminação",
+
+                    "Pavimentação",
+
+                    "Mato Alto",
+
+                    "Lixo",
+
+                    "Sinalização"
+
+                ];
+
+
+                // =================================
+                // LISTA INICIAL
+                // =================================
+
+                $scope.denuncias = [
+
+                    {
+                        nome: "Carlos",
+
+                        descricao:
+                            "Poste de iluminação queimado na rua.",
+
+                        tipoDenuncia:
+                            "Iluminação",
+
+                        local:
+                            "Rua das Flores",
+
+                        status:
+                            "Pendente"
+                    },
+
+
+                    {
+                        nome: "Mariana",
+
+                        descricao:
+                            "Grande quantidade de lixo acumulada na calçada.",
+
+                        tipoDenuncia:
+                            "Lixo",
+
+                        local:
+                            "Avenida Central",
+
+                        status:
+                            "Em análise"
+                    }
+
+                ];
+
+
+                // =================================
+                // FORMULÁRIO
+                // =================================
+
+                $scope.novaDenuncia = {};
+
+
+                // =================================
+                // CONTROLE DE EDIÇÃO
+                // =================================
+
+                $scope.indiceEdicao = -1;
+
+
+                // =================================
+                // PESQUISA
+                // =================================
+
+                $scope.pesquisa = "";
+
+
+                // =================================
+                // FILTRO
+                // =================================
+
+                $scope.filtroTipo = "";
+
+
+                // =================================
+                // ORDENAÇÃO
+                // =================================
+
+                $scope.ordenacao = "nome";
+
+                $scope.ordemInversa = false;
+
+
+                // =================================
+                // SALVAR DENÚNCIA
+                // =================================
+
+                $scope.salvarDenuncia = function () {
+
+
+                    // Verifica se o formulário é inválido
+
+                    if (
+                        $scope.formDenuncia.$invalid
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    // =================================
+                    // NOVA DENÚNCIA
+                    // =================================
+
+                    if (
+                        $scope.indiceEdicao === -1
+                    ) {
+
+
+                        const denuncia =
+                            angular.copy(
+                                $scope.novaDenuncia
+                            );
+
+
+                        // Toda denúncia nova começa
+                        // como pendente
+
+                        denuncia.status =
+                            "Pendente";
+
+
+                        // Adiciona na lista
+
+                        $scope.denuncias.push(
+                            denuncia
+                        );
+
+
+                        // Mensagem
+
+                        $scope.mensagem =
+                            "Denúncia cadastrada com sucesso!";
+
+
+                        $scope.tipoMensagem =
+                            "sucesso";
+
+
+                    }
+
+                    // =================================
+                    // ALTERAR DENÚNCIA
+                    // =================================
+
+                    else {
+
+
+                        // Mantém o status atual
+
+                        const statusAtual =
+                            $scope.denuncias[
+                                $scope.indiceEdicao
+                            ].status;
+
+
+                        $scope.novaDenuncia.status =
+                            statusAtual;
+
+
+                        $scope.denuncias[
+                            $scope.indiceEdicao
+                        ] =
+                            angular.copy(
+                                $scope.novaDenuncia
+                            );
+
+
+                        $scope.mensagem =
+                            "Denúncia alterada com sucesso!";
+
+
+                        $scope.tipoMensagem =
+                            "sucesso";
+
+                    }
+
+
+                    // Limpa formulário
+
+                    $scope.limparFormulario();
+
+                };
+
+
+                // =================================
+                // EDITAR
+                // =================================
+
+                $scope.editarDenuncia =
+                    function (denuncia) {
+
+
+                        $scope.indiceEdicao =
+                            $scope.denuncias.indexOf(
+                                denuncia
+                            );
+
+
+                        $scope.novaDenuncia =
+                            angular.copy(
+                                denuncia
+                            );
+
+
+                        $scope.mensagem =
+                            "Denúncia selecionada para edição.";
+
+
+                        $scope.tipoMensagem =
+                            "aviso";
+
+                    };
+
+
+                // =================================
+                // EXCLUIR
+                // =================================
+
+                $scope.excluirDenuncia =
+                    function (denuncia) {
+
+
+                        const indice =
+                            $scope.denuncias.indexOf(
+                                denuncia
+                            );
+
+
+                        if (indice !== -1) {
+
+
+                            $scope.denuncias.splice(
+                                indice,
+                                1
+                            );
+
+
+                            $scope.mensagem =
+                                "Denúncia excluída com sucesso.";
+
+
+                            $scope.tipoMensagem =
+                                "erro";
+
+                        }
+
+                    };
+
+
+                // =================================
+                // ALTERAR STATUS
+                // =================================
+
+                $scope.alterarStatus =
+                    function (denuncia) {
+
+
+                        if (
+                            denuncia.status ===
+                            "Pendente"
+                        ) {
+
+
+                            denuncia.status =
+                                "Em análise";
+
+                        }
+
+
+                        else if (
+                            denuncia.status ===
+                            "Em análise"
+                        ) {
+
+
+                            denuncia.status =
+                                "Resolvida";
+
+                        }
+
+
+                        else {
+
+
+                            denuncia.status =
+                                "Pendente";
+
+                        }
+
+
+                        $scope.mensagem =
+                            "Situação da denúncia atualizada.";
+
+
+                        $scope.tipoMensagem =
+                            "sucesso";
+
+                    };
+
+
+                // =================================
+                // LIMPAR FORMULÁRIO
+                // =================================
+
+                $scope.limparFormulario =
+                    function () {
+
+
+                        $scope.novaDenuncia = {};
+
+
+                        $scope.indiceEdicao =
+                            -1;
+
+
+                        if (
+                            $scope.formDenuncia
+                        ) {
+
+
+                            $scope.formDenuncia
+                                .$setPristine();
+
+
+                            $scope.formDenuncia
+                                .$setUntouched();
+
+                        }
+
+                    };
+
+
+                // =================================
+                // TOTAL DE DENÚNCIAS
+                // =================================
+
+                $scope.totalDenuncias =
+                    function () {
+
+                        return $scope.denuncias.length;
+
+                    };
+
+
+                // =================================
+                // CONTAR PENDENTES
+                // =================================
+
+                $scope.contarPendentes =
+                    function () {
+
+
+                        let quantidade = 0;
+
+
+                        for (
+                            let denuncia
+                            of $scope.denuncias
+                        ) {
+
+
+                            if (
+                                denuncia.status ===
+                                "Pendente"
+                            ) {
+
+                                quantidade++;
+
+                            }
+
+                        }
+
+
+                        return quantidade;
+
+                    };
+
+
+                // =================================
+                // CONTAR EM ANÁLISE
+                // =================================
+
+                $scope.contarEmAnalise =
+                    function () {
+
+
+                        let quantidade = 0;
+
+
+                        for (
+                            let denuncia
+                            of $scope.denuncias
+                        ) {
+
+
+                            if (
+                                denuncia.status ===
+                                "Em análise"
+                            ) {
+
+                                quantidade++;
+
+                            }
+
+                        }
+
+
+                        return quantidade;
+
+                    };
+
+
+                // =================================
+                // CONTAR RESOLVIDAS
+                // =================================
+
+                $scope.contarResolvidas =
+                    function () {
+
+
+                        let quantidade = 0;
+
+
+                        for (
+                            let denuncia
+                            of $scope.denuncias
+                        ) {
+
+
+                            if (
+                                denuncia.status ===
+                                "Resolvida"
+                            ) {
+
+                                quantidade++;
+
+                            }
+
+                        }
+
+
+                        return quantidade;
+
+                    };
+
+
+                // =================================
+                // CLASSE DO STATUS
+                // =================================
+
+                $scope.classeStatus =
+                    function (status) {
+
+
+                        if (
+                            status ===
+                            "Pendente"
+                        ) {
+
+                            return "status-pendente";
+
+                        }
+
+
+                        if (
+                            status ===
+                            "Em análise"
+                        ) {
+
+                            return "status-analise";
+
+                        }
+
+
+                        if (
+                            status ===
+                            "Resolvida"
+                        ) {
+
+                            return "status-resolvida";
+
+                        }
+
+                    };
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
